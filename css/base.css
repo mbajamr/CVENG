@@ -1,0 +1,200 @@
+/********** Template CSS **********/
+HTML {
+	background-color: white;
+}
+
+#headerMain {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 25px;
+  border: 2px solid #009FDA;
+  background: #009FDA;
+  background-position: left top;
+  color: white;
+  padding: 20px;
+  width: 100%;
+  height: 50px;
+  valign: left;
+}
+
+#header1 {
+  background: #009FDA;
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+  display: inline-block;
+  valign: top;
+  width: 20%;
+  height: 50px;
+  padding-bottom:5px;
+}
+
+#header2 {
+  background: #009FDA;
+  flex: 1;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 10px;
+  valign: top;
+  width: 10%;
+  height: 50px;
+  valign: top;
+  padding-bottom:5px;
+}
+
+#header3 {
+  background: #009FDA;
+  flex: 1;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 10px;
+  valign: top;
+  width: 70%;
+  height: 50px;
+  valign: top;
+  padding-bottom:5px;
+}
+
+bodyBase {
+	margin-top:60px;
+	padding-top:400px;
+	background-color: lightgrey;
+    width: 100%;
+
+}
+
+#Footer {
+  border-radius: 25px;
+  background: #009FDA;
+  color: white;
+  width: 100%;
+  height: 20%;
+  valign: bottom;
+}
+
+#FooterSub {
+  border-radius: 25px;
+  background: #009FDA;
+  color: white;
+  width: 20%;
+  height: 20%;
+}
+
+      .row0 {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .row1 {
+		background: #2196F3;
+		color: white;
+      }
+      .row2 {
+		background: white;
+		color: black;
+      }
+      .row3 {
+		background: #2196F3;
+		color: white;
+      }
+      .h100 {
+		height: 100px;
+      }
+      .h300 {
+		height: 300px;
+      }
+      .h400 {
+		height: 400px;
+      }
+      .w50 {
+		width: 50px;
+      }
+      .w100 {
+		width: 100px;
+      }
+      .w200 {
+		width: 200px;
+      }
+      .w450 {
+		width: 450px;
+      }
+      .w500 {
+		width: 500px;
+      }
+      .w20p {
+		width: 20%;
+      }
+      .w50p {
+		width: 50%;
+      }
+      .w100p {
+		width: 100%;
+      }
+      .column {
+        box-sizing: border-box;
+		text-align: left;
+      }
+      .f25 {
+        flex: 0.25;
+      }
+      .f50 {
+        flex: 0.25;
+      }
+      .f75 {
+        flex: 0.75;
+      }
+      .f1300 {
+        flex: 1 1 300px;
+        margin: 10px;
+      }
+      .f150 {
+        flex: 1 1 50px;
+        margin: 10px;
+      }
+      .p10 {
+        padding: 10px;
+      }
+      .scroll {
+		overflow: scroll;
+      }
+      .scrolla {
+		overflow: auto;
+      }
+      .side {
+		position: sticky; /* make the first column sticky */
+		left: 0; /* stick the first column to the left */
+		background-color: gray; /* make the first column background white */
+		z-index: 1; /* ensure the first column is above the rest of the content */
+      }
+      .tl {
+		text-align: left;
+		display: inline-block;
+      }
+	  
+    .container {
+      background-color: #ccc;
+	  display: grid;
+      grid-template-columns: 20% 80%; /* set the width of the columns */
+      grid-gap: 10px;
+    }
+
+    .first-col {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, auto);
+      grid-gap: 10px;
+    }
+
+    .row {
+      background-color: #ccc;
+      padding: 10px;
+    }
+
+    .second-col {
+      background-color: #eee;
+      padding: 10px;
+	  overflow: scroll;
+	  height: 400px;
+    }
+
+
+###########################################3
