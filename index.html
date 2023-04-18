@@ -1,41 +1,630 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Four Columns Example</title>
-    <!-- Template CSS -->
-    <link rel="stylesheet" href="css/w3.css">
-	<link rel="stylesheet" href="css/base.css">
-  </head>
-  <body>
-  
-	  <div class="row0 row1 h100">
-        <div class="column" id="Header"></div>
-        <div class="column" id="SubMenu"></div>
-        <div class="column" id="HeaderMenu"></div>
-      </div>
+<html lang="en">
 
-  <div class="container">
-    <div class="first-col">
-      <div class="row"><div id="Menu"></div></div>
-      <div class="row"></div>
-      <div class="row"></div>
-    </div>
-    <div class="second-col "><div id="Principal"></div></div>
-  </div>
-  
-	  <div class="row0 row3 h100">
-        <div class="column row3" id="Footer1"></div>
-        <div class="column row3" id="Footer2"></div>
-        <div class="column row3" id="Footer3"></div>
-	    <div class="column row3" id="Footer4"></div>
-	    <div class="column row3" id="Footer5"></div>
-      </div>
+<head>
+    <meta charset="utf-8">
+    <TITLE>MBAjamr (Joel Martinez)</TITLE>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+</head>
 
-      </div>
-  </body>
-</html>
+<STYLE id=vbulletin_css type=text/css>
+HTML {
+	background-color: white;
+}
 
+#header {
+
+  border-radius: 25px;
+  border: 2px solid #009FDA;
+  background: #009FDA;
+  background-position: left top;
+  color: white;
+  padding: 20px;
+  width: 100%;
+  height: 50px;
+  valign: left;
+}
+
+#header1 {
+  width: 20%;
+  height: 50px;
+  valign: top;
+  padding-bottom:5px;
+}
+
+#header2 {
+  width: 10%;
+  height: 50px;
+  valign: top;
+  padding-bottom:5px;
+}
+
+#header3 {
+  width: 70%;
+  height: 50px;
+  valign: top;
+  padding-bottom:5px;
+}
+
+bodyBase {
+	margin-top:60px;
+	padding-top:400px;
+	background-color: lightgrey;
+    width: 100%;
+
+}
+
+#Footer {
+  border-radius: 25px;
+  background: #009FDA;
+  color: white;
+  width: 100%;
+  height: 20%;
+  valign: bottom;
+}
+
+#FooterSub {
+  border-radius: 25px;
+  background: #009FDA;
+  color: white;
+  width: 20%;
+  height: 20%;
+}
+
+###########################################3
+
+
+.nav-tabs .nav-item.show .nav-link {
+  color: var(--bs-nav-tabs-link-active-color);
+  background-color: var(--bs-nav-tabs-link-active-bg);
+  border-color: var(--bs-nav-tabs-link-active-border-color);
+}
+
+.nav-tabs .dropdown-menu {
+  margin-top: calc(-1 * var(--bs-nav-tabs-border-width));
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.navbar-nav .dropdown-menu {
+  position: static;
+}
+
+  .navbar-expand-sm .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+
+  .navbar-expand-md .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+
+  .navbar-expand-lg .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+
+  .navbar-expand-xl .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+
+  .navbar-expand-xxl .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+
+.navbar-expand .navbar-nav .dropdown-menu {
+  position: absolute;
+}
+
+
+.nav-link {
+  display: block;
+  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+  font-size: var(--bs-nav-link-font-size);
+  font-weight: var(--bs-nav-link-font-weight);
+  color: var(--bs-nav-link-color);
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+
+.dropup,
+.dropend,
+.dropdown,
+.dropstart,
+.dropup-center,
+.dropdown-center {
+  position: relative;
+}
+
+.dropdown-toggle {
+  white-space: nowrap;
+}
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+.dropdown-toggle:empty::after {
+  margin-left: 0;
+}
+
+.dropdown-menu {
+  --bs-dropdown-zindex: 1000;
+  --bs-dropdown-min-width: 10rem;
+  --bs-dropdown-padding-x: 0;
+  --bs-dropdown-padding-y: 0.5rem;
+  --bs-dropdown-spacer: 0.125rem;
+  --bs-dropdown-font-size: 1rem;
+  --bs-dropdown-color: var(--bs-body-color);
+  --bs-dropdown-bg: var(--bs-body-bg);
+  --bs-dropdown-border-color: var(--bs-border-color-translucent);
+  --bs-dropdown-border-radius: 0.375rem;
+  --bs-dropdown-border-width: var(--bs-border-width);
+  --bs-dropdown-inner-border-radius: calc(0.375rem - var(--bs-border-width));
+  --bs-dropdown-divider-bg: var(--bs-border-color-translucent);
+  --bs-dropdown-divider-margin-y: 0.5rem;
+  --bs-dropdown-box-shadow: 0 0.5rem 1rem rgba(var(--bs-body-color-rgb), 0.15);
+  --bs-dropdown-link-color: var(--bs-body-color);
+  --bs-dropdown-link-hover-color: var(--bs-body-color);
+  --bs-dropdown-link-hover-bg: var(--bs-tertiary-bg);
+  --bs-dropdown-link-active-color: #fff;
+  --bs-dropdown-link-active-bg: #0d6efd;
+  --bs-dropdown-link-disabled-color: #adb5bd;
+  --bs-dropdown-item-padding-x: 1rem;
+  --bs-dropdown-item-padding-y: 0.25rem;
+  --bs-dropdown-header-color: #6c757d;
+  --bs-dropdown-header-padding-x: 1rem;
+  --bs-dropdown-header-padding-y: 0.5rem;
+  position: absolute;
+  z-index: var(--bs-dropdown-zindex);
+  display: none;
+  min-width: var(--bs-dropdown-min-width);
+  padding: var(--bs-dropdown-padding-y) var(--bs-dropdown-padding-x);
+  margin: 0;
+  font-size: var(--bs-dropdown-font-size);
+  color: var(--bs-dropdown-color);
+  text-align: left;
+  list-style: none;
+  background-color: var(--bs-dropdown-bg);
+  background-clip: padding-box;
+  border: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color);
+  border-radius: var(--bs-dropdown-border-radius);
+}
+.dropdown-menu[data-bs-popper] {
+  top: 100%;
+  left: 0;
+  margin-top: var(--bs-dropdown-spacer);
+}
+
+.dropdown-menu-start {
+  --bs-position: start;
+}
+.dropdown-menu-start[data-bs-popper] {
+  right: auto;
+  left: 0;
+}
+
+.dropdown-menu-end {
+  --bs-position: end;
+}
+.dropdown-menu-end[data-bs-popper] {
+  right: 0;
+  left: auto;
+}
+
+@media (min-width: 576px) {
+  .dropdown-menu-sm-start {
+    --bs-position: start;
+  }
+  .dropdown-menu-sm-start[data-bs-popper] {
+    right: auto;
+    left: 0;
+  }
+  .dropdown-menu-sm-end {
+    --bs-position: end;
+  }
+  .dropdown-menu-sm-end[data-bs-popper] {
+    right: 0;
+    left: auto;
+  }
+}
+@media (min-width: 768px) {
+  .dropdown-menu-md-start {
+    --bs-position: start;
+  }
+  .dropdown-menu-md-start[data-bs-popper] {
+    right: auto;
+    left: 0;
+  }
+  .dropdown-menu-md-end {
+    --bs-position: end;
+  }
+  .dropdown-menu-md-end[data-bs-popper] {
+    right: 0;
+    left: auto;
+  }
+}
+@media (min-width: 992px) {
+  .dropdown-menu-lg-start {
+    --bs-position: start;
+  }
+  .dropdown-menu-lg-start[data-bs-popper] {
+    right: auto;
+    left: 0;
+  }
+  .dropdown-menu-lg-end {
+    --bs-position: end;
+  }
+  .dropdown-menu-lg-end[data-bs-popper] {
+    right: 0;
+    left: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .dropdown-menu-xl-start {
+    --bs-position: start;
+  }
+  .dropdown-menu-xl-start[data-bs-popper] {
+    right: auto;
+    left: 0;
+  }
+  .dropdown-menu-xl-end {
+    --bs-position: end;
+  }
+  .dropdown-menu-xl-end[data-bs-popper] {
+    right: 0;
+    left: auto;
+  }
+}
+@media (min-width: 1400px) {
+  .dropdown-menu-xxl-start {
+    --bs-position: start;
+  }
+  .dropdown-menu-xxl-start[data-bs-popper] {
+    right: auto;
+    left: 0;
+  }
+  .dropdown-menu-xxl-end {
+    --bs-position: end;
+  }
+  .dropdown-menu-xxl-end[data-bs-popper] {
+    right: 0;
+    left: auto;
+  }
+}
+.dropup .dropdown-menu[data-bs-popper] {
+  top: auto;
+  bottom: 100%;
+  margin-top: 0;
+  margin-bottom: var(--bs-dropdown-spacer);
+}
+.dropup .dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0.3em solid;
+  border-left: 0.3em solid transparent;
+}
+.dropup .dropdown-toggle:empty::after {
+  margin-left: 0;
+}
+
+.dropend .dropdown-menu[data-bs-popper] {
+  top: 0;
+  right: auto;
+  left: 100%;
+  margin-top: 0;
+  margin-left: var(--bs-dropdown-spacer);
+}
+.dropend .dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid transparent;
+  border-right: 0;
+  border-bottom: 0.3em solid transparent;
+  border-left: 0.3em solid;
+}
+.dropend .dropdown-toggle:empty::after {
+  margin-left: 0;
+}
+.dropend .dropdown-toggle::after {
+  vertical-align: 0;
+}
+
+.dropstart .dropdown-menu[data-bs-popper] {
+  top: 0;
+  right: 100%;
+  left: auto;
+  margin-top: 0;
+  margin-right: var(--bs-dropdown-spacer);
+}
+.dropstart .dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+}
+.dropstart .dropdown-toggle::after {
+  display: none;
+}
+.dropstart .dropdown-toggle::before {
+  display: inline-block;
+  margin-right: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid transparent;
+  border-right: 0.3em solid;
+  border-bottom: 0.3em solid transparent;
+}
+.dropstart .dropdown-toggle:empty::after {
+  margin-left: 0;
+}
+.dropstart .dropdown-toggle::before {
+  vertical-align: 0;
+}
+
+.dropdown-divider {
+  height: 0;
+  margin: var(--bs-dropdown-divider-margin-y) 0;
+  overflow: hidden;
+  border-top: 1px solid var(--bs-dropdown-divider-bg);
+  opacity: 1;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
+  clear: both;
+  font-weight: 400;
+  color: var(--bs-dropdown-link-color);
+  text-align: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+  border-radius: var(--bs-dropdown-item-border-radius, 0);
+}
+.dropdown-item:hover, .dropdown-item:focus {
+  color: var(--bs-dropdown-link-hover-color);
+  background-color: var(--bs-dropdown-link-hover-bg);
+}
+.dropdown-item.active, .dropdown-item:active {
+  color: var(--bs-dropdown-link-active-color);
+  text-decoration: none;
+  background-color: var(--bs-dropdown-link-active-bg);
+}
+.dropdown-item.disabled, .dropdown-item:disabled {
+  color: var(--bs-dropdown-link-disabled-color);
+  pointer-events: none;
+  background-color: transparent;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-header {
+  display: block;
+  padding: var(--bs-dropdown-header-padding-y) var(--bs-dropdown-header-padding-x);
+  margin-bottom: 0;
+  font-size: 0.875rem;
+  color: var(--bs-dropdown-header-color);
+  white-space: nowrap;
+}
+
+.dropdown-item-text {
+  display: block;
+  padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
+  color: var(--bs-dropdown-link-color);
+}
+
+.dropdown-menu-dark {
+  --bs-dropdown-color: #dee2e6;
+  --bs-dropdown-bg: #343a40;
+  --bs-dropdown-border-color: var(--bs-border-color-translucent);
+  --bs-dropdown-box-shadow: ;
+  --bs-dropdown-link-color: #dee2e6;
+  --bs-dropdown-link-hover-color: #fff;
+  --bs-dropdown-divider-bg: var(--bs-border-color-translucent);
+  --bs-dropdown-link-hover-bg: rgba(255, 255, 255, 0.15);
+  --bs-dropdown-link-active-color: #fff;
+  --bs-dropdown-link-active-bg: #0d6efd;
+  --bs-dropdown-link-disabled-color: #adb5bd;
+  --bs-dropdown-header-color: #adb5bd;
+}
+
+.btn-group,
+.btn-group-vertical {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+}
+.btn-group > .btn,
+.btn-group-vertical > .btn {
+  position: relative;
+  flex: 1 1 auto;
+}
+.btn-group > .btn-check:checked + .btn,
+.btn-group > .btn-check:focus + .btn,
+.btn-group > .btn:hover,
+.btn-group > .btn:focus,
+.btn-group > .btn:active,
+.btn-group > .btn.active,
+.btn-group-vertical > .btn-check:checked + .btn,
+.btn-group-vertical > .btn-check:focus + .btn,
+.btn-group-vertical > .btn:hover,
+.btn-group-vertical > .btn:focus,
+.btn-group-vertical > .btn:active,
+.btn-group-vertical > .btn.active {
+  z-index: 1;
+}
+
+.btn-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.btn-toolbar .input-group {
+  width: auto;
+}
+
+.btn-group {
+  border-radius: 0.375rem;
+}
+.btn-group > :not(.btn-check:first-child) + .btn,
+.btn-group > .btn-group:not(:first-child) {
+  margin-left: calc(var(--bs-border-width) * -1);
+}
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn.dropdown-toggle-split:first-child,
+.btn-group > .btn-group:not(:last-child) > .btn {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.btn-group > .btn:nth-child(n+3),
+.btn-group > :not(.btn-check) + .btn,
+.btn-group > .btn-group:not(:first-child) > .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.dropdown-toggle-split {
+  padding-right: 0.5625rem;
+  padding-left: 0.5625rem;
+}
+.dropdown-toggle-split::after, .dropup .dropdown-toggle-split::after, .dropend .dropdown-toggle-split::after {
+  margin-left: 0;
+}
+.dropstart .dropdown-toggle-split::before {
+  margin-right: 0;
+}
+
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
+  padding-right: 0.375rem;
+  padding-left: 0.375rem;
+}
+
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+.btn-group-vertical {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.btn-group-vertical > .btn,
+.btn-group-vertical > .btn-group {
+  width: 100%;
+}
+.btn-group-vertical > .btn:not(:first-child),
+.btn-group-vertical > .btn-group:not(:first-child) {
+  margin-top: calc(var(--bs-border-width) * -1);
+}
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical > .btn-group:not(:last-child) > .btn {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.btn-group-vertical > .btn ~ .btn,
+.btn-group-vertical > .btn-group:not(:first-child) > .btn {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
+.input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
+.input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3),
+.input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-control,
+.input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-select {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.input-group.has-validation > :nth-last-child(n+3):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
+.input-group.has-validation > .dropdown-toggle:nth-last-child(n+4),
+.input-group.has-validation > .form-floating:nth-last-child(n+3) > .form-control,
+.input-group.has-validation > .form-floating:nth-last-child(n+3) > .form-select {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  margin-left: calc(var(--bs-border-width) * -1);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.Principal {
+  height: 400px; /* set the height of the principal sub window */
+  width: 1300px;
+  overflow: scroll; /* add a scroll bar */
+}
+
+
+</STYLE>
+
+<BODY>
+<!-- Header-->
+<TABLE id="header">
+ <TBODY>
+  <TR>
+<!-- Menu -->
+<TD id="header1"><div id="Header"></div></TD>
+<!-- Menu -->
+<!-- SubMenu -->
+<TD id="header2"><div id="SubMenu"></div></TD>
+<!-- SubMenu -->
+<!-- Principal -->
+<TD id="header3"><div id="HeaderMenu"></div></TD>
+<!-- /Principal -->
+  </TR>
+ </TBODY>
+</TABLE>
+<!-- /Header-->
+
+<!-- Body-->
+<TABLE id="bodyBase">
+ <TBODY>
+  <TR>
+   <!-- Menu -->
+   <TD><div valign="top" id="Menu" class="container-xxl bg-primary"></div></TD>
+   <!-- Menu -->
+   <!-- Principal -->
+   <TD><div class="Principal" id="Principal"></div></TD>
+   <!-- /Principal -->
+  </TR>
+ </TBODY>
+</TABLE>
+
+<!-- Footer -->
+<TABLE id="Footer">
+ <TBODY>
+  <TR>
+   <TD id="FooterSub"><div  id="Footer1"></div></TD>
+  </TR>
+ </TBODY>
+</TABLE>
+<TABLE valign="bottom" width="100%">
+  <TR>
+   <TD id="Footer"><div  id="Footer5"></div></TD>
+  </TR>
+</TABLE>
+<!-- Footer -->
+</BODY>
+</HTML>
 
 <!-- Template Javascript -->
 <script src="ajax/javascript.js"></script>
