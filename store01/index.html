@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Store 01</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">VAR_STR_CLOSE_MENU</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>EL TULE<br>Comida Oaxaca</b></h3>
+  </div>
+
+  <div class="w3-bar-block">
+    <a href="#EL TULE" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">EL TULE</a> 
+    <a href="#Status" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Status</a>  
+    <a href="#Ubicaion" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Ubicaion</a>  
+    <a href="#Servicios o Menu" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Servicios o Menu</a>  
+    <a href="#Horario" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Horario</a> 
+	<a href="#Contacto" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contacto</a> 
+    <a href="#Fotos" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Fotos</a>  
+	<a href="#Feedback" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Feedback</a>  
+	<a href="#Servicio a domicilio" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Servicio a domicilio</a>  
+	<a href="#Promos" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Promos</a>  
+	<a href="#Owner" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Owner</a>  
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>VAR_STR_COMPANY_NAME</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id=EL TULE>
+    <h1 class="w3-jumbo"><b>EL TULE</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Comida Oaxaca</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+  
+      <!-- Status -->
+      <div class="w3-container w3-cell-row w3-left w3-padding-64" style="margin-top:75px" id="Status">
+        <h1 class="w3-xxxlarge w3-text-red" style="margin-top:75px" ><b>Status</b></h1>
+        <hr class="w3-round" style="width:50px;border:5px solid red" ></hr>
+        Opem
+      </div>
+      
+      <!-- Ubicaion -->
+      <div class="w3-container w3-cell-row w3-left w3-padding-64" style="margin-top:75px" id="Ubicaion">
+        <h1 class="w3-xxxlarge w3-text-red" style="margin-top:75px" ><b>Ubicaion</b></h1>
+        <hr class="w3-round" style="width:50px;border:5px solid red" ></hr>
+        Descripcion de la Ubicaion
+      </div>
+    
+      <!-- Servicios o Menu -->
+      <div class="w3-container w3-cell-row w3-left w3-padding-64" style="margin-top:75px" id="Servicios o Menu">
+        <h1 class="w3-xxxlarge w3-text-red" style="margin-top:75px" ><b>Servicios o Menu</b></h1>
+        <hr class="w3-round" style="width:50px;border:5px solid red" ></hr>
+        Descripcion de los Servicios o Menu
+      </div>
+      
+      <!-- Horario -->
+      <div class="w3-container w3-cell-row w3-left w3-padding-64" style="margin-top:75px" id="Horario">
+        <h1 class="w3-xxxlarge w3-text-red" style="margin-top:75px" ><b>Horario</b></h1>
+        <hr class="w3-round" style="width:50px;border:5px solid red" ></hr>
+        Horario L-V 9am-9pm
+      </div>
+      
+      <!-- Contacto -->
+      <div class="w3-container w3-cell-row w3-left w3-padding-64" style="margin-top:75px" id="Contacto">
+        <h1 class="w3-xxxlarge w3-text-red" style="margin-top:75px" ><b>Contacto</b></h1>
+        <hr class="w3-round" style="width:50px;border:5px solid red" ></hr>
+        Contacto desc
+      </div>
+    
+      <!-- Fotos -->
+      <div class="w3-container w3-cell-row w3-left w3-padding-64" style="margin-top:75px" id="Fotos">
+        <h1 class="w3-xxxlarge w3-text-red" style="margin-top:75px" ><b>Fotos</b></h1>
+        <hr class="w3-round" style="width:50px;border:5px solid red" ></hr>
+        Fotos desc
+      </div>
+    
+      <!-- Feedback -->
+      <div class="w3-container w3-cell-row w3-left w3-padding-64" style="margin-top:75px" id="Feedback">
+        <h1 class="w3-xxxlarge w3-text-red" style="margin-top:75px" ><b>Feedback</b></h1>
+        <hr class="w3-round" style="width:50px;border:5px solid red" ></hr>
+        Feedback desc
+      </div>
+    
+      <!-- Servicio a domicilio -->
+      <div class="w3-container w3-cell-row w3-left w3-padding-64" style="margin-top:75px" id="Servicio a domicilio">
+        <h1 class="w3-xxxlarge w3-text-red" style="margin-top:75px" ><b>Servicio a domicilio</b></h1>
+        <hr class="w3-round" style="width:50px;border:5px solid red" ></hr>
+        Servicio a domicilio desc
+      </div>
+    
+      <!-- Promos -->
+      <div class="w3-container w3-cell-row w3-left w3-padding-64" style="margin-top:75px" id="Promos">
+        <h1 class="w3-xxxlarge w3-text-red" style="margin-top:75px" ><b>Promos</b></h1>
+        <hr class="w3-round" style="width:50px;border:5px solid red" ></hr>
+        Promos desc
+      </div>
+    
+      <!-- Owner -->
+      <div class=w3-container w3-content w3-center w3-padding-64 style=max-width:800px id=Owner">
+        <h1 class="w3-xxxlarge w3-text-red" style="margin-top:75px" ><b>Owner</b></h1>
+        <hr class="w3-round" style="width:50px;border:5px solid red" ></hr>
+        Owner desc
+      </div>
+    
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
+
