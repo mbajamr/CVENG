@@ -7,15 +7,96 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
 body {font-size:16px;}
 .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
 .w3-half img:hover{opacity:1}
+
+
+
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto; /* Ensures aspect ratio is maintained */
+    display: block; /* Removes bottom margin in some browsers */
+}
+
+.controls {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.control {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background: #666;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.control:hover,
+input[type="radio"]:checked + .control {
+    background-color: #333; /* Active state */
+}
+
+/* Show the corresponding slide when a radio button is checked */
+#slide1:checked ~ .slides {
+    transform: translateX(0);
+}
+
+#slide2:checked ~ .slides {
+    transform: translateX(-100%);
+}
+
+#slide3:checked ~ .slides {
+    transform: translateX(-200%);
+}
+
+#slide4:checked ~ .slides {
+    transform: translateX(-300%);
+}
+
+#slide5:checked ~ .slides {
+    transform: translateX(-400%);
+}
+
+#slide6:checked ~ .slides {
+    transform: translateX(-500%);
+}
 </style>
 </head>
-<body>
 
+
+<body>
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">VAR_STR_CLOSE_MENU</a>
@@ -67,17 +148,58 @@ body {font-size:16px;}
   </div>
   
       <!-- Status -->
+
+          <!-- Status -->
       <div class="w3-container w3-cell-row w3-left w3-padding-64" style="margin-top:75px" id="Status">
         <h1 class="w3-xxxlarge w3-text-red" style="margin-top:75px" ><b>Status</b></h1>
+
+    <div class="carousel" id="Status">
+        <input type="radio" name="carousel" id="slide1" checked>
+        <input type="radio" name="carousel" id="slide2">
+        <input type="radio" name="carousel" id="slide3">
+        <input type="radio" name="carousel" id="slide4">
+        <input type="radio" name="carousel" id="slide5">
+        
+        <div class="slides">
+            <div class="slide" id="s1">
+                <img class="img-fluid" src="../img/store01a.jpg" alt="">
+            </div>
+            <div class="slide" id="s2">
+                <img class="img-fluid" src="../img/store01b.jpg" alt="">
+            </div>
+            <div class="slide" id="s3">
+                <img class="img-fluid" src="../img/store01c.jpg" alt="">
+            </div>
+            <div class="slide" id="s4">
+                <img class="img-fluid" src="../img/store01d.jpg" alt="">
+            </div>
+            <div class="slide" id="s5">
+                <img class="img-fluid" src="../img/store01e.jpg" alt="">
+            </div>
+        </div>
+        
+        <div class="controls">
+            <label for="slide1" class="control"></label>
+            <label for="slide2" class="control"></label>
+            <label for="slide3" class="control"></label>
+            <label for="slide4" class="control"></label>
+            <label for="slide5" class="control"></label>
+
+        </div>
+    </div>
+
         <hr class="w3-round" style="width:50px;border:5px solid red" ></hr>
-        Opem
+        
       </div>
+      
+
+
       
       <!-- Ubicaion -->
       <div class="w3-container w3-cell-row w3-left w3-padding-64" style="margin-top:75px" id="Ubicaion">
         <h1 class="w3-xxxlarge w3-text-red" style="margin-top:75px" ><b>Ubicaion</b></h1>
         <hr class="w3-round" style="width:50px;border:5px solid red" ></hr>
-        Descripcion de la Ubicaion
+        Descripcion de la jajajaja
       </div>
     
       <!-- Servicios o Menu -->
