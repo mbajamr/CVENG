@@ -92,6 +92,47 @@ input[type="radio"]:checked + .control {
 #slide6:checked ~ .slides {
     transform: translateX(-500%);
 }
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.left {
+    left: 10px;
+}
+
+.right {
+    right: 10px;
+}
+
+/* Arrows linked to radio button checks */
+#slide1:checked ~ .arrow.left[for="slide5"],
+#slide2:checked ~ .arrow.left[for="slide1"],
+#slide3:checked ~ .arrow.left[for="slide2"],
+#slide4:checked ~ .arrow.left[for="slide3"],
+#slide5:checked ~ .arrow.left[for="slide4"],
+#slide1:checked ~ .arrow.right[for="slide2"],
+#slide2:checked ~ .arrow.right[for="slide3"],
+#slide3:checked ~ .arrow.right[for="slide4"],
+#slide4:checked ~ .arrow.right[for="slide5"],
+#slide5:checked ~ .arrow.right[for="slide1"] {
+    display: block;
+}
+
+.arrow {
+    display: none;
+}
+
 </style>
 </head>
 
@@ -177,23 +218,31 @@ input[type="radio"]:checked + .control {
                 <img class="img-fluid" src="../img/store01e.jpg" alt="">
             </div>
         </div>
-        
+    <!-- Left and Right Arrows -->
+    <label for="slide5" class="arrow left">&#10094;</label>
+    <label for="slide2" class="arrow right" for="slide2">&#10095;</label>
+
+    <label for="slide1" class="arrow left">&#10094;</label>
+    <label for="slide3" class="arrow right">&#10095;</label>
+
+    <label for="slide2" class="arrow left">&#10094;</label>
+    <label for="slide4" class="arrow right">&#10095;</label>
+
+    <label for="slide3" class="arrow left">&#10094;</label>
+    <label for="slide5" class="arrow right">&#10095;</label>
+
+    <label for="slide4" class="arrow left">&#10094;</label>
+    <label for="slide1" class="arrow right">&#10095;</label>
         <div class="controls">
             <label for="slide1" class="control"></label>
             <label for="slide2" class="control"></label>
             <label for="slide3" class="control"></label>
             <label for="slide4" class="control"></label>
             <label for="slide5" class="control"></label>
-
         </div>
     </div>
-
         <hr class="w3-round" style="width:50px;border:5px solid red" ></hr>
-        
       </div>
-      
-
-
       
       <!-- Ubicaion -->
       <div class="w3-container w3-cell-row w3-left w3-padding-64" style="margin-top:75px" id="Ubicaion">
