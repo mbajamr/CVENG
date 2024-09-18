@@ -7,16 +7,65 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-
+<link rel="stylesheet" href="../css/gen3.css">
 <style>
-body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
-body {font-size:16px;}
-.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
-.w3-half img:hover{opacity:1}
 
+:root {
+    --main-bg-color: #f4f4f4;
+    --primary-color: red;
+    --secondary-color: #555;
+    --light-color: white;
+    --dark-color: #333;
+    --border-color: #ddd;
+    --active-color: #333;
+    --hover-bg-color: #555;
+    --arrow-bg: rgba(0, 0, 0, 0.5);
+    --arrow-color: white;
+    --control-color: #000000;
+    --control-active-color: #333;
+    --font-family-heading: "Poppins", sans-serif;
+    --font-family-body: Arial, sans-serif;
+    --default-padding: 10px;
+    --border-radius: 10px;
+    --slide-height: 300px;
+}
 
+.color-red {
+    color: var(--primary-color) !important;
+}
+.content {
+    padding-top: 100px; /* Adjust to match the height of your .topbar */
+    /* Other content styling */
+}
 
-.carousel {
+.topbar {
+    width: 100%;
+    background-color: var(--primary-color);
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: var(--default-padding) 0;
+	position: fixed; /* This makes the menu stick at the top */
+    z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+.carouselA {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+.carouselB {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+.carouselC {
     position: relative;
     width: 80%;
     max-width: 600px;
@@ -58,7 +107,7 @@ body {font-size:16px;}
     width: 10px;
     height: 10px;
     margin: 0 5px;
-    background: #666;
+    background: #000000;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -66,31 +115,6 @@ body {font-size:16px;}
 .control:hover,
 input[type="radio"]:checked + .control {
     background-color: #333; /* Active state */
-}
-
-/* Show the corresponding slide when a radio button is checked */
-#slide1:checked ~ .slides {
-    transform: translateX(0);
-}
-
-#slide2:checked ~ .slides {
-    transform: translateX(-100%);
-}
-
-#slide3:checked ~ .slides {
-    transform: translateX(-200%);
-}
-
-#slide4:checked ~ .slides {
-    transform: translateX(-300%);
-}
-
-#slide5:checked ~ .slides {
-    transform: translateX(-400%);
-}
-
-#slide6:checked ~ .slides {
-    transform: translateX(-500%);
 }
 
 .arrow {
@@ -115,156 +139,375 @@ input[type="radio"]:checked + .control {
     right: 10px;
 }
 
-/* Arrows linked to radio button checks */
-#slide1:checked ~ .arrow.left[for="slide5"],
-#slide2:checked ~ .arrow.left[for="slide1"],
-#slide3:checked ~ .arrow.left[for="slide2"],
-#slide4:checked ~ .arrow.left[for="slide3"],
-#slide5:checked ~ .arrow.left[for="slide4"],
-#slide1:checked ~ .arrow.right[for="slide2"],
-#slide2:checked ~ .arrow.right[for="slide3"],
-#slide3:checked ~ .arrow.right[for="slide4"],
-#slide4:checked ~ .arrow.right[for="slide5"],
-#slide5:checked ~ .arrow.right[for="slide1"] {
-    display: block;
-}
-
 .arrow {
     display: none;
+}
+
+.img-grid {
+    width: 10%;
+    height: auto; /* Ensures aspect ratio is maintained */
+    display: block; /* Removes bottom margin in some browsers */
+}
+#slideA1:checked ~ .slides {
+    transform: translateX(-0%);
+}
+
+#slideA2:checked ~ .slides {
+    transform: translateX(-100%);
+}
+
+#slideA3:checked ~ .slides {
+    transform: translateX(-200%);
+}
+
+#slideA4:checked ~ .slides {
+    transform: translateX(-300%);
+}
+
+#slideA5:checked ~ .slides {
+    transform: translateX(-400%);
+}
+
+/* Arrows linked to radio button checks */
+#slideA1:checked ~ .arrow.left[for="slideA5"],
+#slideA1:checked ~ .arrow.right[for="slideA2"] {
+    display: block;
+}
+#slideA2:checked ~ .arrow.left[for="slideA1"],
+#slideA2:checked ~ .arrow.right[for="slideA3"] {
+    display: block;
+}
+#slideA3:checked ~ .arrow.left[for="slideA2"],
+#slideA3:checked ~ .arrow.right[for="slideA4"] {
+    display: block;
+}
+#slideA4:checked ~ .arrow.left[for="slideA3"],
+#slideA4:checked ~ .arrow.right[for="slideA5"] {
+    display: block;
+}
+#slideA5:checked ~ .arrow.left[for="slideA4"],
+#slideA5:checked ~ .arrow.right[for="slideA1"] {
+    display: block;
+}
+#slideB1:checked ~ .slides {
+    transform: translateX(-0%);
+}
+
+#slideB2:checked ~ .slides {
+    transform: translateX(-100%);
+}
+
+#slideB3:checked ~ .slides {
+    transform: translateX(-200%);
+}
+
+#slideB4:checked ~ .slides {
+    transform: translateX(-300%);
+}
+
+#slideB5:checked ~ .slides {
+    transform: translateX(-400%);
+}
+
+/* Arrows linked to radio button checks */
+#slideB1:checked ~ .arrow.left[for="slideB5"],
+#slideB1:checked ~ .arrow.right[for="slideB2"] {
+    display: block;
+}
+#slideB2:checked ~ .arrow.left[for="slideB1"],
+#slideB2:checked ~ .arrow.right[for="slideB3"] {
+    display: block;
+}
+#slideB3:checked ~ .arrow.left[for="slideB2"],
+#slideB3:checked ~ .arrow.right[for="slideB4"] {
+    display: block;
+}
+#slideB4:checked ~ .arrow.left[for="slideB3"],
+#slideB4:checked ~ .arrow.right[for="slideB5"] {
+    display: block;
+}
+#slideB5:checked ~ .arrow.left[for="slideB4"],
+#slideB5:checked ~ .arrow.right[for="slideB1"] {
+    display: block;
 }
 
 </style>
 </head>
 
 
-<body>
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">VAR_STR_CLOSE_MENU</a>
-  <div class="w3-container">
-    <h3 class="w3-padding-64"><b>EL TULE<br>Comida Oaxaca</b></h3>
+<!-- Navbar -->
+    <div class="topbar">
+        <a href="#Stats" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Stats
+        <div class="menu-item" title="Dashboard">
+            <i class="fas fa-tachometer-alt">
+				<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+				  <!-- Outer circle -->
+				  <circle cx="30" cy="30" r="28" stroke="black" stroke-width="2" fill="lightblue" />
+
+				  <!-- Inner shape (triangle) -->
+				  <polygon points="30,10 40,40 20,40" fill="white" />
+
+				  <!-- Center dot -->
+				  <circle cx="30" cy="30" r="4" fill="black" />
+				</svg>
+			</i>
+        </div>
+        </a>
+        <a href="#Horario" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Horario
+        <div class="menu-item" title="Services">
+            <i class="fas fa-cloud">
+				<!-- 1. Clock with Hands Pointing to 5 PM -->
+				<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+				  <!-- Clock face -->
+				  <circle cx="30" cy="30" r="28" stroke="black" stroke-width="6" fill="white" />
+				  
+				  <!-- Hour hand (pointing at 5) -->
+				  <line x1="30" y1="30" x2="45" y2="40" stroke="black" stroke-width="6" />
+
+				  <!-- Minute hand (pointing at 12) -->
+				  <line x1="30" y1="30" x2="30" y2="10" stroke="black" stroke-width="6" />
+
+				  <!-- Center dot -->
+				  <circle cx="30" cy="30" r="2" fill="black" />
+				</svg>
+			</i>
+        </div>
+        </a>
+        <a href="#Contacto" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Contacto
+        <div class="menu-item" title="Storage">
+            <i class="fas fa-database">
+				<!-- 2. Magnifying Glass: -->
+				<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+				  <!-- Glass circle -->
+				  <circle cx="25" cy="25" r="15" stroke="black" stroke-width="5" fill="none" />
+				  
+				  <!-- Handle -->
+				  <line x1="34" y1="34" x2="50" y2="50" stroke="black" stroke-width="6" />
+				</svg>
+			</i>
+        </div>
+        </a>
+        <a href="#Ubicaion" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Ubicaion
+        <div class="menu-item" title="Security">
+            <i class="fas fa-shield-alt">
+				<!-- 3. Location Bubble (Map Pin): -->
+					<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+					  <!-- Circle for the top part of the pin -->
+					  <circle cx="30" cy="20" r="12" stroke="black" stroke-width="2" fill="lightblue" />
+
+					  <!-- Triangle for the bottom (cone) part of the pin -->
+					  <polygon points="30,32 40,52 20,52" fill="lightblue" stroke="black" stroke-width="2" transform="rotate(180, 30, 42)" />
+
+					  <!-- Inner circle to represent the location -->
+					  <circle cx="30" cy="20" r="6" fill="white" />
+					</svg>
+
+			</i>
+        </div>
+        </a>
+        <a href="#Stats" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Stats
+        <div class="menu-item" title="Settings">
+            <i class="fas fa-cog">
+				<!-- 4. Black Circle with Inner Thinner Green/red Circle: -->
+				<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+				  <!-- Outer black circle -->
+				  <circle cx="30" cy="30" r="28" stroke="black" stroke-width="2" fill="black" />
+
+				  <!-- Inner green circle -->
+				  <circle cx="30" cy="30" r="20" stroke="green" stroke-width="2" fill="green" />
+				</svg>
+			</i>
+        </div>
+        </a>
+        <a href="#Menu" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Menu
+        <div class="menu-item" title="Dashboard">
+            <i class="fas fa-tachometer-alt">
+				<!-- 5. Fork and Knife in a Cross: -->
+				<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+				  <!-- Fork -->
+				  <line x1="15" y1="10" x2="30" y2="40" stroke="black" stroke-width="4" />
+				  
+				  <!-- Knife -->
+				  <line x1="45" y1="10" x2="30" y2="40" stroke="black" stroke-width="2" />
+				</svg>
+			</i>
+        </div>
+        </a>
+        <a href="#Fotos" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Fotos
+        <div class="menu-item" title="Services">
+            <i class="fas fa-cloud">
+				<!-- 5. Camera: -->
+				<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+				  <!-- Camera body -->
+				  <rect x="10" y="20" width="40" height="30" stroke="black" stroke-width="2" fill="gray" />
+
+				  <!-- Lens -->
+				  <circle cx="30" cy="35" r="10" stroke="black" stroke-width="2" fill="white" />
+
+				  <!-- Flash -->
+				  <rect x="40" y="10" width="10" height="10" fill="black" />
+				</svg>
+			</i>
+        </div>
+        </a>
+        <a href="#Entrega" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Entrega
+        <div class="menu-item" title="Storage">
+            <i class="fas fa-database">
+				<!-- 6. Briefcase: -->
+
+				<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+				  <!-- Body of the briefcase -->
+				  <rect x="10" y="20" width="40" height="25" stroke="black" stroke-width="2" fill="brown" />
+
+				  <!-- Handle -->
+				  <rect x="25" y="10" width="10" height="5" fill="black" />
+				</svg>
+
+			</i>
+        </div>
+        </a>
+        <a href="#Promos" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Promos
+        <div class="menu-item" title="Security">
+            <i class="fas fa-shield-alt">
+				<!-- 7. Gift: -->
+				<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+				  <!-- Box -->
+				  <rect x="10" y="20" width="40" height="30" stroke="black" stroke-width="2" fill="red" />
+				  
+				  <!-- Ribbon horizontal -->
+				  <line x1="10" y1="35" x2="50" y2="35" stroke="white" stroke-width="4" />
+				  
+				  <!-- Ribbon vertical -->
+				  <line x1="30" y1="20" x2="30" y2="50" stroke="white" stroke-width="4" />
+				</svg>
+
+			</i>
+        </div>
+        </a>
+        <a href="#Owner" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Owner
+        <div class="menu-item" title="Settings">
+            <i class="fas fa-cog">
+				<!-- 8. Key: -->
+				<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+				  <!-- Key ring -->
+				  <circle cx="20" cy="30" r="10" stroke="black" stroke-width="2" fill="none" />
+
+				  <!-- Key shaft -->
+				  <rect x="25" y="28" width="20" height="4" fill="black" />
+
+				  <!-- Teeth -->
+				  <rect x="45" y="26" width="4" height="2" fill="black" />
+				  <rect x="45" y="32" width="4" height="2" fill="black" />
+				</svg>
+
+			</i>
+        </div>
+        </a>
+    </div>
+
+
+<!-- Header -->
+<header class="w3-container  w3-center" style="padding:32px 16px">
+  <div class="content color-red">
+  <h1 class="w3-margin w3-jumbo">EL TULE</h1>
+  <p class="w3-xlarge">Comida Oaxaca</p>
+  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>
   </div>
 
-  <div class="w3-bar-block">
-    <a href="#EL TULE" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">EL TULE</a> 
-    <a href="#Status" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Status</a>  
-    <a href="#Ubicaion" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Ubicaion</a>  
-    <a href="#Servicios o Menu" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Servicios o Menu</a>  
-    <a href="#Horario" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Horario</a> 
-	<a href="#Contacto" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contacto</a> 
-    <a href="#Fotos" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Fotos</a>  
-	<a href="#Feedback" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Feedback</a>  
-	<a href="#Servicio a domicilio" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Servicio a domicilio</a>  
-	<a href="#Promos" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Promos</a>  
-	<a href="#Owner" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Owner</a>  
-  </div>
-</nav>
+</header>
+
+
 
 <!-- Top menu on small screens -->
-<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
-  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+<header class="w3-container w3-top w3-hide-large color-red w3-xlarge w3-padding">
+  <a href="" class="w3-button color-red w3-margin-right" >☰</a>
   <span>VAR_STR_COMPANY_NAME</span>
 </header>
 
 <!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<div class="w3-overlay w3-hide-large"  style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:340px;margin-right:40px">
 
-  <!-- Header -->
-  <div class="w3-container" style="margin-top:80px" id=EL TULE>
-    <h1 class="w3-jumbo"><b>EL TULE</b></h1>
-    <h1 class="w3-xxxlarge w3-text-red"><b>Comida Oaxaca</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-  </div>
 
-  <!-- Modal for full size images on click-->
-  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image">
-      <p id="caption"></p>
-    </div>
-  </div>
-  
-      <!-- Status -->
-
-          <!-- Status -->
-      <div class="w3-container w3-cell-row w3-left w3-padding-64" style="margin-top:75px" id="Status">
-        <h1 class="w3-xxxlarge w3-text-red" style="margin-top:75px" ><b>Status</b></h1>
-
-    <div class="carousel" id="Status">
-        <input type="radio" name="carousel" id="slide1" checked>
-        <input type="radio" name="carousel" id="slide2">
-        <input type="radio" name="carousel" id="slide3">
-        <input type="radio" name="carousel" id="slide4">
-        <input type="radio" name="carousel" id="slide5">
-        
-        <div class="slides">
-            <div class="slide" id="s1">
-                <img class="img-fluid" src="../img/store01a.jpg" alt="">
-            </div>
-            <div class="slide" id="s2">
-                <img class="img-fluid" src="../img/store01b.jpg" alt="">
-            </div>
-            <div class="slide" id="s3">
-                <img class="img-fluid" src="../img/store01c.jpg" alt="">
-            </div>
-            <div class="slide" id="s4">
-                <img class="img-fluid" src="../img/store01d.jpg" alt="">
-            </div>
-            <div class="slide" id="s5">
-                <img class="img-fluid" src="../img/store01e.jpg" alt="">
-            </div>
-        </div>
-    <!-- Left and Right Arrows -->
-    <label for="slide5" class="arrow left">&#10094;</label>
-    <label for="slide2" class="arrow right" for="slide2">&#10095;</label>
-
-    <label for="slide1" class="arrow left">&#10094;</label>
-    <label for="slide3" class="arrow right">&#10095;</label>
-
-    <label for="slide2" class="arrow left">&#10094;</label>
-    <label for="slide4" class="arrow right">&#10095;</label>
-
-    <label for="slide3" class="arrow left">&#10094;</label>
-    <label for="slide5" class="arrow right">&#10095;</label>
-
-    <label for="slide4" class="arrow left">&#10094;</label>
-    <label for="slide1" class="arrow right">&#10095;</label>
-        <div class="controls">
-            <label for="slide1" class="control"></label>
-            <label for="slide2" class="control"></label>
-            <label for="slide3" class="control"></label>
-            <label for="slide4" class="control"></label>
-            <label for="slide5" class="control"></label>
-        </div>
-    </div>
+      <!-- Stats -->
+      <div class="w3-container w3-cell-row w3-left w3-padding-64" style="margin-top:75px" id="Stats">
+        <h1 class="w3-xxxlarge w3-text-red" style="margin-top:75px" ><b>Stats</b></h1>
         <hr class="w3-round" style="width:50px;border:5px solid red" ></hr>
+        Open
       </div>
-      
+    
       <!-- Ubicaion -->
       <div class="w3-container w3-cell-row w3-left w3-padding-64" style="margin-top:75px" id="Ubicaion">
         <h1 class="w3-xxxlarge w3-text-red" style="margin-top:75px" ><b>Ubicaion</b></h1>
         <hr class="w3-round" style="width:50px;border:5px solid red" ></hr>
-        Descripcion de la jajajaja
+        Descripcion de la Ubicacion
       </div>
     
-      <!-- Servicios o Menu -->
-      <div class="w3-container w3-cell-row w3-left w3-padding-64" style="margin-top:75px" id="Servicios o Menu">
-        <h1 class="w3-xxxlarge w3-text-red" style="margin-top:75px" ><b>Servicios o Menu</b></h1>
+      <!-- Menu -->
+
+          <!-- Menu -->
+      <div class="w3-container w3-cell-row w3-left w3-padding-64" style="margin-top:75px" id="Menu">
+        <h1 class="w3-xxxlarge w3-text-red" style="margin-top:75px" ><b>Menu</b></h1>
+
+    <div class="carouselB" id="Menu">
+        <input type="radio" name="carouselB" id="slideB1" checked>
+        <input type="radio" name="carouselB" id="slideB2">
+        <input type="radio" name="carouselB" id="slideB3">
+        <input type="radio" name="carouselB" id="slideB4">
+        <input type="radio" name="carouselB" id="slideB5">
+        
+        <div class="slides">
+            <div class="slide" id="s1b">
+                <img class="img-fluid" src="../img/store01m01.jpg" alt="">
+            </div>
+            <div class="slide" id="s2b">
+                <img class="img-fluid" src="../img/store01m02.jpg" alt="">
+            </div>
+            <div class="slide" id="s3b">
+                <img class="img-fluid" src="../img/store01m03.jpg" alt="">
+            </div>
+            <div class="slide" id="s4b">
+                <img class="img-fluid" src="../img/store01f.jpg" alt="">
+            </div>
+            <div class="slide" id="s5b">
+                <img class="img-fluid" src="../img/store01m02.jpg" alt="">
+            </div>
+        </div>
+    <!-- Left and Right Arrows -->
+    <label for="slideB5" class="arrow left">&#10094;</label>
+    <label for="slideB2" class="arrow right" for="slide2">&#10095;</label>
+
+    <label for="slideB1" class="arrow left">&#10094;</label>
+    <label for="slideB3" class="arrow right">&#10095;</label>
+
+    <label for="slideB2" class="arrow left">&#10094;</label>
+    <label for="slideB4" class="arrow right">&#10095;</label>
+
+    <label for="slideB3" class="arrow left">&#10094;</label>
+    <label for="slideB5" class="arrow right">&#10095;</label>
+
+    <label for="slideB4" class="arrow left">&#10094;</label>
+    <label for="slideB1" class="arrow right">&#10095;</label>
+        <div class="controls">
+            <label for="slideB1" class="control"></label>
+            <label for="slideB2" class="control"></label>
+            <label for="slideB3" class="control"></label>
+            <label for="slideB4" class="control"></label>
+            <label for="slideB5" class="control"></label>
+        </div>
+    </div>
         <hr class="w3-round" style="width:50px;border:5px solid red" ></hr>
-        Descripcion de los Servicios o Menu
       </div>
-      
+    
       <!-- Horario -->
       <div class="w3-container w3-cell-row w3-left w3-padding-64" style="margin-top:75px" id="Horario">
         <h1 class="w3-xxxlarge w3-text-red" style="margin-top:75px" ><b>Horario</b></h1>
         <hr class="w3-round" style="width:50px;border:5px solid red" ></hr>
         Horario L-V 9am-9pm
       </div>
-      
+    
       <!-- Contacto -->
       <div class="w3-container w3-cell-row w3-left w3-padding-64" style="margin-top:75px" id="Contacto">
         <h1 class="w3-xxxlarge w3-text-red" style="margin-top:75px" ><b>Contacto</b></h1>
@@ -273,10 +516,59 @@ input[type="radio"]:checked + .control {
       </div>
     
       <!-- Fotos -->
+
+          <!-- Fotos -->
       <div class="w3-container w3-cell-row w3-left w3-padding-64" style="margin-top:75px" id="Fotos">
         <h1 class="w3-xxxlarge w3-text-red" style="margin-top:75px" ><b>Fotos</b></h1>
+
+    <div class="carouselA" id="Fotos">
+        <input type="radio" name="carouselA" id="slideA1" checked>
+        <input type="radio" name="carouselA" id="slideA2">
+        <input type="radio" name="carouselA" id="slideA3">
+        <input type="radio" name="carouselA" id="slideA4">
+        <input type="radio" name="carouselA" id="slideA5">
+        
+        <div class="slides">
+            <div class="slide" id="s1A">
+                <img class="img-fluid" src="../img/store01f01.jpg" alt="">
+            </div>
+            <div class="slide" id="s2A">
+                <img class="img-fluid" src="../img/store01f02.jpg" alt="">
+            </div>
+            <div class="slide" id="s3A">
+                <img class="img-fluid" src="../img/store01f03.jpg" alt="">
+            </div>
+            <div class="slide" id="s4A">
+                <img class="img-fluid" src="../img/store01f04.jpg" alt="">
+            </div>
+            <div class="slide" id="s5A">
+                <img class="img-fluid" src="../img/store01f05.jpg" alt="">
+            </div>
+        </div>
+    <!-- Left and Right Arrows -->
+    <label for="slideA5" class="arrow left">&#10094;</label>
+    <label for="slideA2" class="arrow right" for="slide2">&#10095;</label>
+
+    <label for="slideA1" class="arrow left">&#10094;</label>
+    <label for="slideA3" class="arrow right">&#10095;</label>
+
+    <label for="slideA2" class="arrow left">&#10094;</label>
+    <label for="slideA4" class="arrow right">&#10095;</label>
+
+    <label for="slideA3" class="arrow left">&#10094;</label>
+    <label for="slideA5" class="arrow right">&#10095;</label>
+
+    <label for="slideA4" class="arrow left">&#10094;</label>
+    <label for="slideA1" class="arrow right">&#10095;</label>
+        <div class="controls">
+            <label for="slideA1" class="control"></label>
+            <label for="slideA2" class="control"></label>
+            <label for="slideA3" class="control"></label>
+            <label for="slideA4" class="control"></label>
+            <label for="slideA5" class="control"></label>
+        </div>
+    </div>
         <hr class="w3-round" style="width:50px;border:5px solid red" ></hr>
-        Fotos desc
       </div>
     
       <!-- Feedback -->
@@ -286,9 +578,9 @@ input[type="radio"]:checked + .control {
         Feedback desc
       </div>
     
-      <!-- Servicio a domicilio -->
-      <div class="w3-container w3-cell-row w3-left w3-padding-64" style="margin-top:75px" id="Servicio a domicilio">
-        <h1 class="w3-xxxlarge w3-text-red" style="margin-top:75px" ><b>Servicio a domicilio</b></h1>
+      <!-- Entrega -->
+      <div class="w3-container w3-cell-row w3-left w3-padding-64" style="margin-top:75px" id="Entrega">
+        <h1 class="w3-xxxlarge w3-text-red" style="margin-top:75px" ><b>Entrega</b></h1>
         <hr class="w3-round" style="width:50px;border:5px solid red" ></hr>
         Servicio a domicilio desc
       </div>
