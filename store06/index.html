@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Grid</title>
+    <style>
+
+        table {
+            border-collapse: collapse;
+            width: 50%; /* Set desired width */
+            margin: auto; /* Center the table */
+        }
+        td {
+            border: none; /* No border */
+            text-align: center; /* Center text */
+            font-size: 1em; /* Font size increased */
+            font-weight: bold; /* Make text bold */
+        }
+        /* Container for the grid */
+        .grid-container {
+            display: grid; /* Enables grid layout */
+            grid-template-columns: repeat(5, 1fr); /* Creates 5 equal columns */
+            gap: 10px; /* Space between grid items */
+            padding: 20px; /* Padding around the grid */
+        }
+
+        /* Style for each grid item */
+        .grid-item {
+            overflow: hidden; /* Hides overflow content */
+            border-radius: 10px; /* Rounded corners for items */
+            cursor: pointer; /* Changes cursor to pointer on hover */
+        }
+
+        .grid-container2 {
+            display: grid; /* Enables grid layout */
+            grid-template-columns: repeat(5, 1fr); /* Creates 5 equal columns */
+            gap: 10px; /* Space between grid items */
+            padding: 20px; /* Padding around the grid */
+        }
+
+        /* Style for each grid item */
+        .grid-item2 {
+            overflow: hidden; /* Hides overflow content */
+            border-radius: 10px; /* Rounded corners for items */
+            cursor: pointer; /* Changes cursor to pointer on hover */
+        }
+
+        /* Style for the images within the grid items */
+        .grid-item img {
+            width: 100%; /* Makes image responsive to container size */
+            height: auto; /* Maintains aspect ratio of images */
+            display: block; /* Removes bottom space/gap in images */
+            border-radius: 10px; /* Rounded corners for images */
+        }
+
+        .grid-item2 img {
+            width: 100%; /* Makes image responsive to container size */
+            height: auto; /* Maintains aspect ratio of images */
+            display: block; /* Removes bottom space/gap in images */
+            border-radius: 10px; /* Rounded corners for images */
+        }
+
+        /* Style for sections at the bottom */
+        .info-section {
+            display: flex; /* Flexbox layout for icons and text */
+            align-items: center; /* Centers items vertically */
+            margin: 20px 0; /* Margin around sections */
+            padding: 10px;
+            border: 1px solid #ccc; /* Border for sections */
+            border-radius: 10px; /* Rounded corners for sections */
+        }
+
+        .info-section img {
+            width: 50px; /* Size of the left icon */
+            height: auto;
+            margin-right: 20px; /* Space between icon and text */
+        }
+
+        .back-to-top {
+            margin-left: auto; /* Pushes back button to the right */
+            cursor: pointer; /* Changes cursor to pointer on hover */
+        }
+
+        .back-to-top img {
+            width: 30px; /* Size of back icon */
+            height: auto;
+        }
+
+        /* Responsive adjustments for mobile screens */
+        @media (max-width: 600px) {
+            .grid-container {
+                grid-template-columns: repeat(3, 1fr); /* Adjusts to 3 columns on small screens */
+            }
+            .grid-item:nth-child(1),
+            .grid-item:nth-child(5),
+            .grid-item:nth-child(6),
+            .grid-item:nth-child(10),
+            .grid-item:nth-child(11),
+            .grid-item:nth-child(15),
+            .grid-item:nth-child(16),
+            .grid-item:nth-child(20),
+            .grid-item:nth-child(21),
+            .grid-item:nth-child(25) {
+                display: none; /* Hides specified cells on mobile */
+            }
+        }
+        @media (max-width: 600px) {
+            .grid-container2 {
+                grid-template-columns: repeat(3, 1fr); /* Adjusts to 3 columns on small screens */
+            }
+            .grid-item2:nth-child(1),
+            .grid-item2:nth-child(5) {
+                display: none; /* Hides specified cells on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Each grid item contains an image -->
+    <div class="grid-container"> 
+        <div class="grid-item" onclick="scrollToSection('none')"><img src="white_small.png" alt="Image 1"></div>
+        <div class="grid-item" onclick="scrollToSection('none')"><img src="MiLocal.png" alt="Image 2"></div>
+        <div class="grid-item" onclick="scrollToSection('none')"><img src="white_small.png" alt="Image 3"></div>
+        <div class="grid-item" onclick="scrollToSection('none')"><img src="white_back.png" alt="Image 4"></div>
+        <div class="grid-item" onclick="scrollToSection('none')"><img src="white_small.png" alt="Image 5"></div>
+    </div>
+    <!-- MAIN TITLE -->
+    <table style="border-collapse: collapse; width: 50%; margin: auto;">
+        <tr>
+            <td style="border: none; text-align: center; font-size: 2em; font-weight: bold;">El Tule - Arte y Sabor de Oaxaca</td> <!-- Font size increased and made bold -->
+        </tr>
+    </table>
+    <!-- THREE BALS -->
+    <div class="grid-container2">
+        <!-- Each grid item contains an image -->
+        <div class="grid-item2" onclick="scrollToSection('none')"><img src="white.png" alt="Image 1"></div>
+        <div class="grid-item2" onclick="scrollToSection('none')"><img src="a1_logo.png" alt="Image 2"></div>
+        <div class="grid-item2" onclick="scrollToSection('none')"><img src="a2_category.png" alt="Image 3"></div>
+        <div class="grid-item2" onclick="scrollToSection('c1')"><img src="a3_status.png" alt="Image 4"></div>
+        <div class="grid-item2" onclick="scrollToSection('none')"><img src="white.png" alt="Image 5"></div>
+    </div>
+    <!-- CATEGORY -->
+    <table>
+        <tr>
+            <td>Restaurante / Comida Mexicana</td> <!-- Centered text -->
+        </tr>
+    </table>
+    <!-- ICONS -->
+<div class="grid-container">
+    <!-- Each grid item contains an image -->
+    <div class="grid-item" onclick="scrollToSection('none')"><img src="white.png" alt="Image 6"></div>
+    <div class="grid-item" onclick="scrollToSection('b1')"><img src="b1_news.png" alt="Image 7"></div>
+    <div class="grid-item" onclick="scrollToSection('b2')"><img src="b2_sp.png" alt="Image 8"></div>
+    <div class="grid-item" onclick="scrollToSection('b3')"><img src="b3_contacto.png" alt="Image 9"></div>
+    <div class="grid-item" onclick="scrollToSection('none')"><img src="white.png" alt "Image 10"></div>
+    <div class="grid-item" onclick="scrollToSection('none')"><img src="white.png" alt "Image 11"></div>
+    <div class="grid-item" onclick="scrollToSection('c1')"><img src="c1_horario.png" alt "Image 12"></div>
+    <div class="grid-item" onclick="scrollToSection('c2')"><img src="c2_fotos.png" alt "Image 13"></div>
+    <div class="grid-item" onclick="scrollToSection('c3')"><img src="c3_ubicacion.png" alt "Image 14"></div>
+    <div class="grid-item" onclick="scrollToSection('none')"><img src="white.png" alt "Image 15"></div>
+    <div class="grid-item" onclick="scrollToSection('none')"><img src="white.png" alt "Image 16"></div>
+    <div class="grid-item" onclick="scrollToSection('d1')"><img src="d1_bolsa.png" alt "Image 17"></div>
+    <div class="grid-item" onclick="scrollToSection('d2')"><img src="d2_promo.png" alt "Image 18"></div>
+    <div class="grid-item" onclick="scrollToSection('d3')"><img src="d3_admin.png" alt "Image 19"></div>
+    <div class="grid-item" onclick="scrollToSection('none')"><img src="white.png" alt "Image 20"></div>
+    <div class="grid-item" onclick="scrollToSection('none')"><img src="white.png" alt "Image 21"></div>
+    <div class="grid-item" onclick="scrollToSection('none')"><img src="white.png" alt "Image 22"></div>
+    <div class="grid-item" onclick="scrollToSection('none')"><img src="white.png" alt "Image 23"></div>
+    <div class="grid-item" onclick="scrollToSection('none')"><img src="white.png" alt "Image 24"></div>
+    <div class="grid-item" onclick="scrollToSection('none')"><img src="white.png" alt "Image 25"></div>
+</div>
+
+<!-- Sections at the bottom -->
+<div id='sections'>
+    <!-- Example section -->
+    <script type='text/javascript'>
+      function scrollToTop() {
+          window.scrollTo({ top:0, behavior:'smooth' });
+      }
+      function scrollToSection(sectionId) {
+          const section = document.getElementById(sectionId);
+          if (section) {
+              section.scrollIntoView({ behavior: 'smooth' });
+          }
+      }
+   </script>
+
+
+   <!-- Create sections dynamically -->
+   <div id='b1' class='info-section'>
+       <img src='b1_news.png' alt='Icon ${i}'>
+       <p>Noticias</p> 
+       <span class='back-to-top' onclick='scrollToTop()'>
+           <img src='z_backtop.png' alt='Back to Top'>
+       </span>
+   </div> 
+   <div id='b1' class='info-section'>
+    <img src='white.png' alt='Icon ${i}'>
+    <p>Cuerpo de Noticias <br> Esto es una prueba. <br> 
+        Linea 2. <br> 
+        Final.</p> 
+    <img src='white.png' alt='Icon ${i}'>
+   </div> 
+   <!-- Create sections dynamically -->
+   <div id='b2' class='info-section'>
+    <img src='b2_sp.png' alt='Icon ${i}'>
+    <p>Servicios</p> 
+    <span class='back-to-top' onclick='scrollToTop()'>
+        <img src='z_backtop.png' alt='Back to Top'>
+    </span> 
+    </div>
+   <!-- Create sections dynamically -->
+   <div id='b3' class='info-section'>
+    <img src='b3_contacto.png' alt='Icon ${i}'>
+    <p>Contacto</p> 
+    <span class='back-to-top' onclick='scrollToTop()'>
+        <img src='z_backtop.png' alt='Back to Top'>
+    </span> 
+    </div> 
+   <!-- Create sections dynamically -->
+   <div id='c1' class='info-section'>
+    <img src='c1_horario.png' alt='Icon ${i}'>
+    <p>Horario</p> 
+    <span class='back-to-top' onclick='scrollToTop()'>
+        <img src='z_backtop.png' alt='Back to Top'>
+    </span> 
+    </div>
+   <!-- Create sections dynamically -->
+   <div id='c2' class='info-section'>
+    <img src='c2_fotos.png' alt='Icon ${i}'>
+    <p>Fotos</p> 
+    <span class='back-to-top' onclick='scrollToTop()'>
+        <img src='z_backtop.png' alt='Back to Top'>
+    </span> 
+    </div>
+   <!-- Create sections dynamically -->
+   <div id='c3' class='info-section'>
+    <img src='c3_ubicacion.png' alt='Icon ${i}'>
+    <p>Ubicacion</p> 
+    <span class='back-to-top' onclick='scrollToTop()'>
+        <img src='z_backtop.png' alt='Back to Top'>
+    </span> 
+    </div>
+   <!-- Create sections dynamically -->
+   <div id='d1' class='info-section'>
+    <img src='d1_bolsa.png' alt='Icon ${i}'>
+    <p>Bolsa de Trabajo</p> 
+    <span class='back-to-top' onclick='scrollToTop()'>
+        <img src='z_backtop.png' alt='Back to Top'>
+    </span> 
+    </div>
+   <!-- Create sections dynamically -->
+   <div id='d2' class='info-section'>
+    <img src='d2_promo.png' alt='Icon ${i}'>
+    <p>Promos</p> 
+    <span class='back-to-top' onclick='scrollToTop()'>
+        <img src='z_backtop.png' alt='Back to Top'>
+    </span> 
+    </div>
+   <!-- Create sections dynamically -->
+   <div id='d3' class='info-section'>
+    <img src='d3_admin.png' alt='Icon ${i}'>
+    <p>Admin</p> 
+    <span class='back-to-top' onclick='scrollToTop()'>
+        <img src='z_backtop.png' alt='Back to Top'>
+    </span> 
+    </div>
+</body>
+</html>
