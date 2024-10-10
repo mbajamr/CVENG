@@ -1,0 +1,636 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id='title'>EL TULE</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<style>
+
+:root {
+    --main-bg-color: #f4f4f4;
+    --primary-color: blue;
+    --secondary-color: #555;
+    --light-color: white;
+    --dark-color: #333;
+    --border-color: #ddd;
+    --background-color: #ddd;
+    --slide-background-color: #eee;
+    --control-background-color: #ffffff;
+    --active-color: #333;
+    --hover-bg-color: pink;
+    --hover-str-bg-color: grey;
+    --arrow-bg: rgba(0, 0, 0, 0.5);
+    --arrow-color: white;
+    --control-color: #000000;
+    --control-active-color: #333;
+    --font-family-heading: "Poppins", sans-serif;
+    --font-family-body: Arial, sans-serif;
+    --default-padding: 10px;
+    --border-radius: 10px;
+    --slide-height: 300px;
+}
+
+.carousel {
+    position: center; /* No direct Bootstrap utility */
+    overflow: hidden;   /* No direct Bootstrap utility */
+    width: 60%;         /* Optional if Bootstrap w-75 is too small */
+    max-width: 400px;   /* Optional if you need exact control */
+}
+
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%; /* No direct Bootstrap class */
+    box-sizing: border-box; /* This is common in many setups */
+    background: var(--slide-background-color); /* Custom color variable */
+    height: 300px; /* Custom height */
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto; /* Ensures aspect ratio is maintained */
+    display: block; /* Removes bottom margin in some browsers */
+}
+
+.img-fluid.custom-style {
+    border-radius: 20px; /* Example customization */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: box-shadow 0.3s ease, border 0.3s ease; /* Smooth transition */
+}
+
+.img-fluid.custom-style:hover {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+    border: 2px solid rgba(0, 0, 0, 0.1); /* Subtle border on hover */
+}
+
+.controls {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.control {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background: var(--control-background-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.control:hover,
+input[type="radio"]:checked + .control {
+    background-color: var(--hover-bg-color); /* Active state */
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.left {
+    left: 10px;
+}
+
+.right {
+    right: 10px;
+}
+
+.arrow {
+    display: none;
+}
+
+.img-grid {
+    width: 10%;
+    height: auto; /* Ensures aspect ratio is maintained */
+    display: block; /* Removes bottom margin in some browsers */
+}
+#slideA1:checked ~ .slides {
+    transform: translateX(-0%);
+}
+
+#slideA2:checked ~ .slides {
+    transform: translateX(-100%);
+}
+
+#slideA3:checked ~ .slides {
+    transform: translateX(-200%);
+}
+
+#slideA4:checked ~ .slides {
+    transform: translateX(-300%);
+}
+
+#slideA5:checked ~ .slides {
+    transform: translateX(-400%);
+}
+
+/* Arrows linked to radio button checks */
+#slideA1:checked ~ .arrow.left[for="slideA5"],
+#slideA1:checked ~ .arrow.right[for="slideA2"] {
+    display: block;
+}
+#slideA2:checked ~ .arrow.left[for="slideA1"],
+#slideA2:checked ~ .arrow.right[for="slideA3"] {
+    display: block;
+}
+#slideA3:checked ~ .arrow.left[for="slideA2"],
+#slideA3:checked ~ .arrow.right[for="slideA4"] {
+    display: block;
+}
+#slideA4:checked ~ .arrow.left[for="slideA3"],
+#slideA4:checked ~ .arrow.right[for="slideA5"] {
+    display: block;
+}
+#slideA5:checked ~ .arrow.left[for="slideA4"],
+#slideA5:checked ~ .arrow.right[for="slideA1"] {
+    display: block;
+}
+
+#slideB1:checked ~ .slides {
+    transform: translateX(-0%);
+}
+
+#slideB2:checked ~ .slides {
+    transform: translateX(-100%);
+}
+
+#slideB3:checked ~ .slides {
+    transform: translateX(-200%);
+}
+
+#slideB4:checked ~ .slides {
+    transform: translateX(-300%);
+}
+
+#slideB5:checked ~ .slides {
+    transform: translateX(-400%);
+}
+
+/* Arrows linked to radio button checks */
+#slideB1:checked ~ .arrow.left[for="slideB5"],
+#slideB1:checked ~ .arrow.right[for="slideB2"] {
+    display: block;
+}
+#slideB2:checked ~ .arrow.left[for="slideB1"],
+#slideB2:checked ~ .arrow.right[for="slideB3"] {
+    display: block;
+}
+#slideB3:checked ~ .arrow.left[for="slideB2"],
+#slideB3:checked ~ .arrow.right[for="slideB4"] {
+    display: block;
+}
+#slideB4:checked ~ .arrow.left[for="slideB3"],
+#slideB4:checked ~ .arrow.right[for="slideB5"] {
+    display: block;
+}
+#slideB5:checked ~ .arrow.left[for="slideB4"],
+#slideB5:checked ~ .arrow.right[for="slideB1"] {
+    display: block;
+}
+
+#slideC1:checked ~ .slides {
+    transform: translateX(-0%);
+}
+
+#slideC2:checked ~ .slides {
+    transform: translateX(-100%);
+}
+
+#slideC3:checked ~ .slides {
+    transform: translateX(-200%);
+}
+
+#slideC4:checked ~ .slides {
+    transform: translateX(-300%);
+}
+
+#slideC5:checked ~ .slides {
+    transform: translateX(-400%);
+}
+
+/* Arrows linked to radio button checks */
+#slideC1:checked ~ .arrow.left[for="slideC5"],
+#slideC1:checked ~ .arrow.right[for="slideC2"] {
+    display: block;
+}
+#slideC2:checked ~ .arrow.left[for="slideC1"],
+#slideC2:checked ~ .arrow.right[for="slideC3"] {
+    display: block;
+}
+#slideC3:checked ~ .arrow.left[for="slideC2"],
+#slideC3:checked ~ .arrow.right[for="slideC4"] {
+    display: block;
+}
+#slideC4:checked ~ .arrow.left[for="slideC3"],
+#slideC4:checked ~ .arrow.right[for="slideC5"] {
+    display: block;
+}
+#slideC5:checked ~ .arrow.left[for="slideC4"],
+#slideC5:checked ~ .arrow.right[for="slideC1"] {
+    display: block;
+}
+
+</style>
+
+    <!-- Each grid item contains an image -->
+    <div class="row justify-content-center">
+        <div class="col-4 d-flex justify-content-center" onclick="scrollToSection('none')">
+            <img src="../img2/MiLocal.svg" alt="Image 2">
+        </div>
+    </div>
+
+    <!-- MAIN TITLE -->
+    <table class="table table-bordered table-striped" style="border-collapse: collapse; width: 50%; margin: auto;">
+        <tbody><tr>
+            <td style="border: none; text-align: center; font-size: 2em; font-weight: bold;">El Tule - Arte y Sabor de Oaxaca</td> <!-- Font size increased and made bold -->
+        </tr>
+    </tbody></table>
+
+    <!-- THREE BALS -->
+    <div class="row justify-content-center">
+        <div class="col-4 d-flex justify-content-center px-1">
+            <!-- First item in first row -->
+            <img src="../img2/a1_logo.png" alt="Image 2" class="w-50 mx-auto">
+        </div>
+        <div class="col-4 d-flex justify-content-center px-1">
+            <!-- Second item in first row -->
+            <img src="../img2/a2_category.png" alt="Image 3" class="w-50 mx-auto">
+        </div>
+        <div class="col-4 d-flex justify-content-center px-1">
+            <!-- Third item in first row -->
+            <img src="../img2/a3_status.png" alt="Image 4" class="w-50 mx-auto">
+        </div>
+    </div>
+
+    <!-- CATEGORY -->
+    <h1 id="top" class="text-center" style="font-family: 'Arial Narrow', Arial, sans-serif; font-style: italic; letter-spacing: 1px; font-size: 3rem;">
+        Restaurante \ Comida Mexicana
+    </h1>
+
+    <!-- ICONS -->
+
+    <div class="row justify-content-center">
+        <div class="col-4 d-flex justify-content-end px-1">
+            <!-- First item in first row -->
+            <a href='#Noticias'>
+                <img src='../img2/b1_news.svg' alt="Image 7"></img>
+            </a>
+        </div>
+        <div class="col-4 d-flex justify-content-center px-1">
+            <!-- Second item in first row -->
+            <a href='#Fotos'>
+                <img src='../img2/c2_fotos.svg' alt="Image 8"></img>
+            </a>
+        </div>
+        <div class="col-4 d-flex justify-content-start px-1">
+            <!-- Third item in first row -->
+            <a href='#Contacto'>
+                <img src='../img2/b3_contacto.svg' alt="Image 9"></img>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 d-flex justify-content-end px-1">
+            <!-- First item in second row -->
+            <a href='#Horario'>
+                <img src='../img2/c1_horario.svg' alt="" "image="" 12"=""></img>
+            </a>
+        </div>
+        <div class="col-4 d-flex justify-content-center px-1">
+            <!-- Second item in second row -->
+            <a href='#Servicios o Menu'>
+                <img src='../img2/b2_sp.svg' alt="" "image="" 13"=""></img>
+            </a>
+        </div>
+        <div class="col-4 d-flex justify-content-start px-1">
+            <!-- Third item in second row -->
+            <a href='#Ubicacion'>
+                <img src='../img2/c3_ubicacion.svg' alt="" "image="" 14"=""></img>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 d-flex justify-content-end px-1">
+            <!-- First item in third row -->
+            <a href='#Feedback'>
+                <img src='../img2/d1_bolsa.svg' alt="" "image="" 17"=""></img>
+            </a>
+        </div>
+        <div class="col-4 d-flex justify-content-center px-1">
+            <!-- Second item in third row -->
+            <a href='#Promos'>
+                <img src='../img2/d2_promo.svg' alt="" "image="" 18"=""></img>
+            </a>
+        </div>
+        <div class="col-4 d-flex justify-content-start px-1">
+            <!-- Third item in third row -->
+            <a href='#Owner'>
+                <img src='../img2/d3_admin.svg' alt="" "image="" 19"=""></img>
+            </a>
+        </div>
+    </div>
+
+            <div id='Noticias' class='d-flex align-items-center my-4 mx-3 py-2 px-3 border border-secondary rounded-3'>
+                <div class='col-4 '>
+                    <img src='../img2/b1_news.svg' style='width: 60px; height: 60px' alt='Icon' class='img-fluid'>
+                </div>
+                <div class='col-4  text-start'>Noticias</div>
+                <div class='col-4  d-flex justify-content-end px-1'>
+                    <!-- Third item in third row -->
+                    <a href='#top'><img class='img-fluid float-end' src='../img2/z_backtop.svg' style='width: 30px; height: 30px; cursor: pointer;'></a>
+                </div>
+            </div>
+        
+            <div id='Ubicacion' class='d-flex align-items-center my-4 mx-3 py-2 px-3 border border-secondary rounded-3'>
+                <div class='col-4 '>
+                    <img src='../img2/b1_news.svg' style='width: 60px; height: 60px' alt='Icon' class='img-fluid'>
+                </div>
+                <div class='col-4  text-start'>Ubicacion</div>
+                <div class='col-4  d-flex justify-content-end px-1'>
+                    <!-- Third item in third row -->
+                    <a href='#top'><img class='img-fluid float-end' src='../img2/z_backtop.svg' style='width: 30px; height: 30px; cursor: pointer;'></a>
+                </div>
+            </div>
+        
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leaflet Basic Example</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <style>
+    #map { height: 500px; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script>
+    var map = L.map('map').setView([40.730610, -73.935242], 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+    }).addTo(map);
+
+    var marker = L.marker([40.730610, -73.935242]).addTo(map)
+      .bindPopup('New York City')
+      .openPopup();
+  </script>
+</body>
+</html>
+
+
+            <div id='Servicios o Menu' class='d-flex align-items-center my-4 mx-3 py-2 px-3 border border-secondary rounded-3'>
+                <div class='col-4 '>
+                    <img src='../img2/b1_news.svg' style='width: 60px; height: 60px' alt='Icon' class='img-fluid'>
+                </div>
+                <div class='col-4  text-start'>Servicios o Menu</div>
+                <div class='col-4  d-flex justify-content-end px-1'>
+                    <!-- Third item in third row -->
+                    <a href='#top'><img class='img-fluid float-end' src='../img2/z_backtop.svg' style='width: 30px; height: 30px; cursor: pointer;'></a>
+                </div>
+            </div>
+        
+    <!-- Descripcion de los Servicios o Menu -->
+    <div class="d-flex justify-content-center">
+    <div class="carousel position-relative w-75 mw-100 border border-2 border-secondary rounded" id="Servicios o Menu">
+        <input type="radio" name="carouselA" id="slideB1" checked>
+        <input type="radio" name="carouselA" id="slideB2">
+        <input type="radio" name="carouselA" id="slideB3">
+        <input type="radio" name="carouselA" id="slideB4">
+        <input type="radio" name="carouselA" id="slideB5">
+
+        <div class="slides">
+            <div class="slide d-flex justify-content-center align-items-center" id="s1b">
+                <img class="img-fluid custom-style" src="../img/store01m01.jpg" alt="">
+            </div>
+            <div class="slide d-flex justify-content-center align-items-center" id="s2b">
+                <img class="img-fluid custom-style" src="../img/store01m02.jpg" alt="">
+            </div>
+            <div class="slide d-flex justify-content-center align-items-center" id="s3b">
+                <img class="img-fluid custom-style" src="../img/store01m03.jpg" alt="">
+            </div>
+            <div class="slide d-flex justify-content-center align-items-center" id="s4b">
+                <img class="img-fluid custom-style" src="../img/store01f.jpg" alt="">
+            </div>
+            <div class="slide d-flex justify-content-center align-items-center" id="s5b">
+                <img class="img-fluid custom-style" src="../img/store01m02.jpg" alt="">
+            </div>
+        </div>
+    <!-- Left and Right Arrows -->
+    <label for="slideB5" class="arrow left">&#10094;</label>
+    <label for="slideB2" class="arrow right" for="slide2">&#10095;</label>
+
+    <label for="slideB1" class="arrow left">&#10094;</label>
+    <label for="slideB3" class="arrow right">&#10095;</label>
+
+    <label for="slideB2" class="arrow left">&#10094;</label>
+    <label for="slideB4" class="arrow right">&#10095;</label>
+
+    <label for="slideB3" class="arrow left">&#10094;</label>
+    <label for="slideB5" class="arrow right">&#10095;</label>
+
+    <label for="slideB4" class="arrow left">&#10094;</label>
+    <label for="slideB1" class="arrow right">&#10095;</label>
+        <div class="controls">
+            <label for="slideB1" class="control"></label>
+            <label for="slideB2" class="control"></label>
+            <label for="slideB3" class="control"></label>
+            <label for="slideB4" class="control"></label>
+            <label for="slideB5" class="control"></label>
+        </div>
+    </div>
+    </div>
+
+    
+            <div id='Horario' class='d-flex align-items-center my-4 mx-3 py-2 px-3 border border-secondary rounded-3'>
+                <div class='col-4 '>
+                    <img src='../img2/b1_news.svg' style='width: 60px; height: 60px' alt='Icon' class='img-fluid'>
+                </div>
+                <div class='col-4  text-start'>Horario</div>
+                <div class='col-4  d-flex justify-content-end px-1'>
+                    <!-- Third item in third row -->
+                    <a href='#top'><img class='img-fluid float-end' src='../img2/z_backtop.svg' style='width: 30px; height: 30px; cursor: pointer;'></a>
+                </div>
+            </div>
+        
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Opening Hours</h2>
+    <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Day</th>
+                <th scope="col">Opening Time</th>
+                <th scope="col">Closing Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>05:00 PM</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>08:00 AM</td>
+                <td>05:00 PM</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>08:00 AM</td>
+                <td>05:00 PM</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>08:00 AM</td>
+                <td>05:00 PM</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>08:00 AM</td>
+                <td>05:00 PM</td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>09:00 AM</td>
+                <td>02:00 PM</td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td>Closed</td>
+                <td>Closed</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+            <div id='Contacto' class='d-flex align-items-center my-4 mx-3 py-2 px-3 border border-secondary rounded-3'>
+                <div class='col-4 '>
+                    <img src='../img2/b1_news.svg' style='width: 60px; height: 60px' alt='Icon' class='img-fluid'>
+                </div>
+                <div class='col-4  text-start'>Contacto</div>
+                <div class='col-4  d-flex justify-content-end px-1'>
+                    <!-- Third item in third row -->
+                    <a href='#top'><img class='img-fluid float-end' src='../img2/z_backtop.svg' style='width: 30px; height: 30px; cursor: pointer;'></a>
+                </div>
+            </div>
+        
+<div class="center-1"><div class="page contact-page"><div class="page-body py-3"><div class="topic-block"><div class="topic-block-title"><h2>Contactenos</h2></div><div class="topic-block-body"><p>¡Gracias por ponerte en contacto con nosotros! Estamos emocionados de recibir tus comentarios y preguntas.</p><p>Por favor, completa el siguiente formulario para que podamos ayudarte de la mejor manera posible:</p></div></div><form method="post" action="/contactus" novalidate="novalidate"><div class="fieldset"><div class="form-fields"><div class="inputs"><label for="FullName">Tú nombre:</label> <input placeholder="Escriba su nombre." class="fullname" type="text" data-val="true" data-val-required="Introduzca su nombre" id="FullName" name="FullName"> <span class="required">*</span> <span class="field-validation-valid" data-valmsg-for="FullName" data-valmsg-replace="true"></span></div><div class="inputs"><label for="Email">Tu email:</label> <input placeholder="Introduzca su dirección de correo electrónico." class="email" type="email" data-val="true" data-val-email="Correo electrónico erróneo" data-val-required="Introduzca el correo electrónico" id="Email" name="Email"> <span class="required">*</span> <span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span></div><div class="inputs"><label for="Enquiry">Consulta:</label> <textarea placeholder="Ingrese su consulta." class="enquiry" data-val="true" data-val-required="Ingrese su consulta" id="Enquiry" name="Enquiry"></textarea> <span class="required">*</span> <span class="field-validation-valid" data-valmsg-for="Enquiry" data-valmsg-replace="true"></span></div></div></div><div class="buttons"><button type="submit" name="send-email" class="button-1 contact-us-button">Enviar</button></div><input name="__RequestVerificationToken" type="hidden" value="CfDJ8EdMHkn9JTJAqedob8qlf8A-N2U3FpxRbFhPOJiKbF5d0jDqugR2mIj7gWtZjPnwfauW1KmP8tXo9pI45Jv3xmXOwiGBlXUSwovQgOA3UiNZOLV4WBwdfyxIUumdfEvPJm2Mtu7P0OC01zJh8FzCmr8"></form></div></div></div>
+
+            <div id='Fotos' class='d-flex align-items-center my-4 mx-3 py-2 px-3 border border-secondary rounded-3'>
+                <div class='col-4 '>
+                    <img src='../img2/b1_news.svg' style='width: 60px; height: 60px' alt='Icon' class='img-fluid'>
+                </div>
+                <div class='col-4  text-start'>Fotos</div>
+                <div class='col-4  d-flex justify-content-end px-1'>
+                    <!-- Third item in third row -->
+                    <a href='#top'><img class='img-fluid float-end' src='../img2/z_backtop.svg' style='width: 30px; height: 30px; cursor: pointer;'></a>
+                </div>
+            </div>
+        
+ 
+     <div class="d-flex justify-content-center">
+     <div class="carousel position-relative w-75 mw-100 border border-2 border-secondary rounded" id="Fotos">
+
+        <input type="radio" name="carousel" id="slideC1" checked>
+        <input type="radio" name="carousel" id="slideC2">
+        <input type="radio" name="carousel" id="slideC3">
+        <input type="radio" name="carousel" id="slideC4">
+        <input type="radio" name="carousel" id="slideC5">
+
+
+        <div class="slides">
+            <div class="slide d-flex justify-content-center align-items-center" id="s1b">
+                <img class="img-fluid" src="../img/store01m01.jpg" alt="">
+            </div>
+            <div class="slide d-flex justify-content-center align-items-center" id="s2b">
+                <img class="img-fluid" src="../img/store01m02.jpg" alt="">
+            </div>
+            <div class="slide d-flex justify-content-center align-items-center" id="s3b">
+                <img class="img-fluid" src="../img/store01m03.jpg" alt="">
+            </div>
+            <div class="slide d-flex justify-content-center align-items-center" id="s4b">
+                <img class="img-fluid" src="../img/store01f.jpg" alt="">
+            </div>
+            <div class="slide d-flex justify-content-center align-items-center" id="s5b">
+                <img class="img-fluid" src="../img/store01m02.jpg" alt="">
+            </div>
+        </div>
+    <!-- Left and Right Arrows -->
+    <label for="slideC5" class="arrow left">&#10094;</label>
+    <label for="slideC2" class="arrow right" for="slide2">&#10095;</label>
+
+    <label for="slideC1" class="arrow left">&#10094;</label>
+    <label for="slideC3" class="arrow right">&#10095;</label>
+
+    <label for="slideC2" class="arrow left">&#10094;</label>
+    <label for="slideC4" class="arrow right">&#10095;</label>
+
+    <label for="slideC3" class="arrow left">&#10094;</label>
+    <label for="slideC5" class="arrow right">&#10095;</label>
+
+    <label for="slideC4" class="arrow left">&#10094;</label>
+    <label for="slideC1" class="arrow right">&#10095;</label>
+        <div class="controls">
+            <label for="slideC1" class="control"></label>
+            <label for="slideC2" class="control"></label>
+            <label for="slideC3" class="control"></label>
+            <label for="slideC4" class="control"></label>
+            <label for="slideC5" class="control"></label>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    
+            <div id='Promos' class='d-flex align-items-center my-4 mx-3 py-2 px-3 border border-secondary rounded-3'>
+                <div class='col-4 '>
+                    <img src='../img2/b1_news.svg' style='width: 60px; height: 60px' alt='Icon' class='img-fluid'>
+                </div>
+                <div class='col-4  text-start'>Promos</div>
+                <div class='col-4  d-flex justify-content-end px-1'>
+                    <!-- Third item in third row -->
+                    <a href='#top'><img class='img-fluid float-end' src='../img2/z_backtop.svg' style='width: 30px; height: 30px; cursor: pointer;'></a>
+                </div>
+            </div>
+        
+            <div id='Owner' class='d-flex align-items-center my-4 mx-3 py-2 px-3 border border-secondary rounded-3'>
+                <div class='col-4 '>
+                    <img src='../img2/b1_news.svg' style='width: 60px; height: 60px' alt='Icon' class='img-fluid'>
+                </div>
+                <div class='col-4  text-start'>Owner</div>
+                <div class='col-4  d-flex justify-content-end px-1'>
+                    <!-- Third item in third row -->
+                    <a href='#top'><img class='img-fluid float-end' src='../img2/z_backtop.svg' style='width: 30px; height: 30px; cursor: pointer;'></a>
+                </div>
+            </div>
+        
+</div>
+
+</body>
+</html>
