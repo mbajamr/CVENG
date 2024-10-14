@@ -6,6 +6,8 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title id='title'>El Tule</title>
             <!-- Bootstrap CSS CDN -->
+            <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
         </head>
         <body>
@@ -35,6 +37,43 @@
             --border-radius: 10px;
             --slide-height: 300px;
         }
+
+        .frame {
+            border: 6px solid black; /* Frame color and thickness */
+            border-radius: 8px; /* Rounded corners for a polished look */
+            padding: 10px; /* Spacing inside the frame */
+            display: flex; /* Use flexbox to align items */
+            align-items: center; /* Center items vertically */
+        }
+
+        .title-style {
+            font-family: 'Playfair Display', serif; /* Elegant font for headings */
+            font-size: 3rem; /* Larger size */
+            font-weight: bold;
+            color: black; /* Change text color to black */
+            background: none; /* Remove gradient background */
+            text-shadow: none; /* Remove text shadow */
+            border: none; /* Remove border */
+            padding: 10px 20px; /* Add spacing around the text */
+            display: flex; /* Use flexbox to align items */
+            align-items: center; /* Center items vertically */
+        }
+
+        .title-style img {
+            margin-right: 10px; /* Space between image and text */
+        }
+
+        @media (max-width: 768px) {
+            .title-style {
+                font-size: 2.5rem; /* Adjust font size for smaller screens */
+            }
+            .title-style img {
+                width: 40px; /* Adjust image size for smaller screens */
+                height: 40px;
+            }
+        }
+
+
         
         .carousel {
             position: center; /* No direct Bootstrap utility */
@@ -125,157 +164,140 @@
             height: auto; /* Ensures aspect ratio is maintained */
             display: block; /* Removes bottom margin in some browsers */
         }
-        #slideA1:checked ~ .slides {
+        /* Part 1 */
+#slidepics1:checked ~ .slides {
     transform: translateX(-0%);
 }
 
-#slideA2:checked ~ .slides {
+#slidepics2:checked ~ .slides {
     transform: translateX(-100%);
 }
 
-#slideA3:checked ~ .slides {
+#slidepics3:checked ~ .slides {
     transform: translateX(-200%);
 }
 
-#slideA4:checked ~ .slides {
+#slidepics4:checked ~ .slides {
     transform: translateX(-300%);
 }
 
-#slideA5:checked ~ .slides {
+#slidepics5:checked ~ .slides {
     transform: translateX(-400%);
 }
 
 /* Arrows linked to radio button checks */
-#slideA1:checked ~ .arrow.left[for="slideA5"],
-#slideA1:checked ~ .arrow.right[for="slideA2"] {
+#slidepics1:checked ~ .arrow.left[for="slidepics5"],
+#slidepics1:checked ~ .arrow.right[for="slidepics2"] {
     display: block;
 }
-#slideA2:checked ~ .arrow.left[for="slideA1"],
-#slideA2:checked ~ .arrow.right[for="slideA3"] {
+#slidepics2:checked ~ .arrow.left[for="slidepics1"],
+#slidepics2:checked ~ .arrow.right[for="slidepics3"] {
     display: block;
 }
-#slideA3:checked ~ .arrow.left[for="slideA2"],
-#slideA3:checked ~ .arrow.right[for="slideA4"] {
+#slidepics3:checked ~ .arrow.left[for="slidepics2"],
+#slidepics3:checked ~ .arrow.right[for="slidepics4"] {
     display: block;
 }
-#slideA4:checked ~ .arrow.left[for="slideA3"],
-#slideA4:checked ~ .arrow.right[for="slideA5"] {
+#slidepics4:checked ~ .arrow.left[for="slidepics3"],
+#slidepics4:checked ~ .arrow.right[for="slidepics5"] {
     display: block;
 }
-#slideA5:checked ~ .arrow.left[for="slideA4"],
-#slideA5:checked ~ .arrow.right[for="slideA1"] {
+#slidepics5:checked ~ .arrow.left[for="slidepics4"],
+#slidepics5:checked ~ .arrow.right[for="slidepics1"] {
     display: block;
 }
-#slideB1:checked ~ .slides {
+/* Part 1 */
+#slidemenu1:checked ~ .slides {
     transform: translateX(-0%);
 }
 
-#slideB2:checked ~ .slides {
+#slidemenu2:checked ~ .slides {
     transform: translateX(-100%);
 }
 
-#slideB3:checked ~ .slides {
+#slidemenu3:checked ~ .slides {
     transform: translateX(-200%);
 }
 
-#slideB4:checked ~ .slides {
-    transform: translateX(-300%);
-}
-
-#slideB5:checked ~ .slides {
-    transform: translateX(-400%);
-}
-
 /* Arrows linked to radio button checks */
-#slideB1:checked ~ .arrow.left[for="slideB5"],
-#slideB1:checked ~ .arrow.right[for="slideB2"] {
+#slidemenu1:checked ~ .arrow.left[for="slidemenu3"],
+#slidemenu1:checked ~ .arrow.right[for="slidemenu2"] {
     display: block;
 }
-#slideB2:checked ~ .arrow.left[for="slideB1"],
-#slideB2:checked ~ .arrow.right[for="slideB3"] {
+#slidemenu2:checked ~ .arrow.left[for="slidemenu1"],
+#slidemenu2:checked ~ .arrow.right[for="slidemenu3"] {
     display: block;
 }
-#slideB3:checked ~ .arrow.left[for="slideB2"],
-#slideB3:checked ~ .arrow.right[for="slideB4"] {
+#slidemenu3:checked ~ .arrow.left[for="slidemenu2"],
+#slidemenu3:checked ~ .arrow.right[for="slidemenu1"] {
     display: block;
 }
-#slideB4:checked ~ .arrow.left[for="slideB3"],
-#slideB4:checked ~ .arrow.right[for="slideB5"] {
-    display: block;
-}
-#slideB5:checked ~ .arrow.left[for="slideB4"],
-#slideB5:checked ~ .arrow.right[for="slideB1"] {
-    display: block;
-}
-#slideC1:checked ~ .slides {
+/* Part 1 */
+#slidepromos1:checked ~ .slides {
     transform: translateX(-0%);
 }
 
-#slideC2:checked ~ .slides {
+#slidepromos2:checked ~ .slides {
     transform: translateX(-100%);
 }
 
-#slideC3:checked ~ .slides {
+#slidepromos3:checked ~ .slides {
     transform: translateX(-200%);
 }
 
-#slideC4:checked ~ .slides {
+#slidepromos4:checked ~ .slides {
     transform: translateX(-300%);
 }
 
-#slideC5:checked ~ .slides {
-    transform: translateX(-400%);
-}
-
 /* Arrows linked to radio button checks */
-#slideC1:checked ~ .arrow.left[for="slideC5"],
-#slideC1:checked ~ .arrow.right[for="slideC2"] {
+#slidepromos1:checked ~ .arrow.left[for="slidepromos4"],
+#slidepromos1:checked ~ .arrow.right[for="slidepromos2"] {
     display: block;
 }
-#slideC2:checked ~ .arrow.left[for="slideC1"],
-#slideC2:checked ~ .arrow.right[for="slideC3"] {
+#slidepromos2:checked ~ .arrow.left[for="slidepromos1"],
+#slidepromos2:checked ~ .arrow.right[for="slidepromos3"] {
     display: block;
 }
-#slideC3:checked ~ .arrow.left[for="slideC2"],
-#slideC3:checked ~ .arrow.right[for="slideC4"] {
+#slidepromos3:checked ~ .arrow.left[for="slidepromos2"],
+#slidepromos3:checked ~ .arrow.right[for="slidepromos4"] {
     display: block;
 }
-#slideC4:checked ~ .arrow.left[for="slideC3"],
-#slideC4:checked ~ .arrow.right[for="slideC5"] {
-    display: block;
-}
-#slideC5:checked ~ .arrow.left[for="slideC4"],
-#slideC5:checked ~ .arrow.right[for="slideC1"] {
+#slidepromos4:checked ~ .arrow.left[for="slidepromos3"],
+#slidepromos4:checked ~ .arrow.right[for="slidepromos1"] {
     display: block;
 }
 
         </style>
         
-            <!-- Each grid item contains an image -->
-            <div class="row justify-content-center">
-                <div class="col-4 d-flex justify-content-center" onclick="scrollToSection('none')">
-                    <img src='../img2/MiLocal.svg' alt="Image 2">
+
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <div class="frame">
+                    <h1 class="title-style">
+                        <img src='../img2/Local2.svg' style='width: 60px; height: 60px' alt='Icon' class='img-fluid'> MiLocal.com
+                    </h1>
+                </div>
+            </div>
+        </div>
+        
+            <!-- MAIN TITLE -->
+            <div class="container">
+                <div class="d-flex justify-content-center">
+                    <h1 class="title-style">El Tule</h1>
                 </div>
             </div>
         
-            <!-- MAIN TITLE -->
-            <table class="table table-bordered table-striped" style="border-collapse: collapse; width: 50%; margin: auto;">
-                <tbody><tr>
-                    <td style="border: none; text-align: center; font-size: 2em; font-weight: bold;">El Tule</td> <!-- Font size increased and made bold -->
-                </tr>
-            </tbody></table>
-        
             <!-- THREE BALS -->
             <div class="row justify-content-center">
-                <div class="col-4 d-flex justify-content-center px-1">
+                <div class="col-4 d-flex justify-content-center py-2 mb-2">
                     <!-- First item in first row -->
                     <img src='../img2/a1_logo.png' alt="Image 2" class="w-50 mx-auto">
                 </div>
-                <div class="col-4 d-flex justify-content-center px-1">
+                <div class="col-4 d-flex justify-content-center py-2 mb-2">
                     <!-- Second item in first row -->
                     <img src='../img2/a2_category.png' alt="Image 3" class="w-50 mx-auto">
                 </div>
-                <div class="col-4 d-flex justify-content-center px-1">
+                <div class="col-4 d-flex justify-content-center py-2 mb-2">
                     <!-- Third item in first row -->
                     <img src='../img2/a3_status.png' alt="Image 4" class="w-50 mx-auto">
                 </div>
@@ -287,7 +309,6 @@
             </h1>
         
             <!-- ICONS -->
-
             <div class="row">
                 <div class="col-4 d-flex justify-content-end px-1">
                     <!-- First item in second row -->
@@ -304,7 +325,7 @@
                 <div class="col-4 d-flex justify-content-start px-1">
                     <!-- Third item in second row -->
                     <a href='#Contacto'>
-                        <img class='img-fluid float-end' src='../img2/b3_contacto.svg' ></img>
+                        <img class='img-fluid float-end' src='../img2/b3_phone.svg' ></img>
                     </a>
                 </div>
             </div>
@@ -371,11 +392,10 @@
                         </div>
                     </div>
                 
-
         <!DOCTYPE html>
         <html>
         <head>
-          <title>Leaflet Basic Example</title>
+          <title>Map</title>
           <meta charset="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
@@ -388,19 +408,27 @@
 
           <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
           <script>
-            var map = L.map('map').setView([40.730610, -73.935242], 13);
+            // Initialize the map
+            var map = L.map('map', {
+              center: [25.761120, -100.285060],
+              zoom: 13,
+              scrollWheelZoom: false,  // Disable zoom with scroll wheel
+              dragging: false,         // Disable dragging
+              zoomControl: false,      // Disable zoom control
+            });
 
+            // Add the OpenStreetMap tile layer
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
               maxZoom: 19,
             }).addTo(map);
 
-            var marker = L.marker([40.730610, -73.935242]).addTo(map)
-              .bindPopup('New York City')
+            // Add a marker with a popup
+            var marker = L.marker([25.761120, -100.285060]).addTo(map)
+              .bindPopup('El Tule')
               .openPopup();
           </script>
         </body>
         </html>
-
         
                     <div id='Servicios o Menu' class='d-flex align-items-center my-4 mx-3 py-2 px-3 border border-secondary rounded-3'>
                         <div class='col-4 '>
@@ -413,58 +441,43 @@
                         </div>
                     </div>
                 
-            <!-- Descripcion de los Servicios o Menu -->
-            <div class="d-flex justify-content-center">
-            <div class="carousel position-relative w-75 mw-100 border border-2 border-secondary rounded" id="Servicios o Menu">
-                <input type="radio" name="carouselB" id="slideB1" checked>
-                <input type="radio" name="carouselB" id="slideB2">
-                <input type="radio" name="carouselB" id="slideB3">
-                <input type="radio" name="carouselB" id="slideB4">
-                <input type="radio" name="carouselB" id="slideB5">
+                <!-- Descripcion de los Servicios o Menu -->
+                <div class="d-flex justify-content-center">
+                <div class="carousel position-relative w-75 mw-100 border border-2 border-secondary rounded" id="Servicios o Menu">
+                    
+                    <input type="radio" name="carouselmenu" id="slidemenu1" checked>
+                    <input type="radio" name="carouselmenu" id="slidemenu2" >
+                    <input type="radio" name="carouselmenu" id="slidemenu3" >
 
-                <div class="slides">
-                    <div class="slide d-flex justify-content-center align-items-center" id="s1b">
-                        <img class="img-fluid custom-style" src="../img/store01m01.jpg" alt="">
+                    <div class="slides">
+                        
+                        <div class="slide d-flex justify-content-center align-items-center" id="s1b">
+                            <img class="img-fluid custom-style" src="../img/N02m01.jpg" alt="">
+                        </div>
+                        <div class="slide d-flex justify-content-center align-items-center" id="s1b">
+                            <img class="img-fluid custom-style" src="../img/N02m02.jpg" alt="">
+                        </div>
+                        <div class="slide d-flex justify-content-center align-items-center" id="s1b">
+                            <img class="img-fluid custom-style" src="../img/N02m03.jpg" alt="">
+                        </div>
                     </div>
-                    <div class="slide d-flex justify-content-center align-items-center" id="s2b">
-                        <img class="img-fluid custom-style" src="../img/store01m02.jpg" alt="">
-                    </div>
-                    <div class="slide d-flex justify-content-center align-items-center" id="s3b">
-                        <img class="img-fluid custom-style" src="../img/store01m03.jpg" alt="">
-                    </div>
-                    <div class="slide d-flex justify-content-center align-items-center" id="s4b">
-                        <img class="img-fluid custom-style" src="../img/store01f.jpg" alt="">
-                    </div>
-                    <div class="slide d-flex justify-content-center align-items-center" id="s5b">
-                        <img class="img-fluid custom-style" src="../img/store01m02.jpg" alt="">
+                <!-- Left and Right Arrows -->
+                
+                <label for="slidemenu3" class="arrow left">&#10094;</label>
+                <label for="slidemenu2" class="arrow right">&#10095;</label>
+                <label for="slidemenu1" class="arrow left">&#10094;</label>
+                <label for="slidemenu3" class="arrow right">&#10095;</label>
+                <label for="slidemenu2" class="arrow left">&#10094;</label>
+                <label for="slidemenu1" class="arrow right">&#10095;</label>
+                    <div class="controls">
+                        
+                        <label for="slidemenu1" class="control"></label>
+                        <label for="slidemenu2" class="control"></label>
+                        <label for="slidemenu3" class="control"></label>
                     </div>
                 </div>
-            <!-- Left and Right Arrows -->
-            <label for="slideB5" class="arrow left">&#10094;</label>
-            <label for="slideB2" class="arrow right" for="slide2">&#10095;</label>
-
-            <label for="slideB1" class="arrow left">&#10094;</label>
-            <label for="slideB3" class="arrow right">&#10095;</label>
-
-            <label for="slideB2" class="arrow left">&#10094;</label>
-            <label for="slideB4" class="arrow right">&#10095;</label>
-
-            <label for="slideB3" class="arrow left">&#10094;</label>
-            <label for="slideB5" class="arrow right">&#10095;</label>
-
-            <label for="slideB4" class="arrow left">&#10094;</label>
-            <label for="slideB1" class="arrow right">&#10095;</label>
-                <div class="controls">
-                    <label for="slideB1" class="control"></label>
-                    <label for="slideB2" class="control"></label>
-                    <label for="slideB3" class="control"></label>
-                    <label for="slideB4" class="control"></label>
-                    <label for="slideB5" class="control"></label>
                 </div>
-            </div>
-            </div>
-
-            
+                
                     <div id='Horario' class='d-flex align-items-center my-4 mx-3 py-2 px-3 border border-secondary rounded-3'>
                         <div class='col-4 '>
                             <img src='../img2/c1_horario.svg' style='width: 60px; height: 60px' alt='Icon' class='img-fluid'>
@@ -522,7 +535,7 @@
         
                     <div id='Contacto' class='d-flex align-items-center my-4 mx-3 py-2 px-3 border border-secondary rounded-3'>
                         <div class='col-4 '>
-                            <img src='../img2/b3_contacto.svg' style='width: 60px; height: 60px' alt='Icon' class='img-fluid'>
+                            <img src='../img2/b3_phone.svg' style='width: 60px; height: 60px' alt='Icon' class='img-fluid'>
                         </div>
                         <div class='col-4  text-start'>Contacto</div>
                         <div class='col-4  d-flex justify-content-end px-1'>
@@ -531,32 +544,54 @@
                         </div>
                     </div>
                 
-        <div class="center-1">
-        <div class="page contact-page">
-        <div class="page-body py-3">
-        <div class="topic-block">
-        <div class="topic-block-title">
-        <h2>Contactenos</h2>
-        </div><div class="topic-block-body">
-        <p>¡Gracias por ponerte en contacto con nosotros! Estamos emocionados de recibir tus comentarios y preguntas.</p>
-        <p>Por favor, completa el siguiente formulario para que podamos ayudarte de la mejor manera posible:</p>
-        </div></div><form method="post" action="/contactus" novalidate="novalidate">
-        <div class="fieldset"><div class="form-fields"><div class="inputs">
-        <label for="FullName">Tú nombre:</label> 
-        <input placeholder="Escriba su nombre." class="fullname" type="text" data-val="true" data-val-required="Introduzca su nombre" id="FullName" name="FullName"> 
-        <span class="required">*</span> <span class="field-validation-valid" data-valmsg-for="FullName" data-valmsg-replace="true">
-        </span></div><div class="inputs"><label for="Email">Tu email:</label> 
-        <input placeholder="Introduzca su dirección de correo electrónico." class="email" type="email" data-val="true" data-val-email="Correo electrónico erróneo" data-val-required="Introduzca el correo electrónico" id="Email" name="Email"> 
-        <span class="required">*</span> <span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span></div><div class="inputs"><label for="Enquiry">Consulta:</label> <textarea placeholder="Ingrese su consulta." class="enquiry" data-val="true" data-val-required="Ingrese su consulta" id="Enquiry" name="Enquiry"></textarea> 
-        <span class="required">*</span> <span class="field-validation-valid" data-valmsg-for="Enquiry" data-valmsg-replace="true">
-        </span></div></div></div><div class="buttons">
-        <button type="submit" name="send-email" class="button-1 contact-us-button">Enviar</button>
-        </div>
-        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8EdMHkn9JTJAqedob8qlf8A-N2U3FpxRbFhPOJiKbF5d0jDqugR2mIj7gWtZjPnwfauW1KmP8tXo9pI45Jv3xmXOwiGBlXUSwovQgOA3UiNZOLV4WBwdfyxIUumdfEvPJm2Mtu7P0OC01zJh8FzCmr8">
-        </form>
-        </div>
-        </div>
-        </div>
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Contactenos</title>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+        </head>
+        <body>
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 col-md-8">
+                        <div class="card shadow-lg">
+                            <div class="card-body">
+                                <h2 class="card-title text-center mb-4">Contáctenos</h2>
+                                <p>¡Gracias por ponerte en contacto con nosotros! Estamos emocionados de recibir tus comentarios y preguntas.</p>
+                                <p>Por favor, completa el siguiente formulario para que podamos ayudarte de la mejor manera posible:</p>
+                                <form method="post" action="/contactus" novalidate="novalidate">
+                                    <div class="mb-3">
+                                        <label for="FullName" class="form-label">Tú nombre:</label>
+                                        <input type="text" class="form-control" id="FullName" name="FullName" placeholder="Escriba su nombre." required>
+                                        <div class="invalid-feedback">Introduzca su nombre</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="Email" class="form-label">Tu email:</label>
+                                        <input type="email" class="form-control" id="Email" name="Email" placeholder="Introduzca su dirección de correo electrónico." required>
+                                        <div class="invalid-feedback">Introduzca un correo electrónico válido</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="Enquiry" class="form-label">Consulta:</label>
+                                        <textarea class="form-control" id="Enquiry" name="Enquiry" placeholder="Ingrese su consulta." rows="4" required></textarea>
+                                        <div class="invalid-feedback">Ingrese su consulta</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary">Enviar</button>
+                                    </div>
+                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8EdMHkn9JTJAqedob8qlf8A-N2U3FpxRbFhPOJiKbF5d0jDqugR2mIj7gWtZjPnwfauW1KmP8tXo9pI45Jv3xmXOwiGBlXUSwovQgOA3UiNZOLV4WBwdfyxIUumdfEvPJm2Mtu7P0OC01zJh8FzCmr8">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bootstrap JS -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        </body>
+        </html>
         
                     <div id='Fotos' class='d-flex align-items-center my-4 mx-3 py-2 px-3 border border-secondary rounded-3'>
                         <div class='col-4 '>
@@ -569,61 +604,57 @@
                         </div>
                     </div>
                 
-         
-             <div class="d-flex justify-content-center">
-             <div class="carousel position-relative w-75 mw-100 border border-2 border-secondary rounded" id="Fotos">
+                <!-- Fotos -->
+                <div class="d-flex justify-content-center">
+                <div class="carousel position-relative w-75 mw-100 border border-2 border-secondary rounded" id="Fotos">
+                    
+                    <input type="radio" name="carouselpics" id="slidepics1" checked>
+                    <input type="radio" name="carouselpics" id="slidepics2" >
+                    <input type="radio" name="carouselpics" id="slidepics3" >
+                    <input type="radio" name="carouselpics" id="slidepics4" >
+                    <input type="radio" name="carouselpics" id="slidepics5" >
 
-                <input type="radio" name="carouselC" id="slideC1" checked>
-                <input type="radio" name="carouselC" id="slideC2">
-                <input type="radio" name="carouselC" id="slideC3">
-                <input type="radio" name="carouselC" id="slideC4">
-                <input type="radio" name="carouselC" id="slideC5">
-
-
-                <div class="slides">
-                    <div class="slide d-flex justify-content-center align-items-center" id="s1b">
-                        <img class="img-fluid" src="../img/store01m01.jpg" alt="">
+                    <div class="slides">
+                        
+                        <div class="slide d-flex justify-content-center align-items-center" id="s1b">
+                            <img class="img-fluid custom-style" src="../img/N02f01.jpg" alt="">
+                        </div>
+                        <div class="slide d-flex justify-content-center align-items-center" id="s1b">
+                            <img class="img-fluid custom-style" src="../img/N02f02.jpg" alt="">
+                        </div>
+                        <div class="slide d-flex justify-content-center align-items-center" id="s1b">
+                            <img class="img-fluid custom-style" src="../img/N02f03.jpg" alt="">
+                        </div>
+                        <div class="slide d-flex justify-content-center align-items-center" id="s1b">
+                            <img class="img-fluid custom-style" src="../img/N02f04.jpg" alt="">
+                        </div>
+                        <div class="slide d-flex justify-content-center align-items-center" id="s1b">
+                            <img class="img-fluid custom-style" src="../img/N02f05.jpg" alt="">
+                        </div>
                     </div>
-                    <div class="slide d-flex justify-content-center align-items-center" id="s2b">
-                        <img class="img-fluid" src="../img/store01m02.jpg" alt="">
-                    </div>
-                    <div class="slide d-flex justify-content-center align-items-center" id="s3b">
-                        <img class="img-fluid" src="../img/store01m03.jpg" alt="">
-                    </div>
-                    <div class="slide d-flex justify-content-center align-items-center" id="s4b">
-                        <img class="img-fluid" src="../img/store01f.jpg" alt="">
-                    </div>
-                    <div class="slide d-flex justify-content-center align-items-center" id="s5b">
-                        <img class="img-fluid" src="../img/store01m02.jpg" alt="">
+                <!-- Left and Right Arrows -->
+                
+                <label for="slidepics5" class="arrow left">&#10094;</label>
+                <label for="slidepics2" class="arrow right">&#10095;</label>
+                <label for="slidepics1" class="arrow left">&#10094;</label>
+                <label for="slidepics3" class="arrow right">&#10095;</label>
+                <label for="slidepics2" class="arrow left">&#10094;</label>
+                <label for="slidepics4" class="arrow right">&#10095;</label>
+                <label for="slidepics3" class="arrow left">&#10094;</label>
+                <label for="slidepics5" class="arrow right">&#10095;</label>
+                <label for="slidepics4" class="arrow left">&#10094;</label>
+                <label for="slidepics1" class="arrow right">&#10095;</label>
+                    <div class="controls">
+                        
+                        <label for="slidepics1" class="control"></label>
+                        <label for="slidepics2" class="control"></label>
+                        <label for="slidepics3" class="control"></label>
+                        <label for="slidepics4" class="control"></label>
+                        <label for="slidepics5" class="control"></label>
                     </div>
                 </div>
-            <!-- Left and Right Arrows -->
-            <label for="slideC5" class="arrow left">&#10094;</label>
-            <label for="slideC2" class="arrow right" for="slide2">&#10095;</label>
-
-            <label for="slideC1" class="arrow left">&#10094;</label>
-            <label for="slideC3" class="arrow right">&#10095;</label>
-
-            <label for="slideC2" class="arrow left">&#10094;</label>
-            <label for="slideC4" class="arrow right">&#10095;</label>
-
-            <label for="slideC3" class="arrow left">&#10094;</label>
-            <label for="slideC5" class="arrow right">&#10095;</label>
-
-            <label for="slideC4" class="arrow left">&#10094;</label>
-            <label for="slideC1" class="arrow right">&#10095;</label>
-                <div class="controls">
-                    <label for="slideC1" class="control"></label>
-                    <label for="slideC2" class="control"></label>
-                    <label for="slideC3" class="control"></label>
-                    <label for="slideC4" class="control"></label>
-                    <label for="slideC5" class="control"></label>
                 </div>
-            </div>
-            </div>
-            </div>
-
-            
+                
                     <div id='Promos' class='d-flex align-items-center my-4 mx-3 py-2 px-3 border border-secondary rounded-3'>
                         <div class='col-4 '>
                             <img src='../img2/d2_promo.svg' style='width: 60px; height: 60px' alt='Icon' class='img-fluid'>
