@@ -1,0 +1,519 @@
+
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>My Landing Page</title>
+                <link rel="stylesheet" href="styles.css">
+                <style>
+                    /* CSS to center the image */
+                    .center {
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        width: 50%; /* Adjust width as needed */
+                    }
+                    header {
+                        background-color: white; /* Initial background color */
+                        color: black; /* Initial text color */
+                        padding: 20px; /* Add some padding */
+                    }
+                    
+                            table2 {
+                        width: 100%;
+                        border-collapse: collapse;
+                    }
+                    th, td {
+                        border: 1px solid black;
+                        padding: 10px;
+                        text-align: center;
+                    }
+                    /* Green background for open hours */
+                    .open {
+                        background-color: green;
+                        color: white;
+                        border: 1px solid black;
+                    }
+                    /* Red background for closed hours */
+                    .closed {
+                        background-color: #8B0000;
+                        color: white;
+                        border: 1px solid black;
+                    }
+
+                    table {
+                        border-collapse: collapse;
+                        width: 50%; /* Set desired width */
+                        margin: auto; /* Center the table */
+                    }
+                    td {
+                        border: none; /* No border */
+                        text-align: center; /* Center text */
+                        font-size: 1em; /* Font size increased */
+                        font-weight: bold; /* Make text bold */
+                    }
+                    /* Container for the grid */
+                    .grid-container {
+                        display: grid; /* Enables grid layout */
+                        grid-template-columns: repeat(5, 1fr); /* Creates 5 equal columns */
+                        gap: 10px; /* Space between grid items */
+                        padding: 20px; /* Padding around the grid */
+                    }
+
+                    /* Style for each grid item */
+                    .grid-item {
+                        overflow: hidden; /* Hides overflow content */
+                        border-radius: 10px; /* Rounded corners for items */
+                        cursor: pointer; /* Changes cursor to pointer on hover */
+                    }
+
+                    .grid-container2 {
+                        display: grid; /* Enables grid layout */
+                        grid-template-columns: repeat(5, 1fr); /* Creates 5 equal columns */
+                        gap: 10px; /* Space between grid items */
+                        padding: 20px; /* Padding around the grid */
+                    }
+
+                    /* Style for each grid item */
+                    .grid-item2 {
+                        overflow: hidden; /* Hides overflow content */
+                        border-radius: 10px; /* Rounded corners for items */
+                        cursor: pointer; /* Changes cursor to pointer on hover */
+                    }
+
+                    .grid-containerX {
+                        display: grid;
+                        grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+                        gap: 10px; /* Espacio entre las imágenes */
+                    }
+
+                    .grid-itemX {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .circle-imageX {
+                        width: 150px; /* Ajusta el tamaño de la imagen */
+                        height: 150px; /* Ajusta el tamaño de la imagen */
+                        object-fit: cover; /* Asegura que la imagen se ajuste al círculo sin deformarse */
+                        border-radius: 50%; /* Hace que el contenedor de la imagen sea un círculo */
+                        border: 13px solid black; /* Añade un borde alrededor de la imagen */
+                    }
+
+
+                    .grid-item3 {
+                        min-height: 200px; /* Sets a minimum height */
+                        min-width: 200px;  /* Sets a minimum width */
+                        overflow: hidden; /* Hides overflow content */
+                        border-radius: 10px; /* Rounded corners for items */
+                        cursor: none; /* Changes cursor to pointer on hover */
+                        background-color: none; /* Optional: sets a background color to make the empty cell visible */
+                        display: flex; /* Enables flexbox to center content */
+                        align-items: center; /* Centers content vertically */
+                        justify-content: center; /* Centers content horizontally */
+                    }
+
+                    /* Style for the images within the grid items */
+                    .grid-item img {
+                        width: 100%; /* Makes image responsive to container size */
+                        height: auto; /* Maintains aspect ratio of images */
+                        display: block; /* Removes bottom space/gap in images */
+                        border-radius: 10px; /* Rounded corners for images */
+                    }
+
+                    .grid-item2 img {
+                        width: 100%; /* Makes image responsive to container size */
+                        height: auto; /* Maintains aspect ratio of images */
+                        display: block; /* Removes bottom space/gap in images */
+                        border-radius: 10px; /* Rounded corners for images */
+                    }
+
+                    /* Style for sections at the bottom */
+                    .info-section {
+                        display: flex; /* Flexbox layout for icons and text */
+                        align-items: center; /* Centers items vertically */
+                        margin: 20px 0; /* Margin around sections */
+                        padding: 10px;
+                        border: 1px solid #ccc; /* Border for sections */
+                        border-radius: 10px; /* Rounded corners for sections */
+                    }
+
+                    .info-section2 {
+                        text-align: center;
+                        font-size: 24px;
+
+                    }
+
+                    .info-section img {
+                        width: 50px; /* Size of the left icon */
+                        height: auto;
+                        margin-right: 20px; /* Space between icon and text */
+                    }
+                    .back-to-top {
+                        margin-left: auto; /* Pushes back button to the right */
+                        cursor: pointer; /* Changes cursor to pointer on hover */
+                    }
+
+                    .back-to-top img {
+                        width: 30px; /* Size of back icon */
+                        height: auto;
+                    }
+
+                    .center-container {
+                        /*display: flex; */
+                        /*justify-content: center; /* Centers items horizontally */
+                        align-items: center; /* Centers items vertically */
+                        /*flex-direction: column; /* Places items in a column (one below the other) */
+                        text-align: center; /* Ensures any inline elements like text will also be centered */
+                    }
+                    .center-container2 {
+                        display: flex; 
+                        justify-content: center; /* Centers items horizontally */
+                        align-items: center; /* Centers items vertically */
+                        /*flex-direction: column; /* Places items in a column (one below the other) */
+                        text-align: center; /* Ensures any inline elements like text will also be centered */
+                    }
+                    .center-text {
+                        /*text-align: right;*/
+                        position: absolute;
+                        left: 30%;
+                        font-size: 40px;
+                        font-weight: bold;
+                        margin: 10px 0; /* Add margin to adjust spacing if needed */
+                    }
+                    /* Responsive adjustments for mobile screens */
+                    @media (max-width: 500px) {
+                        .grid-container {
+                            grid-template-columns: repeat(3, 1fr); /* Adjusts to 3 columns on small screens */
+                        }
+                        .grid-item:nth-child(1),
+                        .grid-item:nth-child(5),
+                        .grid-item:nth-child(6),
+                        .grid-item:nth-child(10),
+                        .grid-item:nth-child(11),
+                        .grid-item:nth-child(15),
+                        .grid-item:nth-child(16),
+                        .grid-item:nth-child(20),
+                        .grid-item:nth-child(21),
+                        .grid-item:nth-child(25) {
+                            display: none; /* Hides specified cells on mobile */
+                        }
+                    }
+                    @media (max-width: 500px) {
+                        .grid-container2 {
+                            grid-template-columns: repeat(3, 1fr); /* Adjusts to 3 columns on small screens */
+                        }
+                        .grid-item2:nth-child(1),
+                        .grid-item2:nth-child(5) {
+                            display: none; /* Hides specified cells on mobile */
+                        }
+                    }
+
+                    body {
+                        font-family: Arial, sans-serif;
+                        margin: 0;
+                        padding: 0;
+                        text-align: center;
+                        background-color: #ffffff; /* White background */
+                        transition: background-color 0.2s, color 0.2s;
+                    }
+
+                    h1 {
+                        font-size: 2.5em;
+                    }
+
+                    p {
+                        font-size: 1.2em;
+                    }
+
+                    input[type="text"] {
+                        padding: 10px;
+                        width: 300px;
+                        margin-top: 20px;
+                    }
+
+                    button {
+                        padding: 10px 20px;
+                        background-color: white; /* Google blue */
+                        color: white;
+                        border: none;
+                        cursor: pointer;
+                        margin-left: 10px; /* Space between input and button */
+                    }
+
+                    button:hover {
+                        background-color: white; /* Darker blue on hover */
+                    }
+
+                    main {
+                        margin-top: 20px;
+                    }
+
+                    #features {
+                        background-color: white; /* Light gray section */
+                        padding: 20px;
+                    }
+
+                    footer {
+                        margin-top: 20px;
+                        padding: 10px;
+                    }
+                </style>
+            </head>
+            <body>
+                <div style="height: 20px;"></div> <!-- Adjust height as needed -->
+                <div>
+                    <svg id="sun" viewBox="0 0 552 552" width="40" height="40" xmlns="http://www.w3.org/2000/svg" onclick="cambiarEstilo()">
+                        <path d="m256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7-100.5-33.5c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0s-49.9-131.1 0-181 131.1-49.9 181 0 49.9 131.1 0 181z" fill="black"/>
+                        <!-- Vertical Line -->
+                        <line x1="552" y1="0" x2="552" y2="552" stroke="black" stroke-width="40"/>
+                    </svg>
+                    <!-- New Moon SVG centered vertically with the sun and moved to the right -->
+                    <svg id="moon" height="30" viewBox="0 0 8 8" width="30" xmlns="http://www.w3.org/2000/svg" onclick="cambiarEstilo()" style="vertical-align: middle; margin-left: 0px; position: relative; top: -17px;">
+                        <path d="m2.72 0c-1.58.53-2.72 2.02-2.72 3.78 0 2.21 1.79 4 4 4 1.76 0 3.25-1.14 3.78-2.72-.4.13-.83.22-1.28.22-2.21 0-4-1.79-4-4 0-.45.08-.88.22-1.28z" fill="black"/>
+                    </svg>
+                </div>
+                <div style="height: 200px;"></div> <!-- Adjust height as needed -->
+                <div class="justify-content-center vertical-align: middle;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="75px" height="50px" viewBox="0 0 75 50" enable-background="new 0 0 75 50" xml:space="preserve">  <image id="image0" width="75" height="50" x="0" y="0"
+                xlink:href="data:image/png;base64,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" />
+            </svg>
+        
+                        <div id="top" class="text-center" style="vertical-align: middle; border: none; text-align: center; font-size: 20px; font-weight: bold; white-space: nowrap;">
+                            MiLocal.com
+                        </div>
+                    </div>
+                    <p>Busca - Encuentra - Disfruta</p>
+                    <input type="text" id="searchInput" placeholder="Buscar..." />
+                </div>
+                <main>
+
+                    <!-- Search Results Section -->
+                    <section id="searchResults" style="display: none;">
+                        <h2>Resultado:</h2>
+                        <ul id="resultsList"></ul>
+                    </section>
+
+                    <div style="height: 150px;"></div> <!-- Adjust height as needed -->
+                    <!-- Hidden Table -->
+                    <table id="hiddenTable" style="display: none;">
+                        <tr><td>Tule</td><td>Restaurant</td><td>MXNLSNLI0000002/</td></tr>
+                        <tr><td>Michoacan</td><td>Paleteria</td><td>https://example2.com</td></tr>
+                        <tr><td>Ferretera</td><td>Ferreteria</td><td>https://example3.com</td></tr>
+                        <tr><td>Tamales</td><td>Comida</td><td>https://example4.com</td></tr>
+                        <tr><td>Sultana</td><td>Paleteria</td><td>https://example4.com</td></tr>
+                        <tr><td>San Juan De Los Lagos</td><td>Iglesia</td><td>MXNLSNLI0000000/</td></tr>
+                        <tr><td>Muncheria</td><td>Restaurant</td><td>https://example1.com</td></tr>
+                        <tr><td>Tortilleria</td><td>Restaurant</td><td>https://example1.com</td></tr>
+                        <tr><td>Parque Morenita Mía</td><td>Parque</td><td>MXNLSNLI0000045/</td></tr>
+                    </table>
+
+                </main>
+                <footer>
+                    <p>&copy; 2024 MiLocal.com / All rights reserved.</p>
+                </footer>
+
+                <!-- Include JavaScript -->
+                <script>
+                    let estiloCambiado = false;
+                    const imagenx = document.getElementById('imagenx');
+                    const imagenlogo = document.getElementById('imagenlogo');
+
+                    function cambiarEstilo() {
+                        if (estiloCambiado) {
+                            document.body.style.backgroundColor = "white";
+                            document.body.style.color = "black";
+                            imagenx.src = "pixel_white.png"; // Cambia esto por la ruta de tu imagen del sol
+                            imagenx.alt = "Sol";
+                            imagenlogo.src = "MiLocal.png"; // Cambia esto por la ruta de tu imagen del sol
+                            imagenlogo.alt = "Sol";
+                            document.getElementById('sun').querySelector('path').setAttribute('fill', 'black');
+                            document.getElementById('moon').querySelector('path').setAttribute('fill', 'black');
+                            document.getElementById('sun').querySelector('line').setAttribute('stroke', 'black');
+                        } else {
+                            document.body.style.backgroundColor = "black";
+                            document.body.style.color = "white";    
+                            imagenx.src = "pixel_black.png"; // Cambia esto por la ruta de tu imagen de la luna
+                            imagenx.alt = "Luna";
+                            imagenlogo.src = "MiLocalblack.png"; // Cambia esto por la ruta de tu imagen del sol
+                            imagenlogo.alt = "Luna";
+                            document.getElementById('sun').querySelector('path').setAttribute('fill', 'white');
+                            document.getElementById('moon').querySelector('path').setAttribute('fill', 'white');
+                            document.getElementById('sun').querySelector('line').setAttribute('stroke', 'white');
+                        }
+                    estiloCambiado = !estiloCambiado; // Cambia el estado
+                    imagenx.style.display = 'block'; // Muestra la imagen
+                    }
+
+                    function capitalizeFirstLetterOfEachWord(str) {
+                        return str.split(' ').map(word => {
+                            return word.charAt(0).toUpperCase() + word.slice(1);
+                        }).join(' ');
+                    }
+
+                    function search() {
+                        const input = document.getElementById('searchInput').value.toLowerCase();
+                        const resultsList = document.getElementById('resultsList');
+                        const hiddenTable = document.getElementById('hiddenTable');
+                        
+                        // Clear previous results
+                        resultsList.innerHTML = '';
+                        
+                        // Check if input is empty
+                        if (input.trim() === '') {
+                            alert("Please enter a search term."); // Optional alert for empty input
+                            document.getElementById('searchResults').style.display = 'none'; // Hide results section
+                            return; // Exit the function early
+                        }
+
+                        // Get rows from the hidden table
+                        const rows = hiddenTable.getElementsByTagName('tr');
+                        
+                        let found = false; // Flag to check if any result is found
+
+                        // Loop through each row in the hidden table
+                        for (let i = 0; i < rows.length; i++) {
+                            const cells = rows[i].getElementsByTagName('td');
+                            const name = cells[0].innerText.toLowerCase();
+                            const category = cells[1].innerText.toLowerCase();
+                            
+                            // Check if input matches either name or category (partial match)
+                            if (name.includes(input) || category.includes(input)) {
+                                found = true; // Set flag to true if match is found
+                                
+                                // Capitalize first letters of each word
+                                const formattedName = capitalizeFirstLetterOfEachWord(name);
+                                const formattedCategory = capitalizeFirstLetterOfEachWord(category);
+                                const link = cells[2].innerText;
+
+                                // Create a new list item for the result in the desired format
+                                const listItem = document.createElement('li');
+                                listItem.innerHTML = `${formattedName} - ${formattedCategory} - <a href="${link}" target="_blank">Link</a>`;
+                                resultsList.appendChild(listItem);
+                            }
+                        }
+
+                        // Display search results section if any result is found
+                        const searchResultsSection = document.getElementById('searchResults');
+                        if (found) {
+                            searchResultsSection.style.display = 'block';
+                        } else {
+                            searchResultsSection.style.display = 'none'; // Hide if no results found
+                            alert("No results found.");
+                        }
+                    }
+
+                    // Add event listener for Enter key press
+                    document.getElementById('searchInput').addEventListener('keypress', function(event) {
+                        if (event.key === 'Enter') { // Check if Enter key is pressed
+                            event.preventDefault(); // Prevent default form submission behavior
+                            search(); // Call the search function
+                        }
+                    });
+                </script>
+            </body>
+            </html>
+        

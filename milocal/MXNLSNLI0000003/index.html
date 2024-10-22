@@ -1,0 +1,1171 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title id='title'>Ferretera Mexico</title>
+            <!-- Bootstrap CSS CDN -->
+            <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+        </head>
+        <body>
+        
+        <style>
+        
+        .category {
+            border-collapse: collapse;
+            width: 50%; /* Set desired width */
+            margin: auto; /* Center the table */
+            border: none; /* No border */
+            text-align: center; /* Center text */
+            font-size: 1em; /* Font size increased */
+            font-weight: bold; /* Make text bold */
+        }
+
+
+        .share-button {
+            width: 200px; /* Ancho consistente */
+            height: 30px;
+            padding: 0px;
+            color: black;
+            border: black;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+        }        
+        .carouselB {
+            position: relative;
+            width: auto;
+            max-width: 800px;
+            height: auto; /*600px*/
+            overflow: hidden;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            margin: 0 auto; /* Esto centrará el carrusel horizontalmente */
+            display: block;
+        }     
+        .carouselA {
+            position: relative;
+            width: auto;
+            max-width: 800px;
+            height: auto; /*600px*/
+            overflow: hidden;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            margin: 0 auto; /* Esto centrará el carrusel horizontalmente */
+            display: block;
+        }   
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+            width: 100%;
+        }  
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            background: #eee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+    #slideB1:checked ~ .slides {
+    transform: translateX(-0%);
+    }
+
+    #slideB2:checked ~ .slides {
+        transform: translateX(-100%);
+    }
+
+    #slideB3:checked ~ .slides {
+        transform: translateX(-200%);
+    }
+
+    #slideB4:checked ~ .slides {
+        transform: translateX(-300%);
+    }
+
+    #slideB5:checked ~ .slides {
+        transform: translateX(-400%);
+    }
+
+    #slideA1:checked ~ .slides {
+    transform: translateX(-0%);
+    }
+
+    #slideA2:checked ~ .slides {
+        transform: translateX(-100%);
+    }
+
+    #slideA3:checked ~ .slides {
+        transform: translateX(-200%);
+    }
+
+    #slideA4:checked ~ .slides {
+        transform: translateX(-300%);
+    }
+
+    #slideA5:checked ~ .slides {
+        transform: translateX(-400%);
+    }
+
+    /* Arrows linked to radio button checks */
+    #slideB1:checked ~ .arrow.left[for="slideB5"],
+    #slideB1:checked ~ .arrow.right[for="slideB2"] {
+        display: block;
+    }
+    #slideB2:checked ~ .arrow.left[for="slideB1"],
+    #slideB2:checked ~ .arrow.right[for="slideB3"] {
+        display: block;
+    }
+    #slideB3:checked ~ .arrow.left[for="slideB2"],
+    #slideB3:checked ~ .arrow.right[for="slideB4"] {
+        display: block;
+    }
+    #slideB4:checked ~ .arrow.left[for="slideB3"],
+    #slideB4:checked ~ .arrow.right[for="slideB5"] {
+        display: block;
+    }
+    #slideB5:checked ~ .arrow.left[for="slideB4"],
+    #slideB5:checked ~ .arrow.right[for="slideB1"] {
+        display: block;
+    }       
+
+    /* Arrows linked to radio button checks */
+    #slideA1:checked ~ .arrow.left[for="slideA5"],
+    #slideA1:checked ~ .arrow.right[for="slideA2"] {
+        display: block;
+    }
+    #slideA2:checked ~ .arrow.left[for="slideA1"],
+    #slideA2:checked ~ .arrow.right[for="slideA3"] {
+        display: block;
+    }
+    #slideA3:checked ~ .arrow.left[for="slideA2"],
+    #slideA3:checked ~ .arrow.right[for="slideA4"] {
+        display: block;
+    }
+    #slideA4:checked ~ .arrow.left[for="slideA3"],
+    #slideA4:checked ~ .arrow.right[for="slideA5"] {
+        display: block;
+    }
+    #slideA5:checked ~ .arrow.left[for="slideA4"],
+    #slideA5:checked ~ .arrow.right[for="slideA1"] {
+        display: block;
+    }  
+
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 30px;
+        cursor: pointer;
+        font-size: 38px;
+        border-radius: 30%;
+        z-index: 10;
+    }
+
+    .left {
+        left: 10px;
+    }
+
+    .right {
+        right: 10px;
+    }    
+    .img-fluid {
+        width: 100%;   /* This makes the image take the full width of the carousel */
+        height: auto;  /* This forces the image to take the full height of the carousel */
+        object-fit: cover; /* This preserves the aspect ratio while covering the entire area */
+        display: block;  /*Removes bottom margin in some browsers */
+    }     
+    .controls {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .control {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        background: #000000;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .arrow {
+            display: none;
+        }
+
+        table2 {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        /* Green background for open hours */
+        .open {
+            background-color: green;
+            color: white;
+            border: 1px solid black;
+        }
+        /* Red background for closed hours */
+        .closed {
+            background-color: #8B0000;
+            color: white;
+            border: 1px solid black;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 50%; /* Set desired width */
+            margin: auto; /* Center the table */
+        }
+        td {
+            border: none; /* No border */
+            text-align: center; /* Center text */
+            font-size: 1em; /* Font size increased */
+            font-weight: bold; /* Make text bold */
+        }
+        /* Container for the grid */
+        .grid-container {
+            display: grid; /* Enables grid layout */
+            grid-template-columns: repeat(5, 1fr); /* Creates 5 equal columns */
+            gap: 10px; /* Space between grid items */
+            padding: 20px; /* Padding around the grid */
+        }
+
+        /* Style for each grid item */
+        .grid-item {
+            overflow: hidden; /* Hides overflow content */
+            border-radius: 10px; /* Rounded corners for items */
+            cursor: pointer; /* Changes cursor to pointer on hover */
+        }
+
+        .grid-container2 {
+            display: grid; /* Enables grid layout */
+            grid-template-columns: repeat(5, 1fr); /* Creates 5 equal columns */
+            gap: 10px; /* Space between grid items */
+            padding: 20px; /* Padding around the grid */
+        }
+
+        /* Style for each grid item */
+        .grid-item2 {
+            overflow: hidden; /* Hides overflow content */
+            border-radius: 10px; /* Rounded corners for items */
+            cursor: pointer; /* Changes cursor to pointer on hover */
+        }
+
+        .grid-containerX {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+            gap: 10px; /* Espacio entre las imágenes */
+        }
+
+        .grid-itemX {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle-imageX {
+            width: 150px; /* Ajusta el tamaño de la imagen */
+            height: 150px; /* Ajusta el tamaño de la imagen */
+            object-fit: cover; /* Asegura que la imagen se ajuste al círculo sin deformarse */
+            border-radius: 50%; /* Hace que el contenedor de la imagen sea un círculo */
+            border: 13px solid black; /* Añade un borde alrededor de la imagen */
+        }
+
+
+        .grid-item3 {
+            min-height: 200px; /* Sets a minimum height */
+            min-width: 200px;  /* Sets a minimum width */
+            overflow: hidden; /* Hides overflow content */
+            border-radius: 10px; /* Rounded corners for items */
+            cursor: none; /* Changes cursor to pointer on hover */
+            background-color: none; /* Optional: sets a background color to make the empty cell visible */
+            display: flex; /* Enables flexbox to center content */
+            align-items: center; /* Centers content vertically */
+            justify-content: center; /* Centers content horizontally */
+        }
+
+        /* Style for the images within the grid items */
+        .grid-item img {
+            width: 100%; /* Makes image responsive to container size */
+            height: auto; /* Maintains aspect ratio of images */
+            display: block; /* Removes bottom space/gap in images */
+            border-radius: 10px; /* Rounded corners for images */
+        }
+
+        .grid-item2 img {
+            width: 100%; /* Makes image responsive to container size */
+            height: auto; /* Maintains aspect ratio of images */
+            display: block; /* Removes bottom space/gap in images */
+            border-radius: 10px; /* Rounded corners for images */
+        }
+
+        /* Style for sections at the bottom */
+        .info-section {
+            display: flex; /* Flexbox layout for icons and text */
+            align-items: center; /* Centers items vertically */
+            margin: 20px 0; /* Margin around sections */
+            padding: 10px;
+            border: 1px solid #ccc; /* Border for sections */
+            border-radius: 10px; /* Rounded corners for sections */
+        }
+
+        .info-section2 {
+            text-align: center;
+            font-size: 24px;
+
+        }
+
+        .info-section img {
+            width: 50px; /* Size of the left icon */
+            height: auto;
+            margin-right: 20px; /* Space between icon and text */
+        }
+        .back-to-top {
+            margin-left: auto; /* Pushes back button to the right */
+            cursor: pointer; /* Changes cursor to pointer on hover */
+        }
+
+        .back-to-top img {
+            width: 30px; /* Size of back icon */
+            height: auto;
+        }
+
+        .center-container {
+            /*display: flex; */
+            /*justify-content: center; /* Centers items horizontally */
+            align-items: center; /* Centers items vertically */
+            /*flex-direction: column; /* Places items in a column (one below the other) */
+            text-align: center; /* Ensures any inline elements like text will also be centered */
+        }
+        .center-container2 {
+            display: flex; 
+            justify-content: center; /* Centers items horizontally */
+            align-items: center; /* Centers items vertically */
+            /*flex-direction: column; /* Places items in a column (one below the other) */
+            text-align: center; /* Ensures any inline elements like text will also be centered */
+        }
+        .center-text {
+            /*text-align: right;*/
+            position: absolute;
+            left: 30%;
+            font-size: 40px;
+            font-weight: bold;
+            margin: 10px 0; /* Add margin to adjust spacing if needed */
+        }
+        /* Responsive adjustments for mobile screens */
+        @media (max-width: 500px) {
+            .grid-container {
+                grid-template-columns: repeat(3, 1fr); /* Adjusts to 3 columns on small screens */
+            }
+            .grid-item:nth-child(1),
+            .grid-item:nth-child(5),
+            .grid-item:nth-child(6),
+            .grid-item:nth-child(10),
+            .grid-item:nth-child(11),
+            .grid-item:nth-child(15),
+            .grid-item:nth-child(16),
+            .grid-item:nth-child(20),
+            .grid-item:nth-child(21),
+            .grid-item:nth-child(25) {
+                display: none; /* Hides specified cells on mobile */
+            }
+        }
+        @media (max-width: 500px) {
+            .grid-container2 {
+                grid-template-columns: repeat(3, 1fr); /* Adjusts to 3 columns on small screens */
+            }
+            .grid-item2:nth-child(1),
+            .grid-item2:nth-child(5) {
+                display: none; /* Hides specified cells on mobile */
+            }
+        }
+
+
+
+        :root {
+            --main-bg-color: #f4f4f4;
+            --primary-color: blue;
+            --secondary-color: #555;
+            --light-color: white;
+            --dark-color: #333;
+            --border-color: #ddd;
+            --background-color: #ddd;
+            --slide-background-color: #eee;
+            --control-background-color: #ffffff;
+            --active-color: #333;
+            --hover-bg-color: pink;
+            --hover-str-bg-color: grey;
+            --arrow-bg: rgba(0, 0, 0, 0.5);
+            --arrow-color: white;
+            --control-color: #000000;
+            --control-active-color: #333;
+            --font-family-heading: "Poppins", sans-serif;
+            --font-family-body: Arial, sans-serif;
+            --default-padding: 10px;
+            --border-radius: 10px;
+            --slide-height: 300px;
+        }
+
+        .frame {
+            border: 6px solid black; /* Frame color and thickness */
+            border-radius: 8px; /* Rounded corners for a polished look */
+            padding: 10px; /* Spacing inside the frame */
+            display: flex; /* Use flexbox to align items */
+            align-items: center; /* Center items vertically */
+        }
+
+        .title-style {
+            font-family: 'Playfair Display', serif; /* Elegant font for headings */
+            font-size: 3rem; /* Larger size */
+            font-weight: bold;
+            color: black; /* Change text color to black */
+            background: none; /* Remove gradient background */
+            text-shadow: none; /* Remove text shadow */
+            border: none; /* Remove border */
+            padding: 10px 20px; /* Add spacing around the text */
+            display: flex; /* Use flexbox to align items */
+            align-items: center; /* Center items vertically */
+        }
+
+        .title-style img {
+            margin-right: 10px; /* Space between image and text */
+        }
+
+        @media (max-width: 768px) {
+            .title-style {
+                font-size: 2.5rem; /* Adjust font size for smaller screens */
+            }
+            .title-style img {
+                width: 40px; /* Adjust image size for smaller screens */
+                height: 40px;
+            }
+        }
+
+
+        
+        .carousel {
+            position: center; /* No direct Bootstrap utility */
+            overflow: hidden;   /* No direct Bootstrap utility */
+            width: 80%;         /* Optional if Bootstrap w-75 is too small */
+            max-width: 800px;   /* Optional if you need exact control */
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slide {
+            min-width: 100%; /* No direct Bootstrap class */
+            box-sizing: border-box; /* This is common in many setups */
+            background: var(--slide-background-color); /* Custom color variable */
+            height: 300px; /* Custom height */
+        }
+
+        .img-fluid {
+            width: 100%;
+            height: auto; /* Ensures aspect ratio is maintained */
+            display: block; /* Removes bottom margin in some browsers */
+        }
+
+        .img-fluid.custom-style {
+            border-radius: 20px; /* Example customization */
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+            transition: box-shadow 0.3s ease, border 0.3s ease; /* Smooth transition */
+        }
+
+        .img-fluid.custom-style:hover {
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+            border: 2px solid rgba(0, 0, 0, 0.1); /* Subtle border on hover */
+        }
+
+        .controls {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .control {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            background: var(--control-background-color);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .control:hover,
+        input[type="radio"]:checked + .control {
+            background-color: var(--hover-bg-color); /* Active state */
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 50%;
+            z-index: 10;
+        }
+
+        .left {
+            left: 10px;
+        }
+
+        .right {
+            right: 10px;
+        }
+
+        .arrow {
+            display: none;
+        }
+
+        .img-grid {
+            width: 10%;
+            height: auto; /* Ensures aspect ratio is maintained */
+            display: block; /* Removes bottom margin in some browsers */
+        }
+        /* Part 1 */
+/* Arrows linked to radio button checks */
+/* Part 1 */
+/* Arrows linked to radio button checks */
+/* Part 1 */
+/* Arrows linked to radio button checks */
+
+        </style>
+        
+
+
+            <!-- THREE BALS -->
+            <div class="row justify-content-center">
+                <div class="col-4 d-flex justify-content-center py-2 mb-2">
+                    <!-- First item in first row -->
+                    <div style="display: flex; justify-content: space-between;">
+                        
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="75px" height="50px" viewBox="0 0 75 50" enable-background="new 0 0 75 50" xml:space="preserve">  <image id="image0" width="75" height="50" x="0" y="0"
+                xlink:href="data:image/png;base64,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" />
+            </svg>
+        
+                        <div id="top" class="align-items: center; text-center; vertical-align: middle;" style="border: none; text-align: center; font-size: 20px; font-weight: bold; white-space: nowrap;">
+                            MiLocal.com
+                        </div>
+                    </div>
+                    <div style="padding: 80px;">
+                        <!-- This div acts as a separator -->
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div>
+                            <svg id="sun" viewBox="0 0 552 552" width="40" height="40" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-left: 1px;">
+                                <path d="m256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7-100.5-33.5c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0s-49.9-131.1 0-181 131.1-49.9 181 0 49.9 131.1 0 181z" fill="black"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <svg id="line" viewBox="0 0 50 552" width="10" height="40" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-r: 0px;">
+                                <line x1="0" y1="0" x2="0" y2="552" stroke="black" stroke-width="40"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <svg id="moon" viewBox="0 0 8 8" width="35" height="35" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-left: 1px;">
+                                <path d="m2.72 0c-1.58.53-2.72 2.02-2.72 3.78 0 2.21 1.79 4 4 4 1.76 0 3.25-1.14 3.78-2.72-.4.13-.83.22-1.28.22-2.21 0-4-1.79-4-4 0-.45.08-.88.22-1.28z" fill="black"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div style="padding: 80px;">
+                        <!-- This div acts as a separator -->
+                    </div>
+                    <div style="flex: 1; padding: 5px;">
+                    <!-- Third item in first row -->
+                        <svg id="backmain" height="60" viewBox="0 0 16 16" width="60" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path d="m16 8c0-5-4.9-5-4.9-5h-2.1v-3l-6 6 6 6v-3h2.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
+                                <path d="m0 6 6 6v-1.5l-4.5-4.5 4.5-4.5v-1.5z" fill="black"/>
+                            </g>
+                        </svg> 
+                    </div>
+                </div>
+            </div>
+
+            
+            <!-- MAIN TITLE -->
+            <div id="top" class=" text-center" style="border: none; text-align: center; font-size: 40px; font-weight: bold; white-space: nowrap;">
+                Ferretera Mexico
+            </div>
+        
+
+ 
+     <!-- THREE BALLS -->
+    <div class="grid-containerX">
+        <!-- Each grid item contains an image -->
+        <div class="grid-itemX" onclick="scrollToSection('none')"></div>
+        <div class="grid-itemX" onclick="scrollToSection('b1')">
+        <img src='../img/lg1.svg' alt="Image 2" class="circle-imageX">
+        </div>
+        <div class="grid-itemX" onclick="scrollToSection('b2')">
+        <img src='../img/lg2.svg' alt="Image 3" class="circle-imageX">
+        </div>
+        <div class="grid-itemX" onclick="scrollToSection('b3')">
+        <img id="imagenstatus" src='../img/lg3a.svg' alt="Image 4" class="circle-imageX">
+        </div>
+        <div class="grid-itemX" onclick="scrollToSection('none')"></div>
+    </div>
+    
+
+
+ 
+            <!-- CATEGORY -->
+            <div id="top" class=" text-center" style="border: none; text-align: center; font-size: 40px; font-weight: bold; white-space: nowrap;">
+                Ferre
+            </div>
+        
+            <!-- ICONS -->
+            <div class="row">
+                <div class="col-4 d-flex justify-content-end px-1">
+                    <!-- First item in second row -->
+                    <a href='#Noticias'>
+                    
+        <svg fill="none" height="150" width="150" viewBox="0 0 60 60">
+            <path d="m0 0h48v48h-48z" fill="none"/>
+            <path d="m13.091 12c-5.021 0-9.091 4.477-9.091 10 0 4.701 2.952 8.633 6.926 9.703l3.074 12.297h12l-2.74-10.961 20.74 6.608v-35.647l-24 8zm4.032 28-2-8h3.754l2 8zm2.877-24v12h-6.909c-2.807 0-5.091-2.692-5.091-6s2.284-6 5.091-6zm20 18.174-16-5.098v-14.193l16-5.333z" fill="black"/>
+        </svg>
+                    </a>
+                </div>
+                <div class="col-4 d-flex justify-content-center px-1">
+                    <!-- Second item in second row -->
+                    <a href='#Servicios o Menu'>
+                        
+        <svg fill="none" height="150" width="150" viewBox="0 0 60 60">
+            <g fill="black">
+                <path clip-rule="evenodd" d="m36.826 13.643-2.326-7.53192-2.326 7.53192-4.4999 2.1428 4.5197 2.1523 2.3062 6.5891 2.3062-6.5891 4.5198-2.1523zm-3 1.4285.674-2.1824.674 2.1824 1.5001.7143-1.4803.7049-.6938 1.9823-.6938-1.9823-1.4802-.7049z" fill-rule="evenodd"/>
+                <path d="m19 16 1-4 1 4 3 1-3 1-1 4-1-4-3-1z"/>
+                <path clip-rule="evenodd" d="m13 39.7493v.2468c0 1.1045-.8954 2-2 2h-3c-1.10457 0-2-.8955-2-2v-10.9954c0-1.1045.89543-2 2-2h3c.946 0 1.7386.6568 1.9467 1.5393 1.3244-.4773 2.8713-1.0454 3.3446-1.2612.402-.1831.8662-.2453 1.2519-.2676.4056-.0234.8264-.0072 1.1946.0213.3714.0287.7085.0716.9519.107.1222.0178.2222.0339.2927.0457.0353.006.0633.0108.0831.0144l.0235.0042.0069.0013.0036.0006.0179.0034 6.6888 1.5005.0418.0134.0114.0035.0461.0141c.0421.0127.106.0314.1884.0542.1651.0458.4025.1075.6855.1692.5749.1254 1.2991.2425 1.9744.2425.6239 0 1.2693.2325 1.6143.8644.2963.5425.2273 1.1382.1164 1.5507-.1381.5134-.4241 1.0537-.7877 1.5127.4907-.1851 1.0271-.4043 1.6029-.6405l.1231-.0506c1.623-.666 3.5475-1.4558 5.245-1.7365 1.9397-.3209 3.3515.3832 3.9915 1.6324.5697 1.1119.4374 2.5713-.42 3.4506-.2152.2207-.5431.4522-.8724.6658-.3516.228-.7847.4857-1.2659.7586-.9638.5467-2.1569 1.1751-3.3548 1.7826-2.372 1.203-4.8584 2.3729-5.6485 2.6622-.9156.3354-1.8991.3671-2.8449.3184-.5152-.0265-1.1137-.086-1.7086-.1452-.4298-.0427-.8576-.0853-1.2507-.115-1.9278-.1461-3.4074-.6166-4.7703-1.05l-.1657-.0527c-1.4076-.4468-2.7171-.8431-4.4521-.913-.3967-.016-1.1888.0131-1.9054.0479zm4.1208-10.6506c.0641-.0292.2341-.0732.5377-.0908.2836-.0164.6072-.006.925.0186.3146.0244.6054.0612.8183.0921.1058.0154.1911.0292.2488.0389.0289.0049.0507.0087.0648.0112l.0022.0004 6.5675 1.4733.0451.0137c.0546.0164.1323.0391.2295.0661.1941.0538.468.1248.7934.1958.5852.1277 1.3692.2624 2.1684.2852-.057.1617-.1535.3526-.2843.5427-.1596.232-.3349.4114-.4788.5141-.4166.2976-.7528.4221-.9569.4751-.1033.0268-.176.0361-.2119.0393l-.0133.0011-.0078.0004-5.362-.0648-.1914 1.9837.1793-.9838-.1783.984.0532.0096.1525.0274c.132.0237.3221.0575.5558.0984.467.0818 1.1085.192 1.806.3056 1.3744.224 3.031.4722 3.9709.5289.6491.0392 1.4051-.16 2.1082-.3948.7337-.2449 1.5625-.584 2.396-.926 1.7173-.7044 3.4659-1.4212 4.9355-1.6642 1.2704-.2102 1.7226.2539 1.8851.5711.2328.4545.1062.9597-.0719 1.1424-.0437.0448-.2012.1716-.5288.3841-.3053.198-.7006.434-1.1643.697-.9261.5252-2.0888 1.138-3.2727 1.7385-2.3915 1.2129-4.772 2.3263-5.4317 2.5679-.5342.1957-1.1944.2433-2.0542.199-.5079-.0261-.9897-.0751-1.515-.1286-.4246-.0432-.8777-.0892-1.3961-.1285-1.6918-.1282-2.978-.5368-4.3563-.9747l-.1256-.0399c-1.4276-.4532-2.9552-.9238-4.9768-1.0052-.4551-.0183-1.2653.0098-1.9859.0439v-7.1009c1.4055-.503 3.4871-1.2584 4.1208-1.5473zm2.7954-.9099.1833-.9831c.0002.0001 0 0-.1833.9831zm-8.9162.8119h-3v10.9954h3z" fill-rule="evenodd"/>
+            </g>
+        </svg>   
+        
+                    </a>
+                </div>
+                <div class="col-4 d-flex justify-content-start px-1">
+                    <!-- Third item in second row -->
+                    <a href='#Horario'>
+                        
+        <svg fill="none" height="150" width="150" viewBox="0 0 60 60">
+            <path d="m0 0h60v60h-60z" fill="black" opacity="0" transform="matrix(-1 0 0 -1 60 60)"/>
+            <g>
+                <!-- Outer Circle -->
+                <path d="m30 2a25 25 0 1 0 25 25 25 25 0 0 0 -25-25zm0 45a20 20 0 1 1 20-20 20 20 0 0 1 -20 20z" fill="black"/>
+                
+                <!-- Centered "L" Shape -->
+                <path d="m38 26h-8v-8a2 2 0 0 0 -5 1.5v10a4 2 0 0 0 2 1h12a2 2 0 0 0 1-4.5z" fill="black"/>
+            </g>
+        </svg>
+        
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 d-flex justify-content-end px-1">
+                    <!-- First item in second row -->
+                    <a href='#Feedback'>
+                        
+        <svg fill="none" height="150" width="150" viewBox="0 0 20 20">
+            <g fill="black">
+                <path d="m15.88 3.86-.61-1.31c-.155-.326-.443-.568-.792-.658-1.938-.528-4.161-.851-6.453-.891-2.342.041-4.565.363-6.687.934-.165.048-.453.29-.605.609l-.613 1.317c-.075.152-.119.331-.12.52v.87c-.001.012-.001.026-.001.041 0 .392.318.71.71.71.011 0 .022 0 .033-.001h2.518c.412-.01.742-.346.742-.76 0-.018-.001-.035-.002-.053v-.838c0-.004 0-.008 0-.012 0-.229.119-.43.298-.546.947-.508 2.069-.806 3.26-.806.156 0 .31.005.464.015.122-.011.288-.017.456-.017 1.178 0 2.287.291 3.261.805.143.099.262.3.262.529v.013.859c-.001.015-.002.033-.002.05 0 .413.33.75.741.76h2.521c.009 0 .02.001.031.001.392 0 .71-.318.71-.71 0-.014 0-.029-.001-.043v-.868c-.001-.189-.045-.368-.123-.527z"/><path d="m12 8.3c-.624-.797-1.001-1.815-1.001-2.92 0-.028 0-.056.001-.084v-.296h-1v1h-4v-1h-1v.33c0 .024.001.052.001.08 0 1.105-.377 2.122-1.009 2.93l-2.992 3.66v3h14v-3zm-4 4.7c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/>
+                <path d="m10 10c0 1.105-.895 2-2 2s-2-.895-2-2 .895-2 2-2 2 .895 2 2z"/>
+            </g>
+        </svg>
+        
+                    </a>
+                </div>
+                <div class="col-4 d-flex justify-content-center px-1">
+                    <!-- Second item in second row -->
+                    <a href='#Fotos'>
+                        
+        <svg fill="none" height="150" width="150" viewBox="0 0 60 60">
+            <g fill="black">
+                <path d="m7.8086 50.3477h40.3828c4.8749 0 7.3594-2.4375 7.3594-7.2657v-24.539c0-4.8281-2.4845-7.2422-7.3594-7.2422h-5.4845c-1.828 0-2.3905-.375-3.4452-1.5469l-1.8984-2.1094c-1.1484-1.289-2.3437-1.9922-4.7813-1.9922h-9.3281c-2.4141 0-3.6094.7032-4.7812 1.9922l-1.8985 2.1094c-1.0312 1.1484-1.6171 1.5469-3.4453 1.5469h-5.3203c-4.875 0-7.3594 2.4141-7.3594 7.2422v24.539c0 4.8282 2.4844 7.2657 7.3594 7.2657zm20.1797-7.5c-7.0781 0-12.7734-5.6954-12.7734-12.8204s5.6953-12.8202 12.7734-12.8202c7.125 0 12.7969 5.6952 12.7969 12.8202s-5.6954 12.8204-12.7969 12.8204zm16.8517-18.5391c-1.594 0-2.9064-1.2891-2.9064-2.8828 0-1.6172 1.3124-2.9063 2.9064-2.9063 1.5936 0 2.906 1.2891 2.906 2.9063 0 1.5937-1.3124 2.8828-2.906 2.8828zm-16.8517 14.9766c5.1094 0 9.2578-4.125 9.2578-9.2579 0-5.1328-4.1484-9.2578-9.2578-9.2578s-9.2344 4.125-9.2344 9.2578c0 5.1329 4.1485 9.2579 9.2344 9.2579z"/>
+            </g>
+        </svg>
+        
+                    </a>
+                </div>
+                <div class="col-4 d-flex justify-content-start px-1">
+                    <!-- Third item in second row -->
+                    <a href='#Ubicacion'>
+                        
+        <svg fill="none" height="150" width="150" viewBox="0 0 60 60">
+            <g fill="black" transform="scale(0.5)">
+                <path d="m50 0c-16 0-30 13-30 30 0 6 2 12 5 17l20.7 35.7c2.8 4 5 3 7-.2l22.8-39c.4-.8.8-2 2-3 1-3 2-7 2-11 0-16-13-30-30-30zm0 14c9 0 16 7 16 16 0 9-7 16-16 16-9 0-16-7-16-16 0-9 7-16 16-16z" stroke-width="2"/>
+                <path d="m70 50-0 0c0-0 0 0 0 0z"/>
+                <path d="m35 70c-14 2-24 7-24 14 0 9 17 17 40 17s40-8 40-17c0-7-10-12-24-14-1 1-1 2-2 3 11 1 18 5 18 8 0 5-14 9-32 9s-32-4-32-9c0-4 7-7 18-8-1-1-1-2-2-3z"/>
+            </g>
+        </svg>
+        
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 d-flex justify-content-end px-1">
+                    <!-- First item in third row -->
+                    <a href='#Compartir'>
+                        
+            <svg id="d1_share" height="100" width="100" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+				<path d="m35.2 32.0c-2.2608 0-4.3387 0.7819-5.979 2.0895l-10.2486-6.4054a9.65551 9.65551 0 0 0 0-4.1683l10.2486-6.4054c1.6403 1.3077 3.7182 2.0896 5.979 2.0896 5.3019 0 9.6-4.2981 9.6-9.6s-4.2981-9.6-9.6-9.6-9.6 4.2981-9.6 9.6c0 0.7158 0.079 1.413 0.2276 2.0841l-10.2486 6.4054c-1.6403-1.3076-3.7182-2.0895-5.979-2.0895-5.3019 0-9.6 4.2981-9.6 9.6s4.2981 9.6 9.6 9.6c2.2608 0 4.3387-0.7819 5.979-2.0895l10.2486 6.4054a9.6301 9.6301 0 0 0 -0.2276 2.0841c0 5.3019 4.2981 9.6 9.6 9.6s9.6-4.2981 9.6-9.6-4.2981-9.6-9.6-9.6z" filler="black"/>
+            </svg>
+        
+                    </a>
+                </div>
+                <div class="col-4 d-flex justify-content-center px-1">
+                    <!-- Second item in third row -->
+                    <a href='#Promos'>
+                        
+		<svg fill="none" height="150" width="150" viewBox="0 0 60 60">
+			<g fill="black" transform="scale(2.5)">
+				<path d="M5 12H4v8c0 1 2 2 2 2h5V12H6 5zM18 12h-5v10h5c1 0 2-1 2-2v-8h-1H18zM19 7C19 7 19 6 19 6 19 4 17 2 15 2c-1 0-3 1-4 3C11 4 10 2 9 2 7 2 5 4 5 6 5 6 5 7 5 7H2v4h9V9h1 1v.1V11h9V7H19zM7 6C7 5 8 4 9 4c1 0 2 2 2 3H8C8 7 7 7 7 6zM16 4C16 4 17 4 17 5 17 6 16 6 16 7h-2C14 5 15 4 16 4z"/>
+			</g>
+		</svg>
+        
+                    </a>
+                </div>
+                <div class="col-4 d-flex justify-content-start px-1">
+                    <!-- Third item in third row -->
+                    <a href='#Owner'>
+                        
+        <svg fill="none" height="150" width="150" viewBox="0 0 60 60">
+            <g fill="black">
+                <path d="m0 0h48v48h-48z" fill="none"/>
+                <path d="m24 2a22 22 0 1 0 22 22 21.9 21.9 0 0 0 -22-22zm0 40a18 18 0 1 1 18-18 18.1 18.1 0 0 1 -18 18z"/>
+                <path d="m25.2 22.3a7.3 7.3 0 0 0 .8-3.3 7 7 0 1 0 -7 7 7.3 7.3 0 0 0 3.3-.8l2.9 2.8-2.6 2.6a1.9 1.9 0 0 0 0 2.8 1.9 1.9 0 0 0 2.8 0l2.6-2.6 1.2 1.2-2.6 2.6a1.9 1.9 0 0 0 0 2.8 1.9 1.9 0 0 0 2.8 0l4-4a1.9 1.9 0 0 0 0-2.8zm-9.2-3.3a3 3 0 1 1 3 3 2.9 2.9 0 0 1 -3-3z"/>
+            <g fill="black">
+        </svg>
+        
+                    </a>
+                </div>
+            </div>
+        
+                    <div id='Noticias' class='d-flex align-items-center my-4 mx-3 py-2 px-3 border border-secondary rounded-3'>
+                        <div class="d-flex justify-content-center align-items-center" style="width: 200px; height: auto;">
+                            
+        <svg fill="none" height="150" width="150" viewBox="0 0 240 240">
+            <path d="m0 0h48v48h-48z" fill="none"/>
+            <path d="m13.091 12c-5.021 0-9.091 4.477-9.091 10 0 4.701 2.952 8.633 6.926 9.703l3.074 12.297h12l-2.74-10.961 20.74 6.608v-35.647l-24 8zm4.032 28-2-8h3.754l2 8zm2.877-24v12h-6.909c-2.807 0-5.091-2.692-5.091-6s2.284-6 5.091-6zm20 18.174-16-5.098v-14.193l16-5.333z" fill="black"/>
+        </svg>
+                        </div>
+                        <div class='col-4  text-start'>Noticias</div>
+                        <div class='col-4  d-flex justify-content-end px-1'>
+                            <!-- Third item in third row -->
+                            <a href='#top'><img class='img-fluid float-end' src='../img/z_backtop.png' style='width: 30px; height: 30px; cursor: pointer;'></a>
+                        </div>
+                    </div>
+                
+                    <div id='Ubicacion' class='d-flex align-items-center my-4 mx-3 py-2 px-3 border border-secondary rounded-3'>
+                        <div class="d-flex justify-content-center align-items-center" style="width: 200px; height: auto;">
+                            
+        <svg fill="none" height="150" width="150" viewBox="0 0 240 240">
+            <g fill="black" transform="scale(0.5)">
+                <path d="m50 0c-16 0-30 13-30 30 0 6 2 12 5 17l20.7 35.7c2.8 4 5 3 7-.2l22.8-39c.4-.8.8-2 2-3 1-3 2-7 2-11 0-16-13-30-30-30zm0 14c9 0 16 7 16 16 0 9-7 16-16 16-9 0-16-7-16-16 0-9 7-16 16-16z" stroke-width="2"/>
+                <path d="m70 50-0 0c0-0 0 0 0 0z"/>
+                <path d="m35 70c-14 2-24 7-24 14 0 9 17 17 40 17s40-8 40-17c0-7-10-12-24-14-1 1-1 2-2 3 11 1 18 5 18 8 0 5-14 9-32 9s-32-4-32-9c0-4 7-7 18-8-1-1-1-2-2-3z"/>
+            </g>
+        </svg>
+        
+                        </div>
+                        <div class='col-4  text-start'>Ubicacion</div>
+                        <div class='col-4  d-flex justify-content-end px-1'>
+                            <!-- Third item in third row -->
+                            <a href='#top'><img class='img-fluid float-end' src='../img/z_backtop.png' style='width: 30px; height: 30px; cursor: pointer;'></a>
+                        </div>
+                    </div>
+                
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>Map</title>
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+          <style>
+            #map { height: 500px; }
+          </style>
+        </head>
+        <body>
+          <div id="map"></div>
+
+          <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+          <script>
+            // Initialize the map
+            var map = L.map('map', {
+              center: [25.762780, -100.281740],
+              zoom: 13,
+              scrollWheelZoom: false,  // Disable zoom with scroll wheel
+              dragging: false,         // Disable dragging
+              zoomControl: false,      // Disable zoom control
+            });
+
+            // Add the OpenStreetMap tile layer
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              maxZoom: 19,
+            }).addTo(map);
+
+            // Add a marker with a popup
+            var marker = L.marker([25.762780, -100.281740]).addTo(map)
+              .bindPopup('Ferretera Mexico')
+              .openPopup();
+          </script>
+        </body>
+        </html>
+        
+                    <div id='Servicios o Menu' class='d-flex align-items-center my-4 mx-3 py-2 px-3 border border-secondary rounded-3'>
+                        <div class="d-flex justify-content-center align-items-center" style="width: 200px; height: auto;">
+                            
+        <svg fill="none" height="150" width="150" viewBox="0 0 240 240">
+            <g fill="black">
+                <path clip-rule="evenodd" d="m36.826 13.643-2.326-7.53192-2.326 7.53192-4.4999 2.1428 4.5197 2.1523 2.3062 6.5891 2.3062-6.5891 4.5198-2.1523zm-3 1.4285.674-2.1824.674 2.1824 1.5001.7143-1.4803.7049-.6938 1.9823-.6938-1.9823-1.4802-.7049z" fill-rule="evenodd"/>
+                <path d="m19 16 1-4 1 4 3 1-3 1-1 4-1-4-3-1z"/>
+                <path clip-rule="evenodd" d="m13 39.7493v.2468c0 1.1045-.8954 2-2 2h-3c-1.10457 0-2-.8955-2-2v-10.9954c0-1.1045.89543-2 2-2h3c.946 0 1.7386.6568 1.9467 1.5393 1.3244-.4773 2.8713-1.0454 3.3446-1.2612.402-.1831.8662-.2453 1.2519-.2676.4056-.0234.8264-.0072 1.1946.0213.3714.0287.7085.0716.9519.107.1222.0178.2222.0339.2927.0457.0353.006.0633.0108.0831.0144l.0235.0042.0069.0013.0036.0006.0179.0034 6.6888 1.5005.0418.0134.0114.0035.0461.0141c.0421.0127.106.0314.1884.0542.1651.0458.4025.1075.6855.1692.5749.1254 1.2991.2425 1.9744.2425.6239 0 1.2693.2325 1.6143.8644.2963.5425.2273 1.1382.1164 1.5507-.1381.5134-.4241 1.0537-.7877 1.5127.4907-.1851 1.0271-.4043 1.6029-.6405l.1231-.0506c1.623-.666 3.5475-1.4558 5.245-1.7365 1.9397-.3209 3.3515.3832 3.9915 1.6324.5697 1.1119.4374 2.5713-.42 3.4506-.2152.2207-.5431.4522-.8724.6658-.3516.228-.7847.4857-1.2659.7586-.9638.5467-2.1569 1.1751-3.3548 1.7826-2.372 1.203-4.8584 2.3729-5.6485 2.6622-.9156.3354-1.8991.3671-2.8449.3184-.5152-.0265-1.1137-.086-1.7086-.1452-.4298-.0427-.8576-.0853-1.2507-.115-1.9278-.1461-3.4074-.6166-4.7703-1.05l-.1657-.0527c-1.4076-.4468-2.7171-.8431-4.4521-.913-.3967-.016-1.1888.0131-1.9054.0479zm4.1208-10.6506c.0641-.0292.2341-.0732.5377-.0908.2836-.0164.6072-.006.925.0186.3146.0244.6054.0612.8183.0921.1058.0154.1911.0292.2488.0389.0289.0049.0507.0087.0648.0112l.0022.0004 6.5675 1.4733.0451.0137c.0546.0164.1323.0391.2295.0661.1941.0538.468.1248.7934.1958.5852.1277 1.3692.2624 2.1684.2852-.057.1617-.1535.3526-.2843.5427-.1596.232-.3349.4114-.4788.5141-.4166.2976-.7528.4221-.9569.4751-.1033.0268-.176.0361-.2119.0393l-.0133.0011-.0078.0004-5.362-.0648-.1914 1.9837.1793-.9838-.1783.984.0532.0096.1525.0274c.132.0237.3221.0575.5558.0984.467.0818 1.1085.192 1.806.3056 1.3744.224 3.031.4722 3.9709.5289.6491.0392 1.4051-.16 2.1082-.3948.7337-.2449 1.5625-.584 2.396-.926 1.7173-.7044 3.4659-1.4212 4.9355-1.6642 1.2704-.2102 1.7226.2539 1.8851.5711.2328.4545.1062.9597-.0719 1.1424-.0437.0448-.2012.1716-.5288.3841-.3053.198-.7006.434-1.1643.697-.9261.5252-2.0888 1.138-3.2727 1.7385-2.3915 1.2129-4.772 2.3263-5.4317 2.5679-.5342.1957-1.1944.2433-2.0542.199-.5079-.0261-.9897-.0751-1.515-.1286-.4246-.0432-.8777-.0892-1.3961-.1285-1.6918-.1282-2.978-.5368-4.3563-.9747l-.1256-.0399c-1.4276-.4532-2.9552-.9238-4.9768-1.0052-.4551-.0183-1.2653.0098-1.9859.0439v-7.1009c1.4055-.503 3.4871-1.2584 4.1208-1.5473zm2.7954-.9099.1833-.9831c.0002.0001 0 0-.1833.9831zm-8.9162.8119h-3v10.9954h3z" fill-rule="evenodd"/>
+            </g>
+        </svg>   
+        
+                        </div>
+                        <div class='col-4  text-start'>Servicios o Menu</div>
+                        <div class='col-4  d-flex justify-content-end px-1'>
+                            <!-- Third item in third row -->
+                            <a href='#top'><img class='img-fluid float-end' src='../img/z_backtop.png' style='width: 30px; height: 30px; cursor: pointer;'></a>
+                        </div>
+                    </div>
+                
+                <!-- Descripcion de los Servicios o Menu -->
+                <div class="d-flex justify-content-center">
+                <div class="carousel position-relative w-75 mw-100 border border-2 border-secondary rounded" id="Servicios o Menu">
+                    
+
+                    <div class="slides">
+                        
+                    </div>
+                <!-- Left and Right Arrows -->
+                
+                    <div class="controls">
+                        
+                    </div>
+                </div>
+                </div>
+                
+                    <div id='Horario' class='d-flex align-items-center my-4 mx-3 py-2 px-3 border border-secondary rounded-3'>
+                        <div class="d-flex justify-content-center align-items-center" style="width: 200px; height: auto;">
+                            
+        <svg fill="none" height="150" width="150" viewBox="0 0 240 240">
+            <path d="m0 0h60v60h-60z" fill="black" opacity="0" transform="matrix(-1 0 0 -1 60 60)"/>
+            <g>
+                <!-- Outer Circle -->
+                <path d="m30 2a25 25 0 1 0 25 25 25 25 0 0 0 -25-25zm0 45a20 20 0 1 1 20-20 20 20 0 0 1 -20 20z" fill="black"/>
+                
+                <!-- Centered "L" Shape -->
+                <path d="m38 26h-8v-8a2 2 0 0 0 -5 1.5v10a4 2 0 0 0 2 1h12a2 2 0 0 0 1-4.5z" fill="black"/>
+            </g>
+        </svg>
+        
+                        </div>
+                        <div class='col-4  text-start'>Horario</div>
+                        <div class='col-4  d-flex justify-content-end px-1'>
+                            <!-- Third item in third row -->
+                            <a href='#top'><img class='img-fluid float-end' src='../img/z_backtop.png' style='width: 30px; height: 30px; cursor: pointer;'></a>
+                        </div>
+                    </div>
+                
+        <div class="container mt-5">
+            <h2 class="text-center mb-4">Opening Hours</h2>
+            <div class="row">
+                <div class="col-4 font-weight-bold">Day</div>
+                <div class="col-4 font-weight-bold">Opening Time</div>
+                <div class="col-4 font-weight-bold">Closing Time</div>
+            </div>
+            <div class="row py-2 border-bottom">
+                <div class="col-4">Monday</div>
+                <div class="col-4">09:00</div>
+                <div class="col-4">18:00</div>
+            </div>
+            <div class="row py-2 border-bottom">
+                <div class="col-4">Tuesday</div>
+                <div class="col-4">09:00</div>
+                <div class="col-4">18:00</div>
+            </div>
+            <div class="row py-2 border-bottom">
+                <div class="col-4">Wednesday</div>
+                <div class="col-4">09:00</div>
+                <div class="col-4">18:00</div>
+            </div>
+            <div class="row py-2 border-bottom">
+                <div class="col-4">Thursday</div>
+                <div class="col-4">09:00</div>
+                <div class="col-4">18:00</div>
+            </div>
+            <div class="row py-2 border-bottom">
+                <div class="col-4">Friday</div>
+                <div class="col-4">09:00</div>
+                <div class="col-4">18:00</div>
+            </div>
+            <div class="row py-2 border-bottom">
+                <div class="col-4">Saturday</div>
+                <div class="col-4">09:00</div>
+                <div class="col-4">18:00</div>
+            </div>
+            <div class="row py-2">
+                <div class="col-4">Sunday</div>
+                <div class="col-4">closed</div>
+                <div class="col-4">closed</div>
+            </div>
+        </div>
+        
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Contactenos</title>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+        </head>
+        <body>
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 col-md-8">
+                        <div class="card shadow-lg">
+                            <div class="card-body">
+                                <h2 class="card-title text-center mb-4">Contáctenos</h2>
+                                <p>¡Gracias por ponerte en contacto con nosotros! Estamos emocionados de recibir tus comentarios y preguntas.</p>
+                                <p>Por favor, completa el siguiente formulario para que podamos ayudarte de la mejor manera posible:</p>
+                                <form method="post" action="/contactus" novalidate="novalidate">
+                                    <div class="mb-3">
+                                        <label for="FullName" class="form-label">Tú nombre:</label>
+                                        <input type="text" class="form-control" id="FullName" name="FullName" placeholder="Escriba su nombre." required>
+                                        <div class="invalid-feedback">Introduzca su nombre</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="Email" class="form-label">Tu email:</label>
+                                        <input type="email" class="form-control" id="Email" name="Email" placeholder="Introduzca su dirección de correo electrónico." required>
+                                        <div class="invalid-feedback">Introduzca un correo electrónico válido</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="Enquiry" class="form-label">Consulta:</label>
+                                        <textarea class="form-control" id="Enquiry" name="Enquiry" placeholder="Ingrese su consulta." rows="4" required></textarea>
+                                        <div class="invalid-feedback">Ingrese su consulta</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary">Enviar</button>
+                                    </div>
+                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8EdMHkn9JTJAqedob8qlf8A-N2U3FpxRbFhPOJiKbF5d0jDqugR2mIj7gWtZjPnwfauW1KmP8tXo9pI45Jv3xmXOwiGBlXUSwovQgOA3UiNZOLV4WBwdfyxIUumdfEvPJm2Mtu7P0OC01zJh8FzCmr8">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bootstrap JS -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        </body>
+        </html>
+        
+                    <div id='Fotos' class='d-flex align-items-center my-4 mx-3 py-2 px-3 border border-secondary rounded-3'>
+                        <div class="d-flex justify-content-center align-items-center" style="width: 200px; height: auto;">
+                            
+        <svg fill="none" height="150" width="150" viewBox="0 0 240 240">
+            <g fill="black">
+                <path d="m7.8086 50.3477h40.3828c4.8749 0 7.3594-2.4375 7.3594-7.2657v-24.539c0-4.8281-2.4845-7.2422-7.3594-7.2422h-5.4845c-1.828 0-2.3905-.375-3.4452-1.5469l-1.8984-2.1094c-1.1484-1.289-2.3437-1.9922-4.7813-1.9922h-9.3281c-2.4141 0-3.6094.7032-4.7812 1.9922l-1.8985 2.1094c-1.0312 1.1484-1.6171 1.5469-3.4453 1.5469h-5.3203c-4.875 0-7.3594 2.4141-7.3594 7.2422v24.539c0 4.8282 2.4844 7.2657 7.3594 7.2657zm20.1797-7.5c-7.0781 0-12.7734-5.6954-12.7734-12.8204s5.6953-12.8202 12.7734-12.8202c7.125 0 12.7969 5.6952 12.7969 12.8202s-5.6954 12.8204-12.7969 12.8204zm16.8517-18.5391c-1.594 0-2.9064-1.2891-2.9064-2.8828 0-1.6172 1.3124-2.9063 2.9064-2.9063 1.5936 0 2.906 1.2891 2.906 2.9063 0 1.5937-1.3124 2.8828-2.906 2.8828zm-16.8517 14.9766c5.1094 0 9.2578-4.125 9.2578-9.2579 0-5.1328-4.1484-9.2578-9.2578-9.2578s-9.2344 4.125-9.2344 9.2578c0 5.1329 4.1485 9.2579 9.2344 9.2579z"/>
+            </g>
+        </svg>
+        
+                        </div>
+                        <div class='col-4  text-start'>Fotos</div>
+                        <div class='col-4  d-flex justify-content-end px-1'>
+                            <!-- Third item in third row -->
+                            <a href='#top'><img class='img-fluid float-end' src='../img/z_backtop.png' style='width: 30px; height: 30px; cursor: pointer;'></a>
+                        </div>
+                    </div>
+                
+                <!-- Fotos -->
+                <div class="d-flex justify-content-center">
+                <div class="carousel position-relative w-75 mw-100 border border-2 border-secondary rounded" id="Fotos">
+                    
+
+                    <div class="slides">
+                        
+                    </div>
+                <!-- Left and Right Arrows -->
+                
+                    <div class="controls">
+                        
+                    </div>
+                </div>
+                </div>
+                
+                    <div id='Promos' class='d-flex align-items-center my-4 mx-3 py-2 px-3 border border-secondary rounded-3'>
+                        <div class="d-flex justify-content-center align-items-center" style="width: 200px; height: auto;">
+                            
+		<svg fill="none" height="150" width="150" viewBox="0 0 240 240">
+			<g fill="black" transform="scale(2.5)">
+				<path d="M5 12H4v8c0 1 2 2 2 2h5V12H6 5zM18 12h-5v10h5c1 0 2-1 2-2v-8h-1H18zM19 7C19 7 19 6 19 6 19 4 17 2 15 2c-1 0-3 1-4 3C11 4 10 2 9 2 7 2 5 4 5 6 5 6 5 7 5 7H2v4h9V9h1 1v.1V11h9V7H19zM7 6C7 5 8 4 9 4c1 0 2 2 2 3H8C8 7 7 7 7 6zM16 4C16 4 17 4 17 5 17 6 16 6 16 7h-2C14 5 15 4 16 4z"/>
+			</g>
+		</svg>
+        
+                        </div>
+                        <div class='col-4  text-start'>Promos</div>
+                        <div class='col-4  d-flex justify-content-end px-1'>
+                            <!-- Third item in third row -->
+                            <a href='#top'><img class='img-fluid float-end' src='../img/z_backtop.png' style='width: 30px; height: 30px; cursor: pointer;'></a>
+                        </div>
+                    </div>
+                
+                    <div id='Owner' class='d-flex align-items-center my-4 mx-3 py-2 px-3 border border-secondary rounded-3'>
+                        <div class="d-flex justify-content-center align-items-center" style="width: 200px; height: auto;">
+                            
+        <svg fill="none" height="150" width="150" viewBox="0 0 240 240">
+            <g fill="black">
+                <path d="m0 0h48v48h-48z" fill="none"/>
+                <path d="m24 2a22 22 0 1 0 22 22 21.9 21.9 0 0 0 -22-22zm0 40a18 18 0 1 1 18-18 18.1 18.1 0 0 1 -18 18z"/>
+                <path d="m25.2 22.3a7.3 7.3 0 0 0 .8-3.3 7 7 0 1 0 -7 7 7.3 7.3 0 0 0 3.3-.8l2.9 2.8-2.6 2.6a1.9 1.9 0 0 0 0 2.8 1.9 1.9 0 0 0 2.8 0l2.6-2.6 1.2 1.2-2.6 2.6a1.9 1.9 0 0 0 0 2.8 1.9 1.9 0 0 0 2.8 0l4-4a1.9 1.9 0 0 0 0-2.8zm-9.2-3.3a3 3 0 1 1 3 3 2.9 2.9 0 0 1 -3-3z"/>
+            <g fill="black">
+        </svg>
+        
+                        </div>
+                        <div class='col-4  text-start'>Owner</div>
+                        <div class='col-4  d-flex justify-content-end px-1'>
+                            <!-- Third item in third row -->
+                            <a href='#top'><img class='img-fluid float-end' src='../img/z_backtop.png' style='width: 30px; height: 30px; cursor: pointer;'></a>
+                        </div>
+                    </div>
+                
+                    <div id='Compartir' class='d-flex align-items-center my-4 mx-3 py-2 px-3 border border-secondary rounded-3'>
+                        <div class="d-flex justify-content-center align-items-center" style="width: 200px; height: auto;">
+                            Compartir
+                        </div>
+                        <div class='col-4  text-start'>Compartir</div>
+                        <div class='col-4  d-flex justify-content-end px-1'>
+                            <!-- Third item in third row -->
+                            <a href='#top'><img class='img-fluid float-end' src='../img/z_backtop.png' style='width: 30px; height: 30px; cursor: pointer;'></a>
+                        </div>
+                    </div>
+                
+        </div>
+        
+        </body>
+        </html>
+        
