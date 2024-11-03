@@ -14,6 +14,26 @@
         
         <style>
         
+.knowus {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.info-card {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    width: 30%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 /* Base styles */
 body {
     font-family: Arial, sans-serif;
@@ -21,17 +41,11 @@ body {
     padding: 20px;
 }
 
-h1 {
-    font-size: 3em; /* Default large font size for desktop */
-}
 
 .text-section {
     font-size: 3em; /* Default large font size for desktop */
 }
 
-p {
-    font-size: 2em; /* Default paragraph font size for desktop */
-}
 
 img {
     width: 100%; /* Images take full width of their container */
@@ -49,7 +63,7 @@ img {
         font-size: 3em; /* Medium font size for large tablets */
     }
     p {
-        font-size: 3em; /* Medium font size for large tablets */
+        font-size: 1em; /* Medium font size for large tablets */
     }
     .text-section {
         font-size: 2em; /* Slightly smaller paragraph font size */
@@ -61,7 +75,7 @@ img {
         font-size: 2.7em; /* Medium font size for large tablets */
     }
     p {
-        font-size: 2.7em; /* Medium font size for large tablets */
+        font-size: 0.9em; /* Medium font size for large tablets */
     }
     .text-section {
        font-size: 1.8em; /* Slightly smaller paragraph font size */
@@ -73,7 +87,7 @@ img {
         font-size: 2.4em; /* Medium font size for large tablets */
     }
     p {
-        font-size: 2.4em; /* Medium font size for large tablets */
+        font-size: 0.8em; /* Medium font size for large tablets */
     }
     .text-section {
         font-size: 1.6em; /* Slightly smaller paragraph font size */
@@ -85,7 +99,7 @@ img {
         font-size: 2.1em; /* Smaller font size for medium tablets */
     }
     p {
-        font-size: 2.1em; /* Medium font size for large tablets */
+        font-size: 0.7em; /* Medium font size for large tablets */
     }
     .text-section {
         font-size: 1.4em; /* Smaller paragraph font size */
@@ -97,7 +111,7 @@ img {
         font-size: 1.8em; /* Smaller font size for small tablets */
     }
     p {
-        font-size: 1.8em; /* Medium font size for large tablets */
+        font-size: 0.6em; /* Medium font size for large tablets */
     }
     .text-section {
         font-size: 1.2em; /* Smaller paragraph font size */
@@ -109,7 +123,7 @@ img {
         font-size: 1.5em; /* Smaller font size for mobile */
     }
     p {
-        font-size: 1.5em; /* Medium font size for large tablets */
+        font-size: 0.5em; /* Medium font size for large tablets */
     }
     .text-section {
         font-size: 1em; /* Smaller paragraph font size */
@@ -121,7 +135,7 @@ img {
         font-size: 1.2em; /* Even smaller font size for very small screens */
     }
     p {
-        font-size: 1.2em; /* Medium font size for large tablets */
+        font-size: .4em; /* Medium font size for large tablets */
     }
     .text-section {
         font-size: 0.8em; /* Smaller paragraph font size */
@@ -887,7 +901,7 @@ img {
                 </div>
                 <div class="col-4 d-flex justify-content-center px-1">
                     <!-- Second item in second row -->
-                    <a href='#Servicios o Menu'>
+                    <a href='#Servicios'>
                         
         <svg fill="none" height="150" width="150" viewBox="0 0 60 60">
             <g fill="black">
@@ -920,7 +934,7 @@ img {
             <div class="row">
                 <div class="col-4 d-flex justify-content-end px-1">
                     <!-- First item in second row -->
-                    <a href='#Feedback'>
+                    <a href='#Contacto'>
                         
         <svg fill="none" height="140" width="140" viewBox="-3 0 20 20">
             <g fill="black">
@@ -999,26 +1013,6 @@ img {
 
 
    <!-- B1 NEWS SECTION -->
-   <div id='Noticias' class='info-section4'>
-       
-       <svg id="b1_news2" height="30" viewBox="0 0 48 48" width="30" xmlns="http://www.w3.org/2000/svg">
-        <path d="m0 0h48v48h-48z" fill="none"/>
-        <path d="m13.091 12c-5.021 0-9.091 4.477-9.091 10 0 4.701 2.952 8.633 6.926 9.703l3.074 12.297h12l-2.74-10.961 20.74 6.608v-35.647l-24 8zm4.032 28-2-8h3.754l2 8zm2.877-24v12h-6.909c-2.807 0-5.091-2.692-5.091-6s2.284-6 5.091-6zm20 18.174-16-5.098v-14.193l16-5.333z" fill="black"/>
-       </svg>
-       
-       <p class='center-text2'>****** Noticias ******</p>
-       <span class='back-to-top' onclick='scrollToTop()'>
-           <svg id="z_backtop1" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
-            <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
-           </svg>
-       </span>
-   </div> 
-
-
-                   
-
-
-   <!-- B1 NEWS SECTION -->
    <div id='Ubicacion' class='info-section4'>
        
     <svg id="c3_ubicacion2" height="30" width="30" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -1029,7 +1023,7 @@ img {
         </g>
     </svg>
         
-       <p class='center-text2'>****** Ubicacion ******</p>
+       <h1 class='center-text2'>****** Ubicacion ******</h1>
        <span class='back-to-top' onclick='scrollToTop()'>
            <svg id="z_backtop1" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
             <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
@@ -1080,7 +1074,7 @@ img {
 
 
    <!-- B1 NEWS SECTION -->
-   <div id='Servicios o Menu' class='info-section4'>
+   <div id='Servicios' class='info-section4'>
        
     <svg id="b2_sp" fill="none" height="40" viewBox="0 0 48 48" width="40" xmlns="http://www.w3.org/2000/svg">
         <g fill="black">
@@ -1090,7 +1084,7 @@ img {
         </g>
     </svg>  
         
-       <p class='center-text2'>****** Servicios o Menu ******</p>
+       <h1 class='center-text2'>****** Servicios ******</h1>
        <span class='back-to-top' onclick='scrollToTop()'>
            <svg id="z_backtop1" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
             <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
@@ -1102,7 +1096,7 @@ img {
                    
                 <!-- Descripcion de los Servicios o Menu -->
                 <div class="d-flex justify-content-center">
-                <div class="carousel position-relative w-75 mw-100 border border-2 border-secondary rounded" id="Servicios o Menu">
+                <div class="carousel position-relative w-75 mw-100 border border-2 border-secondary rounded" id="Servicios">
                     
                     <input type="radio" name="carouselmenu" id="slidemenu1" checked>
                     <input type="radio" name="carouselmenu" id="slidemenu2" >
@@ -1164,7 +1158,7 @@ img {
         </g>
     </svg>
         
-       <p class='center-text2'>****** Horario ******</p>
+       <h1 class='center-text2'>****** Horario ******</h1>
        <span class='back-to-top' onclick='scrollToTop()'>
            <svg id="z_backtop1" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
             <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
@@ -1174,50 +1168,62 @@ img {
 
 
                    
-        <div class="container mt-5">
-            <h2 class="text-center mb-4">Opening Hours</h2>
-            <div class="row">
-                <div class="col-4 font-weight-bold">Day</div>
-                <div class="col-4 font-weight-bold">Opening Time</div>
-                <div class="col-4 font-weight-bold">Closing Time</div>
-            </div>
-            <div class="row py-2 border-bottom">
-                <div class="col-4">Monday</div>
-                <div class="col-4"></div>
-                <div class="col-4"></div>
-            </div>
-            <div class="row py-2 border-bottom">
-                <div class="col-4">Tuesday</div>
-                <div class="col-4"></div>
-                <div class="col-4"></div>
-            </div>
-            <div class="row py-2 border-bottom">
-                <div class="col-4">Wednesday</div>
-                <div class="col-4"></div>
-                <div class="col-4"></div>
-            </div>
-            <div class="row py-2 border-bottom">
-                <div class="col-4">Thursday</div>
-                <div class="col-4"></div>
-                <div class="col-4"></div>
-            </div>
-            <div class="row py-2 border-bottom">
-                <div class="col-4">Friday</div>
-                <div class="col-4"></div>
-                <div class="col-4"></div>
-            </div>
-            <div class="row py-2 border-bottom">
-                <div class="col-4">Saturday</div>
-                <div class="col-4"></div>
-                <div class="col-4"></div>
-            </div>
-            <div class="row py-2">
-                <div class="col-4">Sunday</div>
-                <div class="col-4"></div>
-                <div class="col-4"></div>
-            </div>
-        </div>
+    <html>
+    <head>
+        <style>
+            table {
+                width: 40%;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1px solid #ccc;
+                padding: 5px; /* Smaller padding for smaller cells */
+                text-align: center;
+                width: 40px; /* Set a fixed width for the cells */
+                height: 40px; /* Set a fixed height for the cells */
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+            .open {
+                background-color: #90ee90; /* Light green */
+            }
+            .closed {
+                background-color: #ffcccb; /* Light red for closed */
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th></th>
+    <th>D</th><th>L</th><th>M</th><th>M</th><th>J</th><th>V</th><th>S</th></tr>
+        </table>
+    </body>
+    </html>
+    
+
+
+   <!-- B1 NEWS SECTION -->
+   <div id='Contacto' class='info-section4'>
+       
+        <svg id="z_backtop4" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
+            <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
+        </svg>
         
+       <h1 class='center-text2'>****** Contacto ******</h1>
+       <span class='back-to-top' onclick='scrollToTop()'>
+           <svg id="z_backtop1" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
+            <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
+           </svg>
+       </span>
+   </div> 
+
+
+                   
         <!DOCTYPE html>
         <html lang="es">
         <head>
@@ -1276,7 +1282,7 @@ img {
         <path d="m7.8086 50.3477h40.3828c4.8749 0 7.3594-2.4375 7.3594-7.2657v-24.539c0-4.8281-2.4845-7.2422-7.3594-7.2422h-5.4845c-1.828 0-2.3905-.375-3.4452-1.5469l-1.8984-2.1094c-1.1484-1.289-2.3437-1.9922-4.7813-1.9922h-9.3281c-2.4141 0-3.6094.7032-4.7812 1.9922l-1.8985 2.1094c-1.0312 1.1484-1.6171 1.5469-3.4453 1.5469h-5.3203c-4.875 0-7.3594 2.4141-7.3594 7.2422v24.539c0 4.8282 2.4844 7.2657 7.3594 7.2657zm20.1797-7.5c-7.0781 0-12.7734-5.6954-12.7734-12.8204s5.6953-12.8202 12.7734-12.8202c7.125 0 12.7969 5.6952 12.7969 12.8202s-5.6954 12.8204-12.7969 12.8204zm16.8517-18.5391c-1.594 0-2.9064-1.2891-2.9064-2.8828 0-1.6172 1.3124-2.9063 2.9064-2.9063 1.5936 0 2.906 1.2891 2.906 2.9063 0 1.5937-1.3124 2.8828-2.906 2.8828zm-16.8517 14.9766c5.1094 0 9.2578-4.125 9.2578-9.2579 0-5.1328-4.1484-9.2578-9.2578-9.2578s-9.2344 4.125-9.2344 9.2578c0 5.1329 4.1485 9.2579 9.2344 9.2579z"/>
     </svg>
         
-       <p class='center-text2'>****** Fotos ******</p>
+       <h1 class='center-text2'>****** Fotos ******</h1>
        <span class='back-to-top' onclick='scrollToTop()'>
            <svg id="z_backtop1" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
             <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
@@ -1346,7 +1352,7 @@ img {
         <path d="m569.517 440.013c18.458 31.994-4.711 71.987-41.577 71.987h-479.886c-36.937 0-59.999-40.055-41.577-71.987l239.946-416.028c18.467-32.009 64.72-31.951 83.154 0zm-281.517-86.013c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346 7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/>
     </svg>   
         
-       <p class='center-text2'>****** Promos ******</p>
+       <h1 class='center-text2'>****** Promos ******</h1>
        <span class='back-to-top' onclick='scrollToTop()'>
            <svg id="z_backtop1" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
             <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
@@ -1367,7 +1373,7 @@ img {
         <path d="m25.2 22.3a7.3 7.3 0 0 0 .8-3.3 7 7 0 1 0 -7 7 7.3 7.3 0 0 0 3.3-.8l2.9 2.8-2.6 2.6a1.9 1.9 0 0 0 0 2.8 1.9 1.9 0 0 0 2.8 0l2.6-2.6 1.2 1.2-2.6 2.6a1.9 1.9 0 0 0 0 2.8 1.9 1.9 0 0 0 2.8 0l4-4a1.9 1.9 0 0 0 0-2.8zm-9.2-3.3a3 3 0 1 1 3 3 2.9 2.9 0 0 1 -3-3z"/>
     </svg>
         
-       <p class='center-text2'>****** Owner ******</p>
+       <h1 class='center-text2'>****** Owner ******</h1>
        <span class='back-to-top' onclick='scrollToTop()'>
            <svg id="z_backtop1" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
             <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
@@ -1376,7 +1382,13 @@ img {
    </div> 
 
 
-                   
+                   <section class='knowus'><div class='info-container'><div class='info-card'>
+                            <p>Â¿Eres el responsable del local y quieres actualizar la informaciÃ³n de este sitio web?</p>
+                
+                            <p>Conoce el detalle de todo lo que puedes configurar.</p>
+                
+                            <p>No lo dudes, Â¡es gratis</p>
+                </div></div><section>
 
 
    <!-- B1 NEWS SECTION -->
@@ -1385,7 +1397,7 @@ img {
         <svg id="z_backtop7" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
             <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
         </svg>        
-       <p class='center-text2'>****** Compartir ******</p>
+       <h1 class='center-text2'>****** Compartir ******</h1>
        <span class='back-to-top' onclick='scrollToTop()'>
            <svg id="z_backtop1" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
             <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
@@ -1395,6 +1407,98 @@ img {
 
 
                    
+    <div id='c1_2' class='info-section2'>
+        <p>Comparte esta página en:</p>
+    
+        <a href="https://api.whatsapp.com/send?text=Visita%20esta%20página:%20https://tupaginaweb.com" 
+           target="_blank" style="text-decoration: none;">
+            <button class="share-button" style="width: 20%;">WhatsApp</button>
+        </a>
+        <br><br>
+    
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://tupaginaweb.com" 
+           target="_blank" style="text-decoration: none;">
+            <button class="share-button" style="width: 20%;">Facebook</button>
+        </a>
+        <br><br>
+    
+        <a href="https://signal.me/#p/+123456789" 
+        target="_blank" style="text-decoration: none;">
+         <button class="share-button" style="width: 20%;">Signal</button>
+        </a>
+        <br><br>
+
+        <a href="mailto:?subject=Echa%20un%20vistazo%20a%20esta%20página&body=Visita%20esta%20página:%20https://tupaginaweb.com" 
+           target="_blank" style="text-decoration: none;">
+            <button class="share-button" style="width: 20%;">Email</button>
+        </a>
+        <br><br>
+    
+        <a href="sms:?&body=Visita%20esta%20página:%20https://tupaginaweb.com" 
+           target="_blank" style="text-decoration: none;">
+            <button class="share-button" style="width: 20%;">SMS</button>
+        </a>
+        <br><br>
+    
+        <a href="https://twitter.com/intent/tweet?url=https://tupaginaweb.com&text=Echa%20un%20vistazo%20a%20esta%20página!" 
+           target="_blank" style="text-decoration: none;">
+            <button class="share-button" style="width: 20%;">X (Twitter)</button>
+        </a>
+        <br><br>
+    
+        <a href="https://www.tiktok.com/share?url=https://tupaginaweb.com" 
+           target="_blank" style="text-decoration: none;">
+            <button class="share-button" style="width: 20%;">TikTok</button>
+        </a>
+        <br><br>
+    
+        <a href="https://www.instagram.com" 
+           target="_blank" style="text-decoration: none;">
+            <button class="share-button" style="width: 20%;">Instagram</button>
+        </a>
+    </div>
+                
+
+
+   <!-- B1 NEWS SECTION -->
+   <div id='Conocenos' class='info-section4'>
+       
+       <svg id="b1_news2" height="30" viewBox="0 0 48 48" width="30" xmlns="http://www.w3.org/2000/svg">
+        <path d="m0 0h48v48h-48z" fill="none"/>
+        <path d="m13.091 12c-5.021 0-9.091 4.477-9.091 10 0 4.701 2.952 8.633 6.926 9.703l3.074 12.297h12l-2.74-10.961 20.74 6.608v-35.647l-24 8zm4.032 28-2-8h3.754l2 8zm2.877-24v12h-6.909c-2.807 0-5.091-2.692-5.091-6s2.284-6 5.091-6zm20 18.174-16-5.098v-14.193l16-5.333z" fill="black"/>
+       </svg>
+       
+       <h1 class='center-text2'>****** Conocenos ******</h1>
+       <span class='back-to-top' onclick='scrollToTop()'>
+           <svg id="z_backtop1" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
+            <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
+           </svg>
+       </span>
+   </div> 
+
+
+                   <section class='knowus'><div class='info-container'>
+                    
+                        <div class='info-card'>
+                            <h3>Mision</h3>
+                            <p>Proveer los mejores servicios a nuestros clientes entregando inovacion y excelencia.</p>
+                        </div>
+                    
+                
+                    
+                        <div class='info-card'>
+                            <h3>Vision</h3>
+                            <p>Ser lider de la industria, reconocido por el compromiso en vcalidad y satisfaccion del clietne.</p>
+                        </div>
+                    
+                
+                    
+                        <div class='info-card'>
+                            <h3>Valores</h3>
+                            <p>Integridad, Calidad, Trabajo de equipo, Enfoque a cliente, entrega en todo lo que hacemos.</p>
+                        </div>
+                    
+                </div><section>
         </div>
         
         </body>
