@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div>
+        <h1 id="header">Welcome to My Responsive Site</h1>
+        <p id="paragraph">This text will adjust its size based on the screen width. Resize your browser to see the effect!</p>
+        <img src="image.jpg" alt="Example Image">
+        <div class="info-section" id="infoSection">
+            This is an info section. Its font size will also be displayed.
+        </div>
+        <div class="browser-width">
+            Current browser width: <span id="widthDisplay">0</span> pixels<br>
+            Current H1 font size: <span id="headerSize">0</span> pixels<br>
+            Current P font size: <span id="paragraphSize">0</span> pixels<br>
+            Current Info Section font size: <span id="infoSize">0</span> pixels<br>
+        </div>
+    </div>
+<style>
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3em; /* Default large font size for desktop */
+}
+
+.info-section {
+    font-size: 3em; /* Default large font size for desktop */
+}
+
+p {
+    font-size: 2em; /* Default paragraph font size for desktop */
+}
+
+img {
+    width: 100%; /* Images take full width of their container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.browser-width {
+    margin-top: 20px; /* Add some space above the width display */
+    font-size: 1em; /* Font size for the width display */
+}
+
+/* Gradual styles for different screen sizes */
+@media (max-width: 1920px) {
+    h1 {
+        font-size: 3em; /* Medium font size for large tablets */
+    }
+    .info-section {
+        font-size: 3em; /* Medium font size for large tablets */
+    }
+    p {
+        font-size: 2em; /* Slightly smaller paragraph font size */
+    }
+}
+
+@media (max-width: 1680px) {
+    h1 {
+        font-size: 2.7em; /* Medium font size for large tablets */
+    }
+    .info-section {
+        font-size: 2.7em; /* Medium font size for large tablets */
+    }
+    p {
+       font-size: 1.8em; /* Slightly smaller paragraph font size */
+    }
+}
+
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 2.4em; /* Medium font size for large tablets */
+    }
+    .info-section {
+        font-size: 2.4em; /* Medium font size for large tablets */
+    }
+    p {
+        font-size: 1.6em; /* Slightly smaller paragraph font size */
+    }
+}
+
+@media (max-width: 992px) {
+    h1 {
+        font-size: 2.1em; /* Smaller font size for medium tablets */
+    }
+    .info-section {
+        font-size: 2.1em; /* Medium font size for large tablets */
+    }
+    p {
+        font-size: 1.4em; /* Smaller paragraph font size */
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8em; /* Smaller font size for small tablets */
+    }
+    .info-section {
+        font-size: 1.8em; /* Medium font size for large tablets */
+    }
+    p {
+        font-size: 1.2em; /* Smaller paragraph font size */
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em; /* Smaller font size for mobile */
+    }
+    .info-section {
+        font-size: 1.5em; /* Medium font size for large tablets */
+    }
+    p {
+        font-size: 1em; /* Smaller paragraph font size */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em; /* Even smaller font size for very small screens */
+    }
+    .info-section {
+        font-size: 1.2em; /* Medium font size for large tablets */
+    }
+    p {
+        font-size: 0.8em; /* Smaller paragraph font size */
+    }
+}
+
+
+</style>
+    <script>
+        function updateSizes() {
+            const width = window.innerWidth; // Get the current width of the window
+            const headerSize = window.getComputedStyle(document.getElementById('header')).fontSize; // Get H1 font size
+            const paragraphSize = window.getComputedStyle(document.getElementById('paragraph')).fontSize; // Get paragraph font size
+            const infoSize = window.getComputedStyle(document.getElementById('infoSection')).fontSize; // Get info section font size
+
+            document.getElementById('widthDisplay').textContent = width; // Display the width
+            document.getElementById('headerSize').textContent = headerSize; // Display H1 font size
+            document.getElementById('paragraphSize').textContent = paragraphSize; // Display paragraph font size
+            document.getElementById('infoSize').textContent = infoSize; // Display info section font size
+        }
+
+
+        window.addEventListener('resize', updateSizes); // Update sizes on resize
+        window.addEventListener('load', updateSizes); // Also update sizes on initial load
+    </script>
+</body>
+</html>

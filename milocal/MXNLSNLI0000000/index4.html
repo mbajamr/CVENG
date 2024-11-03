@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 3em; /* Default large font size for desktop */
+}
+
+p {
+    font-size: 1.5em; /* Default paragraph font size for desktop */
+}
+
+img {
+    width: 100%; /* Images take full width of their container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.browser-width {
+    margin-top: 20px; /* Add some space above the width display */
+    font-size: 1em; /* Font size for the width display */
+}
+
+/* Gradual styles for different screen sizes */
+@media (max-width: 1920px) {
+    h1 {
+        font-size: 4em; /* Medium font size for large tablets */
+    }
+
+    p {
+        font-size: 2.8em; /* Slightly smaller paragraph font size */
+    }
+}
+
+@media (max-width: 1680px) {
+    h1 {
+        font-size: 3.5em; /* Medium font size for large tablets */
+    }
+
+    p {
+        font-size: 2.4em; /* Slightly smaller paragraph font size */
+    }
+}
+
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 3em; /* Medium font size for large tablets */
+    }
+
+    p {
+        font-size: 2em; /* Slightly smaller paragraph font size */
+    }
+}
+
+@media (max-width: 992px) {
+    h1 {
+        font-size: 2.5em; /* Smaller font size for medium tablets */
+    }
+
+    p {
+        font-size: 1.6em; /* Smaller paragraph font size */
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em; /* Smaller font size for small tablets */
+    }
+
+    p {
+        font-size: 1.2em; /* Smaller paragraph font size */
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em; /* Smaller font size for mobile */
+    }
+
+    p {
+        font-size: .8em; /* Smaller paragraph font size */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1em; /* Even smaller font size for very small screens */
+    }
+
+    p {
+        font-size: 0.4em; /* Smaller paragraph font size */
+    }
+}
+
+
+</style>
+<body>
+    <div class="container">
+        <h1>Welcome to My Responsive Site</h1>
+        <p>This text will adjust its size based on the screen width. Resize your browser to see the effect!</p>
+        <img src="image.jpg" alt="Example Image">
+        
+        <div class="browser-width">
+            Current browser width: <span id="widthDisplay">0</span> pixels
+        </div>
+    </div>
+
+    <script>
+        function updateWidth() {
+            const width = window.innerWidth; // Get the current width of the window
+            document.getElementById('widthDisplay').textContent = width; // Display the width
+        }
+
+        window.addEventListener('resize', updateWidth); // Update width on resize
+        window.addEventListener('load', updateWidth); // Also update width on initial load
+    </script>
+</body>
+</html>

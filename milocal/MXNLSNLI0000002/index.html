@@ -14,6 +14,121 @@
         
         <style>
         
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3em; /* Default large font size for desktop */
+}
+
+.text-section {
+    font-size: 3em; /* Default large font size for desktop */
+}
+
+p {
+    font-size: 2em; /* Default paragraph font size for desktop */
+}
+
+img {
+    width: 100%; /* Images take full width of their container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.browser-width {
+    margin-top: 20px; /* Add some space above the width display */
+    font-size: 1em; /* Font size for the width display */
+}
+
+/* Gradual styles for different screen sizes */
+@media (max-width: 1920px) {
+    h1 {
+        font-size: 3em; /* Medium font size for large tablets */
+    }
+    p {
+        font-size: 3em; /* Medium font size for large tablets */
+    }
+    .text-section {
+        font-size: 2em; /* Slightly smaller paragraph font size */
+    }
+}
+
+@media (max-width: 1680px) {
+    h1 {
+        font-size: 2.7em; /* Medium font size for large tablets */
+    }
+    p {
+        font-size: 2.7em; /* Medium font size for large tablets */
+    }
+    .text-section {
+       font-size: 1.8em; /* Slightly smaller paragraph font size */
+    }
+}
+
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 2.4em; /* Medium font size for large tablets */
+    }
+    p {
+        font-size: 2.4em; /* Medium font size for large tablets */
+    }
+    .text-section {
+        font-size: 1.6em; /* Slightly smaller paragraph font size */
+    }
+}
+
+@media (max-width: 992px) {
+    h1 {
+        font-size: 2.1em; /* Smaller font size for medium tablets */
+    }
+    p {
+        font-size: 2.1em; /* Medium font size for large tablets */
+    }
+    .text-section {
+        font-size: 1.4em; /* Smaller paragraph font size */
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8em; /* Smaller font size for small tablets */
+    }
+    p {
+        font-size: 1.8em; /* Medium font size for large tablets */
+    }
+    .text-section {
+        font-size: 1.2em; /* Smaller paragraph font size */
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em; /* Smaller font size for mobile */
+    }
+    p {
+        font-size: 1.5em; /* Medium font size for large tablets */
+    }
+    .text-section {
+        font-size: 1em; /* Smaller paragraph font size */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em; /* Even smaller font size for very small screens */
+    }
+    p {
+        font-size: 1.2em; /* Medium font size for large tablets */
+    }
+    .text-section {
+        font-size: 0.8em; /* Smaller paragraph font size */
+    }
+}
+
+
         .category {
             border-collapse: collapse;
             width: 50%; /* Set desired width */
@@ -23,7 +138,6 @@
             font-size: 1em; /* Font size increased */
             font-weight: bold; /* Make text bold */
         }
-
 
         .share-button {
             width: 200px; /* Ancho consistente */
@@ -36,28 +150,7 @@
             cursor: pointer;
             text-align: center;
         }        
-        .carouselB {
-            position: relative;
-            width: auto;
-            max-width: 800px;
-            height: auto; /*600px*/
-            overflow: hidden;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            margin: 0 auto; /* Esto centrará el carrusel horizontalmente */
-            display: block;
-        }     
-        .carouselA {
-            position: relative;
-            width: auto;
-            max-width: 800px;
-            height: auto; /*600px*/
-            overflow: hidden;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            margin: 0 auto; /* Esto centrará el carrusel horizontalmente */
-            display: block;
-        }   
+  
         .slides {
             display: flex;
             transition: transform 0.5s ease;
@@ -72,90 +165,6 @@
             align-items: center;
             height: 100%;
         }
-
-    #slideB1:checked ~ .slides {
-    transform: translateX(-0%);
-    }
-
-    #slideB2:checked ~ .slides {
-        transform: translateX(-100%);
-    }
-
-    #slideB3:checked ~ .slides {
-        transform: translateX(-200%);
-    }
-
-    #slideB4:checked ~ .slides {
-        transform: translateX(-300%);
-    }
-
-    #slideB5:checked ~ .slides {
-        transform: translateX(-400%);
-    }
-
-    #slideA1:checked ~ .slides {
-    transform: translateX(-0%);
-    }
-
-    #slideA2:checked ~ .slides {
-        transform: translateX(-100%);
-    }
-
-    #slideA3:checked ~ .slides {
-        transform: translateX(-200%);
-    }
-
-    #slideA4:checked ~ .slides {
-        transform: translateX(-300%);
-    }
-
-    #slideA5:checked ~ .slides {
-        transform: translateX(-400%);
-    }
-
-    /* Arrows linked to radio button checks */
-    #slideB1:checked ~ .arrow.left[for="slideB5"],
-    #slideB1:checked ~ .arrow.right[for="slideB2"] {
-        display: block;
-    }
-    #slideB2:checked ~ .arrow.left[for="slideB1"],
-    #slideB2:checked ~ .arrow.right[for="slideB3"] {
-        display: block;
-    }
-    #slideB3:checked ~ .arrow.left[for="slideB2"],
-    #slideB3:checked ~ .arrow.right[for="slideB4"] {
-        display: block;
-    }
-    #slideB4:checked ~ .arrow.left[for="slideB3"],
-    #slideB4:checked ~ .arrow.right[for="slideB5"] {
-        display: block;
-    }
-    #slideB5:checked ~ .arrow.left[for="slideB4"],
-    #slideB5:checked ~ .arrow.right[for="slideB1"] {
-        display: block;
-    }       
-
-    /* Arrows linked to radio button checks */
-    #slideA1:checked ~ .arrow.left[for="slideA5"],
-    #slideA1:checked ~ .arrow.right[for="slideA2"] {
-        display: block;
-    }
-    #slideA2:checked ~ .arrow.left[for="slideA1"],
-    #slideA2:checked ~ .arrow.right[for="slideA3"] {
-        display: block;
-    }
-    #slideA3:checked ~ .arrow.left[for="slideA2"],
-    #slideA3:checked ~ .arrow.right[for="slideA4"] {
-        display: block;
-    }
-    #slideA4:checked ~ .arrow.left[for="slideA3"],
-    #slideA4:checked ~ .arrow.right[for="slideA5"] {
-        display: block;
-    }
-    #slideA5:checked ~ .arrow.left[for="slideA4"],
-    #slideA5:checked ~ .arrow.right[for="slideA1"] {
-        display: block;
-    }  
 
     .arrow {
         position: absolute;
@@ -314,6 +323,28 @@
             border-radius: 10px; /* Rounded corners for images */
         }
 
+/* Style for sections at the bottom */
+.info-section4 {
+    display: flex; /* Flexbox layout for icons and text */
+    border: 1px solid #ccc; /* Border for sections */
+    border-radius: 10px; /* Rounded corners for sections */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 10px; /* Optional padding */
+}
+
+.text-centered {
+    margin: 0; /* Remove default margins */
+    text-align: center; /* Center the text */
+}
+
+        /* Style for sections at the bottom */
+        .info-section3 {
+            display: flex; /* Flexbox layout for icons and text */
+            border: 1px solid #ccc; /* Border for sections */
+            border-radius: 10px; /* Rounded corners for sections */
+        }
+        
         /* Style for sections at the bottom */
         .info-section {
             display: flex; /* Flexbox layout for icons and text */
@@ -367,6 +398,15 @@
             font-weight: bold;
             margin: 10px 0; /* Add margin to adjust spacing if needed */
         }
+
+        .center-text2 {
+            /*text-align: right;*/
+            position: absolute;
+            left: 30%;
+            font-weight: bold;
+            margin: 10px 0; /* Add margin to adjust spacing if needed */
+        }
+
         /* Responsive adjustments for mobile screens */
         @media (max-width: 500px) {
             .grid-container {
@@ -446,15 +486,7 @@
             margin-right: 10px; /* Space between image and text */
         }
 
-        @media (max-width: 768px) {
-            .title-style {
-                font-size: 2.5rem; /* Adjust font size for smaller screens */
-            }
-            .title-style img {
-                width: 40px; /* Adjust image size for smaller screens */
-                height: 40px;
-            }
-        }
+
 
 
         
@@ -806,8 +838,8 @@
             </div>
             
             <!-- MAIN TITLE -->
-            <div id="top" class=" text-center" style="border: none; text-align: center; font-size: 40px; font-weight: bold; white-space: nowrap;">
-                El Tule
+            <div id="top" class=" text-center" style="border: none; text-align: center; font-size: 20px; font-weight: bold; white-space: nowrap;">
+                <p id="paragraph">El Tule</p>             
             </div>
         
 
@@ -832,9 +864,10 @@
 
  
             <!-- CATEGORY -->
-            <div id="top" class=" text-center" style="border: none; text-align: center; font-size: 40px; font-weight: bold; white-space: nowrap;">
-                Arte, Tradicion y Sabor de Oaxaca
+            <div id="top" class=" text-center" style="border: none; text-align: center; font-size: 15px; font-weight: bold; white-space: nowrap;">
+                <p id="paragraph">Arte, Tradicion y Sabor de Oaxaca</p>             
             </div>
+
         
             <div style="padding: 10px;">
                 <!-- This div acts as a separator -->
@@ -963,24 +996,30 @@
                 </div>
             </div>
         
+
+
    <!-- B1 NEWS SECTION -->
-   <div id='Noticias' class='info-section'>
+   <div id='Noticias' class='info-section4'>
        
        <svg id="b1_news2" height="30" viewBox="0 0 48 48" width="30" xmlns="http://www.w3.org/2000/svg">
         <path d="m0 0h48v48h-48z" fill="none"/>
         <path d="m13.091 12c-5.021 0-9.091 4.477-9.091 10 0 4.701 2.952 8.633 6.926 9.703l3.074 12.297h12l-2.74-10.961 20.74 6.608v-35.647l-24 8zm4.032 28-2-8h3.754l2 8zm2.877-24v12h-6.909c-2.807 0-5.091-2.692-5.091-6s2.284-6 5.091-6zm20 18.174-16-5.098v-14.193l16-5.333z" fill="black"/>
        </svg>
        
-       <p class='center-text'>****** Noticias ******</p>
+       <p class='center-text2'>****** Noticias ******</p>
        <span class='back-to-top' onclick='scrollToTop()'>
            <svg id="z_backtop1" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
             <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
            </svg>
        </span>
    </div> 
+
+
                    
+
+
    <!-- B1 NEWS SECTION -->
-   <div id='Ubicacion' class='info-section'>
+   <div id='Ubicacion' class='info-section4'>
        
     <svg id="c3_ubicacion2" height="30" width="30" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
         <g fill="black">
@@ -990,13 +1029,15 @@
         </g>
     </svg>
         
-       <p class='center-text'>****** Ubicacion ******</p>
+       <p class='center-text2'>****** Ubicacion ******</p>
        <span class='back-to-top' onclick='scrollToTop()'>
            <svg id="z_backtop1" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
             <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
            </svg>
        </span>
    </div> 
+
+
                    
         <!DOCTYPE html>
         <html>
@@ -1036,8 +1077,10 @@
         </body>
         </html>
         
+
+
    <!-- B1 NEWS SECTION -->
-   <div id='Servicios o Menu' class='info-section'>
+   <div id='Servicios o Menu' class='info-section4'>
        
     <svg id="b2_sp" fill="none" height="40" viewBox="0 0 48 48" width="40" xmlns="http://www.w3.org/2000/svg">
         <g fill="black">
@@ -1047,13 +1090,15 @@
         </g>
     </svg>  
         
-       <p class='center-text'>****** Servicios o Menu ******</p>
+       <p class='center-text2'>****** Servicios o Menu ******</p>
        <span class='back-to-top' onclick='scrollToTop()'>
            <svg id="z_backtop1" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
             <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
            </svg>
        </span>
    </div> 
+
+
                    
                 <!-- Descripcion de los Servicios o Menu -->
                 <div class="d-flex justify-content-center">
@@ -1092,8 +1137,10 @@
                 </div>
                 </div>
                 
+
+
    <!-- B1 NEWS SECTION -->
-   <div id='Horario' class='info-section'>
+   <div id='Horario' class='info-section4'>
        
     <svg id="b3_horario2" viewBox="0 0 24 24" width="30" height="30" xmlns="http://www.w3.org/2000/svg">
         <path d="m0 0h24v24h-24z" fill="black" opacity="0" transform="matrix(-1 0 0 -1 24 24)"/>
@@ -1103,13 +1150,15 @@
         </g>
     </svg>
         
-       <p class='center-text'>****** Horario ******</p>
+       <p class='center-text2'>****** Horario ******</p>
        <span class='back-to-top' onclick='scrollToTop()'>
            <svg id="z_backtop1" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
             <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
            </svg>
        </span>
    </div> 
+
+
                    
         <div class="container mt-5">
             <h2 class="text-center mb-4">Opening Hours</h2>
@@ -1204,20 +1253,24 @@
         </body>
         </html>
         
+
+
    <!-- B1 NEWS SECTION -->
-   <div id='Fotos' class='info-section'>
+   <div id='Fotos' class='info-section4'>
        
     <svg id="c2_fotos2" height="30" viewBox="0 0 56 56" width="30" xmlns="http://www.w3.org/2000/svg">
         <path d="m7.8086 50.3477h40.3828c4.8749 0 7.3594-2.4375 7.3594-7.2657v-24.539c0-4.8281-2.4845-7.2422-7.3594-7.2422h-5.4845c-1.828 0-2.3905-.375-3.4452-1.5469l-1.8984-2.1094c-1.1484-1.289-2.3437-1.9922-4.7813-1.9922h-9.3281c-2.4141 0-3.6094.7032-4.7812 1.9922l-1.8985 2.1094c-1.0312 1.1484-1.6171 1.5469-3.4453 1.5469h-5.3203c-4.875 0-7.3594 2.4141-7.3594 7.2422v24.539c0 4.8282 2.4844 7.2657 7.3594 7.2657zm20.1797-7.5c-7.0781 0-12.7734-5.6954-12.7734-12.8204s5.6953-12.8202 12.7734-12.8202c7.125 0 12.7969 5.6952 12.7969 12.8202s-5.6954 12.8204-12.7969 12.8204zm16.8517-18.5391c-1.594 0-2.9064-1.2891-2.9064-2.8828 0-1.6172 1.3124-2.9063 2.9064-2.9063 1.5936 0 2.906 1.2891 2.906 2.9063 0 1.5937-1.3124 2.8828-2.906 2.8828zm-16.8517 14.9766c5.1094 0 9.2578-4.125 9.2578-9.2579 0-5.1328-4.1484-9.2578-9.2578-9.2578s-9.2344 4.125-9.2344 9.2578c0 5.1329 4.1485 9.2579 9.2344 9.2579z"/>
     </svg>
         
-       <p class='center-text'>****** Fotos ******</p>
+       <p class='center-text2'>****** Fotos ******</p>
        <span class='back-to-top' onclick='scrollToTop()'>
            <svg id="z_backtop1" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
             <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
            </svg>
        </span>
    </div> 
+
+
                    
                 <!-- Fotos -->
                 <div class="d-flex justify-content-center">
@@ -1270,23 +1323,29 @@
                 </div>
                 </div>
                 
+
+
    <!-- B1 NEWS SECTION -->
-   <div id='Promos' class='info-section'>
+   <div id='Promos' class='info-section4'>
        
     <svg id="d2_promo2" viewBox="0 0 576 512" height="30" width="30" xmlns="http://www.w3.org/2000/svg">
         <path d="m569.517 440.013c18.458 31.994-4.711 71.987-41.577 71.987h-479.886c-36.937 0-59.999-40.055-41.577-71.987l239.946-416.028c18.467-32.009 64.72-31.951 83.154 0zm-281.517-86.013c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346 7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/>
     </svg>   
         
-       <p class='center-text'>****** Promos ******</p>
+       <p class='center-text2'>****** Promos ******</p>
        <span class='back-to-top' onclick='scrollToTop()'>
            <svg id="z_backtop1" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
             <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
            </svg>
        </span>
    </div> 
+
+
                    
+
+
    <!-- B1 NEWS SECTION -->
-   <div id='Owner' class='info-section'>
+   <div id='Owner' class='info-section4'>
        
     <svg id="d3_admin2" height="30" viewBox="0 0 48 48" width="30" xmlns="http://www.w3.org/2000/svg">
         <path d="m0 0h48v48h-48z" fill="none"/>
@@ -1294,27 +1353,33 @@
         <path d="m25.2 22.3a7.3 7.3 0 0 0 .8-3.3 7 7 0 1 0 -7 7 7.3 7.3 0 0 0 3.3-.8l2.9 2.8-2.6 2.6a1.9 1.9 0 0 0 0 2.8 1.9 1.9 0 0 0 2.8 0l2.6-2.6 1.2 1.2-2.6 2.6a1.9 1.9 0 0 0 0 2.8 1.9 1.9 0 0 0 2.8 0l4-4a1.9 1.9 0 0 0 0-2.8zm-9.2-3.3a3 3 0 1 1 3 3 2.9 2.9 0 0 1 -3-3z"/>
     </svg>
         
-       <p class='center-text'>****** Owner ******</p>
+       <p class='center-text2'>****** Owner ******</p>
        <span class='back-to-top' onclick='scrollToTop()'>
            <svg id="z_backtop1" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
             <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
            </svg>
        </span>
    </div> 
+
+
                    
+
+
    <!-- B1 NEWS SECTION -->
-   <div id='Compartir' class='info-section'>
+   <div id='Compartir' class='info-section4'>
        
         <svg id="z_backtop7" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
             <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
         </svg>        
-       <p class='center-text'>****** Compartir ******</p>
+       <p class='center-text2'>****** Compartir ******</p>
        <span class='back-to-top' onclick='scrollToTop()'>
            <svg id="z_backtop1" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
             <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
            </svg>
        </span>
    </div> 
+
+
                    
         </div>
         
