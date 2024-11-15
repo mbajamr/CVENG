@@ -4,48 +4,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* CSS to center the image */
-        .center {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%; /* Adjust width as needed */
-        }
-        header {
-            background-color: white; /* Initial background color */
-            color: black; /* Initial text color */
-            padding: 20px; /* Add some padding */
-        }
-    </style>
+    <title>MiLocal.com</title>
+
+<style>
+
+    /* CSS to center the image */
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%; /* Adjust width as needed */
+    }
+    header {
+        background-color: white; /* Initial background color */
+        color: black; /* Initial text color */
+        padding: 20px; /* Add some padding */
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background-color: #ffffff; /* White background */
+        transition: background-color 0.2s, color 0.2s;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    input[type="text"] {
+        padding: 10px;
+        width: 300px;
+        margin-top: 20px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: white; /* Google blue */
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin-left: 10px; /* Space between input and button */
+    }
+
+    button:hover {
+        background-color: white; /* Darker blue on hover */
+    }
+
+    main {
+        margin-top: 20px;
+    }
+
+    #features {
+        background-color: white; /* Light gray section */
+        padding: 20px;
+    }
+
+    footer {
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+
+    
+</style>
+
 </head>
+
 <body>
+
+
     <div style="height: 20px;"></div> <!-- Adjust height as needed -->
+
+        <svg id="sunmoonmain" fill="black" viewBox="0 0 8 8" width="80" height="40" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-left: 1px;" onclick="cambiarEstilo()">
+                <path d="m0.29 2.32c-0.77 0-1.39 0.63-1.39 1.39s0.63 1.39 1.39 1.39 1.39-0.63 1.39-1.39-0.63-1.39-1.39-1.39zm3.57 1.17-1.37-0.69 0.49-1.46c0.07-0.21-0.12-0.43-0.33-0.33l-1.46 0.49-0.69-1.37c-0.09-0.17-0.26-0.17-0.34 0l-0.69 1.37-1.46-0.49c-0.21-0.07-0.43 0.12-0.33 0.33l0.49 1.46-1.37 0.69c-0.17 0.09-0.17 0.26 0 0.34l1.37 0.69-0.49 1.46c-0.07 0.21 0.12 0.43 0.33 0.33l1.46-0.49 0.69 1.37c0.09 0.17 0.26 0.17 0.34 0l0.69-1.37 1.46 0.49c0.21 0.07 0.43-0.12 0.33-0.33l-0.49-1.46 1.37-0.69c0.18-0.09 0.18-0.26 0-0.34zm-2.27 1.54c-0.73 0.73-1.91 0.73-2.74 0s-0.73-1.91 0-2.74 1.91-0.73 2.74 0 0.73 1.91 0 2.74z"/>
+                <path d="m7 0c-1.56.52-2.69 2.00-2.69 3.74 0 2.19 1.77 3 3 3 1.74 0 3.22-1.13 3.74-2.69-.4.13-.82.22-1.27.22-2.19 0-3-1.77-3-3 0-.44.08-.87.22-1.27z"/>
+        </svg>	
+
+            <div style="padding: 100px;">
+                <!-- This div acts as a separator -->
+            </div>
+
+
+            <div style="flex: 1; display: flex; justify-content: center;">
+                <div style="display: flex; align-content: flex-end;" >
+                    
+    <img src='../milocal/img/MiLocalLogo.svg'  style="width: 50px;">
+
+                    <div id="top" style="align-content: flex-end; vertical-align: bottom; font-size:25px; font-weight: bold; ">
+                        MiLocal.com
+                    </div>
+                </div>
+            </div>
+
     <div>
-        <!--<img id="imagenx" src="pixel_white.png" onclick="cambiarEstilo()" alt="Description of Image" style="display: block; margin-left: auto; margin-right: auto; width: 30%; max-width: 150px; height: auto;">  -->
-        <img id="imagenx" src="img/pixel_white.png" onclick="cambiarEstilo()" alt="Description of Image">
-        <!-- Original SVG Icon -->
-        <svg id="sun" viewBox="0 0 552 552" width="40" height="40" xmlns="http://www.w3.org/2000/svg" onclick="cambiarEstilo()">
-            <path d="m256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7-100.5-33.5c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0s-49.9-131.1 0-181 131.1-49.9 181 0 49.9 131.1 0 181z" fill="black"/>
-            <!-- Vertical Line -->
-            <line x1="552" y1="0" x2="552" y2="552" stroke="black" stroke-width="40"/>
-        </svg>
-        <!-- New Moon SVG centered vertically with the sun and moved to the right -->
-        <svg id="moon" height="30" viewBox="0 0 8 8" width="30" xmlns="http://www.w3.org/2000/svg" onclick="cambiarEstilo()" style="vertical-align: middle; margin-left: 0px; position: relative; top: -17px;">
-            <path d="m2.72 0c-1.58.53-2.72 2.02-2.72 3.78 0 2.21 1.79 4 4 4 1.76 0 3.25-1.14 3.78-2.72-.4.13-.83.22-1.28.22-2.21 0-4-1.79-4-4 0-.45.08-.88.22-1.28z" fill="black"/>
-        </svg>
-    </div>
-    <div style="height: 200px;"></div> <!-- Adjust height as needed -->
-    <div>
-        <img id="imagenlogo" src="img/MiLocal.png" alt="">
         <!--<h1>MiLocal.com</h1>-->
         <p>Busca - Encuentra - Disfruta</p>
         <input type="text" id="searchInput" placeholder="Buscar..." />
     </div>
-    <main>
 
+    <main>
         <!-- Search Results Section -->
         <section id="searchResults" style="display: none;">
             <h2>Resultado:</h2>
@@ -55,15 +119,17 @@
         <div style="height: 150px;"></div> <!-- Adjust height as needed -->
         <!-- Hidden Table -->
         <table id="hiddenTable" style="display: none;">
-            <tr><td>Tule</td><td>Restaurant</td><td>MXNLSNLI0000002/index.html</td></tr>
-            <tr><td>Michoacan</td><td>Paleteria</td><td>https://example2.com</td></tr>
-            <tr><td>Ferretera</td><td>Ferreteria</td><td>https://example3.com</td></tr>
-            <tr><td>Tamales</td><td>Comida</td><td>https://example4.com</td></tr>
-            <tr><td>Sultana</td><td>Paleteria</td><td>https://example4.com</td></tr>
-            <tr><td>San Juan De Los Lagos</td><td>Iglesia</td><td>MXNLSNLI0000000/index.html</td></tr>
-            <tr><td>Muncheria</td><td>Restaurant</td><td>https://example1.com</td></tr>
-            <tr><td>Tortilleria</td><td>Restaurant</td><td>https://example1.com</td></tr>
-            <tr><td>Parque Morenita Mía</td><td>Parque</td><td>MXNLSNLI0000045/index.html</td></tr>
+            
+                    <tr><td>San Juan de los Lagos</td><td>Iglesia</td><td>MXNLSNLI0000000/index.html</td></tr>
+        
+                    <tr><td>La Flor de Michoacan</td><td>Paleteria</td><td>MXNLSNLI0000001/index.html</td></tr>
+        
+                    <tr><td>El Tule</td><td>Restaurant</td><td>MXNLSNLI0000002/index.html</td></tr>
+        
+                    <tr><td>Ferretera Mexico</td><td>Ferre</td><td>MXNLSNLI0000003/index.html</td></tr>
+        
+                    <tr><td>Yoga & Pilates Sonia Ochoa</td><td>Yoga</td><td>MXNLSNLI0000004/index.html</td></tr>
+        
         </table>
 
     </main>
@@ -72,38 +138,152 @@
     </footer>
 
     <!-- Include JavaScript -->
-    <script>
-        let estiloCambiado = false;
-        const imagenx = document.getElementById('imagenx');
-        const imagenlogo = document.getElementById('imagenlogo');
+<script>
+        const savedTheme = localStorage.getItem('theme');
 
-        function cambiarEstilo() {
-            if (estiloCambiado) {
+        if (savedTheme) {
+          document.body.classList.add(savedTheme);
+          setPAGE(savedTheme);
+        } else {
+          // If no saved preference, check the system preference
+          const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+          if (prefersDarkScheme.matches) {
+            document.body.classList.add('dark-mode');
+          } else {
+            document.body.classList.add('light-mode');
+          }
+        }
+
+        function setPAGE(pTheme) {
+            if (pTheme=='dark-mode') {
+                //alert('dark-mode');
+                document.body.style.backgroundColor = "black";
+                document.body.style.color = "white";
+                changeSVGs("white");
+                //changeTBLs("white","white");
+                document.body.classList.remove('light-mode');
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark-mode');
+            } else {
+                //alert('l-mode');
                 document.body.style.backgroundColor = "white";
                 document.body.style.color = "black";
-                imagenx.src = "img/pixel_white.png"; // Cambia esto por la ruta de tu imagen del sol
-                imagenx.alt = "Sol";
-                imagenlogo.src = "img/MiLocal.png"; // Cambia esto por la ruta de tu imagen del sol
-                imagenlogo.alt = "Sol";
-                document.getElementById('sun').querySelector('path').setAttribute('fill', 'black');
-                document.getElementById('moon').querySelector('path').setAttribute('fill', 'black');
-                document.getElementById('sun').querySelector('line').setAttribute('stroke', 'black');
-            } else {
-                document.body.style.backgroundColor = "black";
-                document.body.style.color = "white";    
-                imagenx.src = "img/pixel_black.png"; // Cambia esto por la ruta de tu imagen de la luna
-                imagenx.alt = "Luna";
-                imagenlogo.src = "img/MiLocalblack.png"; // Cambia esto por la ruta de tu imagen del sol
-                imagenlogo.alt = "Luna";
-                document.getElementById('sun').querySelector('path').setAttribute('fill', 'white');
-                document.getElementById('moon').querySelector('path').setAttribute('fill', 'white');
-                document.getElementById('sun').querySelector('line').setAttribute('stroke', 'white');
+                changeSVGs("black");
+                //changeTBLs("black","black");
+                document.body.classList.remove('dark-mode');
+                document.body.classList.add('light-mode');
+                localStorage.setItem('theme', 'light-mode');
             }
-        estiloCambiado = !estiloCambiado; // Cambia el estado
-        imagenx.style.display = 'block'; // Muestra la imagen
         }
-    </script>
-    <script src="script.js"></script>
+
+        function changeSVGs(pColor) {
+            const svgs = document.querySelectorAll('svg');
+            svgs.forEach((svg, index) => {
+              svg.setAttribute('fill', pColor);
+            });
+        }
+
+        function changeTBLs(pColorTD,pColorTH) {
+            const tbls = document.getElementById('schedule_table');
+            const tbls2 = document.querySelectorAll('table');
+
+             //tbls.forEach(function(table) {					  
+                tbls.style.border = "2px solid #007BFF";
+                tbls.style.backgroundColor = "#f0f8ff";
+                tbls.style.color = "#007BFF";
+                tbls.querySelectorAll('th').forEach(th => {
+                  th.style.backgroundColor = "#007BFF";
+                  th.style.color = "white";
+                });
+                tbls.querySelectorAll('td').forEach(td => {
+                  td.style.backgroundColor = "#e7f3ff";
+                });
+            //});
+        }
+
+        function cambiarEstilo() {
+            const mySavedTheme = localStorage.getItem('theme');
+            if (mySavedTheme=='dark-mode') {
+                setPAGE('light-mode');
+            } else {
+                setPAGE('dark-mode');
+            }
+        }
+
+        function capitalizeFirstLetterOfEachWord(str) {
+            return str.split(' ').map(word => {
+                return word.charAt(0).toUpperCase() + word.slice(1);
+            }).join(' ');
+        }
+
+        function search() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const resultsList = document.getElementById('resultsList');
+            const hiddenTable = document.getElementById('hiddenTable');
+            
+            // Clear previous results
+            resultsList.innerHTML = '';
+            
+            // Check if input is empty
+            if (input.trim() === '') {
+                alert("Please enter a search term."); // Optional alert for empty input
+                document.getElementById('searchResults').style.display = 'none'; // Hide results section
+                return; // Exit the function early
+            }
+
+            // Get rows from the hidden table
+            const rows = hiddenTable.getElementsByTagName('tr');
+            
+            let found = false; // Flag to check if any result is found
+
+            // Loop through each row in the hidden table
+            for (let i = 0; i < rows.length; i++) {
+                const cells = rows[i].getElementsByTagName('td');
+                const name = cells[0].innerText.toLowerCase();
+                const category = cells[1].innerText.toLowerCase();
+                
+                // Check if input matches either name or category (partial match)
+                if (name.includes(input) || category.includes(input)) {
+                    found = true; // Set flag to true if match is found
+                    
+                    // Capitalize first letters of each word
+                    const formattedName = capitalizeFirstLetterOfEachWord(name);
+                    const formattedCategory = capitalizeFirstLetterOfEachWord(category);
+                    const link = cells[2].innerText;
+
+                    // Create a new list item for the result in the desired format
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `${formattedName} - ${formattedCategory} - <a href="${link}" target="_blank">Link</a>`;
+                    resultsList.appendChild(listItem);
+                }
+            }
+
+            // Display search results section if any result is found
+            const searchResultsSection = document.getElementById('searchResults');
+            if (found) {
+                searchResultsSection.style.display = 'block';
+            } else {
+                searchResultsSection.style.display = 'none'; // Hide if no results found
+                alert("No results found.");
+            }
+        }
+
+        // Add event listener for Enter key press
+        document.getElementById('searchInput').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') { // Check if Enter key is pressed
+                event.preventDefault(); // Prevent default form submission behavior
+                search(); // Call the search function
+            }
+        });
+
+        // Listen for changes in localStorage and update the theme in all tabs
+        window.addEventListener('storage', (event) => {
+            if (event.key === 'theme') {
+                const savedThemeForTabs = localStorage.getItem('theme');
+                setPAGE(savedThemeForTabs);
+            }
+        });
+</script>
+
 </body>
 </html>
-        

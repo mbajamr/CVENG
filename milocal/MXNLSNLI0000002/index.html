@@ -9,603 +9,11 @@
             <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+            <link href="http://localhost/cveng/milocal/css/styles.css" rel="stylesheet">
         </head>
         <body>
         
         <style>
-        
-            .knowus {
-                padding: 20px;
-                background-color: #f9f9f9;
-            }
-
-            .info-container {
-                display: flex;
-                justify-content: space-around;
-                margin-bottom: 20px;
-            }
-
-            .info-card {
-                background: #fff;
-                border: 1px solid #ccc;
-                border-radius: 8px;
-                padding: 15px;
-                width: 30%;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            }
-
-            /* Base styles */
-            body {
-                font-family: Arial, sans-serif;
-                margin: 0;
-                padding: 20px;
-            }
-
-            .text-section {
-                font-size: 3em; /* Default large font size for desktop */
-            }
-
-            img {
-                width: 100%; /* Images take full width of their container */
-                height: auto; /* Maintain aspect ratio */
-            }
-
-            .browser-width {
-                margin-top: 20px; /* Add some space above the width display */
-                font-size: 1em; /* Font size for the width display */
-            }
-
-            /* Gradual styles for different screen sizes */
-            @media (max-width: 1920px) {
-                h1 {
-                    font-size: 3em; /* Medium font size for large tablets */
-                }
-                h2 {
-                    font-size: 2em; /* Medium font size for large tablets */
-                }
-                p {
-                    font-size: 1em; /* Medium font size for large tablets */
-                }
-                .text-section {
-                    font-size: 2em; /* Slightly smaller paragraph font size */
-                }
-            }
-
-            @media (max-width: 1680px) {
-                h1 {
-                    font-size: 2.7em; /* Medium font size for large tablets */
-                }
-                h2 {
-                    font-size: 1.8em; /* Medium font size for large tablets */
-                }
-                p {
-                    font-size: 0.9em; /* Medium font size for large tablets */
-                }
-                .text-section {
-                   font-size: 1.8em; /* Slightly smaller paragraph font size */
-                }
-            }
-
-            @media (max-width: 1200px) {
-                h1 {
-                    font-size: 2.4em; /* Medium font size for large tablets */
-                }
-                h2 {
-                    font-size: 1.6em; /* Medium font size for large tablets */
-                }
-                p {
-                    font-size: 0.8em; /* Medium font size for large tablets */
-                }
-                .text-section {
-                    font-size: 1.6em; /* Slightly smaller paragraph font size */
-                }
-            }
-
-            @media (max-width: 992px) {
-                h1 {
-                    font-size: 2.1em; /* Smaller font size for medium tablets */
-                }
-                h2 {
-                    font-size: 1.4em; /* Smaller font size for medium tablets */
-                }
-                p {
-                    font-size: 0.7em; /* Medium font size for large tablets */
-                }
-                .text-section {
-                    font-size: 1.4em; /* Smaller paragraph font size */
-                }
-            }
-
-            @media (max-width: 768px) {
-                h1 {
-                    font-size: 1.8em; /* Smaller font size for small tablets */
-                }
-                h2 {
-                    font-size: 1.2em; /* Smaller font size for small tablets */
-                }
-                p {
-                    font-size: 0.6em; /* Medium font size for large tablets */
-                }
-                .text-section {
-                    font-size: 1.2em; /* Smaller paragraph font size */
-                }
-            }
-
-            @media (max-width: 600px) {
-                h1 {
-                    font-size: 1.5em; /* Smaller font size for small tablets */
-                }
-                h2 {
-                    font-size: 1em; /* Smaller font size for small tablets */
-                }
-                p {
-                    font-size: 0.5em; /* Medium font size for large tablets */
-                }
-                .text-section {
-                    font-size: 1em; /* Smaller paragraph font size */
-                }
-            }
-
-            @media (max-width: 480px) {
-                h1 {
-                    font-size: 1.2em; /* Even smaller font size for very small screens */
-                }
-                h2 {
-                    font-size: 0.8em; /* Even smaller font size for very small screens */
-                }
-                p {
-                    font-size: .4em; /* Medium font size for large tablets */
-                }
-                .text-section {
-                    font-size: 0.8em; /* Smaller paragraph font size */
-                }
-            }
-
-                .category {
-                    border-collapse: collapse;
-                    width: 50%; /* Set desired width */
-                    margin: auto; /* Center the table */
-                    border: none; /* No border */
-                    text-align: center; /* Center text */
-                    font-size: 1em; /* Font size increased */
-                    font-weight: bold; /* Make text bold */
-                }
-
-                .share-button {
-                    width: 200px; /* Ancho consistente */
-                    height: 30px;
-                    padding: 0px;
-                    color: black;
-                    border: black;
-                    border-radius: 50px;
-                    font-size: 16px;
-                    cursor: pointer;
-                    text-align: center;
-                }        
-          
-                .slides {
-                    display: flex;
-                    transition: transform 0.5s ease;
-                    width: 100%;
-                }  
-                .slide {
-                    min-width: 100%;
-                    box-sizing: border-box;
-                    background: #eee;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 100%;
-                }
-
-            .arrow {
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                background-color: rgba(0, 0, 0, 0.5);
-                color: white;
-                border: none;
-                padding: 30px;
-                cursor: pointer;
-                font-size: 38px;
-                border-radius: 30%;
-                z-index: 10;
-            }
-
-            .left {
-                left: 10px;
-            }
-
-            .right {
-                right: 10px;
-            }    
-            .img-fluid {
-                width: 100%;   /* This makes the image take the full width of the carousel */
-                height: auto;  /* This forces the image to take the full height of the carousel */
-                object-fit: cover; /* This preserves the aspect ratio while covering the entire area */
-                display: block;  /*Removes bottom margin in some browsers */
-            }     
-            .controls {
-                position: absolute;
-                bottom: 10px;
-                width: 100%;
-                text-align: center;
-            }
-
-            .control {
-                display: inline-block;
-                width: 10px;
-                height: 10px;
-                margin: 0 5px;
-                background: #000000;
-                border-radius: 50%;
-                cursor: pointer;
-            }
-            .arrow {
-                display: none;
-            }
-
-            table2 {
-                width: 100%;
-                border-collapse: collapse;
-            }
-            th, td {
-                border: 1px solid black;
-                padding: 10px;
-                text-align: center;
-            }
-            /* Green background for open hours */
-            .open {
-                background-color: green;
-                color: white;
-                border: 1px solid black;
-            }
-            /* Red background for closed hours */
-            .closed {
-                background-color: #8B0000;
-                color: white;
-                border: 1px solid black;
-            }
-
-            table {
-                border-collapse: collapse;
-                width: 50%; /* Set desired width */
-                margin: auto; /* Center the table */
-            }
-            td {
-                border: none; /* No border */
-                text-align: center; /* Center text */
-                font-size: 1em; /* Font size increased */
-                font-weight: bold; /* Make text bold */
-            }
-            /* Container for the grid */
-            .grid-container {
-                display: grid; /* Enables grid layout */
-                grid-template-columns: repeat(5, 1fr); /* Creates 5 equal columns */
-                gap: 10px; /* Space between grid items */
-                padding: 20px; /* Padding around the grid */
-            }
-
-            /* Style for each grid item */
-            .grid-item {
-                overflow: hidden; /* Hides overflow content */
-                border-radius: 10px; /* Rounded corners for items */
-                cursor: pointer; /* Changes cursor to pointer on hover */
-            }
-
-            .grid-container2 {
-                display: grid; /* Enables grid layout */
-                grid-template-columns: repeat(5, 1fr); /* Creates 5 equal columns */
-                gap: 10px; /* Space between grid items */
-                padding: 20px; /* Padding around the grid */
-            }
-
-            /* Style for each grid item */
-            .grid-item2 {
-                overflow: hidden; /* Hides overflow content */
-                border-radius: 10px; /* Rounded corners for items */
-                cursor: pointer; /* Changes cursor to pointer on hover */
-            }
-
-            .grid-containerX {
-                display: grid;
-                grid-template-columns: repeat(5, 1fr); /* 5 columnas */
-                gap: 10px; /* Espacio entre las imágenes */
-            }
-
-            .grid-itemX {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .circle-imageX {
-                width: 130px; /* Ajusta el tamaño de la imagen */
-                height: 130px; /* Ajusta el tamaño de la imagen */
-                object-fit: cover; /* Asegura que la imagen se ajuste al círculo sin deformarse */
-                border-radius: 50%; /* Hace que el contenedor de la imagen sea un círculo */
-                border: 13px solid black; /* Añade un borde alrededor de la imagen */
-            }
-
-            .grid-item3 {
-                min-height: 200px; /* Sets a minimum height */
-                min-width: 200px;  /* Sets a minimum width */
-                overflow: hidden; /* Hides overflow content */
-                border-radius: 10px; /* Rounded corners for items */
-                cursor: none; /* Changes cursor to pointer on hover */
-                background-color: none; /* Optional: sets a background color to make the empty cell visible */
-                display: flex; /* Enables flexbox to center content */
-                align-items: center; /* Centers content vertically */
-                justify-content: center; /* Centers content horizontally */
-            }
-
-            /* Style for the images within the grid items */
-            .grid-item img {
-                width: 100%; /* Makes image responsive to container size */
-                height: auto; /* Maintains aspect ratio of images */
-                display: block; /* Removes bottom space/gap in images */
-                border-radius: 10px; /* Rounded corners for images */
-            }
-
-            .grid-item2 img {
-                width: 100%; /* Makes image responsive to container size */
-                height: auto; /* Maintains aspect ratio of images */
-                display: block; /* Removes bottom space/gap in images */
-                border-radius: 10px; /* Rounded corners for images */
-            }
-
-            /* Style for sections at the bottom */
-            .info-section4 {
-                display: flex; /* Flexbox layout for icons and text */
-                border: 1px solid #ccc; /* Border for sections */
-                border-radius: 10px; /* Rounded corners for sections */
-                justify-content: center; /* Center items horizontally */
-                align-items: center; /* Center items vertically */
-                padding: 10px; /* Optional padding */
-            }
-
-            .text-centered {
-                margin: 0; /* Remove default margins */
-                text-align: center; /* Center the text */
-            }
-
-            /* Style for sections at the bottom */
-            .info-section3 {
-                display: flex; /* Flexbox layout for icons and text */
-                border: 1px solid #ccc; /* Border for sections */
-                border-radius: 10px; /* Rounded corners for sections */
-            }
-            
-            /* Style for sections at the bottom */
-            .info-section {
-                display: flex; /* Flexbox layout for icons and text */
-                align-items: center; /* Centers items vertically */
-                margin: 20px 0; /* Margin around sections */
-                padding: 10px;
-                border: 1px solid #ccc; /* Border for sections */
-                border-radius: 10px; /* Rounded corners for sections */
-            }
-
-            .info-section2 {
-                text-align: center;
-                font-size: 24px;
-            }
-
-            .info-section img {
-                width: 50px; /* Size of the left icon */
-                height: auto;
-                margin-right: 20px; /* Space between icon and text */
-            }
-
-            .back-to-top {
-                margin-left: auto; /* Pushes back button to the right */
-                cursor: pointer; /* Changes cursor to pointer on hover */
-            }
-
-            .back-to-top img {
-                width: 30px; /* Size of back icon */
-                height: auto;
-            }
-
-            .center-container {
-                /*display: flex; */
-                /*justify-content: center; /* Centers items horizontally */
-                align-items: center; /* Centers items vertically */
-                /*flex-direction: column; /* Places items in a column (one below the other) */
-                text-align: center; /* Ensures any inline elements like text will also be centered */
-            }
-
-            .center-container2 {
-                display: flex; 
-                justify-content: center; /* Centers items horizontally */
-                align-items: center; /* Centers items vertically */
-                /*flex-direction: column; /* Places items in a column (one below the other) */
-                text-align: center; /* Ensures any inline elements like text will also be centered */
-            }
-
-            .center-text {
-                /*text-align: right;*/
-                position: absolute;
-                left: 30%;
-                font-size: 40px;
-                font-weight: bold;
-                margin: 10px 0; /* Add margin to adjust spacing if needed */
-            }
-
-            .center-text2 {
-                /*text-align: right;*/
-                position: absolute;
-                left: 30%;
-                font-weight: bold;
-                margin: 10px 0; /* Add margin to adjust spacing if needed */
-            }
-
-            /* Responsive adjustments for mobile screens */
-            @media (max-width: 500px) {
-                .grid-container {
-                    grid-template-columns: repeat(3, 1fr); /* Adjusts to 3 columns on small screens */
-                }
-                .grid-item:nth-child(1),
-                .grid-item:nth-child(5),
-                .grid-item:nth-child(6),
-                .grid-item:nth-child(10),
-                .grid-item:nth-child(11),
-                .grid-item:nth-child(15),
-                .grid-item:nth-child(16),
-                .grid-item:nth-child(20),
-                .grid-item:nth-child(21),
-                .grid-item:nth-child(25) {
-                    display: none; /* Hides specified cells on mobile */
-                }
-            }
-            @media (max-width: 500px) {
-                .grid-container2 {
-                    grid-template-columns: repeat(3, 1fr); /* Adjusts to 3 columns on small screens */
-                }
-                .grid-item2:nth-child(1),
-                .grid-item2:nth-child(5) {
-                    display: none; /* Hides specified cells on mobile */
-                }
-            }
-
-            :root {
-                --main-bg-color: #f4f4f4;
-                --primary-color: blue;
-                --secondary-color: #555;
-                --light-color: white;
-                --dark-color: #333;
-                --border-color: #ddd;
-                --background-color: #ddd;
-                --slide-background-color: #eee;
-                --control-background-color: #ffffff;
-                --active-color: #333;
-                --hover-bg-color: pink;
-                --hover-str-bg-color: grey;
-                --arrow-bg: rgba(0, 0, 0, 0.5);
-                --arrow-color: white;
-                --control-color: #000000;
-                --control-active-color: #333;
-                --font-family-heading: "Poppins", sans-serif;
-                --font-family-body: Arial, sans-serif;
-                --default-padding: 10px;
-                --border-radius: 10px;
-                --slide-height: 300px;
-            }
-
-            .frame {
-                border: 6px solid black; /* Frame color and thickness */
-                border-radius: 8px; /* Rounded corners for a polished look */
-                padding: 10px; /* Spacing inside the frame */
-                display: flex; /* Use flexbox to align items */
-                align-items: center; /* Center items vertically */
-            }
-
-            .title-style {
-                font-family: 'Playfair Display', serif; /* Elegant font for headings */
-                font-size: 3rem; /* Larger size */
-                font-weight: bold;
-                color: black; /* Change text color to black */
-                background: none; /* Remove gradient background */
-                text-shadow: none; /* Remove text shadow */
-                border: none; /* Remove border */
-                padding: 10px 20px; /* Add spacing around the text */
-                display: flex; /* Use flexbox to align items */
-                align-items: center; /* Center items vertically */
-            }
-
-            .title-style img {
-                margin-right: 10px; /* Space between image and text */
-            }
-        
-            .carousel {
-                position: center; /* No direct Bootstrap utility */
-                overflow: hidden;   /* No direct Bootstrap utility */
-                width: 60%;         /* Optional if Bootstrap w-75 is too small */
-                max-width: 800px;   /* Optional if you need exact control */
-            }
-
-            .slides {
-                display: flex;
-                transition: transform 0.5s ease;
-            }
-
-            .slide {
-                min-width: 100%; /* No direct Bootstrap class */
-                box-sizing: border-box; /* This is common in many setups */
-                background: var(--slide-background-color); /* Custom color variable */
-                height: 300px; /* Custom height */
-            }
-
-            .img-fluid {
-                width: 100%;
-                height: auto; /* Ensures aspect ratio is maintained */
-                display: block; /* Removes bottom margin in some browsers */
-            }
-
-            .img-fluid.custom-style {
-                border-radius: 20px; /* Example customization */
-                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-                transition: box-shadow 0.3s ease, border 0.3s ease; /* Smooth transition */
-            }
-
-            .img-fluid.custom-style:hover {
-                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
-                border: 2px solid rgba(0, 0, 0, 0.1); /* Subtle border on hover */
-            }
-
-            .controls {
-                position: absolute;
-                bottom: 10px;
-                width: 100%;
-                text-align: center;
-            }
-
-            .control {
-                display: inline-block;
-                width: 10px;
-                height: 10px;
-                margin: 0 5px;
-                background: var(--control-background-color);
-                border-radius: 50%;
-                cursor: pointer;
-            }
-
-            .control:hover,
-            input[type="radio"]:checked + .control {
-                background-color: var(--hover-bg-color); /* Active state */
-            }
-
-            .arrow {
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                background-color: rgba(0, 0, 0, 0.5);
-                color: white;
-                border: none;
-                padding: 10px;
-                cursor: pointer;
-                font-size: 18px;
-                border-radius: 50%;
-                z-index: 10;
-            }
-
-            .left {
-                left: 10px;
-            }
-
-            .right {
-                right: 10px;
-            }
-
-            .arrow {
-                display: none;
-            }
-
-            .img-grid {
-                width: 10%;
-                height: auto; /* Ensures aspect ratio is maintained */
-                display: block; /* Removes bottom margin in some browsers */
-            }
         /* Part 1 */
 #slidepics1:checked ~ .slides {
     transform: translateX(-0%);
@@ -661,8 +69,16 @@
     transform: translateX(-200%);
 }
 
+#slidemenu4:checked ~ .slides {
+    transform: translateX(-300%);
+}
+
+#slidemenu5:checked ~ .slides {
+    transform: translateX(-400%);
+}
+
 /* Arrows linked to radio button checks */
-#slidemenu1:checked ~ .arrow.left[for="slidemenu3"],
+#slidemenu1:checked ~ .arrow.left[for="slidemenu5"],
 #slidemenu1:checked ~ .arrow.right[for="slidemenu2"] {
     display: block;
 }
@@ -671,43 +87,19 @@
     display: block;
 }
 #slidemenu3:checked ~ .arrow.left[for="slidemenu2"],
-#slidemenu3:checked ~ .arrow.right[for="slidemenu1"] {
+#slidemenu3:checked ~ .arrow.right[for="slidemenu4"] {
+    display: block;
+}
+#slidemenu4:checked ~ .arrow.left[for="slidemenu3"],
+#slidemenu4:checked ~ .arrow.right[for="slidemenu5"] {
+    display: block;
+}
+#slidemenu5:checked ~ .arrow.left[for="slidemenu4"],
+#slidemenu5:checked ~ .arrow.right[for="slidemenu1"] {
     display: block;
 }
 /* Part 1 */
-#slidepromos1:checked ~ .slides {
-    transform: translateX(-0%);
-}
-
-#slidepromos2:checked ~ .slides {
-    transform: translateX(-100%);
-}
-
-#slidepromos3:checked ~ .slides {
-    transform: translateX(-200%);
-}
-
-#slidepromos4:checked ~ .slides {
-    transform: translateX(-300%);
-}
-
 /* Arrows linked to radio button checks */
-#slidepromos1:checked ~ .arrow.left[for="slidepromos4"],
-#slidepromos1:checked ~ .arrow.right[for="slidepromos2"] {
-    display: block;
-}
-#slidepromos2:checked ~ .arrow.left[for="slidepromos1"],
-#slidepromos2:checked ~ .arrow.right[for="slidepromos3"] {
-    display: block;
-}
-#slidepromos3:checked ~ .arrow.left[for="slidepromos2"],
-#slidepromos3:checked ~ .arrow.right[for="slidepromos4"] {
-    display: block;
-}
-#slidepromos4:checked ~ .arrow.left[for="slidepromos3"],
-#slidepromos4:checked ~ .arrow.right[for="slidepromos1"] {
-    display: block;
-}
 
         </style>
         
@@ -717,130 +109,9 @@
             
             <div style="display: flex; justify-content: space-between; align-items: flex-end; padding: 0px;">
                 <div style="flex: 1; display: flex; justify-content: end;">
-                    <div style="display: flex; align-content: flex-end;">
+                    <div style="display: flex; align-content: flex-end;"  style="width: 50px;">
                         
-            <svg
-               version="1.1"
-               id="logo"
-               width="60"
-               height="40"
-               viewBox="0 0 60 40"
-               sodipodi:docname="MiLocalIconBAS.svg"
-               inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
-               xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-               xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-               xmlns:xlink="http://www.w3.org/1999/xlink"
-               xmlns="http://www.w3.org/2000/svg"
-               xmlns:svg="http://www.w3.org/2000/svg">
-              <defs
-                 id="defs740" />
-              <g
-                 inkscape:groupmode="layer"
-                 inkscape:label="Image"
-                 id="g742">
-                <image
-                   width="60"
-                   height="40"
-                   preserveAspectRatio="none"
-                   style="image-rendering:optimizeQuality;fill:#decd87"
-                   id="image744" />
-                #l ear border
-                <ellipse
-                   style="fill:#000000"
-                   id="earleftborder"
-                   cx="11"
-                   cy="11"
-                   rx="9"
-                   ry="8" />
-                #l ear color
-                <ellipse
-                   style="fill:#f2ae42"
-                   id="earleft"
-                   cx="11"
-                   cy="11"
-                   rx="6"
-                   ry="6" />
-                #l ear inner color
-                <ellipse
-                   style="fill:#FFCFCC"
-                   id="earleftinner"
-                   cx="11"
-                   cy="11"
-                   rx="4"
-                   ry="4" />
-                #r ear border
-                <ellipse
-                   style="fill:#000000"
-                   id="earrightborder"
-                   cx="50"
-                   cy="11"
-                   rx="9"
-                   ry="8" />
-                #r ear color
-                <ellipse
-                   style="fill:#f2ae42"
-                   id="earright"
-                   cx="50"
-                   cy="11"
-                   rx="6"
-                   ry="6" />
-                #r ear inner color
-                <ellipse
-                   style="fill:#FFCFCC"
-                   id="earrightinner"
-                   cx="50"
-                   cy="11"
-                   rx="3"
-                   ry="3" />
-                #face border
-                <ellipse
-                   style="fill:#000000"
-                   id="faceborder"
-                   cx="29"
-                   cy="22"
-                   rx="28"
-                   ry="18.5" />
-                #face color
-                <ellipse
-                   style="fill:#f2ae42"
-                   id="facecolor"
-                   cx="29"
-                   cy="22"
-                   rx="25"
-                   ry="16" />
-                #racoon
-                <path d="M 17 20 Q 30 14, 43 20" fill="none" stroke="purple" stroke-width="9.5" />
-                <circle cx="17" cy="20" r="4.5" fill="purple" />
-                <circle cx="43" cy="20" r="4.5" fill="purple" />
-                #eye
-                <ellipse
-                   style="fill:#000000"
-                   id="facecolor"
-                   cx="19"
-                   cy="20"
-                   rx="3"
-                   ry="3" />
-                #eye
-                <ellipse
-                   style="fill:#000000"
-                   id="facecolor"
-                   cx="41"
-                   cy="20"
-                   rx="3"
-                   ry="3" />
-                #nose
-                <ellipse
-                   style="fill:#FFCFCC"
-                   id="facecolor"
-                   cx="30"
-                   cy="25"
-                   rx="3"
-                   ry="2" />
-                #mouth
-                <path d="M 21 28.5 A 5 5 0 0 0 29.5 28" fill="none" stroke="black" stroke-width="1"/>
-                <path d="M 30 28.5 A 5 5 0 0 0 38.5 28" fill="none" stroke="black" stroke-width="1"/>
-              </g>
-            </svg>
+            <img src='../img/MiLocalLogo.svg'  style="width: 50px;">
         
                         <div id="top" style="align-content: flex-end; vertical-align: bottom; font-size:25px; font-weight: bold; ">
                             MiLocal.com
@@ -849,29 +120,17 @@
                 </div>
                 <div style="flex: 1; display: flex; justify-content: center;">
                     <div style="display: flex; justify-content: space-between;">
-                        <div>
-                            <svg id="sun" viewBox="0 0 552 552" width="40" height="40" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-left: 1px;">
-                                <path d="m256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7-100.5-33.5c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0s-49.9-131.1 0-181 131.1-49.9 181 0 49.9 131.1 0 181z" fill="black"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <svg id="line" viewBox="0 0 50 552" width="10" height="40" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-r: 0px;">
-                                <line x1="0" y1="0" x2="0" y2="552" stroke="black" stroke-width="40"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <svg id="moon" viewBox="0 0 8 8" width="35" height="35" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-left: 1px;">
-                                <path d="m2.72 0c-1.58.53-2.72 2.02-2.72 3.78 0 2.21 1.79 4 4 4 1.76 0 3.25-1.14 3.78-2.72-.4.13-.83.22-1.28.22-2.21 0-4-1.79-4-4 0-.45.08-.88.22-1.28z" fill="black"/>
-                            </svg>
-                        </div>
+                <svg id="sunmoonpage" fill="black" viewBox="0 0 8 8" width="80" height="40" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-left: 1px;" onclick="cambiarEstilo()">
+                        <path d="m0.29 2.32c-0.77 0-1.39 0.63-1.39 1.39s0.63 1.39 1.39 1.39 1.39-0.63 1.39-1.39-0.63-1.39-1.39-1.39zm3.57 1.17-1.37-0.69 0.49-1.46c0.07-0.21-0.12-0.43-0.33-0.33l-1.46 0.49-0.69-1.37c-0.09-0.17-0.26-0.17-0.34 0l-0.69 1.37-1.46-0.49c-0.21-0.07-0.43 0.12-0.33 0.33l0.49 1.46-1.37 0.69c-0.17 0.09-0.17 0.26 0 0.34l1.37 0.69-0.49 1.46c-0.07 0.21 0.12 0.43 0.33 0.33l1.46-0.49 0.69 1.37c0.09 0.17 0.26 0.17 0.34 0l0.69-1.37 1.46 0.49c0.21 0.07 0.43-0.12 0.33-0.33l-0.49-1.46 1.37-0.69c0.18-0.09 0.18-0.26 0-0.34zm-2.27 1.54c-0.73 0.73-1.91 0.73-2.74 0s-0.73-1.91 0-2.74 1.91-0.73 2.74 0 0.73 1.91 0 2.74z"/>
+                        <path d="m7 0c-1.56.52-2.69 2.00-2.69 3.74 0 2.19 1.77 3 3 3 1.74 0 3.22-1.13 3.74-2.69-.4.13-.82.22-1.27.22-2.19 0-3-1.77-3-3 0-.44.08-.87.22-1.27z"/>
+                </svg>
+             
                     </div>
                 </div>
                 <div style="flex: 1; display: flex; justify-content: start;">
-                    <svg id="backmain" height="60" viewBox="0 0 16 16" width="60" xmlns="http://www.w3.org/2000/svg">
-                        <g>
-                            <path d="m16 8c0-5-4.9-5-4.9-5h-2.1v-3l-6 6 6 6v-3h2.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
-                            <path d="m0 6 6 6v-1.5l-4.5-4.5 4.5-4.5v-1.5z" fill="black"/>
-                        </g>
+                    <svg id="backmain1" fill="black" height="60" viewBox="0 0 16 16" width="60" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m16 8c0-5-4.9-5-4.9-5h-2.1v-3l-6 6 6 6v-3h2.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z"/>
+                            <path d="m0 6 6 6v-1.5l-4.5-4.5 4.5-4.5v-1.5z"/>
                     </svg>
                 </div>
             </div>
@@ -887,18 +146,19 @@
         
              <!-- THREE BALLS -->
             <div class="grid-containerX">
-                <!-- Each grid item contains an image -->
-                <div class="grid-itemX" onclick="scrollToSection('none')"></div>
-                <div class="grid-itemX" onclick="scrollToSection('b1')">
-                <img src='../img/lg1.svg' alt="Image 2" class="circle-imageX">
+                <div class="grid-itemX">
                 </div>
-                <div class="grid-itemX" onclick="scrollToSection('b2')">
-                <img src='../img/lg2.svg' alt="Image 3" class="circle-imageX">
+                <div class="grid-itemX">
+                    <img id="circleimg1" src='img/a1_logo.jpg' alt="Image2" style="width: 130px; height: 130px; object-fit: cover; border-radius: 50%; border: 13px solid black;">
                 </div>
-                <div class="grid-itemX" onclick="scrollToSection('b3')">
-                <img id="imagenstatus" src='../img/lg3a.svg' alt="Image 4" class="circle-imageX">
+                <div class="grid-itemX">
+                    <img id="circleimg2" src='img/a2_category.jpg' alt="Image3" style="width: 130px; height: 130px; object-fit: cover; border-radius: 50%; border: 13px solid black;">
                 </div>
-                <div class="grid-itemX" onclick="scrollToSection('none')"></div>
+                <div class="grid-itemX">
+                    <div id="circleimg3" style="width: 130px; height: 130px; object-fit: cover; border-radius: 50%; border: 13px solid black; background-color: green; font-size: 20px; color: white; font-weight: bold; display: flex; align-items: center; justify-content: center;">text</div>
+                </div>
+                <div class="grid-itemX">
+                </div>
             </div>
          
             <!-- CATEGORY -->
@@ -916,9 +176,8 @@
                     <!-- First item in second row -->
                     <a href='#Noticias'>
                     
-        <svg fill="none" width="140" height="140" viewBox="-3 0 60 60">
-            <path d="m0 0h48v48h-48z" fill="none"/>
-            <path d="m13.091 12c-5.021 0-9.091 4.477-9.091 10 0 4.701 2.952 8.633 6.926 9.703l3.074 12.297h12l-2.74-10.961 20.74 6.608v-35.647l-24 8zm4.032 28-2-8h3.754l2 8zm2.877-24v12h-6.909c-2.807 0-5.091-2.692-5.091-6s2.284-6 5.091-6zm20 18.174-16-5.098v-14.193l16-5.333z" fill="black"/>
+        <svg id="news" fill="black" width="140" height="140" viewBox="-3 0 60 60">
+            <path d="m13.091 12c-5.021 0-9.091 4.477-9.091 10 0 4.701 2.952 8.633 6.926 9.703l3.074 12.297h12l-2.74-10.961 20.74 6.608v-35.647l-24 8zm4.032 28-2-8h3.754l2 8zm2.877-24v12h-6.909c-2.807 0-5.091-2.692-5.091-6s2.284-6 5.091-6zm20 18.174-16-5.098v-14.193l16-5.333z"/>
         </svg>
                     </a>
                 </div>
@@ -926,12 +185,10 @@
                     <!-- Second item in second row -->
                     <a href='#Servicios'>
                         
-        <svg fill="none" height="150" width="150" viewBox="0 0 60 60">
-            <g fill="black">
-                <path clip-rule="evenodd" d="m36.826 13.643-2.326-7.53192-2.326 7.53192-4.4999 2.1428 4.5197 2.1523 2.3062 6.5891 2.3062-6.5891 4.5198-2.1523zm-3 1.4285.674-2.1824.674 2.1824 1.5001.7143-1.4803.7049-.6938 1.9823-.6938-1.9823-1.4802-.7049z" fill-rule="evenodd"/>
-                <path d="m19 16 1-4 1 4 3 1-3 1-1 4-1-4-3-1z"/>
-                <path clip-rule="evenodd" d="m13 39.7493v.2468c0 1.1045-.8954 2-2 2h-3c-1.10457 0-2-.8955-2-2v-10.9954c0-1.1045.89543-2 2-2h3c.946 0 1.7386.6568 1.9467 1.5393 1.3244-.4773 2.8713-1.0454 3.3446-1.2612.402-.1831.8662-.2453 1.2519-.2676.4056-.0234.8264-.0072 1.1946.0213.3714.0287.7085.0716.9519.107.1222.0178.2222.0339.2927.0457.0353.006.0633.0108.0831.0144l.0235.0042.0069.0013.0036.0006.0179.0034 6.6888 1.5005.0418.0134.0114.0035.0461.0141c.0421.0127.106.0314.1884.0542.1651.0458.4025.1075.6855.1692.5749.1254 1.2991.2425 1.9744.2425.6239 0 1.2693.2325 1.6143.8644.2963.5425.2273 1.1382.1164 1.5507-.1381.5134-.4241 1.0537-.7877 1.5127.4907-.1851 1.0271-.4043 1.6029-.6405l.1231-.0506c1.623-.666 3.5475-1.4558 5.245-1.7365 1.9397-.3209 3.3515.3832 3.9915 1.6324.5697 1.1119.4374 2.5713-.42 3.4506-.2152.2207-.5431.4522-.8724.6658-.3516.228-.7847.4857-1.2659.7586-.9638.5467-2.1569 1.1751-3.3548 1.7826-2.372 1.203-4.8584 2.3729-5.6485 2.6622-.9156.3354-1.8991.3671-2.8449.3184-.5152-.0265-1.1137-.086-1.7086-.1452-.4298-.0427-.8576-.0853-1.2507-.115-1.9278-.1461-3.4074-.6166-4.7703-1.05l-.1657-.0527c-1.4076-.4468-2.7171-.8431-4.4521-.913-.3967-.016-1.1888.0131-1.9054.0479zm4.1208-10.6506c.0641-.0292.2341-.0732.5377-.0908.2836-.0164.6072-.006.925.0186.3146.0244.6054.0612.8183.0921.1058.0154.1911.0292.2488.0389.0289.0049.0507.0087.0648.0112l.0022.0004 6.5675 1.4733.0451.0137c.0546.0164.1323.0391.2295.0661.1941.0538.468.1248.7934.1958.5852.1277 1.3692.2624 2.1684.2852-.057.1617-.1535.3526-.2843.5427-.1596.232-.3349.4114-.4788.5141-.4166.2976-.7528.4221-.9569.4751-.1033.0268-.176.0361-.2119.0393l-.0133.0011-.0078.0004-5.362-.0648-.1914 1.9837.1793-.9838-.1783.984.0532.0096.1525.0274c.132.0237.3221.0575.5558.0984.467.0818 1.1085.192 1.806.3056 1.3744.224 3.031.4722 3.9709.5289.6491.0392 1.4051-.16 2.1082-.3948.7337-.2449 1.5625-.584 2.396-.926 1.7173-.7044 3.4659-1.4212 4.9355-1.6642 1.2704-.2102 1.7226.2539 1.8851.5711.2328.4545.1062.9597-.0719 1.1424-.0437.0448-.2012.1716-.5288.3841-.3053.198-.7006.434-1.1643.697-.9261.5252-2.0888 1.138-3.2727 1.7385-2.3915 1.2129-4.772 2.3263-5.4317 2.5679-.5342.1957-1.1944.2433-2.0542.199-.5079-.0261-.9897-.0751-1.515-.1286-.4246-.0432-.8777-.0892-1.3961-.1285-1.6918-.1282-2.978-.5368-4.3563-.9747l-.1256-.0399c-1.4276-.4532-2.9552-.9238-4.9768-1.0052-.4551-.0183-1.2653.0098-1.9859.0439v-7.1009c1.4055-.503 3.4871-1.2584 4.1208-1.5473zm2.7954-.9099.1833-.9831c.0002.0001 0 0-.1833.9831zm-8.9162.8119h-3v10.9954h3z" fill-rule="evenodd"/>
-            </g>
+        <svg id="services" fill="black" height="150" width="150" viewBox="0 0 60 60">
+            <path clip-rule="evenodd" d="m36.826 13.643-2.326-7.53192-2.326 7.53192-4.4999 2.1428 4.5197 2.1523 2.3062 6.5891 2.3062-6.5891 4.5198-2.1523zm-3 1.4285.674-2.1824.674 2.1824 1.5001.7143-1.4803.7049-.6938 1.9823-.6938-1.9823-1.4802-.7049z" fill-rule="evenodd"/>
+            <path d="m19 16 1-4 1 4 3 1-3 1-1 4-1-4-3-1z"/>
+            <path clip-rule="evenodd" d="m13 39.7493v.2468c0 1.1045-.8954 2-2 2h-3c-1.10457 0-2-.8955-2-2v-10.9954c0-1.1045.89543-2 2-2h3c.946 0 1.7386.6568 1.9467 1.5393 1.3244-.4773 2.8713-1.0454 3.3446-1.2612.402-.1831.8662-.2453 1.2519-.2676.4056-.0234.8264-.0072 1.1946.0213.3714.0287.7085.0716.9519.107.1222.0178.2222.0339.2927.0457.0353.006.0633.0108.0831.0144l.0235.0042.0069.0013.0036.0006.0179.0034 6.6888 1.5005.0418.0134.0114.0035.0461.0141c.0421.0127.106.0314.1884.0542.1651.0458.4025.1075.6855.1692.5749.1254 1.2991.2425 1.9744.2425.6239 0 1.2693.2325 1.6143.8644.2963.5425.2273 1.1382.1164 1.5507-.1381.5134-.4241 1.0537-.7877 1.5127.4907-.1851 1.0271-.4043 1.6029-.6405l.1231-.0506c1.623-.666 3.5475-1.4558 5.245-1.7365 1.9397-.3209 3.3515.3832 3.9915 1.6324.5697 1.1119.4374 2.5713-.42 3.4506-.2152.2207-.5431.4522-.8724.6658-.3516.228-.7847.4857-1.2659.7586-.9638.5467-2.1569 1.1751-3.3548 1.7826-2.372 1.203-4.8584 2.3729-5.6485 2.6622-.9156.3354-1.8991.3671-2.8449.3184-.5152-.0265-1.1137-.086-1.7086-.1452-.4298-.0427-.8576-.0853-1.2507-.115-1.9278-.1461-3.4074-.6166-4.7703-1.05l-.1657-.0527c-1.4076-.4468-2.7171-.8431-4.4521-.913-.3967-.016-1.1888.0131-1.9054.0479zm4.1208-10.6506c.0641-.0292.2341-.0732.5377-.0908.2836-.0164.6072-.006.925.0186.3146.0244.6054.0612.8183.0921.1058.0154.1911.0292.2488.0389.0289.0049.0507.0087.0648.0112l.0022.0004 6.5675 1.4733.0451.0137c.0546.0164.1323.0391.2295.0661.1941.0538.468.1248.7934.1958.5852.1277 1.3692.2624 2.1684.2852-.057.1617-.1535.3526-.2843.5427-.1596.232-.3349.4114-.4788.5141-.4166.2976-.7528.4221-.9569.4751-.1033.0268-.176.0361-.2119.0393l-.0133.0011-.0078.0004-5.362-.0648-.1914 1.9837.1793-.9838-.1783.984.0532.0096.1525.0274c.132.0237.3221.0575.5558.0984.467.0818 1.1085.192 1.806.3056 1.3744.224 3.031.4722 3.9709.5289.6491.0392 1.4051-.16 2.1082-.3948.7337-.2449 1.5625-.584 2.396-.926 1.7173-.7044 3.4659-1.4212 4.9355-1.6642 1.2704-.2102 1.7226.2539 1.8851.5711.2328.4545.1062.9597-.0719 1.1424-.0437.0448-.2012.1716-.5288.3841-.3053.198-.7006.434-1.1643.697-.9261.5252-2.0888 1.138-3.2727 1.7385-2.3915 1.2129-4.772 2.3263-5.4317 2.5679-.5342.1957-1.1944.2433-2.0542.199-.5079-.0261-.9897-.0751-1.515-.1286-.4246-.0432-.8777-.0892-1.3961-.1285-1.6918-.1282-2.978-.5368-4.3563-.9747l-.1256-.0399c-1.4276-.4532-2.9552-.9238-4.9768-1.0052-.4551-.0183-1.2653.0098-1.9859.0439v-7.1009c1.4055-.503 3.4871-1.2584 4.1208-1.5473zm2.7954-.9099.1833-.9831c.0002.0001 0 0-.1833.9831zm-8.9162.8119h-3v10.9954h3z" fill-rule="evenodd"/>
         </svg>   
         
                     </a>
@@ -940,15 +197,10 @@
                     <!-- Third item in second row -->
                     <a href='#Horario'>
                         
-        <svg fill="none" width="120" height="120" viewBox="0 0 60 60">
-            <path d="m0 0h60v60h-60z" fill="black" opacity="0" transform="matrix(-1 0 0 -1 60 60)"/>
-            <g>
-                <!-- Outer Circle -->
-                <path d="m30 2a25 25 0 1 0 25 25 25 25 0 0 0 -25-25zm0 45a20 20 0 1 1 20-20 20 20 0 0 1 -20 20z" fill="black"/>
-                
-                <!-- Centered "L" Shape -->
-                <path d="m38 26h-8v-8a2 2 0 0 0 -5 1.5v10a4 2 0 0 0 2 1h12a2 2 0 0 0 1-4.5z" fill="black"/>
-            </g>
+        <svg id="schedule" fill="black" width="120" height="120" viewBox="0 0 60 60">
+            <path d="m0 0h60v60h-60z" opacity="0" transform="matrix(-1 0 0 -1 60 60)"/>
+            <path d="m30 2a25 25 0 1 0 25 25 25 25 0 0 0 -25-25zm0 45a20 20 0 1 1 20-20 20 20 0 0 1 -20 20z"/>
+            <path d="m38 26h-8v-8a2 2 0 0 0 -5 1.5v10a4 2 0 0 0 2 1h12a2 2 0 0 0 1-4.5z"/>
         </svg>
         
                     </a>
@@ -959,11 +211,9 @@
                     <!-- First item in second row -->
                     <a href='#Contacto'>
                         
-        <svg fill="none" width="140" height="140" viewBox="-3 0 20 20">
-            <g fill="black">
-                <path d="m15.88 3.86-.61-1.31c-.155-.326-.443-.568-.792-.658-1.938-.528-4.161-.851-6.453-.891-2.342.041-4.565.363-6.687.934-.165.048-.453.29-.605.609l-.613 1.317c-.075.152-.119.331-.12.52v.87c-.001.012-.001.026-.001.041 0 .392.318.71.71.71.011 0 .022 0 .033-.001h2.518c.412-.01.742-.346.742-.76 0-.018-.001-.035-.002-.053v-.838c0-.004 0-.008 0-.012 0-.229.119-.43.298-.546.947-.508 2.069-.806 3.26-.806.156 0 .31.005.464.015.122-.011.288-.017.456-.017 1.178 0 2.287.291 3.261.805.143.099.262.3.262.529v.013.859c-.001.015-.002.033-.002.05 0 .413.33.75.741.76h2.521c.009 0 .02.001.031.001.392 0 .71-.318.71-.71 0-.014 0-.029-.001-.043v-.868c-.001-.189-.045-.368-.123-.527z"/><path d="m12 8.3c-.624-.797-1.001-1.815-1.001-2.92 0-.028 0-.056.001-.084v-.296h-1v1h-4v-1h-1v.33c0 .024.001.052.001.08 0 1.105-.377 2.122-1.009 2.93l-2.992 3.66v3h14v-3zm-4 4.7c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/>
-                <path d="m10 10c0 1.105-.895 2-2 2s-2-.895-2-2 .895-2 2-2 2 .895 2 2z"/>
-            </g>
+        <svg id="contact" fill="black" width="140" height="140" viewBox="-3 0 20 20">
+            <path d="m15.88 3.86-.61-1.31c-.155-.326-.443-.568-.792-.658-1.938-.528-4.161-.851-6.453-.891-2.342.041-4.565.363-6.687.934-.165.048-.453.29-.605.609l-.613 1.317c-.075.152-.119.331-.12.52v.87c-.001.012-.001.026-.001.041 0 .392.318.71.71.71.011 0 .022 0 .033-.001h2.518c.412-.01.742-.346.742-.76 0-.018-.001-.035-.002-.053v-.838c0-.004 0-.008 0-.012 0-.229.119-.43.298-.546.947-.508 2.069-.806 3.26-.806.156 0 .31.005.464.015.122-.011.288-.017.456-.017 1.178 0 2.287.291 3.261.805.143.099.262.3.262.529v.013.859c-.001.015-.002.033-.002.05 0 .413.33.75.741.76h2.521c.009 0 .02.001.031.001.392 0 .71-.318.71-.71 0-.014 0-.029-.001-.043v-.868c-.001-.189-.045-.368-.123-.527z"/><path d="m12 8.3c-.624-.797-1.001-1.815-1.001-2.92 0-.028 0-.056.001-.084v-.296h-1v1h-4v-1h-1v.33c0 .024.001.052.001.08 0 1.105-.377 2.122-1.009 2.93l-2.992 3.66v3h14v-3zm-4 4.7c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/>
+            <path d="m10 10c0 1.105-.895 2-2 2s-2-.895-2-2 .895-2 2-2 2 .895 2 2z"/>
         </svg>
         
                     </a>
@@ -972,10 +222,8 @@
                     <!-- Second item in second row -->
                     <a href='#Fotos'>
                         
-        <svg fill="none" width="120" height="120" viewBox="0 0 60 60">
-            <g fill="black">
-                <path d="m7.8086 50.3477h40.3828c4.8749 0 7.3594-2.4375 7.3594-7.2657v-24.539c0-4.8281-2.4845-7.2422-7.3594-7.2422h-5.4845c-1.828 0-2.3905-.375-3.4452-1.5469l-1.8984-2.1094c-1.1484-1.289-2.3437-1.9922-4.7813-1.9922h-9.3281c-2.4141 0-3.6094.7032-4.7812 1.9922l-1.8985 2.1094c-1.0312 1.1484-1.6171 1.5469-3.4453 1.5469h-5.3203c-4.875 0-7.3594 2.4141-7.3594 7.2422v24.539c0 4.8282 2.4844 7.2657 7.3594 7.2657zm20.1797-7.5c-7.0781 0-12.7734-5.6954-12.7734-12.8204s5.6953-12.8202 12.7734-12.8202c7.125 0 12.7969 5.6952 12.7969 12.8202s-5.6954 12.8204-12.7969 12.8204zm16.8517-18.5391c-1.594 0-2.9064-1.2891-2.9064-2.8828 0-1.6172 1.3124-2.9063 2.9064-2.9063 1.5936 0 2.906 1.2891 2.906 2.9063 0 1.5937-1.3124 2.8828-2.906 2.8828zm-16.8517 14.9766c5.1094 0 9.2578-4.125 9.2578-9.2579 0-5.1328-4.1484-9.2578-9.2578-9.2578s-9.2344 4.125-9.2344 9.2578c0 5.1329 4.1485 9.2579 9.2344 9.2579z"/>
-            </g>
+        <svg id="pics" fill="black" width="120" height="120" viewBox="0 0 60 60">
+            <path d="m7.8086 50.3477h40.3828c4.8749 0 7.3594-2.4375 7.3594-7.2657v-24.539c0-4.8281-2.4845-7.2422-7.3594-7.2422h-5.4845c-1.828 0-2.3905-.375-3.4452-1.5469l-1.8984-2.1094c-1.1484-1.289-2.3437-1.9922-4.7813-1.9922h-9.3281c-2.4141 0-3.6094.7032-4.7812 1.9922l-1.8985 2.1094c-1.0312 1.1484-1.6171 1.5469-3.4453 1.5469h-5.3203c-4.875 0-7.3594 2.4141-7.3594 7.2422v24.539c0 4.8282 2.4844 7.2657 7.3594 7.2657zm20.1797-7.5c-7.0781 0-12.7734-5.6954-12.7734-12.8204s5.6953-12.8202 12.7734-12.8202c7.125 0 12.7969 5.6952 12.7969 12.8202s-5.6954 12.8204-12.7969 12.8204zm16.8517-18.5391c-1.594 0-2.9064-1.2891-2.9064-2.8828 0-1.6172 1.3124-2.9063 2.9064-2.9063 1.5936 0 2.906 1.2891 2.906 2.9063 0 1.5937-1.3124 2.8828-2.906 2.8828zm-16.8517 14.9766c5.1094 0 9.2578-4.125 9.2578-9.2579 0-5.1328-4.1484-9.2578-9.2578-9.2578s-9.2344 4.125-9.2344 9.2578c0 5.1329 4.1485 9.2579 9.2344 9.2579z"/>
         </svg>
         
                     </a>
@@ -984,13 +232,11 @@
                     <!-- Third item in second row -->
                     <a href='#Ubicacion'>
                         
-        <svg fill="none" width="140" height="140" viewBox="0 0 60 60">
-            <g fill="black" transform="scale(0.5)">
-                <path d="m50 0c-16 0-30 13-30 30 0 6 2 12 5 17l20.7 35.7c2.8 4 5 3 7-.2l22.8-39c.4-.8.8-2 2-3 1-3 2-7 2-11 0-16-13-30-30-30zm0 14c9 0 16 7 16 16 0 9-7 16-16 16-9 0-16-7-16-16 0-9 7-16 16-16z" stroke-width="2"/>
-                <path d="m70 50-0 0c0-0 0 0 0 0z"/>
-                <path d="m35 70c-14 2-24 7-24 14 0 9 17 17 40 17s40-8 40-17c0-7-10-12-24-14-1 1-1 2-2 3 11 1 18 5 18 8 0 5-14 9-32 9s-32-4-32-9c0-4 7-7 18-8-1-1-1-2-2-3z"/>
-            </g>
-        </svg>
+        <svg id="location" fill="black" width="100" height="100" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+            <path d="m50.001303 0c-16.352602 0-29.751303 13.360422-29.751303 29.666303 0 6.317865 2.017532 12.188967 5.432936 17.016175l20.687753 35.762188c2.897215 3.784891 4.823674 3.06608 7.232659-.199393l22.817296-38.830854c.460965-.83384.822139-1.721773 1.137489-2.628431 1.408365-3.43986 2.191867-7.192337 2.191867-11.119685 0-16.305881-13.396104-29.666303-29.748697-29.666303zm0 13.900901c8.805396 0 15.80796 6.985154 15.80797 15.765402 0 8.780247-7.002574 15.762814-15.80797 15.762814-8.805405 0-15.810576-6.982567-15.810576-15.762814 0-8.780248 7.005171-15.765402 15.810576-15.765402z" stroke-width="3.62116"/>
+            <path d="m68.912802 48.907851-.04824.126174c.01569-.03832.02717-.07672.04267-.115041.0015-.0039.004-.0072.0056-.01113z"/>
+            <path d="m34.005859 69.056641c-14.125859 1.996545-24.005859 6.771562-24.005859 13.800781 0 9.46774 16.508399 17.142578 40 17.142578s40-7.674838 40-17.142578c0-7.028964-9.878869-11.804111-24.003906-13.800781-.651648 1.111256-1.305308 2.220821-1.957032 3.332031 10.64597 1.477058 17.960938 4.581453 17.960938 8.183594 0 5.04946-14.326887 9.142578-32 9.142578s-32-4.093118-32-9.142578c-.001289-3.589575 7.266228-6.691267 17.945312-8.173828-.645552-1.114537-1.294505-2.226873-1.939453-3.341797z"/>
+        </svg>	
         
                     </a>
                 </div>
@@ -1000,9 +246,9 @@
                     <!-- First item in third row -->
                     <a href='#Compartir'>
                         
-            <svg id="d1_share" width="100" height="100" viewBox="-3 0 60 60" xmlns="http://www.w3.org/2000/svg">
-                <path d="m35.2 32.0c-2.2608 0-4.3387 0.7819-5.979 2.0895l-10.2486-6.4054a9.65551 9.65551 0 0 0 0-4.1683l10.2486-6.4054c1.6403 1.3077 3.7182 2.0896 5.979 2.0896 5.3019 0 9.6-4.2981 9.6-9.6s-4.2981-9.6-9.6-9.6-9.6 4.2981-9.6 9.6c0 0.7158 0.079 1.413 0.2276 2.0841l-10.2486 6.4054c-1.6403-1.3076-3.7182-2.0895-5.979-2.0895-5.3019 0-9.6 4.2981-9.6 9.6s4.2981 9.6 9.6 9.6c2.2608 0 4.3387-0.7819 5.979-2.0895l10.2486 6.4054a9.6301 9.6301 0 0 0 -0.2276 2.0841c0 5.3019 4.2981 9.6 9.6 9.6s9.6-4.2981 9.6-9.6-4.2981-9.6-9.6-9.6z" fill="black"/>
-            </svg>
+        <svg id="share" fill="black" width="100" height="100" viewBox="-3 0 60 60" xmlns="http://www.w3.org/2000/svg">
+            <path d="m35.2 32.0c-2.2608 0-4.3387 0.7819-5.979 2.0895l-10.2486-6.4054a9.65551 9.65551 0 0 0 0-4.1683l10.2486-6.4054c1.6403 1.3077 3.7182 2.0896 5.979 2.0896 5.3019 0 9.6-4.2981 9.6-9.6s-4.2981-9.6-9.6-9.6-9.6 4.2981-9.6 9.6c0 0.7158 0.079 1.413 0.2276 2.0841l-10.2486 6.4054c-1.6403-1.3076-3.7182-2.0895-5.979-2.0895-5.3019 0-9.6 4.2981-9.6 9.6s4.2981 9.6 9.6 9.6c2.2608 0 4.3387-0.7819 5.979-2.0895l10.2486 6.4054a9.6301 9.6301 0 0 0 -0.2276 2.0841c0 5.3019 4.2981 9.6 9.6 9.6s9.6-4.2981 9.6-9.6-4.2981-9.6-9.6-9.6z"/>
+        </svg>
         
                     </a>
                 </div>
@@ -1010,9 +256,9 @@
                     <!-- Second item in third row -->
                     <a href='#Promos'>
                          
-             <svg id="d2_promo" width="100" height="100" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-                <path d="m59.586 46.323c1.916 3.101-0.490 7.018-4.318 7.018h-49.593c-3.794 0-6.041-4.174-4.318-7.018l23.160-39.853c1.916-3.101 6.732-3.103 8.610 0zm-29.597-8.028c-2.649 0-4.798 2.018-4.798 4.798s2.018 4.798 4.798 4.798 4.798-2.018 4.798-4.798-2.018-4.798-4.798-4.798zm-4.550-17.200 0.774 14.164c0.036 0.661 0.586 1.172 1.248 1.172h5.059c0.661 0 1.212-0.511 1.248-1.172l0.774-14.164c0.039-0.713-0.526-1.305-1.248-1.305h-7.270c-0.722 0-1.160 0.610-1.248 1.305z"/>
-            </svg>
+        <svg id="promos" fill="black" width="100" height="100" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+            <path d="m59.586 46.323c1.916 3.101-0.490 7.018-4.318 7.018h-49.593c-3.794 0-6.041-4.174-4.318-7.018l23.160-39.853c1.916-3.101 6.732-3.103 8.610 0zm-29.597-8.028c-2.649 0-4.798 2.018-4.798 4.798s2.018 4.798 4.798 4.798 4.798-2.018 4.798-4.798-2.018-4.798-4.798-4.798zm-4.550-17.200 0.774 14.164c0.036 0.661 0.586 1.172 1.248 1.172h5.059c0.661 0 1.212-0.511 1.248-1.172l0.774-14.164c0.039-0.713-0.526-1.305-1.248-1.305h-7.270c-0.722 0-1.160 0.610-1.248 1.305z"/>
+        </svg>
         
                     </a>
                 </div>
@@ -1020,35 +266,33 @@
                     <!-- Third item in third row -->
                     <a href='#Owner'>
                         
-        <svg fill="none" width="140" height="140" viewBox="0 0 60 60">
-            <g fill="black">
-                <path d="m0 0h48v48h-48z" fill="none"/>
-                <path d="m24 2a22 22 0 1 0 22 22 21.9 21.9 0 0 0 -22-22zm0 40a18 18 0 1 1 18-18 18.1 18.1 0 0 1 -18 18z"/>
-                <path d="m25.2 22.3a7.3 7.3 0 0 0 .8-3.3 7 7 0 1 0 -7 7 7.3 7.3 0 0 0 3.3-.8l2.9 2.8-2.6 2.6a1.9 1.9 0 0 0 0 2.8 1.9 1.9 0 0 0 2.8 0l2.6-2.6 1.2 1.2-2.6 2.6a1.9 1.9 0 0 0 0 2.8 1.9 1.9 0 0 0 2.8 0l4-4a1.9 1.9 0 0 0 0-2.8zm-9.2-3.3a3 3 0 1 1 3 3 2.9 2.9 0 0 1 -3-3z"/>
-            <g fill="black">
+        <svg fill="owner" fill="black" width="140" height="140" viewBox="0 0 60 60">
+            <path d="m0 0h48v48h-48z" fill="none"/>
+            <path d="m24 2a22 22 0 1 0 22 22 21.9 21.9 0 0 0 -22-22zm0 40a18 18 0 1 1 18-18 18.1 18.1 0 0 1 -18 18z"/>
+            <path d="m25.2 22.3a7.3 7.3 0 0 0 .8-3.3 7 7 0 1 0 -7 7 7.3 7.3 0 0 0 3.3-.8l2.9 2.8-2.6 2.6a1.9 1.9 0 0 0 0 2.8 1.9 1.9 0 0 0 2.8 0l2.6-2.6 1.2 1.2-2.6 2.6a1.9 1.9 0 0 0 0 2.8 1.9 1.9 0 0 0 2.8 0l4-4a1.9 1.9 0 0 0 0-2.8zm-9.2-3.3a3 3 0 1 1 3 3 2.9 2.9 0 0 1 -3-3z"/>
         </svg>
         
                     </a>
                 </div>
             </div>
         
-                <div id='Ubicacion' class='info-section4'>
-                    
-        <svg fill="none" width="30" height="30" viewBox="0 0 60 60">
-            <g fill="black" transform="scale(0.5)">
-                <path d="m50 0c-16 0-30 13-30 30 0 6 2 12 5 17l20.7 35.7c2.8 4 5 3 7-.2l22.8-39c.4-.8.8-2 2-3 1-3 2-7 2-11 0-16-13-30-30-30zm0 14c9 0 16 7 16 16 0 9-7 16-16 16-9 0-16-7-16-16 0-9 7-16 16-16z" stroke-width="2"/>
-                <path d="m70 50-0 0c0-0 0 0 0 0z"/>
-                <path d="m35 70c-14 2-24 7-24 14 0 9 17 17 40 17s40-8 40-17c0-7-10-12-24-14-1 1-1 2-2 3 11 1 18 5 18 8 0 5-14 9-32 9s-32-4-32-9c0-4 7-7 18-8-1-1-1-2-2-3z"/>
-            </g>
-        </svg>
+                    <div id='Ubicacion' class='info-section4'>
+                        <div class="col-4 d-flex justify-content-start px-1" style="width: 50px;">
+                        
+        <svg id="small_location" fill="black" width="30" height="30" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="m50.001303 0c-16.352602 0-29.751303 13.360422-29.751303 29.666303 0 6.317865 2.017532 12.188967 5.432936 17.016175l20.687753 35.762188c2.897215 3.784891 4.823674 3.06608 7.232659-.199393l22.817296-38.830854c.460965-.83384.822139-1.721773 1.137489-2.628431 1.408365-3.43986 2.191867-7.192337 2.191867-11.119685 0-16.305881-13.396104-29.666303-29.748697-29.666303zm0 13.900901c8.805396 0 15.80796 6.985154 15.80797 15.765402 0 8.780247-7.002574 15.762814-15.80797 15.762814-8.805405 0-15.810576-6.982567-15.810576-15.762814 0-8.780248 7.005171-15.765402 15.810576-15.765402z" stroke-width="3.62116"/>
+            <path d="m68.912802 48.907851-.04824.126174c.01569-.03832.02717-.07672.04267-.115041.0015-.0039.004-.0072.0056-.01113z"/>
+            <path d="m34.005859 69.056641c-14.125859 1.996545-24.005859 6.771562-24.005859 13.800781 0 9.46774 16.508399 17.142578 40 17.142578s40-7.674838 40-17.142578c0-7.028964-9.878869-11.804111-24.003906-13.800781-.651648 1.111256-1.305308 2.220821-1.957032 3.332031 10.64597 1.477058 17.960938 4.581453 17.960938 8.183594 0 5.04946-14.326887 9.142578-32 9.142578s-32-4.093118-32-9.142578c-.001289-3.589575 7.266228-6.691267 17.945312-8.173828-.645552-1.114537-1.294505-2.226873-1.939453-3.341797z"/>
+        </svg>	
         
-                    <h2 class='center-text2'>****** Ubicacion ******</h2>
-                    <span class='back-to-top' onclick='scrollToTop()'>
-                        <svg id="z_backtop1" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
-                            <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
-                        </svg>
-                    </span>
-                </div> 
+                        </div>
+                        <h2 class='center-text2'>****** Ubicacion ******</h2>
+                        <span class='back-to-top' onclick='scrollToTop()'>
+                            <svg id="z_backtop1" fill="black" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
+                                <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z"/>
+                            </svg>
+                        </span>
+                    </div> 
                    
         <!DOCTYPE html>
         <html>
@@ -1057,12 +301,28 @@
           <meta charset="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
-          <style>
-            #map { height: 500px; }
-          </style>
+  <style>
+    /* Custom container for the map */
+    .mapbody {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0; /* Remove default margin */
+    }
+
+    /* Style for the map */
+    #map {
+      height: 700px;
+      width: 700px;
+      border: 1px solid #ccc; /* Optional, to give the map a border */
+    }
+  </style>
         </head>
         <body>
-          <div id="map"></div>
+  <div class="mapbody">
+    <!-- Div for Leaflet Map -->
+    <div id="map"></div>
+  </div>
 
           <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
           <script>
@@ -1088,149 +348,128 @@
         </body>
         </html>
         
-                <div id='Servicios' class='info-section4'>
-                    
-        <svg fill="none" height="40" width="40" viewBox="0 0 48 48">
-            <g fill="black">
-                <path clip-rule="evenodd" d="m36.826 13.643-2.326-7.53192-2.326 7.53192-4.4999 2.1428 4.5197 2.1523 2.3062 6.5891 2.3062-6.5891 4.5198-2.1523zm-3 1.4285.674-2.1824.674 2.1824 1.5001.7143-1.4803.7049-.6938 1.9823-.6938-1.9823-1.4802-.7049z" fill-rule="evenodd"/>
-                <path d="m19 16 1-4 1 4 3 1-3 1-1 4-1-4-3-1z"/>
-                <path clip-rule="evenodd" d="m13 39.7493v.2468c0 1.1045-.8954 2-2 2h-3c-1.10457 0-2-.8955-2-2v-10.9954c0-1.1045.89543-2 2-2h3c.946 0 1.7386.6568 1.9467 1.5393 1.3244-.4773 2.8713-1.0454 3.3446-1.2612.402-.1831.8662-.2453 1.2519-.2676.4056-.0234.8264-.0072 1.1946.0213.3714.0287.7085.0716.9519.107.1222.0178.2222.0339.2927.0457.0353.006.0633.0108.0831.0144l.0235.0042.0069.0013.0036.0006.0179.0034 6.6888 1.5005.0418.0134.0114.0035.0461.0141c.0421.0127.106.0314.1884.0542.1651.0458.4025.1075.6855.1692.5749.1254 1.2991.2425 1.9744.2425.6239 0 1.2693.2325 1.6143.8644.2963.5425.2273 1.1382.1164 1.5507-.1381.5134-.4241 1.0537-.7877 1.5127.4907-.1851 1.0271-.4043 1.6029-.6405l.1231-.0506c1.623-.666 3.5475-1.4558 5.245-1.7365 1.9397-.3209 3.3515.3832 3.9915 1.6324.5697 1.1119.4374 2.5713-.42 3.4506-.2152.2207-.5431.4522-.8724.6658-.3516.228-.7847.4857-1.2659.7586-.9638.5467-2.1569 1.1751-3.3548 1.7826-2.372 1.203-4.8584 2.3729-5.6485 2.6622-.9156.3354-1.8991.3671-2.8449.3184-.5152-.0265-1.1137-.086-1.7086-.1452-.4298-.0427-.8576-.0853-1.2507-.115-1.9278-.1461-3.4074-.6166-4.7703-1.05l-.1657-.0527c-1.4076-.4468-2.7171-.8431-4.4521-.913-.3967-.016-1.1888.0131-1.9054.0479zm4.1208-10.6506c.0641-.0292.2341-.0732.5377-.0908.2836-.0164.6072-.006.925.0186.3146.0244.6054.0612.8183.0921.1058.0154.1911.0292.2488.0389.0289.0049.0507.0087.0648.0112l.0022.0004 6.5675 1.4733.0451.0137c.0546.0164.1323.0391.2295.0661.1941.0538.468.1248.7934.1958.5852.1277 1.3692.2624 2.1684.2852-.057.1617-.1535.3526-.2843.5427-.1596.232-.3349.4114-.4788.5141-.4166.2976-.7528.4221-.9569.4751-.1033.0268-.176.0361-.2119.0393l-.0133.0011-.0078.0004-5.362-.0648-.1914 1.9837.1793-.9838-.1783.984.0532.0096.1525.0274c.132.0237.3221.0575.5558.0984.467.0818 1.1085.192 1.806.3056 1.3744.224 3.031.4722 3.9709.5289.6491.0392 1.4051-.16 2.1082-.3948.7337-.2449 1.5625-.584 2.396-.926 1.7173-.7044 3.4659-1.4212 4.9355-1.6642 1.2704-.2102 1.7226.2539 1.8851.5711.2328.4545.1062.9597-.0719 1.1424-.0437.0448-.2012.1716-.5288.3841-.3053.198-.7006.434-1.1643.697-.9261.5252-2.0888 1.138-3.2727 1.7385-2.3915 1.2129-4.772 2.3263-5.4317 2.5679-.5342.1957-1.1944.2433-2.0542.199-.5079-.0261-.9897-.0751-1.515-.1286-.4246-.0432-.8777-.0892-1.3961-.1285-1.6918-.1282-2.978-.5368-4.3563-.9747l-.1256-.0399c-1.4276-.4532-2.9552-.9238-4.9768-1.0052-.4551-.0183-1.2653.0098-1.9859.0439v-7.1009c1.4055-.503 3.4871-1.2584 4.1208-1.5473zm2.7954-.9099.1833-.9831c.0002.0001 0 0-.1833.9831zm-8.9162.8119h-3v10.9954h3z" fill-rule="evenodd"/>
-            </g>
+                    <div id='Servicios' class='info-section4'>
+                        <div class="col-4 d-flex justify-content-start px-1" style="width: 50px;">
+                        
+        <svg id="services" fill="black" height="40" width="40" viewBox="0 0 48 48">
+            <path clip-rule="evenodd" d="m36.826 13.643-2.326-7.53192-2.326 7.53192-4.4999 2.1428 4.5197 2.1523 2.3062 6.5891 2.3062-6.5891 4.5198-2.1523zm-3 1.4285.674-2.1824.674 2.1824 1.5001.7143-1.4803.7049-.6938 1.9823-.6938-1.9823-1.4802-.7049z" fill-rule="evenodd"/>
+            <path d="m19 16 1-4 1 4 3 1-3 1-1 4-1-4-3-1z"/>
+            <path clip-rule="evenodd" d="m13 39.7493v.2468c0 1.1045-.8954 2-2 2h-3c-1.10457 0-2-.8955-2-2v-10.9954c0-1.1045.89543-2 2-2h3c.946 0 1.7386.6568 1.9467 1.5393 1.3244-.4773 2.8713-1.0454 3.3446-1.2612.402-.1831.8662-.2453 1.2519-.2676.4056-.0234.8264-.0072 1.1946.0213.3714.0287.7085.0716.9519.107.1222.0178.2222.0339.2927.0457.0353.006.0633.0108.0831.0144l.0235.0042.0069.0013.0036.0006.0179.0034 6.6888 1.5005.0418.0134.0114.0035.0461.0141c.0421.0127.106.0314.1884.0542.1651.0458.4025.1075.6855.1692.5749.1254 1.2991.2425 1.9744.2425.6239 0 1.2693.2325 1.6143.8644.2963.5425.2273 1.1382.1164 1.5507-.1381.5134-.4241 1.0537-.7877 1.5127.4907-.1851 1.0271-.4043 1.6029-.6405l.1231-.0506c1.623-.666 3.5475-1.4558 5.245-1.7365 1.9397-.3209 3.3515.3832 3.9915 1.6324.5697 1.1119.4374 2.5713-.42 3.4506-.2152.2207-.5431.4522-.8724.6658-.3516.228-.7847.4857-1.2659.7586-.9638.5467-2.1569 1.1751-3.3548 1.7826-2.372 1.203-4.8584 2.3729-5.6485 2.6622-.9156.3354-1.8991.3671-2.8449.3184-.5152-.0265-1.1137-.086-1.7086-.1452-.4298-.0427-.8576-.0853-1.2507-.115-1.9278-.1461-3.4074-.6166-4.7703-1.05l-.1657-.0527c-1.4076-.4468-2.7171-.8431-4.4521-.913-.3967-.016-1.1888.0131-1.9054.0479zm4.1208-10.6506c.0641-.0292.2341-.0732.5377-.0908.2836-.0164.6072-.006.925.0186.3146.0244.6054.0612.8183.0921.1058.0154.1911.0292.2488.0389.0289.0049.0507.0087.0648.0112l.0022.0004 6.5675 1.4733.0451.0137c.0546.0164.1323.0391.2295.0661.1941.0538.468.1248.7934.1958.5852.1277 1.3692.2624 2.1684.2852-.057.1617-.1535.3526-.2843.5427-.1596.232-.3349.4114-.4788.5141-.4166.2976-.7528.4221-.9569.4751-.1033.0268-.176.0361-.2119.0393l-.0133.0011-.0078.0004-5.362-.0648-.1914 1.9837.1793-.9838-.1783.984.0532.0096.1525.0274c.132.0237.3221.0575.5558.0984.467.0818 1.1085.192 1.806.3056 1.3744.224 3.031.4722 3.9709.5289.6491.0392 1.4051-.16 2.1082-.3948.7337-.2449 1.5625-.584 2.396-.926 1.7173-.7044 3.4659-1.4212 4.9355-1.6642 1.2704-.2102 1.7226.2539 1.8851.5711.2328.4545.1062.9597-.0719 1.1424-.0437.0448-.2012.1716-.5288.3841-.3053.198-.7006.434-1.1643.697-.9261.5252-2.0888 1.138-3.2727 1.7385-2.3915 1.2129-4.772 2.3263-5.4317 2.5679-.5342.1957-1.1944.2433-2.0542.199-.5079-.0261-.9897-.0751-1.515-.1286-.4246-.0432-.8777-.0892-1.3961-.1285-1.6918-.1282-2.978-.5368-4.3563-.9747l-.1256-.0399c-1.4276-.4532-2.9552-.9238-4.9768-1.0052-.4551-.0183-1.2653.0098-1.9859.0439v-7.1009c1.4055-.503 3.4871-1.2584 4.1208-1.5473zm2.7954-.9099.1833-.9831c.0002.0001 0 0-.1833.9831zm-8.9162.8119h-3v10.9954h3z" fill-rule="evenodd"/>
         </svg>   
         
-                    <h2 class='center-text2'>****** Servicios ******</h2>
-                    <span class='back-to-top' onclick='scrollToTop()'>
-                        <svg id="z_backtop1" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
-                            <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
-                        </svg>
-                    </span>
-                </div> 
+                        </div>
+                        <h2 class='center-text2'>****** Servicios ******</h2>
+                        <span class='back-to-top' onclick='scrollToTop()'>
+                            <svg id="z_backtop1" fill="black" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
+                                <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z"/>
+                            </svg>
+                        </span>
+                    </div> 
                    
                 <!-- Descripcion de los Servicios o Menu -->
                 <div class="d-flex justify-content-center">
-                <div class="carousel position-relative w-75 mw-100 border border-2 border-secondary rounded" id="Servicios">
+                <div class="carousel" id="Servicios">
                     
                     <input type="radio" name="carouselmenu" id="slidemenu1" checked>
                     <input type="radio" name="carouselmenu" id="slidemenu2" >
                     <input type="radio" name="carouselmenu" id="slidemenu3" >
+                    <input type="radio" name="carouselmenu" id="slidemenu4" >
+                    <input type="radio" name="carouselmenu" id="slidemenu5" >
 
                     <div class="slides">
                         
-                        <div class="slide d-flex justify-content-center align-items-center" id="s1b">
-                            <img class="img-fluid custom-style" src="../img/N02m01.png" alt="">
-                        </div>
-                        <div class="slide d-flex justify-content-center align-items-center" id="s1b">
-                            <img class="img-fluid custom-style" src="../img/N02m02.png" alt="">
-                        </div>
-                        <div class="slide d-flex justify-content-center align-items-center" id="s1b">
-                            <img class="img-fluid custom-style" src="../img/N02m03.png" alt="">
-                        </div>
+                            <div class="slide"
+                            id="s1b">
+                                <img class="img-fluid custom-style" src="menu/SP_1.jpg" alt="">
+                            </div>
+                            <div class="slide"
+                            id="s1b">
+                                <img class="img-fluid custom-style" src="menu/SP_2.jpg" alt="">
+                            </div>
+                            <div class="slide"
+                            id="s1b">
+                                <img class="img-fluid custom-style" src="menu/SP_3.jpg" alt="">
+                            </div>
+                            <div class="slide"
+                            id="s1b">
+                                <img class="img-fluid custom-style" src="menu/SP_4.jpg" alt="">
+                            </div>
+                            <div class="slide"
+                            id="s1b">
+                                <img class="img-fluid custom-style" src="menu/SP_5.jpg" alt="">
+                            </div>
                     </div>
                 <!-- Left and Right Arrows -->
                 
-                <label for="slidemenu3" class="arrow left">&#10094;</label>
+                <label for="slidemenu5" class="arrow left">&#10094;</label>
                 <label for="slidemenu2" class="arrow right">&#10095;</label>
                 <label for="slidemenu1" class="arrow left">&#10094;</label>
                 <label for="slidemenu3" class="arrow right">&#10095;</label>
                 <label for="slidemenu2" class="arrow left">&#10094;</label>
+                <label for="slidemenu4" class="arrow right">&#10095;</label>
+                <label for="slidemenu3" class="arrow left">&#10094;</label>
+                <label for="slidemenu5" class="arrow right">&#10095;</label>
+                <label for="slidemenu4" class="arrow left">&#10094;</label>
                 <label for="slidemenu1" class="arrow right">&#10095;</label>
                     <div class="controls">
                         
                         <label for="slidemenu1" class="control"></label>
                         <label for="slidemenu2" class="control"></label>
                         <label for="slidemenu3" class="control"></label>
+                        <label for="slidemenu4" class="control"></label>
+                        <label for="slidemenu5" class="control"></label>
                     </div>
                 </div>
                 </div>
                 
-                <div id='Horario' class='info-section4'>
-                    
-        <svg fill="none" width="30" height="30" viewBox="0 0 60 60">
-            <path d="m0 0h60v60h-60z" fill="black" opacity="0" transform="matrix(-1 0 0 -1 60 60)"/>
-            <g>
-                <!-- Outer Circle -->
-                <path d="m30 2a25 25 0 1 0 25 25 25 25 0 0 0 -25-25zm0 45a20 20 0 1 1 20-20 20 20 0 0 1 -20 20z" fill="black"/>
-                
-                <!-- Centered "L" Shape -->
-                <path d="m38 26h-8v-8a2 2 0 0 0 -5 1.5v10a4 2 0 0 0 2 1h12a2 2 0 0 0 1-4.5z" fill="black"/>
-            </g>
+                    <div id='Horario' class='info-section4'>
+                        <div class="col-4 d-flex justify-content-start px-1" style="width: 50px;">
+                        
+        <svg id="schedule" fill="black" width="30" height="30" viewBox="0 0 60 60">
+            <path d="m0 0h60v60h-60z" opacity="0" transform="matrix(-1 0 0 -1 60 60)"/>
+            <path d="m30 2a25 25 0 1 0 25 25 25 25 0 0 0 -25-25zm0 45a20 20 0 1 1 20-20 20 20 0 0 1 -20 20z"/>
+            <path d="m38 26h-8v-8a2 2 0 0 0 -5 1.5v10a4 2 0 0 0 2 1h12a2 2 0 0 0 1-4.5z"/>
         </svg>
         
-                    <h2 class='center-text2'>****** Horario ******</h2>
-                    <span class='back-to-top' onclick='scrollToTop()'>
-                        <svg id="z_backtop1" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
-                            <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
-                        </svg>
-                    </span>
-                </div> 
+                        </div>
+                        <h2 class='center-text2'>****** Horario ******</h2>
+                        <span class='back-to-top' onclick='scrollToTop()'>
+                            <svg id="z_backtop1" fill="black" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
+                                <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z"/>
+                            </svg>
+                        </span>
+                    </div> 
                    
-    <html>
-    <head>
-        <style>
-            table {
-                width: 40%;
-                border-collapse: collapse;
-            }
-            th, td {
-                border: 1px solid #ccc;
-                padding: 5px; /* Smaller padding for smaller cells */
-                text-align: center;
-                width: 40px; /* Set a fixed width for the cells */
-                height: 40px; /* Set a fixed height for the cells */
-            }
-            th {
-                background-color: #f2f2f2;
-            }
-            .open {
-                background-color: #90ee90; /* Light green */
-            }
-            .closed {
-                background-color: #ffcccb; /* Light red for closed */
-            }
-            tr:nth-child(even) {
-                background-color: #f9f9f9;
-            }
-        </style>
-    </head>
-    <body>
-        <table>
+        <table id="schedule_table" class="schedule">
             <tr>
-                <th></th>
-    <th>D</th><th>L</th><th>M</th><th>M</th><th>J</th><th>V</th><th>S</th></tr><tr><td>1300</td><td class="open">1300</td><td class="open">1300</td><td class="open">1300</td><td class="open">1300</td><td class="open">1300</td><td class="open">1300</td><td class="open">1300</td></tr><tr><td>1400</td><td class="open">1400</td><td class="open">1400</td><td class="open">1400</td><td class="open">1400</td><td class="open">1400</td><td class="open">1400</td><td class="open">1400</td></tr><tr><td>1500</td><td class="open">1500</td><td class="open">1500</td><td class="open">1500</td><td class="open">1500</td><td class="open">1500</td><td class="open">1500</td><td class="open">1500</td></tr><tr><td>1600</td><td class="open">1600</td><td class="open">1600</td><td class="open">1600</td><td class="open">1600</td><td class="open">1600</td><td class="open">1600</td><td class="open">1600</td></tr><tr><td>1700</td><td class="open">1700</td><td class="open">1700</td><td class="open">1700</td><td class="open">1700</td><td class="open">1700</td><td class="open">1700</td><td class="open">1700</td></tr><tr><td>1800</td><td class="open">1800</td><td class="open">1800</td><td class="open">1800</td><td class="open">1800</td><td class="open">1800</td><td class="open">1800</td><td class="open">1800</td></tr><tr><td>1900</td><td class="open">1900</td><td class="open">1900</td><td class="open">1900</td><td class="open">1900</td><td class="open">1900</td><td class="open">1900</td><td class="open">1900</td></tr>
+                <th class="schedule"></th>
+    <th>D</th><th>L</th><th>M</th><th>I</th><th>J</th><th>V</th><th>S</th></tr><tr><td>1300</td><td class="open">1300</td><td class="open">1300</td><td class="open">1300</td><td></td><td class="open">1300</td><td class="open">1300</td><td class="open">1300</td></tr><tr><td>1400</td><td class="open">1400</td><td class="open">1400</td><td class="open">1400</td><td></td><td class="open">1400</td><td class="open">1400</td><td class="open">1400</td></tr><tr><td>1500</td><td class="open">1500</td><td class="open">1500</td><td class="open">1500</td><td></td><td class="open">1500</td><td class="open">1500</td><td class="open">1500</td></tr><tr><td>1600</td><td class="open">1600</td><td class="open">1600</td><td class="open">1600</td><td></td><td class="open">1600</td><td class="open">1600</td><td class="open">1600</td></tr><tr><td>1700</td><td class="open">1700</td><td class="open">1700</td><td class="open">1700</td><td></td><td class="open">1700</td><td class="open">1700</td><td class="open">1700</td></tr><tr><td>1800</td><td class="open">1800</td><td class="open">1800</td><td class="open">1800</td><td></td><td class="open">1800</td><td class="open">1800</td><td class="open">1800</td></tr><tr><td>1900</td><td class="closed">1900</td><td class="open">1900</td><td class="open">1900</td><td></td><td class="open">1900</td><td class="open">1900</td><td class="open">1900</td></tr>
         </table>
     </body>
     </html>
     
-                <div id='Contacto' class='info-section4'>
-                    
-        <svg fill="none" width="30" height="30" viewBox="-3 0 20 20">
-            <g fill="black">
-                <path d="m15.88 3.86-.61-1.31c-.155-.326-.443-.568-.792-.658-1.938-.528-4.161-.851-6.453-.891-2.342.041-4.565.363-6.687.934-.165.048-.453.29-.605.609l-.613 1.317c-.075.152-.119.331-.12.52v.87c-.001.012-.001.026-.001.041 0 .392.318.71.71.71.011 0 .022 0 .033-.001h2.518c.412-.01.742-.346.742-.76 0-.018-.001-.035-.002-.053v-.838c0-.004 0-.008 0-.012 0-.229.119-.43.298-.546.947-.508 2.069-.806 3.26-.806.156 0 .31.005.464.015.122-.011.288-.017.456-.017 1.178 0 2.287.291 3.261.805.143.099.262.3.262.529v.013.859c-.001.015-.002.033-.002.05 0 .413.33.75.741.76h2.521c.009 0 .02.001.031.001.392 0 .71-.318.71-.71 0-.014 0-.029-.001-.043v-.868c-.001-.189-.045-.368-.123-.527z"/><path d="m12 8.3c-.624-.797-1.001-1.815-1.001-2.92 0-.028 0-.056.001-.084v-.296h-1v1h-4v-1h-1v.33c0 .024.001.052.001.08 0 1.105-.377 2.122-1.009 2.93l-2.992 3.66v3h14v-3zm-4 4.7c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/>
-                <path d="m10 10c0 1.105-.895 2-2 2s-2-.895-2-2 .895-2 2-2 2 .895 2 2z"/>
-            </g>
+                    <div id='Contacto' class='info-section4'>
+                        <div class="col-4 d-flex justify-content-start px-1" style="width: 50px;">
+                        
+        <svg id="contact" fill="black" width="30" height="30" viewBox="-3 0 20 20">
+            <path d="m15.88 3.86-.61-1.31c-.155-.326-.443-.568-.792-.658-1.938-.528-4.161-.851-6.453-.891-2.342.041-4.565.363-6.687.934-.165.048-.453.29-.605.609l-.613 1.317c-.075.152-.119.331-.12.52v.87c-.001.012-.001.026-.001.041 0 .392.318.71.71.71.011 0 .022 0 .033-.001h2.518c.412-.01.742-.346.742-.76 0-.018-.001-.035-.002-.053v-.838c0-.004 0-.008 0-.012 0-.229.119-.43.298-.546.947-.508 2.069-.806 3.26-.806.156 0 .31.005.464.015.122-.011.288-.017.456-.017 1.178 0 2.287.291 3.261.805.143.099.262.3.262.529v.013.859c-.001.015-.002.033-.002.05 0 .413.33.75.741.76h2.521c.009 0 .02.001.031.001.392 0 .71-.318.71-.71 0-.014 0-.029-.001-.043v-.868c-.001-.189-.045-.368-.123-.527z"/><path d="m12 8.3c-.624-.797-1.001-1.815-1.001-2.92 0-.028 0-.056.001-.084v-.296h-1v1h-4v-1h-1v.33c0 .024.001.052.001.08 0 1.105-.377 2.122-1.009 2.93l-2.992 3.66v3h14v-3zm-4 4.7c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/>
+            <path d="m10 10c0 1.105-.895 2-2 2s-2-.895-2-2 .895-2 2-2 2 .895 2 2z"/>
         </svg>
         
-                    <h2 class='center-text2'>****** Contacto ******</h2>
-                    <span class='back-to-top' onclick='scrollToTop()'>
-                        <svg id="z_backtop1" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
-                            <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
-                        </svg>
-                    </span>
-                </div> 
+                        </div>
+                        <h2 class='center-text2'>****** Contacto ******</h2>
+                        <span class='back-to-top' onclick='scrollToTop()'>
+                            <svg id="z_backtop1" fill="black" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
+                                <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z"/>
+                            </svg>
+                        </span>
+                    </div> 
                    
-        <!DOCTYPE html>
-        <html lang="es">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Contactenos</title>
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
-        </head>
-        <body>
+
             <div class="container my-5">
                 <div class="row justify-content-center">
                     <div class="col-lg-6 col-md-8">
-                        <div class="card shadow-lg">
+                        <div class="info-section4">
                             <div class="card-body">
                                 <h2 class="card-title text-center mb-4">Contáctenos</h2>
                                 <p>¡Gracias por ponerte en contacto con nosotros! Estamos emocionados de recibir tus comentarios y preguntas.</p>
@@ -1261,31 +500,26 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Bootstrap JS -->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-        </body>
-        </html>
         
-                <div id='Fotos' class='info-section4'>
-                    
-        <svg fill="none" width="30" height="30" viewBox="0 0 60 60">
-            <g fill="black">
-                <path d="m7.8086 50.3477h40.3828c4.8749 0 7.3594-2.4375 7.3594-7.2657v-24.539c0-4.8281-2.4845-7.2422-7.3594-7.2422h-5.4845c-1.828 0-2.3905-.375-3.4452-1.5469l-1.8984-2.1094c-1.1484-1.289-2.3437-1.9922-4.7813-1.9922h-9.3281c-2.4141 0-3.6094.7032-4.7812 1.9922l-1.8985 2.1094c-1.0312 1.1484-1.6171 1.5469-3.4453 1.5469h-5.3203c-4.875 0-7.3594 2.4141-7.3594 7.2422v24.539c0 4.8282 2.4844 7.2657 7.3594 7.2657zm20.1797-7.5c-7.0781 0-12.7734-5.6954-12.7734-12.8204s5.6953-12.8202 12.7734-12.8202c7.125 0 12.7969 5.6952 12.7969 12.8202s-5.6954 12.8204-12.7969 12.8204zm16.8517-18.5391c-1.594 0-2.9064-1.2891-2.9064-2.8828 0-1.6172 1.3124-2.9063 2.9064-2.9063 1.5936 0 2.906 1.2891 2.906 2.9063 0 1.5937-1.3124 2.8828-2.906 2.8828zm-16.8517 14.9766c5.1094 0 9.2578-4.125 9.2578-9.2579 0-5.1328-4.1484-9.2578-9.2578-9.2578s-9.2344 4.125-9.2344 9.2578c0 5.1329 4.1485 9.2579 9.2344 9.2579z"/>
-            </g>
+                    <div id='Fotos' class='info-section4'>
+                        <div class="col-4 d-flex justify-content-start px-1" style="width: 50px;">
+                        
+        <svg id="pics" fill="black" width="30" height="30" viewBox="0 0 60 60">
+            <path d="m7.8086 50.3477h40.3828c4.8749 0 7.3594-2.4375 7.3594-7.2657v-24.539c0-4.8281-2.4845-7.2422-7.3594-7.2422h-5.4845c-1.828 0-2.3905-.375-3.4452-1.5469l-1.8984-2.1094c-1.1484-1.289-2.3437-1.9922-4.7813-1.9922h-9.3281c-2.4141 0-3.6094.7032-4.7812 1.9922l-1.8985 2.1094c-1.0312 1.1484-1.6171 1.5469-3.4453 1.5469h-5.3203c-4.875 0-7.3594 2.4141-7.3594 7.2422v24.539c0 4.8282 2.4844 7.2657 7.3594 7.2657zm20.1797-7.5c-7.0781 0-12.7734-5.6954-12.7734-12.8204s5.6953-12.8202 12.7734-12.8202c7.125 0 12.7969 5.6952 12.7969 12.8202s-5.6954 12.8204-12.7969 12.8204zm16.8517-18.5391c-1.594 0-2.9064-1.2891-2.9064-2.8828 0-1.6172 1.3124-2.9063 2.9064-2.9063 1.5936 0 2.906 1.2891 2.906 2.9063 0 1.5937-1.3124 2.8828-2.906 2.8828zm-16.8517 14.9766c5.1094 0 9.2578-4.125 9.2578-9.2579 0-5.1328-4.1484-9.2578-9.2578-9.2578s-9.2344 4.125-9.2344 9.2578c0 5.1329 4.1485 9.2579 9.2344 9.2579z"/>
         </svg>
         
-                    <h2 class='center-text2'>****** Fotos ******</h2>
-                    <span class='back-to-top' onclick='scrollToTop()'>
-                        <svg id="z_backtop1" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
-                            <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
-                        </svg>
-                    </span>
-                </div> 
+                        </div>
+                        <h2 class='center-text2'>****** Fotos ******</h2>
+                        <span class='back-to-top' onclick='scrollToTop()'>
+                            <svg id="z_backtop1" fill="black" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
+                                <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z"/>
+                            </svg>
+                        </span>
+                    </div> 
                    
                 <!-- Fotos -->
                 <div class="d-flex justify-content-center">
-                <div class="carousel position-relative w-75 mw-100 border border-2 border-secondary rounded" id="Fotos">
+                <div class="carousel" id="Fotos">
                     
                     <input type="radio" name="carouselpics" id="slidepics1" checked>
                     <input type="radio" name="carouselpics" id="slidepics2" >
@@ -1295,21 +529,26 @@
 
                     <div class="slides">
                         
-                        <div class="slide d-flex justify-content-center align-items-center" id="s1b">
-                            <img class="img-fluid custom-style" src="../img/N02f01.png" alt="">
-                        </div>
-                        <div class="slide d-flex justify-content-center align-items-center" id="s1b">
-                            <img class="img-fluid custom-style" src="../img/N02f02.png" alt="">
-                        </div>
-                        <div class="slide d-flex justify-content-center align-items-center" id="s1b">
-                            <img class="img-fluid custom-style" src="../img/N02f03.png" alt="">
-                        </div>
-                        <div class="slide d-flex justify-content-center align-items-center" id="s1b">
-                            <img class="img-fluid custom-style" src="../img/N02f04.png" alt="">
-                        </div>
-                        <div class="slide d-flex justify-content-center align-items-center" id="s1b">
-                            <img class="img-fluid custom-style" src="../img/N02f05.png" alt="">
-                        </div>
+                            <div class="slide"
+                            id="s1b">
+                                <img class="img-fluid custom-style" src="fotos/Foto_1.jpg" alt="">
+                            </div>
+                            <div class="slide"
+                            id="s1b">
+                                <img class="img-fluid custom-style" src="fotos/Foto_2.jpg" alt="">
+                            </div>
+                            <div class="slide"
+                            id="s1b">
+                                <img class="img-fluid custom-style" src="fotos/Foto_3.jpg" alt="">
+                            </div>
+                            <div class="slide"
+                            id="s1b">
+                                <img class="img-fluid custom-style" src="fotos/Foto_4.jpg" alt="">
+                            </div>
+                            <div class="slide"
+                            id="s1b">
+                                <img class="img-fluid custom-style" src="fotos/Foto_5.jpg" alt="">
+                            </div>
                     </div>
                 <!-- Left and Right Arrows -->
                 
@@ -1334,37 +573,55 @@
                 </div>
                 </div>
                 
-                <div id='Promos' class='info-section4'>
-                     
-             <svg id="d2_promo" width="30" height="30" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-                <path d="m59.586 46.323c1.916 3.101-0.490 7.018-4.318 7.018h-49.593c-3.794 0-6.041-4.174-4.318-7.018l23.160-39.853c1.916-3.101 6.732-3.103 8.610 0zm-29.597-8.028c-2.649 0-4.798 2.018-4.798 4.798s2.018 4.798 4.798 4.798 4.798-2.018 4.798-4.798-2.018-4.798-4.798-4.798zm-4.550-17.200 0.774 14.164c0.036 0.661 0.586 1.172 1.248 1.172h5.059c0.661 0 1.212-0.511 1.248-1.172l0.774-14.164c0.039-0.713-0.526-1.305-1.248-1.305h-7.270c-0.722 0-1.160 0.610-1.248 1.305z"/>
-            </svg>
-        
-                    <h2 class='center-text2'>****** Promos ******</h2>
-                    <span class='back-to-top' onclick='scrollToTop()'>
-                        <svg id="z_backtop1" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
-                            <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
-                        </svg>
-                    </span>
-                </div> 
-                   
-                <div id='Owner' class='info-section4'>
-                    
-        <svg fill="none" width="30" height="30" viewBox="0 0 48 48">
-            <g fill="black">
-                <path d="m0 0h48v48h-48z" fill="none"/>
-                <path d="m24 2a22 22 0 1 0 22 22 21.9 21.9 0 0 0 -22-22zm0 40a18 18 0 1 1 18-18 18.1 18.1 0 0 1 -18 18z"/>
-                <path d="m25.2 22.3a7.3 7.3 0 0 0 .8-3.3 7 7 0 1 0 -7 7 7.3 7.3 0 0 0 3.3-.8l2.9 2.8-2.6 2.6a1.9 1.9 0 0 0 0 2.8 1.9 1.9 0 0 0 2.8 0l2.6-2.6 1.2 1.2-2.6 2.6a1.9 1.9 0 0 0 0 2.8 1.9 1.9 0 0 0 2.8 0l4-4a1.9 1.9 0 0 0 0-2.8zm-9.2-3.3a3 3 0 1 1 3 3 2.9 2.9 0 0 1 -3-3z"/>
-            <g fill="black">
+                    <div id='Promos' class='info-section4'>
+                        <div class="col-4 d-flex justify-content-start px-1" style="width: 50px;">
+                         
+        <svg id="promos" fill="black" width="30" height="30" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+            <path d="m59.586 46.323c1.916 3.101-0.490 7.018-4.318 7.018h-49.593c-3.794 0-6.041-4.174-4.318-7.018l23.160-39.853c1.916-3.101 6.732-3.103 8.610 0zm-29.597-8.028c-2.649 0-4.798 2.018-4.798 4.798s2.018 4.798 4.798 4.798 4.798-2.018 4.798-4.798-2.018-4.798-4.798-4.798zm-4.550-17.200 0.774 14.164c0.036 0.661 0.586 1.172 1.248 1.172h5.059c0.661 0 1.212-0.511 1.248-1.172l0.774-14.164c0.039-0.713-0.526-1.305-1.248-1.305h-7.270c-0.722 0-1.160 0.610-1.248 1.305z"/>
         </svg>
         
-                    <h2 class='center-text2'>****** Owner ******</h2>
-                    <span class='back-to-top' onclick='scrollToTop()'>
-                        <svg id="z_backtop1" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
-                            <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
-                        </svg>
-                    </span>
-                </div> 
+                        </div>
+                        <h2 class='center-text2'>****** Promos ******</h2>
+                        <span class='back-to-top' onclick='scrollToTop()'>
+                            <svg id="z_backtop1" fill="black" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
+                                <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z"/>
+                            </svg>
+                        </span>
+                    </div> 
+                   
+                <!-- Fotos -->
+                <div class="d-flex justify-content-center">
+                <div class="carousel" id="Promos">
+                    
+
+                    <div class="slides">
+                        
+                    </div>
+                <!-- Left and Right Arrows -->
+                
+                    <div class="controls">
+                        
+                    </div>
+                </div>
+                </div>
+                
+                    <div id='Owner' class='info-section4'>
+                        <div class="col-4 d-flex justify-content-start px-1" style="width: 50px;">
+                        
+        <svg fill="owner" fill="black" width="30" height="30" viewBox="0 0 48 48">
+            <path d="m0 0h48v48h-48z" fill="none"/>
+            <path d="m24 2a22 22 0 1 0 22 22 21.9 21.9 0 0 0 -22-22zm0 40a18 18 0 1 1 18-18 18.1 18.1 0 0 1 -18 18z"/>
+            <path d="m25.2 22.3a7.3 7.3 0 0 0 .8-3.3 7 7 0 1 0 -7 7 7.3 7.3 0 0 0 3.3-.8l2.9 2.8-2.6 2.6a1.9 1.9 0 0 0 0 2.8 1.9 1.9 0 0 0 2.8 0l2.6-2.6 1.2 1.2-2.6 2.6a1.9 1.9 0 0 0 0 2.8 1.9 1.9 0 0 0 2.8 0l4-4a1.9 1.9 0 0 0 0-2.8zm-9.2-3.3a3 3 0 1 1 3 3 2.9 2.9 0 0 1 -3-3z"/>
+        </svg>
+        
+                        </div>
+                        <h2 class='center-text2'>****** Owner ******</h2>
+                        <span class='back-to-top' onclick='scrollToTop()'>
+                            <svg id="z_backtop1" fill="black" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
+                                <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z"/>
+                            </svg>
+                        </span>
+                    </div> 
                    <section class='knowus'><div class='info-container'><div class='info-card'>
                             <p>Â¿Eres el responsable del local y quieres actualizar la informaciÃ³n de este sitio web?</p>
                 
@@ -1372,19 +629,21 @@
                 
                             <p>No lo dudes, Â¡es gratis</p>
                 </div></div><section>
-                <div id='Compartir' class='info-section4'>
-                    
-            <svg id="d1_share"  width="30" height="30" viewBox="-3 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                <path d="m35.2 32.0c-2.2608 0-4.3387 0.7819-5.979 2.0895l-10.2486-6.4054a9.65551 9.65551 0 0 0 0-4.1683l10.2486-6.4054c1.6403 1.3077 3.7182 2.0896 5.979 2.0896 5.3019 0 9.6-4.2981 9.6-9.6s-4.2981-9.6-9.6-9.6-9.6 4.2981-9.6 9.6c0 0.7158 0.079 1.413 0.2276 2.0841l-10.2486 6.4054c-1.6403-1.3076-3.7182-2.0895-5.979-2.0895-5.3019 0-9.6 4.2981-9.6 9.6s4.2981 9.6 9.6 9.6c2.2608 0 4.3387-0.7819 5.979-2.0895l10.2486 6.4054a9.6301 9.6301 0 0 0 -0.2276 2.0841c0 5.3019 4.2981 9.6 9.6 9.6s9.6-4.2981 9.6-9.6-4.2981-9.6-9.6-9.6z" fill="black"/>
-            </svg>
+                    <div id='Compartir' class='info-section4'>
+                        <div class="col-4 d-flex justify-content-start px-1" style="width: 50px;">
+                        
+        <svg id="small_share" fill="black"  width="30" height="30" viewBox="-3 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path d="m35.2 32.0c-2.2608 0-4.3387 0.7819-5.979 2.0895l-10.2486-6.4054a9.65551 9.65551 0 0 0 0-4.1683l10.2486-6.4054c1.6403 1.3077 3.7182 2.0896 5.979 2.0896 5.3019 0 9.6-4.2981 9.6-9.6s-4.2981-9.6-9.6-9.6-9.6 4.2981-9.6 9.6c0 0.7158 0.079 1.413 0.2276 2.0841l-10.2486 6.4054c-1.6403-1.3076-3.7182-2.0895-5.979-2.0895-5.3019 0-9.6 4.2981-9.6 9.6s4.2981 9.6 9.6 9.6c2.2608 0 4.3387-0.7819 5.979-2.0895l10.2486 6.4054a9.6301 9.6301 0 0 0 -0.2276 2.0841c0 5.3019 4.2981 9.6 9.6 9.6s9.6-4.2981 9.6-9.6-4.2981-9.6-9.6-9.6z"/>
+        </svg>
         
-                    <h2 class='center-text2'>****** Compartir ******</h2>
-                    <span class='back-to-top' onclick='scrollToTop()'>
-                        <svg id="z_backtop1" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
-                            <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
-                        </svg>
-                    </span>
-                </div> 
+                        </div>
+                        <h2 class='center-text2'>****** Compartir ******</h2>
+                        <span class='back-to-top' onclick='scrollToTop()'>
+                            <svg id="z_backtop1" fill="black" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
+                                <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z"/>
+                            </svg>
+                        </span>
+                    </div> 
                    
             <div id='c1_2' class='info-section2'>
                 <p>Comparte esta página en:</p>
@@ -1437,35 +696,33 @@
                 </a>
             </div>
         
-                <div id='Conocenos' class='info-section4'>
-                    
-        <svg fill="none"  width="30" height="30" viewBox="-3 0 48 48">
-            <path d="m0 0h48v48h-48z" fill="none"/>
-            <path d="m13.091 12c-5.021 0-9.091 4.477-9.091 10 0 4.701 2.952 8.633 6.926 9.703l3.074 12.297h12l-2.74-10.961 20.74 6.608v-35.647l-24 8zm4.032 28-2-8h3.754l2 8zm2.877-24v12h-6.909c-2.807 0-5.091-2.692-5.091-6s2.284-6 5.091-6zm20 18.174-16-5.098v-14.193l16-5.333z" fill="black"/>
+                    <div id='Conocenos' class='info-section4'>
+                        <div class="col-4 d-flex justify-content-start px-1" style="width: 50px;">
+                        
+        <svg id="news" fill="black"  width="30" height="30" viewBox="-3 0 48 48">
+            <path d="m13.091 12c-5.021 0-9.091 4.477-9.091 10 0 4.701 2.952 8.633 6.926 9.703l3.074 12.297h12l-2.74-10.961 20.74 6.608v-35.647l-24 8zm4.032 28-2-8h3.754l2 8zm2.877-24v12h-6.909c-2.807 0-5.091-2.692-5.091-6s2.284-6 5.091-6zm20 18.174-16-5.098v-14.193l16-5.333z"/>
         </svg>
-                    <h2 class='center-text2'>****** Conocenos ******</h2>
-                    <span class='back-to-top' onclick='scrollToTop()'>
-                        <svg id="z_backtop1" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
-                            <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
-                        </svg>
-                    </span>
-                </div> 
+                        </div>
+                        <h2 class='center-text2'>****** Conocenos ******</h2>
+                        <span class='back-to-top' onclick='scrollToTop()'>
+                            <svg id="z_backtop1" fill="black" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
+                                <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z"/>
+                            </svg>
+                        </span>
+                    </div> 
                    <section class='knowus'><div class='info-container'>
-                    
                         <div class='info-card'>
                             <h3>Mision</h3>
                             <p>Proveer los mejores servicios a nuestros clientes entregando inovacion y excelencia.</p>
                         </div>
                     
                 
-                    
                         <div class='info-card'>
                             <h3>Vision</h3>
                             <p>Ser lider de la industria, reconocido por el compromiso en vcalidad y satisfaccion del clietne.</p>
                         </div>
                     
                 
-                    
                         <div class='info-card'>
                             <h3>Valores</h3>
                             <p>Integridad, Calidad, Trabajo de equipo, Enfoque a cliente, entrega en todo lo que hacemos.</p>
@@ -1475,5 +732,152 @@
         </div>
         
         </body>
+        <script>
+            const savedTheme = localStorage.getItem('theme');
+
+            if (savedTheme) {
+              document.body.classList.add(savedTheme);
+              setPAGE(savedTheme);
+            } else {
+              // If no saved preference, check the system preference
+              const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+              if (prefersDarkScheme.matches) {
+                document.body.classList.add('dark-mode');
+              } else {
+                document.body.classList.add('light-mode');
+              }
+            }
+
+            function setPAGE(pTheme) {
+                if (pTheme=='dark-mode') {
+                    document.body.style.backgroundColor = "black";
+                    document.body.style.color = "white";
+                    changeSVGs("white");
+                    //changeTBLs("white","white");
+                    changeBorderColor("white");
+                    document.body.classList.remove('light-mode');
+                    document.body.classList.add('dark-mode');
+                    localStorage.setItem('theme', 'dark-mode');
+                } else {
+                    document.body.style.backgroundColor = "white";
+                    document.body.style.color = "black";
+                    changeSVGs("black");
+                    //changeTBLs("black","black");
+                    changeBorderColor("black");
+                    document.body.classList.remove('dark-mode');
+                    document.body.classList.add('light-mode');
+                    localStorage.setItem('theme', 'light-mode');
+                }
+            }
+
+            function changeSVGs(pColor) {
+                const svgs = document.querySelectorAll('svg');
+                svgs.forEach((svg, index) => {
+                  svg.setAttribute('fill', pColor);
+                });
+            }
+
+            function changeTBLs(pColorTD,pColorTH) {
+                const tbls = document.getElementById('schedule_table');
+                const tbls2 = document.querySelectorAll('table');
+
+                 //tbls.forEach(function(table) {					  
+                    tbls.style.border = "2px solid #007BFF";
+                    tbls.style.backgroundColor = "#f0f8ff";
+                    tbls.style.color = "#007BFF";
+                    tbls.querySelectorAll('th').forEach(th => {
+                      th.style.backgroundColor = "#007BFF";
+                      th.style.color = "white";
+                    });
+                    tbls.querySelectorAll('td').forEach(td => {
+                      td.style.backgroundColor = "#e7f3ff";
+                    });
+                //});
+            }
+
+            function changeBorderColor(pBorderColor) {
+              const cbimg1 = document.getElementById('circleimg1');
+              cbimg1.style.border = "13px solid " + pBorderColor ;
+              const cbimg2 = document.getElementById('circleimg2');
+              cbimg2.style.border = "13px solid " + pBorderColor ;
+              const cbimg3 = document.getElementById('circleimg3');
+              cbimg3.style.border = "13px solid " + pBorderColor ;
+            }
+
+            function cambiarEstilo() {
+                const mySavedTheme = localStorage.getItem('theme');
+                if (mySavedTheme=='dark-mode') {
+                    setPAGE('light-mode');
+                } else {
+                    setPAGE('dark-mode');
+                }
+            }          
+
+            function obtenerEstadoNegocio() {
+                // Obtiene la fecha y hora actual
+                const fechaActual = new Date();
+                const diaActual = fechaActual.getDay(); // Número del día (0 es domingo, 1 es lunes, etc.)
+                const horaActual = fechaActual.getHours(); // Hora actual (0-23)
+                const status = getCellStatus(diaActual, horaActual+'00');
+                return (status=='open') ? "green" : "red";
+            }
+
+            // Selecciona la imagen y cambia el src según el horario
+            function actualizarImagen() {
+                const imagenstatus = document.getElementById('circleimg3');
+                const varEstadoNegocio = obtenerEstadoNegocio();
+                const cbimg3 = document.getElementById('circleimg3');
+
+                if (varEstadoNegocio=='green') {
+                    imagenstatus.style.backgroundColor = varEstadoNegocio;
+                    cbimg3.innerText  =  'ABIERTO';
+                } else {
+                    //imagenstatus.style.backgroundColor = varEstadoNegocio;
+                    //imagenstatus.style.backgroundColor = '#ffcccb';
+                    imagenstatus.style.backgroundColor = 'darkred';
+                    cbimg3.innerText  =  'CERRADO';
+                    
+                }            
+            }
+
+            function getCellStatus(day, time) {
+
+                // Get all the rows of the table body
+                const rows = document.querySelectorAll('#schedule_table tr');
+
+                // Loop through each row to find the right time
+                for (let row of rows) {
+                    const cell = row.cells[day]; // Get the cell for the specified day (column)
+                    const cellContent = cell.textContent;
+                    const isOpen = cell.classList.contains('open'); // Check if the cell has class 'open'
+                    console.log('isOpen:'+ isOpen)
+                    if (cellContent === time) {
+                        // Check if the cell has the 'open' class
+                        if (isOpen) {
+                            return 'open';  // Return 'open' if the class is present
+                        } else {
+                            return 'closed';  // Return 'closed' if the class is not present
+                        }
+                    }
+                    // If no matching time was found
+                    return 'Time not found for the given day';
+                }
+            }
+
+            // Llama a la función cuando se carga la página
+            //window.onload = actualizarImagen();
+
+            document.addEventListener("DOMContentLoaded", function() {
+              actualizarImagen();
+            });
+
+            // Listen for changes in localStorage and update the theme in all tabs
+            window.addEventListener('storage', (event) => {
+                if (event.key === 'theme') {
+                    const savedThemeForTabs = localStorage.getItem('theme');
+                    setPAGE(savedThemeForTabs);
+                }
+            });
+        </script>
         </html>
         
