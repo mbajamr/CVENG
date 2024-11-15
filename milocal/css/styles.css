@@ -93,6 +93,14 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
+    .info-card2 {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 15px;
+        width: 60%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
     /* Base styles */
     body {
         font-family: Arial, sans-serif;
@@ -113,7 +121,13 @@
         margin-top: 20px; /* Add some space above the width display */
         font-size: 1em; /* Font size for the width display */
     }
-
+    /* Custom container for the map */
+    .mapbody {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0; /* Remove default margin */
+    }
     /* Gradual styles for different screen sizes */
     @media (max-width: 1920px) {
         h1 {
@@ -128,6 +142,27 @@
         .text-section {
             font-size: 2em; /* Slightly smaller paragraph font size */
         }
+    #map {
+      height: 500px;
+      width: 500px;
+      border: 1px solid #ccc; /* Optional, to give the map a border */
+    }
+    svg {
+        width: 100%;   /* Reduce the size on smaller screens */
+    }
+    table {
+        width: 100%; /* Ensure table uses full available width */
+        table-layout: fixed; /* Adjust table layout */
+    }
+
+    td, th {
+        font-size: 1em; /* Adjust font size inside table cells */
+        padding: 10px;   /* Adjust padding for readability */
+    }
+
+    tr {
+        font-size: 1em; /* Ensure font size is consistent within rows */
+    }
     }
 
     @media (max-width: 1680px) {
@@ -143,6 +178,27 @@
         .text-section {
            font-size: 1.8em; /* Slightly smaller paragraph font size */
         }
+    #map {
+      height: 480px;
+      width: 480px;
+      border: 1px solid #ccc; /* Optional, to give the map a border */
+    }
+    svg {
+        width: 95%;   /* Reduce the size on smaller screens */
+    }
+    table {
+        width: 100%; /* Ensure table uses full available width */
+        table-layout: fixed; /* Adjust table layout */
+    }
+
+    td, th {
+        font-size: .9em; /* Adjust font size inside table cells */
+        padding: 10px;   /* Adjust padding for readability */
+    }
+
+    tr {
+        font-size: .9em; /* Ensure font size is consistent within rows */
+    }
     }
 
     @media (max-width: 1200px) {
@@ -158,6 +214,27 @@
         .text-section {
             font-size: 1.6em; /* Slightly smaller paragraph font size */
         }
+    #map {
+      height: 460px;
+      width: 460px;
+      border: 1px solid #ccc; /* Optional, to give the map a border */
+    }
+    svg {
+        width: 90%;   /* Reduce the size on smaller screens */
+    }
+    table {
+        width: 100%; /* Ensure table uses full available width */
+        table-layout: fixed; /* Adjust table layout */
+    }
+
+    td, th {
+        font-size: .8em; /* Adjust font size inside table cells */
+        padding: 10px;   /* Adjust padding for readability */
+    }
+
+    tr {
+        font-size: .8em; /* Ensure font size is consistent within rows */
+    }
     }
 
     @media (max-width: 992px) {
@@ -173,6 +250,27 @@
         .text-section {
             font-size: 1.4em; /* Smaller paragraph font size */
         }
+    #map {
+      height: 440px;
+      width: 440px;
+      border: 1px solid #ccc; /* Optional, to give the map a border */
+    }
+    svg {
+        width: 85%;   /* Reduce the size on smaller screens */
+    }
+    table {
+        width: 100%; /* Ensure table uses full available width */
+        table-layout: fixed; /* Adjust table layout */
+    }
+
+    td, th {
+        font-size: .7em; /* Adjust font size inside table cells */
+        padding: 10px;   /* Adjust padding for readability */
+    }
+
+    tr {
+        font-size: .7em; /* Ensure font size is consistent within rows */
+    }
     }
 
     @media (max-width: 768px) {
@@ -188,6 +286,27 @@
         .text-section {
             font-size: 1.2em; /* Smaller paragraph font size */
         }
+    #map {
+      height: 420px;
+      width: 420px;
+      border: 1px solid #ccc; /* Optional, to give the map a border */
+    }
+    svg {
+        width: 80%;   /* Reduce the size on smaller screens */
+    }
+    table {
+        width: 100%; /* Ensure table uses full available width */
+        table-layout: fixed; /* Adjust table layout */
+    }
+
+    td, th {
+        font-size: .6em; /* Adjust font size inside table cells */
+        padding: 10px;   /* Adjust padding for readability */
+    }
+
+    tr {
+        font-size: .6em; /* Ensure font size is consistent within rows */
+    }
     }
 
     @media (max-width: 600px) {
@@ -203,6 +322,27 @@
         .text-section {
             font-size: 1em; /* Smaller paragraph font size */
         }
+    #map {
+      height: 400px;
+      width: 400px;
+      border: 1px solid #ccc; /* Optional, to give the map a border */
+    }
+    svg {
+        width: 75%;   /* Reduce the size on smaller screens */
+    }
+    table {
+        width: 100%; /* Ensure table uses full available width */
+        table-layout: fixed; /* Adjust table layout */
+    }
+
+    td, th {
+        font-size: .5em; /* Adjust font size inside table cells */
+        padding: 10px;   /* Adjust padding for readability */
+    }
+
+    tr {
+        font-size: .5em; /* Ensure font size is consistent within rows */
+    }
     }
 
     @media (max-width: 480px) {
@@ -218,6 +358,28 @@
         .text-section {
             font-size: 0.8em; /* Smaller paragraph font size */
         }
+    #map {
+      height: 380px;
+      width: 380px;
+      border: 1px solid #ccc; /* Optional, to give the map a border */
+    }
+    svg {
+        width: 70%;   /* Reduce the size on smaller screens */
+    }
+    table {
+        width: 100%; /* Ensure table uses full available width */
+        table-layout: fixed; /* Adjust table layout */
+    }
+
+    td, th {
+        font-size: .4em; /* Adjust font size inside table cells */
+        padding: 10px;   /* Adjust padding for readability */
+    }
+
+    tr {
+        font-size: .4em; /* Ensure font size is consistent within rows */
+    }
+
     }
 
         .category {
