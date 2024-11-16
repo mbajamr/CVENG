@@ -149,6 +149,7 @@
     }
     svg {
         width: 100%;   /* Reduce the size on smaller screens */
+        height: auto;
     }
     table {
         width: 100%; /* Ensure table uses full available width */
@@ -185,6 +186,7 @@
     }
     svg {
         width: 95%;   /* Reduce the size on smaller screens */
+        height: auto;
     }
     table {
         width: 100%; /* Ensure table uses full available width */
@@ -221,6 +223,7 @@
     }
     svg {
         width: 90%;   /* Reduce the size on smaller screens */
+        height: auto;
     }
     table {
         width: 100%; /* Ensure table uses full available width */
@@ -257,6 +260,7 @@
     }
     svg {
         width: 85%;   /* Reduce the size on smaller screens */
+        height: auto;
     }
     table {
         width: 100%; /* Ensure table uses full available width */
@@ -293,6 +297,7 @@
     }
     svg {
         width: 80%;   /* Reduce the size on smaller screens */
+        height: auto;
     }
     table {
         width: 100%; /* Ensure table uses full available width */
@@ -329,6 +334,7 @@
     }
     svg {
         width: 75%;   /* Reduce the size on smaller screens */
+        height: auto;
     }
     table {
         width: 100%; /* Ensure table uses full available width */
@@ -365,6 +371,7 @@
     }
     svg {
         width: 70%;   /* Reduce the size on smaller screens */
+        height: auto;
     }
     table {
         width: 100%; /* Ensure table uses full available width */

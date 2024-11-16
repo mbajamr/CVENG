@@ -126,7 +126,7 @@
         
                     <tr><td>El Tule</td><td>Restaurant</td><td>MXNLSNLI0000002/index.html</td></tr>
         
-                    <tr><td>Ferretera Mexico</td><td>Ferre</td><td>MXNLSNLI0000003/index.html</td></tr>
+                    <tr><td>Ferretera Mexico</td><td>Ferretera</td><td>MXNLSNLI0000003/index.html</td></tr>
         
                     <tr><td>Yoga & Pilates Sonia Ochoa</td><td>Yoga</td><td>MXNLSNLI0000004/index.html</td></tr>
         
@@ -283,6 +283,11 @@
                 setPAGE(savedThemeForTabs);
             }
         });
+
+        // Focus on the input field when the page is loaded
+        window.onload = function() {
+            document.getElementById("searchInput").focus();
+        }
 </script>
 
 </body>
