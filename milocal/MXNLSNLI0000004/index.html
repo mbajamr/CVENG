@@ -121,19 +121,23 @@
             </div>
         
              <!-- THREE BALLS -->
-            <div class="grid-containerX">
-                <div class="grid-itemX">
+
+
+            <div class="row">
+                <div class="col-4 d-flex justify-content-end px-1">
+                    <a href='#Ubicacion'>
+                        <img id="circleimg1" src='img/a1_logo.jpg' alt="Logo" style="width: 130px; height: 130px; object-fit: cover; border-radius: 50%; border: 13px solid black;" onerror="this.onerror=null; this.src='../img/white.png';">
+                    </a>
                 </div>
-                <div class="grid-itemX">
-                    <img id="circleimg1" src='img/a1_logo.jpg' alt="Image2" style="width: 130px; height: 130px; object-fit: cover; border-radius: 50%; border: 13px solid black;">
+                <div class="col-4 d-flex justify-content-center px-1">
+                    <a href='#Servicios'>
+                        <img id="circleimg2" src='img/a2_category.jpg' alt="Category" style="width: 130px; height: 130px; object-fit: cover; border-radius: 50%; border: 13px solid black;" onerror="this.onerror=null; this.src='../img/white.png';">
+                    </a>
                 </div>
-                <div class="grid-itemX">
-                    <img id="circleimg2" src='img/a2_category.jpg' alt="Image3" style="width: 130px; height: 130px; object-fit: cover; border-radius: 50%; border: 13px solid black;">
-                </div>
-                <div class="grid-itemX">
-                    <div id="circleimg3" style="width: 130px; height: 130px; object-fit: cover; border-radius: 50%; border: 13px solid black; background-color: green; font-size: 20px; color: white; font-weight: bold; display: flex; align-items: center; justify-content: center;">text</div>
-                </div>
-                <div class="grid-itemX">
+                <div class="col-4 d-flex justify-content-start px-1">
+                    <a href='#Horario'>
+                        <div id="circleimg3" style="width: 130px; height: 130px; object-fit: cover; border-radius: 50%; border: 13px solid black; background-color: green; font-size: 20px; color: white; font-weight: bold; display: flex; align-items: center; justify-content: center;">text</div>
+                    </a>
                 </div>
             </div>
          
@@ -804,6 +808,11 @@
             function goToParentIndex() {
             // Navegar un nivel hacia arriba y abrir index.html
             window.location.href = "../index.html";
+            }
+
+            function scrollToTop() {
+                window.scrollTo({ top:0, behavior:'smooth' });
+                //scrollToSection('topo');
             }
 
             // Llama a la función cuando se carga la página
