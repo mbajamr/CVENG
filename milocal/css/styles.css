@@ -553,7 +553,7 @@
     .grid-containerX {
         display: grid;
         grid-template-columns: repeat(5, 1fr); /* 5 columnas */
-        gap: 10px; /* Espacio entre las imÃ¡genes */
+        gap: 10px; /* Espacio entre las imágenes */
     }
 
     .grid-itemX {

@@ -11,6 +11,17 @@
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
             <link href="../css/styles.css?v=1.0.1" rel="stylesheet">
         </head>
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DDHJNCML24"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-DDHJNCML24');
+        </script>
+
         <body>
         
         <style>
@@ -107,10 +118,10 @@
                 <div style="flex: 1; display: flex; justify-content: start;" onclick="goToParentIndex()">
                     <div style="display: flex; justify-content: space-between;">
                         
-            <svg fill="black" width="60px" height="60px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                <path d="M 8,4.3 V 1.8769198 L 3.2465798,6.7358111 8.2895022,11.594705 V 9.1652581 l 1.1577052,0.0836 C 12.380686,9.4606744 12.044583,13.830843 12.044583,13.830843 15.138844,10.754822 15.342424,8.0942599 14.696432,6.4655097 14.011533,4.7386614 12.269379,4.1405376 8.2895022,4.3063654 Z" />
-                <path d="M 1.3,6.6804601 6.3648103,11.53935 V 10.324628 L 2.5826193,6.6804601 6.3648103,3.0362916 V 1.8215688 Z" />
-            </svg>
+            <svg id="backmain" viewBox="0 0 24 24" height="40" width="40" xmlns="http://www.w3.org/2000/svg">
+                <path d="m0 0h24v24h-24z" fill="black" opacity="0"/>
+                <path d="m18 3h-12a3 3 0 0 0 -3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-12a3 3 0 0 0 -3-3zm-3 10h-2v2a1 1 0 0 1 -2 0v-2h-2a1 1 0 0 1 0-2h2v-2a1 1 0 0 1 2 0v2h2a1 1 0 0 1 0 2z" fill="black"/>
+            </svg>   
         
                     </div>
                 </div>
@@ -131,7 +142,7 @@
 
             <div class="row">
                 <div class="col-4 d-flex justify-content-end px-1">
-                    <a href='#Ubicacion'>
+                    <a href='#ConÃ³cenos'>
                         <img id="circleimg1" src='img/a1_logo.jpg' alt="Logo" style="width: 130px; height: 130px; object-fit: cover; border-radius: 50%; border: 13px solid black;" onerror="this.onerror=null; this.src='../img/white.png';">
                     </a>
                 </div>
@@ -160,11 +171,12 @@
             <div class="row">
                 <div class="col-4 d-flex justify-content-end px-1">
                     <!-- First item in second row -->
-                    <a href='#Noticias'>
+                    <a href='#ConÃ³cenos'>
                     
         <svg id="news" fill="black" width="140px" height="140px" viewBox="-3 0 60 60">
             <path d="m13.091 12c-5.021 0-9.091 4.477-9.091 10 0 4.701 2.952 8.633 6.926 9.703l3.074 12.297h12l-2.74-10.961 20.74 6.608v-35.647l-24 8zm4.032 28-2-8h3.754l2 8zm2.877-24v12h-6.909c-2.807 0-5.091-2.692-5.091-6s2.284-6 5.091-6zm20 18.174-16-5.098v-14.193l16-5.333z"/>
         </svg>
+        
                     </a>
                 </div>
                 <div class="col-4 d-flex justify-content-center px-1">
@@ -240,7 +252,7 @@
                 </div>
                 <div class="col-4 d-flex justify-content-center px-1">
                     <!-- Second item in third row -->
-                    <a href='#Promos'>
+                    <a href='#Avisos'>
                          
         <svg id="promos" fill="black" width="100px" height="100px" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
             <path d="m59.586 46.323c1.916 3.101-0.490 7.018-4.318 7.018h-49.593c-3.794 0-6.041-4.174-4.318-7.018l23.160-39.853c1.916-3.101 6.732-3.103 8.610 0zm-29.597-8.028c-2.649 0-4.798 2.018-4.798 4.798s2.018 4.798 4.798 4.798 4.798-2.018 4.798-4.798-2.018-4.798-4.798-4.798zm-4.550-17.200 0.774 14.164c0.036 0.661 0.586 1.172 1.248 1.172h5.059c0.661 0 1.212-0.511 1.248-1.172l0.774-14.164c0.039-0.713-0.526-1.305-1.248-1.305h-7.270c-0.722 0-1.160 0.610-1.248 1.305z"/>
@@ -250,7 +262,7 @@
                 </div>
                 <div class="col-4 d-flex justify-content-start px-1">
                     <!-- Third item in third row -->
-                    <a href='#Owner'>
+                    <a href='#Admin'>
                         
         <svg fill="owner" fill="black" width="140px" height="140px" viewBox="0 0 60 60">
             <path d="m0 0h48v48h-48z" fill="none"/>
@@ -261,61 +273,6 @@
                     </a>
                 </div>
             </div>
-        
-                    <div id='Ubicacion' class='info-section4'>
-                        <div class="col-4 d-flex justify-content-start px-1" style="width: 50px;">
-                        
-        <svg id="small_location" fill="black" width="30px" height="30px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <path d="m50.001303 0c-16.352602 0-29.751303 13.360422-29.751303 29.666303 0 6.317865 2.017532 12.188967 5.432936 17.016175l20.687753 35.762188c2.897215 3.784891 4.823674 3.06608 7.232659-.199393l22.817296-38.830854c.460965-.83384.822139-1.721773 1.137489-2.628431 1.408365-3.43986 2.191867-7.192337 2.191867-11.119685 0-16.305881-13.396104-29.666303-29.748697-29.666303zm0 13.900901c8.805396 0 15.80796 6.985154 15.80797 15.765402 0 8.780247-7.002574 15.762814-15.80797 15.762814-8.805405 0-15.810576-6.982567-15.810576-15.762814 0-8.780248 7.005171-15.765402 15.810576-15.765402z" stroke-width="3.62116"/>
-            <path d="m68.912802 48.907851-.04824.126174c.01569-.03832.02717-.07672.04267-.115041.0015-.0039.004-.0072.0056-.01113z"/>
-            <path d="m34.005859 69.056641c-14.125859 1.996545-24.005859 6.771562-24.005859 13.800781 0 9.46774 16.508399 17.142578 40 17.142578s40-7.674838 40-17.142578c0-7.028964-9.878869-11.804111-24.003906-13.800781-.651648 1.111256-1.305308 2.220821-1.957032 3.332031 10.64597 1.477058 17.960938 4.581453 17.960938 8.183594 0 5.04946-14.326887 9.142578-32 9.142578s-32-4.093118-32-9.142578c-.001289-3.589575 7.266228-6.691267 17.945312-8.173828-.645552-1.114537-1.294505-2.226873-1.939453-3.341797z"/>
-        </svg>	
-        
-                        </div>
-                        <h2 class='center-text2'>****** Ubicacion ******</h2>
-                        <span class='back-to-top' onclick='scrollToTop()'>
-                            <svg id="z_backtop1" fill="black" width="30" height="30" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z"/>
-                            </svg>
-                        </span>
-                    </div> 
-                   
-        <!DOCTYPE html>
-        <html>
-        <head>
-          <title>Map</title>
-          <meta charset="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
-        </head>
-        <body>
-  <div class="mapbody">
-    <!-- Div for Leaflet Map -->
-    <div id="map"></div>
-  </div>
-          <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
-          <script>
-            // Initialize the map
-            var map = L.map('map', {
-              center: [25.762780, -100.281740],
-              zoom: 13,
-              scrollWheelZoom: false,  // Disable zoom with scroll wheel
-              dragging: false,         // Disable dragging
-              zoomControl: false,      // Disable zoom control
-            });
-
-            // Add the OpenStreetMap tile layer
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-              maxZoom: 19,
-            }).addTo(map);
-
-            // Add a marker with a popup
-            var marker = L.marker([25.762780, -100.281740]).addTo(map)
-              .bindPopup('Yoga & Pilates Sonia Ochoa')
-              .openPopup();
-          </script>
-        </body>
-        </html>
         
                     <div id='Servicios' class='info-section4'>
                         <div class="col-4 d-flex justify-content-start px-1" style="width: 50px;">
@@ -335,7 +292,7 @@
                         </span>
                     </div> 
                    
-                <!-- Descripcion de los Servicios o Menu -->
+                <!-- DescripciÃ³n de los Servicios o Menu -->
                 <div class="d-flex justify-content-center">
                 <div class="carousel" id="Servicios">
                     
@@ -416,19 +373,19 @@
                     <div class="col-lg-6 col-md-8">
                         <div class="info-section4">
                             <div class="card-body">
-                                <h2 class="card-title text-center mb-4">ContÃ¡ctenos</h2>
-                                <p>Â¡Gracias por ponerte en contacto con nosotros! Estamos emocionados de recibir tus comentarios y preguntas.</p>
+                                <h2 class="card-title text-center mb-4">Contáctenos</h2>
+                                <p>¡Gracias por ponerte en contacto con nosotros! Estamos emocionados de recibir tus comentarios y preguntas.</p>
                                 <p>Por favor, completa el siguiente formulario para que podamos ayudarte de la mejor manera posible:</p>
                                 <form method="post" action="/contactus" novalidate="novalidate">
                                     <div class="mb-3">
-                                        <label for="FullName" class="form-label">TÃº nombre:</label>
+                                        <label for="FullName" class="form-label">Tú nombre:</label>
                                         <input type="text" class="form-control" id="FullName" name="FullName" placeholder="Escriba su nombre." required>
                                         <div class="invalid-feedback">Introduzca su nombre</div>
                                     </div>
                                     <div class="mb-3">
                                         <label for="Email" class="form-label">Tu email:</label>
-                                        <input type="email" class="form-control" id="Email" name="Email" placeholder="Introduzca su direcciÃ³n de correo electrÃ³nico." required>
-                                        <div class="invalid-feedback">Introduzca un correo electrÃ³nico vÃ¡lido</div>
+                                        <input type="email" class="form-control" id="Email" name="Email" placeholder="Introduzca su dirección de correo electrónico." required>
+                                        <div class="invalid-feedback">Introduzca un correo electrónico válido</div>
                                     </div>
                                     <div class="mb-3">
                                         <label for="Enquiry" class="form-label">Consulta:</label>
@@ -518,15 +475,17 @@
                 </div>
                 </div>
                 
-                    <div id='Promos' class='info-section4'>
+                    <div id='Ubicacion' class='info-section4'>
                         <div class="col-4 d-flex justify-content-start px-1" style="width: 50px;">
-                         
-        <svg id="promos" fill="black" width="30px" height="30" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-            <path d="m59.586 46.323c1.916 3.101-0.490 7.018-4.318 7.018h-49.593c-3.794 0-6.041-4.174-4.318-7.018l23.160-39.853c1.916-3.101 6.732-3.103 8.610 0zm-29.597-8.028c-2.649 0-4.798 2.018-4.798 4.798s2.018 4.798 4.798 4.798 4.798-2.018 4.798-4.798-2.018-4.798-4.798-4.798zm-4.550-17.200 0.774 14.164c0.036 0.661 0.586 1.172 1.248 1.172h5.059c0.661 0 1.212-0.511 1.248-1.172l0.774-14.164c0.039-0.713-0.526-1.305-1.248-1.305h-7.270c-0.722 0-1.160 0.610-1.248 1.305z"/>
-        </svg>
+                        
+        <svg id="small_location" fill="black" width="30px" height="30px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="m50.001303 0c-16.352602 0-29.751303 13.360422-29.751303 29.666303 0 6.317865 2.017532 12.188967 5.432936 17.016175l20.687753 35.762188c2.897215 3.784891 4.823674 3.06608 7.232659-.199393l22.817296-38.830854c.460965-.83384.822139-1.721773 1.137489-2.628431 1.408365-3.43986 2.191867-7.192337 2.191867-11.119685 0-16.305881-13.396104-29.666303-29.748697-29.666303zm0 13.900901c8.805396 0 15.80796 6.985154 15.80797 15.765402 0 8.780247-7.002574 15.762814-15.80797 15.762814-8.805405 0-15.810576-6.982567-15.810576-15.762814 0-8.780248 7.005171-15.765402 15.810576-15.765402z" stroke-width="3.62116"/>
+            <path d="m68.912802 48.907851-.04824.126174c.01569-.03832.02717-.07672.04267-.115041.0015-.0039.004-.0072.0056-.01113z"/>
+            <path d="m34.005859 69.056641c-14.125859 1.996545-24.005859 6.771562-24.005859 13.800781 0 9.46774 16.508399 17.142578 40 17.142578s40-7.674838 40-17.142578c0-7.028964-9.878869-11.804111-24.003906-13.800781-.651648 1.111256-1.305308 2.220821-1.957032 3.332031 10.64597 1.477058 17.960938 4.581453 17.960938 8.183594 0 5.04946-14.326887 9.142578-32 9.142578s-32-4.093118-32-9.142578c-.001289-3.589575 7.266228-6.691267 17.945312-8.173828-.645552-1.114537-1.294505-2.226873-1.939453-3.341797z"/>
+        </svg>	
         
                         </div>
-                        <h2 class='center-text2'>****** Promos ******</h2>
+                        <h2 class='center-text2'>****** Ubicacion ******</h2>
                         <span class='back-to-top' onclick='scrollToTop()'>
                             <svg id="z_backtop1" fill="black" width="30" height="30" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                                 <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z"/>
@@ -534,46 +493,43 @@
                         </span>
                     </div> 
                    
-                <!-- Fotos -->
-                <div class="d-flex justify-content-center">
-                <div class="carousel" id="Promos">
-                    
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>Map</title>
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+        </head>
+        <body>
+  <div class="mapbody">
+    <!-- Div for Leaflet Map -->
+    <div id="map"></div>
+  </div>
+          <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+          <script>
+            // Initialize the map
+            var map = L.map('map', {
+              center: [25.762780, -100.281740],
+              zoom: 13,
+              scrollWheelZoom: false,  // Disable zoom with scroll wheel
+              dragging: false,         // Disable dragging
+              zoomControl: false,      // Disable zoom control
+            });
 
-                    <div class="slides">
-                        
-                    </div>
-                <!-- Left and Right Arrows -->
-                
-                    <div class="controls">
-                        
-                    </div>
-                </div>
-                </div>
-                
-                    <div id='Owner' class='info-section4'>
-                        <div class="col-4 d-flex justify-content-start px-1" style="width: 50px;">
-                        
-        <svg fill="owner" fill="black" width="30px" height="30px" viewBox="0 0 48 48">
-            <path d="m0 0h48v48h-48z" fill="none"/>
-            <path d="m24 2a22 22 0 1 0 22 22 21.9 21.9 0 0 0 -22-22zm0 40a18 18 0 1 1 18-18 18.1 18.1 0 0 1 -18 18z"/>
-            <path d="m25.2 22.3a7.3 7.3 0 0 0 .8-3.3 7 7 0 1 0 -7 7 7.3 7.3 0 0 0 3.3-.8l2.9 2.8-2.6 2.6a1.9 1.9 0 0 0 0 2.8 1.9 1.9 0 0 0 2.8 0l2.6-2.6 1.2 1.2-2.6 2.6a1.9 1.9 0 0 0 0 2.8 1.9 1.9 0 0 0 2.8 0l4-4a1.9 1.9 0 0 0 0-2.8zm-9.2-3.3a3 3 0 1 1 3 3 2.9 2.9 0 0 1 -3-3z"/>
-        </svg>
+            // Add the OpenStreetMap tile layer
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              maxZoom: 19,
+            }).addTo(map);
+
+            // Add a marker with a popup
+            var marker = L.marker([25.762780, -100.281740]).addTo(map)
+              .bindPopup('Yoga & Pilates Sonia Ochoa')
+              .openPopup();
+          </script>
+        </body>
+        </html>
         
-                        </div>
-                        <h2 class='center-text2'>****** Owner ******</h2>
-                        <span class='back-to-top' onclick='scrollToTop()'>
-                            <svg id="z_backtop1" fill="black" width="30" height="30" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z"/>
-                            </svg>
-                        </span>
-                    </div> 
-                   <section class='knowus'><div class='info-container'><div class='info-card2'>
-                            <h4>Â¿Eres el responsable del local y quieres actualizar la informaciÃ³n de este sitio web?</h4>
-                
-                            <h4>Conoce el detalle de todo lo que puedes configurar.</h4>
-                
-                            <h4>No lo dudes Â¡Es gratis!</h4>
-                </div></div><section>
                     <div id='Compartir' class='info-section4'>
                         <div class="col-4 d-flex justify-content-start px-1" style="width: 50px;">
                         
@@ -591,9 +547,9 @@
                     </div> 
                    
             <div id='c1_2' class='info-section2'>
-                <p>Comparte esta pÃ¡gina en:</p>
+                <p>Comparte esta página en:</p>
             
-                <a href="https://api.whatsapp.com/send?text=Visita%20esta%20pÃ¡gina:%20https://tupaginaweb.com" 
+                <a href="https://api.whatsapp.com/send?text=Visita%20esta%20página:%20https://tupaginaweb.com" 
                    target="_blank" style="text-decoration: none;">
                     <button class="share-button" style="width: 20%;">WhatsApp</button>
                 </a>
@@ -611,19 +567,19 @@
                 </a>
                 <br><br>
 
-                <a href="mailto:?subject=Echa%20un%20vistazo%20a%20esta%20pÃ¡gina&body=Visita%20esta%20pÃ¡gina:%20https://tupaginaweb.com" 
+                <a href="mailto:?subject=Echa%20un%20vistazo%20a%20esta%20página&body=Visita%20esta%20página:%20https://tupaginaweb.com" 
                    target="_blank" style="text-decoration: none;">
                     <button class="share-button" style="width: 20%;">Email</button>
                 </a>
                 <br><br>
             
-                <a href="sms:?&body=Visita%20esta%20pÃ¡gina:%20https://tupaginaweb.com" 
+                <a href="sms:?&body=Visita%20esta%20página:%20https://tupaginaweb.com" 
                    target="_blank" style="text-decoration: none;">
                     <button class="share-button" style="width: 20%;">SMS</button>
                 </a>
                 <br><br>
             
-                <a href="https://twitter.com/intent/tweet?url=https://tupaginaweb.com&text=Echa%20un%20vistazo%20a%20esta%20pÃ¡gina!" 
+                <a href="https://twitter.com/intent/tweet?url=https://tupaginaweb.com&text=Echa%20un%20vistazo%20a%20esta%20página!" 
                    target="_blank" style="text-decoration: none;">
                     <button class="share-button" style="width: 20%;">X (Twitter)</button>
                 </a>
@@ -641,39 +597,62 @@
                 </a>
             </div>
         
-                    <div id='Conocenos' class='info-section4'>
+                    <div id='Avisos' class='info-section4'>
                         <div class="col-4 d-flex justify-content-start px-1" style="width: 50px;">
-                        
-        <svg id="news" fill="black"  width="30px" height="30px" viewBox="-3 0 48 48">
-            <path d="m13.091 12c-5.021 0-9.091 4.477-9.091 10 0 4.701 2.952 8.633 6.926 9.703l3.074 12.297h12l-2.74-10.961 20.74 6.608v-35.647l-24 8zm4.032 28-2-8h3.754l2 8zm2.877-24v12h-6.909c-2.807 0-5.091-2.692-5.091-6s2.284-6 5.091-6zm20 18.174-16-5.098v-14.193l16-5.333z"/>
+                         
+        <svg id="promos" fill="black" width="30px" height="30" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+            <path d="m59.586 46.323c1.916 3.101-0.490 7.018-4.318 7.018h-49.593c-3.794 0-6.041-4.174-4.318-7.018l23.160-39.853c1.916-3.101 6.732-3.103 8.610 0zm-29.597-8.028c-2.649 0-4.798 2.018-4.798 4.798s2.018 4.798 4.798 4.798 4.798-2.018 4.798-4.798-2.018-4.798-4.798-4.798zm-4.550-17.200 0.774 14.164c0.036 0.661 0.586 1.172 1.248 1.172h5.059c0.661 0 1.212-0.511 1.248-1.172l0.774-14.164c0.039-0.713-0.526-1.305-1.248-1.305h-7.270c-0.722 0-1.160 0.610-1.248 1.305z"/>
         </svg>
+        
                         </div>
-                        <h2 class='center-text2'>****** Conocenos ******</h2>
+                        <h2 class='center-text2'>****** Avisos ******</h2>
                         <span class='back-to-top' onclick='scrollToTop()'>
                             <svg id="z_backtop1" fill="black" width="30" height="30" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                                 <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z"/>
                             </svg>
                         </span>
                     </div> 
-                   <section class='knowus'><div class='info-container'>
-                        <div class='info-card'>
-                            <h3>Mision</h3>
-                            <p>Proveer los mejores servicios a nuestros clientes entregando inovacion y excelencia.</p>
-                        </div>
+                   
+                <!-- Fotos -->
+                <div class="d-flex justify-content-center">
+                <div class="carousel" id="Avisos">
                     
+
+                    <div class="slides">
+                        
+                    </div>
+                <!-- Left and Right Arrows -->
                 
-                        <div class='info-card'>
-                            <h3>Vision</h3>
-                            <p>Ser lider de la industria, reconocido por el compromiso en vcalidad y satisfaccion del clietne.</p>
-                        </div>
-                    
+                    <div class="controls">
+                        
+                    </div>
+                </div>
+                </div>
                 
-                        <div class='info-card'>
-                            <h3>Valores</h3>
-                            <p>Integridad, Calidad, Trabajo de equipo, Enfoque a cliente, entrega en todo lo que hacemos.</p>
+                    <div id='Admin' class='info-section4'>
+                        <div class="col-4 d-flex justify-content-start px-1" style="width: 50px;">
+                        
+        <svg fill="owner" fill="black" width="30px" height="30px" viewBox="0 0 48 48">
+            <path d="m0 0h48v48h-48z" fill="none"/>
+            <path d="m24 2a22 22 0 1 0 22 22 21.9 21.9 0 0 0 -22-22zm0 40a18 18 0 1 1 18-18 18.1 18.1 0 0 1 -18 18z"/>
+            <path d="m25.2 22.3a7.3 7.3 0 0 0 .8-3.3 7 7 0 1 0 -7 7 7.3 7.3 0 0 0 3.3-.8l2.9 2.8-2.6 2.6a1.9 1.9 0 0 0 0 2.8 1.9 1.9 0 0 0 2.8 0l2.6-2.6 1.2 1.2-2.6 2.6a1.9 1.9 0 0 0 0 2.8 1.9 1.9 0 0 0 2.8 0l4-4a1.9 1.9 0 0 0 0-2.8zm-9.2-3.3a3 3 0 1 1 3 3 2.9 2.9 0 0 1 -3-3z"/>
+        </svg>
+        
                         </div>
-                    
-                </div><section>
+                        <h2 class='center-text2'>****** Admin ******</h2>
+                        <span class='back-to-top' onclick='scrollToTop()'>
+                            <svg id="z_backtop1" fill="black" width="30" height="30" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z"/>
+                            </svg>
+                        </span>
+                    </div> 
+                   <section class='knowus'><div class='info-container'><div class='info-card2'>
+                            <h4>Â¿Eres el responsable del local y quieres actualizar la informaciÃ³n de este sitio web?</h4>
+                
+                            <h4>Conoce el detalle de todo lo que puedes configurar.</h4>
+                
+                            <h4>No lo dudes Â¡Es gratis!</h4>
+                </div></div><section>
         </div>
         
         </body>
@@ -761,13 +740,13 @@
             function obtenerEstadoNegocio() {
                 // Obtiene la fecha y hora actual
                 const fechaActual = new Date();
-                const diaActual = fechaActual.getDay(); // NÃºmero del dÃ­a (0 es domingo, 1 es lunes, etc.)
+                const diaActual = fechaActual.getDay(); // Número del día (0 es domingo, 1 es lunes, etc.)
                 const horaActual = fechaActual.getHours(); // Hora actual (0-23)
                 const status = getCellStatus(diaActual, horaActual+'00');
                 return (status=='open') ? "green" : "red";
             }
 
-            // Selecciona la imagen y cambia el src segÃºn el horario
+            // Selecciona la imagen y cambia el src según el horario
             function actualizarImagen() {
                 const imagenstatus = document.getElementById('circleimg3');
                 const varEstadoNegocio = obtenerEstadoNegocio();
@@ -820,7 +799,7 @@
                 //scrollToSection('topo');
             }
 
-            // Llama a la funciÃ³n cuando se carga la pÃ¡gina
+            // Llama a la función cuando se carga la página
             //window.onload = actualizarImagen();
 
             document.addEventListener("DOMContentLoaded", function() {
