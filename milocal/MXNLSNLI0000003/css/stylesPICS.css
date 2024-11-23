@@ -1,0 +1,42 @@
+/* Part 1 */
+#slidepics1:checked ~ .slides {
+    transform: translateX(-0%);
+}
+
+#slidepics2:checked ~ .slides {
+    transform: translateX(-100%);
+}
+
+#slidepics3:checked ~ .slides {
+    transform: translateX(-200%);
+}
+
+#slidepics4:checked ~ .slides {
+    transform: translateX(-300%);
+}
+
+#slidepics5:checked ~ .slides {
+    transform: translateX(-400%);
+}
+
+/* Arrows linked to radio button checks */
+#slidepics1:checked ~ .arrow.left[for="slidepics5"],
+#slidepics1:checked ~ .arrow.right[for="slidepics2"] {
+    display: block;
+}
+#slidepics2:checked ~ .arrow.left[for="slidepics1"],
+#slidepics2:checked ~ .arrow.right[for="slidepics3"] {
+    display: block;
+}
+#slidepics3:checked ~ .arrow.left[for="slidepics2"],
+#slidepics3:checked ~ .arrow.right[for="slidepics4"] {
+    display: block;
+}
+#slidepics4:checked ~ .arrow.left[for="slidepics3"],
+#slidepics4:checked ~ .arrow.right[for="slidepics5"] {
+    display: block;
+}
+#slidepics5:checked ~ .arrow.left[for="slidepics4"],
+#slidepics5:checked ~ .arrow.right[for="slidepics1"] {
+    display: block;
+}

@@ -1,0 +1,26 @@
+/* Part 1 */
+#slidepromos1:checked ~ .slides {
+    transform: translateX(-0%);
+}
+
+#slidepromos2:checked ~ .slides {
+    transform: translateX(-100%);
+}
+
+#slidepromos3:checked ~ .slides {
+    transform: translateX(-200%);
+}
+
+/* Arrows linked to radio button checks */
+#slidepromos1:checked ~ .arrow.left[for="slidepromos3"],
+#slidepromos1:checked ~ .arrow.right[for="slidepromos2"] {
+    display: block;
+}
+#slidepromos2:checked ~ .arrow.left[for="slidepromos1"],
+#slidepromos2:checked ~ .arrow.right[for="slidepromos3"] {
+    display: block;
+}
+#slidepromos3:checked ~ .arrow.left[for="slidepromos2"],
+#slidepromos3:checked ~ .arrow.right[for="slidepromos1"] {
+    display: block;
+}

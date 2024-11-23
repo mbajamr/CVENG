@@ -1,0 +1,79 @@
+
+.carousel {
+    position: relative;
+    width: auto;
+    max-width: 800px;
+    height: auto; /*600px*/
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    margin: 0 auto; 
+    display: block;
+}  
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}  
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+    .controls {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .control {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        background: var(--control-background-color);
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .control:hover,
+    input[type="radio"]:checked + .control {
+        background-color: var(--hover-bg-color); /* Active state */
+    }
+
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 50%;
+        z-index: 10;
+    }
+
+    .left {
+        left: 20px;
+    }
+
+    .right {
+        right: 20px;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .img-grid {
+        width: 10%;
+        height: auto; /* Ensures aspect ratio is maintained */
+        display: block; /* Removes bottom margin in some browsers */
+    }
