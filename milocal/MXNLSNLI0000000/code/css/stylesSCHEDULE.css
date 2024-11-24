@@ -1,0 +1,45 @@
+
+
+                    .schedule table {
+                        width: 40%;
+                        border-collapse: collapse;
+                    }
+                    .schedule th {
+                        border: 1px solid #ccc;
+                        padding: 5px; /* Smaller padding for smaller cells */
+                        text-align: center;
+                        width: 40px; /* Set a fixed width for the cells */
+                        height: 40px; /* Set a fixed height for the cells */
+                    }
+                    .open2 {
+                        background-color: 'lightgreen'; /* Light green */
+                    }
+                    .closed2 {
+                        background-color: 'darkred'; /* Dark red for closed */
+                    }
+
+            /* Green background for open hours */
+            .open {
+                background-color: green;
+                color: white;
+                border: 1px solid black;
+            }
+            /* Red background for closed hours */
+            .closed {
+                background-color: #8B0000;
+                color: white;
+                border: 1px solid black;
+            }
+
+            table {
+                border-collapse: collapse;
+                width: 50%; /* Set desired width */
+                margin: auto; /* Center the table */
+            }
+            td {
+                border: none; /* No border */
+                text-align: center; /* Center text */
+                font-size: 1em; /* Font size increased */
+                font-weight: bold; /* Make text bold */
+            }
+        
