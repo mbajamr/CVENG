@@ -1,0 +1,21 @@
+
+/* Announcement container */
+.announcement-container {
+  background-color: #fff;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Combined announcement title class */
+.ann-title {
+  margin-bottom: 10px;
+}
+
+/* Message styling */
+.ann-message {
+  margin-top: 10px;
+}
+
+ 

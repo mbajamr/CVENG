@@ -1,6 +1,6 @@
 
         <!DOCTYPE html>
-        <html lang="en">
+        <html id="pages" lang="en">
         
         <head>
         
@@ -10,15 +10,16 @@
             <title id='title'>El Tule</title>
         
             <!-- Bootstrap CSS CDN -->
-            <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-            <link href="../code/css/stylesCAROUSEL.css?v=1.0.1" rel="stylesheet">
-            <link href="../code/css/stylesMAIN.css?v=1.0.1" rel="stylesheet">
+            <link href="../code/css/stylesCAROUSEL.css" rel="stylesheet">
+            <link href="../code/css/stylesMAIN.css" rel="stylesheet">
+            <link href="../code/css/stylesCONTAINERS.css" rel="stylesheet">
+            <link href="../code/css/stylesANNOUNCEMENT.css" rel="stylesheet">
+            <link href="../code/css/stylesCAROUSELPROMOS.css" rel="stylesheet">
+            <link href="../code/css/stylesSERVICES.css" rel="stylesheet">
+            <link href="../code/css/stylesSHARE.css" rel="stylesheet">
             <link href="../code/css/stylesSCHEDULE.css?v=1.0.1" rel="stylesheet">
-            <link href="../code/css/stylesSHARE.css?v=1.0.1" rel="stylesheet">
-            
-        <link href="code/css/stylesPICS.css?v=1.0.1" rel="stylesheet"><link href="code/css/stylesMENU.css?v=1.0.1" rel="stylesheet"><link href="code/css/stylesPROMOS.css?v=1.0.1" rel="stylesheet"><link href="code/css/stylesSCHEDULE.css?v=1.0.1" rel="stylesheet"><link href="code/css/stylesSHARE.css?v=1.0.1" rel="stylesheet">
+        <link href="code/css/stylesPICS.css?v=1.0.1" rel="stylesheet"><link href="code/css/stylesMENU.css?v=1.0.1" rel="stylesheet"><link href="code/css/stylesPROMOS.css?v=1.0.1" rel="stylesheet">
         </head>
         
         <!-- Google tag (gtag.js) -->
@@ -36,272 +37,31 @@
             <div style="padding: 10px;">
                 <!-- This div acts as a separator -->
             </div>
-            
-            <div style="display: flex; justify-content: space-between; align-items: flex-end; padding: 0px;">
-                <div style="flex: 1; display: flex; justify-content: end;">
-                    <div style="display: flex; align-content: flex-end;"  style="width: 50px;">
-                        
-            <img src='../img/MiLocalLogo.svg'  style="width: 50px;">
-        
-                        <div id="top" style="align-content: flex-end; vertical-align: bottom; font-size:25px; font-weight: bold; ">
-                            MiLocal.com
-                        </div>
-                    </div>
-                </div>
-                <div style="flex: 1; display: flex; justify-content: center;">
-                    <div style="display: flex; justify-content: space-between;">
-                        
-                <svg id="sunmoonpage" fill="black" width="80" height="40" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-left: 1px;" onclick="cambiarEstilo()">
-                        <path d="m0.29 2.32c-0.77 0-1.39 0.63-1.39 1.39s0.63 1.39 1.39 1.39 1.39-0.63 1.39-1.39-0.63-1.39-1.39-1.39zm3.57 1.17-1.37-0.69 0.49-1.46c0.07-0.21-0.12-0.43-0.33-0.33l-1.46 0.49-0.69-1.37c-0.09-0.17-0.26-0.17-0.34 0l-0.69 1.37-1.46-0.49c-0.21-0.07-0.43 0.12-0.33 0.33l0.49 1.46-1.37 0.69c-0.17 0.09-0.17 0.26 0 0.34l1.37 0.69-0.49 1.46c-0.07 0.21 0.12 0.43 0.33 0.33l1.46-0.49 0.69 1.37c0.09 0.17 0.26 0.17 0.34 0l0.69-1.37 1.46 0.49c0.21 0.07 0.43-0.12 0.33-0.33l-0.49-1.46 1.37-0.69c0.18-0.09 0.18-0.26 0-0.34zm-2.27 1.54c-0.73 0.73-1.91 0.73-2.74 0s-0.73-1.91 0-2.74 1.91-0.73 2.74 0 0.73 1.91 0 2.74z"/>
-                        <path d="m7 0c-1.56.52-2.69 2.00-2.69 3.74 0 2.19 1.77 3 3 3 1.74 0 3.22-1.13 3.74-2.69-.4.13-.82.22-1.27.22-2.19 0-3-1.77-3-3 0-.44.08-.87.22-1.27z"/>
-                </svg>
-        
-                    </div>
-                </div>
-                <div style="flex: 1; display: flex; justify-content: start;" onclick="goToParentIndex()">
-                    <div style="display: flex; justify-content: space-between;">
-                        
-            <svg id="backmain" fill="black" viewBox="0 0 24 24" height="40" width="40" xmlns="http://www.w3.org/2000/svg">
-                <path d="m0 0h24v24h-24z" opacity="0"/>
-                <path d="m18 3h-12a3 3 0 0 0 -3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-12a3 3 0 0 0 -3-3zm-3 10h-2v2a1 1 0 0 1 -2 0v-2h-2a1 1 0 0 1 0-2h2v-2a1 1 0 0 1 2 0v2h2a1 1 0 0 1 0 2z"/>
-            </svg> 
-        
-                    </div>
-                </div>
-            </div>
-
-
-            
+            <div id="HEADER"></div>
             <div style="padding: 10px;">
                 <!-- This div acts as a separator -->
             </div>
-            
-            <!-- MAIN TITLE -->
-            <div id="top" class=" text-center" style="border: none; text-align: center; font-size: 20px; font-weight: bold; white-space: nowrap;">
-                <h1 id="paragraph">El Tule</h1>             
-            </div>
-        
-             <!-- THREE BALLS -->
-
-            <div class="row">
-                <div class="col-4 d-flex justify-content-end px-1">
-                    <a href='#Conócenos'>
-                        <img id="circleimg1" src='img/a1_logo.jpg' alt="Logo" style="width: 130px; height: 130px; object-fit: cover; border-radius: 50%; border: 13px solid black;" onerror="this.onerror=null; this.src='../img/white.png';">
-                    </a>
-                </div>
-                <div class="col-4 d-flex justify-content-center px-1">
-                    <a href='#Servicios'>
-                        <img id="circleimg2" src='img/a2_category.jpg' alt="Category" style="width: 130px; height: 130px; object-fit: cover; border-radius: 50%; border: 13px solid black;" onerror="this.onerror=null; this.src='../img/white.png';">
-                    </a>
-                </div>
-                <div class="col-4 d-flex justify-content-start px-1">
-                    <a href='#Horario'>
-                        <div id="circleimg3" style="width: 130px; height: 130px; object-fit: cover; border-radius: 50%; border: 13px solid black; background-color: green; font-size: 20px; color: white; font-weight: bold; display: flex; align-items: center; justify-content: center;">text</div>
-                    </a>
-                </div>
-            </div>
-         
-            <!-- CATEGORY -->
-            <div id="top" class=" text-center" style="border: none; text-align: center; font-size: 15px; font-weight: bold; white-space: nowrap;">
-                <h1 id="paragraph">Arte, Tradicion y Sabor de Oaxaca</h1>             
-            </div>
-        
+            <div id="TITLE"></div><div id="3BALLS"></div><div id="CATEGORY"></div>
             <div style="padding: 10px;">
                 <!-- This div acts as a separator -->
             </div>
-            
-            <!-- ICONS -->
-            <div class="row">
-                <div class="col-4 d-flex justify-content-end px-1">
-                    <!-- First item in first row -->
-                    <a href='#Conócenos'>
-                    
-        <svg id="news" fill="black" width="140px" height="140px" viewBox="-3 0 60 60">
-            <path d="m13.091 12c-5.021 0-9.091 4.477-9.091 10 0 4.701 2.952 8.633 6.926 9.703l3.074 12.297h12l-2.74-10.961 20.74 6.608v-35.647l-24 8zm4.032 28-2-8h3.754l2 8zm2.877-24v12h-6.909c-2.807 0-5.091-2.692-5.091-6s2.284-6 5.091-6zm20 18.174-16-5.098v-14.193l16-5.333z"/>
-        </svg>
-        
-                    </a>
-                </div>
-                <div class="col-4 d-flex justify-content-center px-1">
-                    <!-- Second item in first row -->
-                    <a href='#Servicios'>
-                        
-        <svg id="services" fill="grey" width="150px" height="150px" viewBox="0 0 60 60">
-            <path clip-rule="evenodd" d="m36.826 13.643-2.326-7.53192-2.326 7.53192-4.4999 2.1428 4.5197 2.1523 2.3062 6.5891 2.3062-6.5891 4.5198-2.1523zm-3 1.4285.674-2.1824.674 2.1824 1.5001.7143-1.4803.7049-.6938 1.9823-.6938-1.9823-1.4802-.7049z" fill-rule="evenodd"/>
-            <path d="m19 16 1-4 1 4 3 1-3 1-1 4-1-4-3-1z"/>
-            <path clip-rule="evenodd" d="m13 39.7493v.2468c0 1.1045-.8954 2-2 2h-3c-1.10457 0-2-.8955-2-2v-10.9954c0-1.1045.89543-2 2-2h3c.946 0 1.7386.6568 1.9467 1.5393 1.3244-.4773 2.8713-1.0454 3.3446-1.2612.402-.1831.8662-.2453 1.2519-.2676.4056-.0234.8264-.0072 1.1946.0213.3714.0287.7085.0716.9519.107.1222.0178.2222.0339.2927.0457.0353.006.0633.0108.0831.0144l.0235.0042.0069.0013.0036.0006.0179.0034 6.6888 1.5005.0418.0134.0114.0035.0461.0141c.0421.0127.106.0314.1884.0542.1651.0458.4025.1075.6855.1692.5749.1254 1.2991.2425 1.9744.2425.6239 0 1.2693.2325 1.6143.8644.2963.5425.2273 1.1382.1164 1.5507-.1381.5134-.4241 1.0537-.7877 1.5127.4907-.1851 1.0271-.4043 1.6029-.6405l.1231-.0506c1.623-.666 3.5475-1.4558 5.245-1.7365 1.9397-.3209 3.3515.3832 3.9915 1.6324.5697 1.1119.4374 2.5713-.42 3.4506-.2152.2207-.5431.4522-.8724.6658-.3516.228-.7847.4857-1.2659.7586-.9638.5467-2.1569 1.1751-3.3548 1.7826-2.372 1.203-4.8584 2.3729-5.6485 2.6622-.9156.3354-1.8991.3671-2.8449.3184-.5152-.0265-1.1137-.086-1.7086-.1452-.4298-.0427-.8576-.0853-1.2507-.115-1.9278-.1461-3.4074-.6166-4.7703-1.05l-.1657-.0527c-1.4076-.4468-2.7171-.8431-4.4521-.913-.3967-.016-1.1888.0131-1.9054.0479zm4.1208-10.6506c.0641-.0292.2341-.0732.5377-.0908.2836-.0164.6072-.006.925.0186.3146.0244.6054.0612.8183.0921.1058.0154.1911.0292.2488.0389.0289.0049.0507.0087.0648.0112l.0022.0004 6.5675 1.4733.0451.0137c.0546.0164.1323.0391.2295.0661.1941.0538.468.1248.7934.1958.5852.1277 1.3692.2624 2.1684.2852-.057.1617-.1535.3526-.2843.5427-.1596.232-.3349.4114-.4788.5141-.4166.2976-.7528.4221-.9569.4751-.1033.0268-.176.0361-.2119.0393l-.0133.0011-.0078.0004-5.362-.0648-.1914 1.9837.1793-.9838-.1783.984.0532.0096.1525.0274c.132.0237.3221.0575.5558.0984.467.0818 1.1085.192 1.806.3056 1.3744.224 3.031.4722 3.9709.5289.6491.0392 1.4051-.16 2.1082-.3948.7337-.2449 1.5625-.584 2.396-.926 1.7173-.7044 3.4659-1.4212 4.9355-1.6642 1.2704-.2102 1.7226.2539 1.8851.5711.2328.4545.1062.9597-.0719 1.1424-.0437.0448-.2012.1716-.5288.3841-.3053.198-.7006.434-1.1643.697-.9261.5252-2.0888 1.138-3.2727 1.7385-2.3915 1.2129-4.772 2.3263-5.4317 2.5679-.5342.1957-1.1944.2433-2.0542.199-.5079-.0261-.9897-.0751-1.515-.1286-.4246-.0432-.8777-.0892-1.3961-.1285-1.6918-.1282-2.978-.5368-4.3563-.9747l-.1256-.0399c-1.4276-.4532-2.9552-.9238-4.9768-1.0052-.4551-.0183-1.2653.0098-1.9859.0439v-7.1009c1.4055-.503 3.4871-1.2584 4.1208-1.5473zm2.7954-.9099.1833-.9831c.0002.0001 0 0-.1833.9831zm-8.9162.8119h-3v10.9954h3z" fill-rule="evenodd"/>
-        </svg>   
-        
-                    </a>
-                </div>
-                <div class="col-4 d-flex justify-content-start px-1">
-                    <!-- Third item in first row -->
-                    <a href='#Horario'>
-                        
-        <svg id="schedule" fill="black" width="120px" height="120px" viewBox="0 0 60 60">
-            <path d="m0 0h60v60h-60z" opacity="0" transform="matrix(-1 0 0 -1 60 60)"/>
-            <path d="m30 2a25 25 0 1 0 25 25 25 25 0 0 0 -25-25zm0 45a20 20 0 1 1 20-20 20 20 0 0 1 -20 20z"/>
-            <path d="m38 26h-8v-8a2 2 0 0 0 -5 1.5v10a4 2 0 0 0 2 1h12a2 2 0 0 0 1-4.5z"/>
-        </svg>
-        
-                    </a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-4 d-flex justify-content-end px-1">
-                    <!-- First item in second row -->
-                    <a href='#Contáctanos'>
-                        
-        <svg id="contact" fill="black" width="140px" height="140px" viewBox="-3 0 20 20">
-            <path d="m15.88 3.86-.61-1.31c-.155-.326-.443-.568-.792-.658-1.938-.528-4.161-.851-6.453-.891-2.342.041-4.565.363-6.687.934-.165.048-.453.29-.605.609l-.613 1.317c-.075.152-.119.331-.12.52v.87c-.001.012-.001.026-.001.041 0 .392.318.71.71.71.011 0 .022 0 .033-.001h2.518c.412-.01.742-.346.742-.76 0-.018-.001-.035-.002-.053v-.838c0-.004 0-.008 0-.012 0-.229.119-.43.298-.546.947-.508 2.069-.806 3.26-.806.156 0 .31.005.464.015.122-.011.288-.017.456-.017 1.178 0 2.287.291 3.261.805.143.099.262.3.262.529v.013.859c-.001.015-.002.033-.002.05 0 .413.33.75.741.76h2.521c.009 0 .02.001.031.001.392 0 .71-.318.71-.71 0-.014 0-.029-.001-.043v-.868c-.001-.189-.045-.368-.123-.527z"/><path d="m12 8.3c-.624-.797-1.001-1.815-1.001-2.92 0-.028 0-.056.001-.084v-.296h-1v1h-4v-1h-1v.33c0 .024.001.052.001.08 0 1.105-.377 2.122-1.009 2.93l-2.992 3.66v3h14v-3zm-4 4.7c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/>
-            <path d="m10 10c0 1.105-.895 2-2 2s-2-.895-2-2 .895-2 2-2 2 .895 2 2z"/>
-        </svg>
-        
-                    </a>
-                </div>
-                <div class="col-4 d-flex justify-content-center px-1">
-                    <!-- Second item in second row -->
-                    <a href='#Fotos'>
-                        
-        <svg id="pics" fill="black" width="120px" height="120px" viewBox="0 0 60 60">
-            <path d="m7.8086 50.3477h40.3828c4.8749 0 7.3594-2.4375 7.3594-7.2657v-24.539c0-4.8281-2.4845-7.2422-7.3594-7.2422h-5.4845c-1.828 0-2.3905-.375-3.4452-1.5469l-1.8984-2.1094c-1.1484-1.289-2.3437-1.9922-4.7813-1.9922h-9.3281c-2.4141 0-3.6094.7032-4.7812 1.9922l-1.8985 2.1094c-1.0312 1.1484-1.6171 1.5469-3.4453 1.5469h-5.3203c-4.875 0-7.3594 2.4141-7.3594 7.2422v24.539c0 4.8282 2.4844 7.2657 7.3594 7.2657zm20.1797-7.5c-7.0781 0-12.7734-5.6954-12.7734-12.8204s5.6953-12.8202 12.7734-12.8202c7.125 0 12.7969 5.6952 12.7969 12.8202s-5.6954 12.8204-12.7969 12.8204zm16.8517-18.5391c-1.594 0-2.9064-1.2891-2.9064-2.8828 0-1.6172 1.3124-2.9063 2.9064-2.9063 1.5936 0 2.906 1.2891 2.906 2.9063 0 1.5937-1.3124 2.8828-2.906 2.8828zm-16.8517 14.9766c5.1094 0 9.2578-4.125 9.2578-9.2579 0-5.1328-4.1484-9.2578-9.2578-9.2578s-9.2344 4.125-9.2344 9.2578c0 5.1329 4.1485 9.2579 9.2344 9.2579z"/>
-        </svg>
-        
-                    </a>
-                </div>
-                <div class="col-4 d-flex justify-content-start px-1">
-                    <!-- Third item in second row -->
-                    <a href='#Morenita Mia #150'>
-                        
-        <svg id="location" fill="black" width="100px" height="100px" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-            <path d="m50.001303 0c-16.352602 0-29.751303 13.360422-29.751303 29.666303 0 6.317865 2.017532 12.188967 5.432936 17.016175l20.687753 35.762188c2.897215 3.784891 4.823674 3.06608 7.232659-.199393l22.817296-38.830854c.460965-.83384.822139-1.721773 1.137489-2.628431 1.408365-3.43986 2.191867-7.192337 2.191867-11.119685 0-16.305881-13.396104-29.666303-29.748697-29.666303zm0 13.900901c8.805396 0 15.80796 6.985154 15.80797 15.765402 0 8.780247-7.002574 15.762814-15.80797 15.762814-8.805405 0-15.810576-6.982567-15.810576-15.762814 0-8.780248 7.005171-15.765402 15.810576-15.765402z" stroke-width="3.62116"/>
-            <path d="m68.912802 48.907851-.04824.126174c.01569-.03832.02717-.07672.04267-.115041.0015-.0039.004-.0072.0056-.01113z"/>
-            <path d="m34.005859 69.056641c-14.125859 1.996545-24.005859 6.771562-24.005859 13.800781 0 9.46774 16.508399 17.142578 40 17.142578s40-7.674838 40-17.142578c0-7.028964-9.878869-11.804111-24.003906-13.800781-.651648 1.111256-1.305308 2.220821-1.957032 3.332031 10.64597 1.477058 17.960938 4.581453 17.960938 8.183594 0 5.04946-14.326887 9.142578-32 9.142578s-32-4.093118-32-9.142578c-.001289-3.589575 7.266228-6.691267 17.945312-8.173828-.645552-1.114537-1.294505-2.226873-1.939453-3.341797z"/>
-        </svg>	
-        
-                    </a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-4 d-flex justify-content-end px-1">
-                    <!-- First item in third row -->
-                    <a href='#Compartir'>
-                        
-        <svg id="share" fill="black" width="100px" height="100px" viewBox="-3 0 60 60" xmlns="http://www.w3.org/2000/svg">
-            <path d="m35.2 32.0c-2.2608 0-4.3387 0.7819-5.979 2.0895l-10.2486-6.4054a9.65551 9.65551 0 0 0 0-4.1683l10.2486-6.4054c1.6403 1.3077 3.7182 2.0896 5.979 2.0896 5.3019 0 9.6-4.2981 9.6-9.6s-4.2981-9.6-9.6-9.6-9.6 4.2981-9.6 9.6c0 0.7158 0.079 1.413 0.2276 2.0841l-10.2486 6.4054c-1.6403-1.3076-3.7182-2.0895-5.979-2.0895-5.3019 0-9.6 4.2981-9.6 9.6s4.2981 9.6 9.6 9.6c2.2608 0 4.3387-0.7819 5.979-2.0895l10.2486 6.4054a9.6301 9.6301 0 0 0 -0.2276 2.0841c0 5.3019 4.2981 9.6 9.6 9.6s9.6-4.2981 9.6-9.6-4.2981-9.6-9.6-9.6z"/>
-        </svg>
-        
-                    </a>
-                </div>
-                <div class="col-4 d-flex justify-content-center px-1">
-                    <!-- Second item in third row -->
-                    <a href='#Avisos'>
-                         
-        <svg id="promos" fill="black" width="100px" height="100px" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-            <path d="m59.586 46.323c1.916 3.101-0.490 7.018-4.318 7.018h-49.593c-3.794 0-6.041-4.174-4.318-7.018l23.160-39.853c1.916-3.101 6.732-3.103 8.610 0zm-29.597-8.028c-2.649 0-4.798 2.018-4.798 4.798s2.018 4.798 4.798 4.798 4.798-2.018 4.798-4.798-2.018-4.798-4.798-4.798zm-4.550-17.200 0.774 14.164c0.036 0.661 0.586 1.172 1.248 1.172h5.059c0.661 0 1.212-0.511 1.248-1.172l0.774-14.164c0.039-0.713-0.526-1.305-1.248-1.305h-7.270c-0.722 0-1.160 0.610-1.248 1.305z"/>
-        </svg>
-        
-                    </a>
-                </div>
-                <div class="col-4 d-flex justify-content-start px-1">
-                    <!-- Third item in third row -->
-                    <a href='#Admin'>
-                        
-        <svg fill="owner" fill="black" width="140px" height="140px" viewBox="0 0 60 60">
-            <path d="m0 0h48v48h-48z" fill="none"/>
-            <path d="m24 2a22 22 0 1 0 22 22 21.9 21.9 0 0 0 -22-22zm0 40a18 18 0 1 1 18-18 18.1 18.1 0 0 1 -18 18z"/>
-            <path d="m25.2 22.3a7.3 7.3 0 0 0 .8-3.3 7 7 0 1 0 -7 7 7.3 7.3 0 0 0 3.3-.8l2.9 2.8-2.6 2.6a1.9 1.9 0 0 0 0 2.8 1.9 1.9 0 0 0 2.8 0l2.6-2.6 1.2 1.2-2.6 2.6a1.9 1.9 0 0 0 0 2.8 1.9 1.9 0 0 0 2.8 0l4-4a1.9 1.9 0 0 0 0-2.8zm-9.2-3.3a3 3 0 1 1 3 3 2.9 2.9 0 0 1 -3-3z"/>
-        </svg>
-        
-                    </a>
-                </div>
-            </div>
-        
-                        <div id='Servicios' class='info-section4'>
-                            <div class="col-4 d-flex justify-content-start px-1" style="width: 50px;">
-                            
-        <svg id="services" fill="grey" height="40px" width="40px" viewBox="0 0 48 48">
-            <path clip-rule="evenodd" d="m36.826 13.643-2.326-7.53192-2.326 7.53192-4.4999 2.1428 4.5197 2.1523 2.3062 6.5891 2.3062-6.5891 4.5198-2.1523zm-3 1.4285.674-2.1824.674 2.1824 1.5001.7143-1.4803.7049-.6938 1.9823-.6938-1.9823-1.4802-.7049z" fill-rule="evenodd"/>
-            <path d="m19 16 1-4 1 4 3 1-3 1-1 4-1-4-3-1z"/>
-            <path clip-rule="evenodd" d="m13 39.7493v.2468c0 1.1045-.8954 2-2 2h-3c-1.10457 0-2-.8955-2-2v-10.9954c0-1.1045.89543-2 2-2h3c.946 0 1.7386.6568 1.9467 1.5393 1.3244-.4773 2.8713-1.0454 3.3446-1.2612.402-.1831.8662-.2453 1.2519-.2676.4056-.0234.8264-.0072 1.1946.0213.3714.0287.7085.0716.9519.107.1222.0178.2222.0339.2927.0457.0353.006.0633.0108.0831.0144l.0235.0042.0069.0013.0036.0006.0179.0034 6.6888 1.5005.0418.0134.0114.0035.0461.0141c.0421.0127.106.0314.1884.0542.1651.0458.4025.1075.6855.1692.5749.1254 1.2991.2425 1.9744.2425.6239 0 1.2693.2325 1.6143.8644.2963.5425.2273 1.1382.1164 1.5507-.1381.5134-.4241 1.0537-.7877 1.5127.4907-.1851 1.0271-.4043 1.6029-.6405l.1231-.0506c1.623-.666 3.5475-1.4558 5.245-1.7365 1.9397-.3209 3.3515.3832 3.9915 1.6324.5697 1.1119.4374 2.5713-.42 3.4506-.2152.2207-.5431.4522-.8724.6658-.3516.228-.7847.4857-1.2659.7586-.9638.5467-2.1569 1.1751-3.3548 1.7826-2.372 1.203-4.8584 2.3729-5.6485 2.6622-.9156.3354-1.8991.3671-2.8449.3184-.5152-.0265-1.1137-.086-1.7086-.1452-.4298-.0427-.8576-.0853-1.2507-.115-1.9278-.1461-3.4074-.6166-4.7703-1.05l-.1657-.0527c-1.4076-.4468-2.7171-.8431-4.4521-.913-.3967-.016-1.1888.0131-1.9054.0479zm4.1208-10.6506c.0641-.0292.2341-.0732.5377-.0908.2836-.0164.6072-.006.925.0186.3146.0244.6054.0612.8183.0921.1058.0154.1911.0292.2488.0389.0289.0049.0507.0087.0648.0112l.0022.0004 6.5675 1.4733.0451.0137c.0546.0164.1323.0391.2295.0661.1941.0538.468.1248.7934.1958.5852.1277 1.3692.2624 2.1684.2852-.057.1617-.1535.3526-.2843.5427-.1596.232-.3349.4114-.4788.5141-.4166.2976-.7528.4221-.9569.4751-.1033.0268-.176.0361-.2119.0393l-.0133.0011-.0078.0004-5.362-.0648-.1914 1.9837.1793-.9838-.1783.984.0532.0096.1525.0274c.132.0237.3221.0575.5558.0984.467.0818 1.1085.192 1.806.3056 1.3744.224 3.031.4722 3.9709.5289.6491.0392 1.4051-.16 2.1082-.3948.7337-.2449 1.5625-.584 2.396-.926 1.7173-.7044 3.4659-1.4212 4.9355-1.6642 1.2704-.2102 1.7226.2539 1.8851.5711.2328.4545.1062.9597-.0719 1.1424-.0437.0448-.2012.1716-.5288.3841-.3053.198-.7006.434-1.1643.697-.9261.5252-2.0888 1.138-3.2727 1.7385-2.3915 1.2129-4.772 2.3263-5.4317 2.5679-.5342.1957-1.1944.2433-2.0542.199-.5079-.0261-.9897-.0751-1.515-.1286-.4246-.0432-.8777-.0892-1.3961-.1285-1.6918-.1282-2.978-.5368-4.3563-.9747l-.1256-.0399c-1.4276-.4532-2.9552-.9238-4.9768-1.0052-.4551-.0183-1.2653.0098-1.9859.0439v-7.1009c1.4055-.503 3.4871-1.2584 4.1208-1.5473zm2.7954-.9099.1833-.9831c.0002.0001 0 0-.1833.9831zm-8.9162.8119h-3v10.9954h3z" fill-rule="evenodd"/>
-        </svg>   
-        
-                            </div>
-                            <h2 class='center-text2'>****** Servicios ******</h2>
-                            <span class='back-to-top' onclick='scrollToTop()'>
-                                <svg id="z_backtop1" fill="black" width="30" height="30" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z"/>
-                                </svg>
-                            </span>
-                        </div> 
-                       
-                    <!-- Descripción de los Servicios o Menu -->
-                    <div class="d-flex justify-content-center">
-                    <div class="carousel" id="Servicios">
-                        
-                        <input type="radio" name="carouselmenu" id="slidemenu1" checked>
-                        <input type="radio" name="carouselmenu" id="slidemenu2" >
-                        <input type="radio" name="carouselmenu" id="slidemenu3" >
-                        <input type="radio" name="carouselmenu" id="slidemenu4" >
-                        <input type="radio" name="carouselmenu" id="slidemenu5" >
-
-                        <div class="slides">
-                            
-                                <div class="slide"
-                                id="s1b">
-                                    <img class="img-fluid custom-style" src="menu/SP_1.jpg" alt="">
-                                </div>
-                                <div class="slide"
-                                id="s1b">
-                                    <img class="img-fluid custom-style" src="menu/SP_2.jpg" alt="">
-                                </div>
-                                <div class="slide"
-                                id="s1b">
-                                    <img class="img-fluid custom-style" src="menu/SP_3.jpg" alt="">
-                                </div>
-                                <div class="slide"
-                                id="s1b">
-                                    <img class="img-fluid custom-style" src="menu/SP_4.jpg" alt="">
-                                </div>
-                                <div class="slide"
-                                id="s1b">
-                                    <img class="img-fluid custom-style" src="menu/SP_5.jpg" alt="">
-                                </div>
-                        </div>
-                    <!-- Left and Right Arrows -->
-                    
-                    <label for="slidemenu5" class="arrow left">&#10094;</label>
-                    <label for="slidemenu2" class="arrow right">&#10095;</label>
-                    <label for="slidemenu1" class="arrow left">&#10094;</label>
-                    <label for="slidemenu3" class="arrow right">&#10095;</label>
-                    <label for="slidemenu2" class="arrow left">&#10094;</label>
-                    <label for="slidemenu4" class="arrow right">&#10095;</label>
-                    <label for="slidemenu3" class="arrow left">&#10094;</label>
-                    <label for="slidemenu5" class="arrow right">&#10095;</label>
-                    <label for="slidemenu4" class="arrow left">&#10094;</label>
-                    <label for="slidemenu1" class="arrow right">&#10095;</label>
-                    
-                    </div>
-                    </div>
-                    
-                        <div id='Horario' class='info-section4'>
-                            <div class="col-4 d-flex justify-content-start px-1" style="width: 50px;">
-                            
-        <svg id="schedule" fill="black" width="30px" height="30px" viewBox="0 0 60 60">
-            <path d="m0 0h60v60h-60z" opacity="0" transform="matrix(-1 0 0 -1 60 60)"/>
-            <path d="m30 2a25 25 0 1 0 25 25 25 25 0 0 0 -25-25zm0 45a20 20 0 1 1 20-20 20 20 0 0 1 -20 20z"/>
-            <path d="m38 26h-8v-8a2 2 0 0 0 -5 1.5v10a4 2 0 0 0 2 1h12a2 2 0 0 0 1-4.5z"/>
-        </svg>
-        
-                            </div>
-                            <h2 class='center-text2'>****** Horario ******</h2>
-                            <span class='back-to-top' onclick='scrollToTop()'>
-                                <svg id="z_backtop1" fill="black" width="30" height="30" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z"/>
-                                </svg>
-                            </span>
-                        </div> 
-                       
+            <div id="ICONS"></div><div id="KNOWUSHDR"></div>
+        <div id="KNOWUS"></div>
+         <div id="SERVICESHDR"></div>
+        <div id="carousel-container">
+            <table>
+            <td>
+            <button id="prev" onclick="changePage(-1,'carousel-content-services',v_services_values)">&#10094;</button>
+            </td>
+            <td>
+            <div id="carousel-content-services">Loading...</div>
+            </td>
+            <td>
+            <button id="next" onclick="changePage(1,'carousel-content-services',v_services_values)">&#10095;</button>
+            </td>
+            </table>
+        </div>
+         <div id="SCHEDULEHDR"></div>
         <table id="schedule_table" class="schedule">
             <tr>
                 <th class="schedule"></th>
@@ -309,23 +69,9 @@
         </table>
     </body>
     </html>
-    
-                        <div id='Fotos' class='info-section4'>
-                            <div class="col-4 d-flex justify-content-start px-1" style="width: 50px;">
-                            
-        <svg id="pics" fill="black" width="30px" height="30px" viewBox="0 0 60 60">
-            <path d="m7.8086 50.3477h40.3828c4.8749 0 7.3594-2.4375 7.3594-7.2657v-24.539c0-4.8281-2.4845-7.2422-7.3594-7.2422h-5.4845c-1.828 0-2.3905-.375-3.4452-1.5469l-1.8984-2.1094c-1.1484-1.289-2.3437-1.9922-4.7813-1.9922h-9.3281c-2.4141 0-3.6094.7032-4.7812 1.9922l-1.8985 2.1094c-1.0312 1.1484-1.6171 1.5469-3.4453 1.5469h-5.3203c-4.875 0-7.3594 2.4141-7.3594 7.2422v24.539c0 4.8282 2.4844 7.2657 7.3594 7.2657zm20.1797-7.5c-7.0781 0-12.7734-5.6954-12.7734-12.8204s5.6953-12.8202 12.7734-12.8202c7.125 0 12.7969 5.6952 12.7969 12.8202s-5.6954 12.8204-12.7969 12.8204zm16.8517-18.5391c-1.594 0-2.9064-1.2891-2.9064-2.8828 0-1.6172 1.3124-2.9063 2.9064-2.9063 1.5936 0 2.906 1.2891 2.906 2.9063 0 1.5937-1.3124 2.8828-2.906 2.8828zm-16.8517 14.9766c5.1094 0 9.2578-4.125 9.2578-9.2579 0-5.1328-4.1484-9.2578-9.2578-9.2578s-9.2344 4.125-9.2344 9.2578c0 5.1329 4.1485 9.2579 9.2344 9.2579z"/>
-        </svg>
-        
-                            </div>
-                            <h2 class='center-text2'>****** Fotos ******</h2>
-                            <span class='back-to-top' onclick='scrollToTop()'>
-                                <svg id="z_backtop1" fill="black" width="30" height="30" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z"/>
-                                </svg>
-                            </span>
-                        </div> 
-                       
+    <div id="CONTACTHDR"></div>
+        <div id="CONTACT"></div>
+         <div id="PICSHDR"></div>
                     <!-- Fotos -->
                     <div class="d-flex justify-content-center">
                     <div class="carousel" id="Fotos">
@@ -374,307 +120,59 @@
                     
                     </div>
                     </div>
-                    
-                        <div id='Ubicacion' class='info-section4'>
-                            <div class="col-4 d-flex justify-content-start px-1" style="width: 50px;">
-                            
-        <svg id="small_location" fill="black" width="30px" height="30px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <path d="m50.001303 0c-16.352602 0-29.751303 13.360422-29.751303 29.666303 0 6.317865 2.017532 12.188967 5.432936 17.016175l20.687753 35.762188c2.897215 3.784891 4.823674 3.06608 7.232659-.199393l22.817296-38.830854c.460965-.83384.822139-1.721773 1.137489-2.628431 1.408365-3.43986 2.191867-7.192337 2.191867-11.119685 0-16.305881-13.396104-29.666303-29.748697-29.666303zm0 13.900901c8.805396 0 15.80796 6.985154 15.80797 15.765402 0 8.780247-7.002574 15.762814-15.80797 15.762814-8.805405 0-15.810576-6.982567-15.810576-15.762814 0-8.780248 7.005171-15.765402 15.810576-15.765402z" stroke-width="3.62116"/>
-            <path d="m68.912802 48.907851-.04824.126174c.01569-.03832.02717-.07672.04267-.115041.0015-.0039.004-.0072.0056-.01113z"/>
-            <path d="m34.005859 69.056641c-14.125859 1.996545-24.005859 6.771562-24.005859 13.800781 0 9.46774 16.508399 17.142578 40 17.142578s40-7.674838 40-17.142578c0-7.028964-9.878869-11.804111-24.003906-13.800781-.651648 1.111256-1.305308 2.220821-1.957032 3.332031 10.64597 1.477058 17.960938 4.581453 17.960938 8.183594 0 5.04946-14.326887 9.142578-32 9.142578s-32-4.093118-32-9.142578c-.001289-3.589575 7.266228-6.691267 17.945312-8.173828-.645552-1.114537-1.294505-2.226873-1.939453-3.341797z"/>
-        </svg>	
-        
-                            </div>
-                            <h2 class='center-text2'>****** Ubicacion ******</h2>
-                            <span class='back-to-top' onclick='scrollToTop()'>
-                                <svg id="z_backtop1" fill="black" width="30" height="30" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z"/>
-                                </svg>
-                            </span>
-                        </div> 
-                       
-        <div id='c3_2' class='info-container'>
-            <div  class='info-card-small'>            <p>Morenita Mia #150<br></p> 
-                <img src='maps/Location_Image.jpg' alt='Icon' style="border: 2px solid black;"/>
-            </div>
+                    <div id="LOCATIONHDR"></div><div id="LOCATION"></div><div id="SHAREHDR"></div><div id="SHARE"></div><div id="PROMOSHDR"></div>
+        <div id="carousel-container">
+            <table>
+            <td>
+            <button id="prev" onclick="changePage(-1,'carousel-content-promos',v_promo_values)">&#10094;</button>
+            </td>
+            <td>
+            <div id="carousel-content-promos">Loading...</div>
+            </td>
+            <td>
+            <button id="next" onclick="changePage(1,'carousel-content-promos',v_promo_values)">&#10095;</button>
+            </td>
+            </table>
         </div>
-        
-                        <div id='Compartir' class='info-section4'>
-                            <div class="col-4 d-flex justify-content-start px-1" style="width: 50px;">
-                            
-        <svg id="small_share" fill="black"  width="30px" height="30px" viewBox="-3 0 48 48" xmlns="http://www.w3.org/2000/svg">
-            <path d="m35.2 32.0c-2.2608 0-4.3387 0.7819-5.979 2.0895l-10.2486-6.4054a9.65551 9.65551 0 0 0 0-4.1683l10.2486-6.4054c1.6403 1.3077 3.7182 2.0896 5.979 2.0896 5.3019 0 9.6-4.2981 9.6-9.6s-4.2981-9.6-9.6-9.6-9.6 4.2981-9.6 9.6c0 0.7158 0.079 1.413 0.2276 2.0841l-10.2486 6.4054c-1.6403-1.3076-3.7182-2.0895-5.979-2.0895-5.3019 0-9.6 4.2981-9.6 9.6s4.2981 9.6 9.6 9.6c2.2608 0 4.3387-0.7819 5.979-2.0895l10.2486 6.4054a9.6301 9.6301 0 0 0 -0.2276 2.0841c0 5.3019 4.2981 9.6 9.6 9.6s9.6-4.2981 9.6-9.6-4.2981-9.6-9.6-9.6z"/>
-        </svg>
-        
-                            </div>
-                            <h2 class='center-text2'>****** Compartir ******</h2>
-                            <span class='back-to-top' onclick='scrollToTop()'>
-                                <svg id="z_backtop1" fill="black" width="30" height="30" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z"/>
-                                </svg>
-                            </span>
-                        </div> 
-                       
-            <div id='c1_2' class='info-section2'>
-                <p>Comparte esta página en:</p>
-            
-                <a href="https://api.whatsapp.com/send?text=Visita%20esta%20página:%20https://tupaginaweb.com" 
-                   target="_blank" style="text-decoration: none;">
-                    <button class="share-button" style="width: 20%;">WhatsApp</button>
-                </a>
-                <br><br>
-            
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://tupaginaweb.com" 
-                   target="_blank" style="text-decoration: none;">
-                    <button class="share-button" style="width: 20%;">Facebook</button>
-                </a>
-                <br><br>
-            
-                <a href="https://signal.me/#p/+123456789" 
-                target="_blank" style="text-decoration: none;">
-                 <button class="share-button" style="width: 20%;">Signal</button>
-                </a>
-                <br><br>
-
-                <a href="mailto:?subject=Echa%20un%20vistazo%20a%20esta%20página&body=Visita%20esta%20página:%20https://tupaginaweb.com" 
-                   target="_blank" style="text-decoration: none;">
-                    <button class="share-button" style="width: 20%;">Email</button>
-                </a>
-                <br><br>
-            
-                <a href="sms:?&body=Visita%20esta%20página:%20https://tupaginaweb.com" 
-                   target="_blank" style="text-decoration: none;">
-                    <button class="share-button" style="width: 20%;">SMS</button>
-                </a>
-                <br><br>
-            
-                <a href="https://twitter.com/intent/tweet?url=https://tupaginaweb.com&text=Echa%20un%20vistazo%20a%20esta%20página!" 
-                   target="_blank" style="text-decoration: none;">
-                    <button class="share-button" style="width: 20%;">X (Twitter)</button>
-                </a>
-                <br><br>
-            
-                <a href="https://www.tiktok.com/share?url=https://tupaginaweb.com" 
-                   target="_blank" style="text-decoration: none;">
-                    <button class="share-button" style="width: 20%;">TikTok</button>
-                </a>
-                <br><br>
-            
-                <a href="https://www.instagram.com" 
-                   target="_blank" style="text-decoration: none;">
-                    <button class="share-button" style="width: 20%;">Instagram</button>
-                </a>
-            </div>
-        
-                        <div id='Avisos' class='info-section4'>
-                            <div class="col-4 d-flex justify-content-start px-1" style="width: 50px;">
-                             
-        <svg id="promos" fill="black" width="30px" height="30" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-            <path d="m59.586 46.323c1.916 3.101-0.490 7.018-4.318 7.018h-49.593c-3.794 0-6.041-4.174-4.318-7.018l23.160-39.853c1.916-3.101 6.732-3.103 8.610 0zm-29.597-8.028c-2.649 0-4.798 2.018-4.798 4.798s2.018 4.798 4.798 4.798 4.798-2.018 4.798-4.798-2.018-4.798-4.798-4.798zm-4.550-17.200 0.774 14.164c0.036 0.661 0.586 1.172 1.248 1.172h5.059c0.661 0 1.212-0.511 1.248-1.172l0.774-14.164c0.039-0.713-0.526-1.305-1.248-1.305h-7.270c-0.722 0-1.160 0.610-1.248 1.305z"/>
-        </svg>
-        
-                            </div>
-                            <h2 class='center-text2'>****** Avisos ******</h2>
-                            <span class='back-to-top' onclick='scrollToTop()'>
-                                <svg id="z_backtop1" fill="black" width="30" height="30" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z"/>
-                                </svg>
-                            </span>
-                        </div> 
-                       
-                        <div id='Admin' class='info-section4'>
-                            <div class="col-4 d-flex justify-content-start px-1" style="width: 50px;">
-                            
-        <svg fill="owner" fill="black" width="30px" height="30px" viewBox="0 0 48 48">
-            <path d="m0 0h48v48h-48z" fill="none"/>
-            <path d="m24 2a22 22 0 1 0 22 22 21.9 21.9 0 0 0 -22-22zm0 40a18 18 0 1 1 18-18 18.1 18.1 0 0 1 -18 18z"/>
-            <path d="m25.2 22.3a7.3 7.3 0 0 0 .8-3.3 7 7 0 1 0 -7 7 7.3 7.3 0 0 0 3.3-.8l2.9 2.8-2.6 2.6a1.9 1.9 0 0 0 0 2.8 1.9 1.9 0 0 0 2.8 0l2.6-2.6 1.2 1.2-2.6 2.6a1.9 1.9 0 0 0 0 2.8 1.9 1.9 0 0 0 2.8 0l4-4a1.9 1.9 0 0 0 0-2.8zm-9.2-3.3a3 3 0 1 1 3 3 2.9 2.9 0 0 1 -3-3z"/>
-        </svg>
-        
-                            </div>
-                            <h2 class='center-text2'>****** Admin ******</h2>
-                            <span class='back-to-top' onclick='scrollToTop()'>
-                                <svg id="z_backtop1" fill="black" width="30" height="30" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z"/>
-                                </svg>
-                            </span>
-                        </div> 
-                       <section class='main-container'><div class='info-container'><div class='info-card-medium'>
-                            <h4>¿Eres el responsable del local y quieres actualizar la información de este sitio web?</h4>
-                
-                            <h4>Conoce el detalle de todo lo que puedes configurar.</h4>
-                
-                            <h4>No lo dudes ¡Es gratis!</h4>
-                </div></div><section>
+         <div id="OWNERHDR"></div><div id="OWNER"></div>
         </div>
         
         </body>
+        <script src="../code/js/scriptCOMMON.js"></script>
+        <script src="../code/js/scriptPAGES.js"></script>
+        <script src="../code/js/scriptAJAX.js"></script>
         <script>
-            const savedTheme = localStorage.getItem('theme');
-
-            if (savedTheme) {
-              document.body.classList.add(savedTheme);
-              setPAGE(savedTheme);
-            } else {
-              // If no saved preference, check the system preference
-              const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-              if (prefersDarkScheme.matches) {
-                document.body.classList.add('dark-mode');
-              } else {
-                document.body.classList.add('light-mode');
-              }
-            }
-
-            function setPAGE(pTheme) {
-                if (pTheme=='dark-mode') {
-                    document.body.style.backgroundColor = "black";
-                    document.body.style.color = "white";
-                    changeSVGs("white");
-                    //changeTBLs("white","white");
-                    changeBorderColor("white");
-                    document.body.classList.remove('light-mode');
-                    document.body.classList.add('dark-mode');
-                    localStorage.setItem('theme', 'dark-mode');
-                } else {
-                    document.body.style.backgroundColor = "white";
-                    document.body.style.color = "black";
-                    changeSVGs("black");
-                    //changeTBLs("black","black");
-                    changeBorderColor("black");
-                    document.body.classList.remove('dark-mode');
-                    document.body.classList.add('light-mode');
-                    localStorage.setItem('theme', 'light-mode');
-                }
-            }
-
-            function changeSVGs(pColor) {
-                greyColor = 'grey';
-                const svgs = document.querySelectorAll('svg');
-
-                svgs.forEach((svg, index) => {
-                    // Get the current fill attribute
-                    let currentFill = svg.getAttribute('fill');
-
-                    // Check if the current fill is grey
-                    if (currentFill !== greyColor) {
-                        // If it's not grey, set the new color
-                        svg.setAttribute('fill', pColor);
-                    }
-                });
-            }
-
-            function changeTBLs(pColorTD,pColorTH) {
-                const tbls = document.getElementById('schedule_table');
-                const tbls2 = document.querySelectorAll('table');
-
-                 //tbls.forEach(function(table) {
-                    tbls.style.border = "2px solid #007BFF";
-                    tbls.style.backgroundColor = "#f0f8ff";
-                    tbls.style.color = "#007BFF";
-                    tbls.querySelectorAll('th').forEach(th => {
-                      th.style.backgroundColor = "#007BFF";
-                      th.style.color = "white";
-                    });
-                    tbls.querySelectorAll('td').forEach(td => {
-                      td.style.backgroundColor = "#e7f3ff";
-                    });
-                //});
-            }
-
-            function changeBorderColor(pBorderColor) {
-              const cbimg1 = document.getElementById('circleimg1');
-              cbimg1.style.border = "13px solid " + pBorderColor ;
-              const cbimg2 = document.getElementById('circleimg2');
-              cbimg2.style.border = "13px solid " + pBorderColor ;
-              const cbimg3 = document.getElementById('circleimg3');
-              cbimg3.style.border = "13px solid " + pBorderColor ;
-            }
-
-            function cambiarEstilo() {
-                const mySavedTheme = localStorage.getItem('theme');
-                if (mySavedTheme=='dark-mode') {
-                    setPAGE('light-mode');
-                } else {
-                    setPAGE('dark-mode');
-                }
-            }          
-
-            function obtenerEstadoNegocio() {
-                // Obtiene la fecha y hora actual
-                const fechaActual = new Date();
-                const diaActual = fechaActual.getDay(); // Número del día (0 es domingo, 1 es lunes, etc.)
-                const horaActual = fechaActual.getHours(); // Hora actual (0-23)
-                const status = getCellStatus(diaActual, horaActual+'00');
-                return (status=='open') ? "green" : "red";
-            }
-
-            // Selecciona la imagen y cambia el src según el horario
-            function actualizarImagen() {
-                const imagenstatus = document.getElementById('circleimg3');
-                const varEstadoNegocio = obtenerEstadoNegocio();
-                const cbimg3 = document.getElementById('circleimg3');
-
-                if (varEstadoNegocio=='green') {
-                    imagenstatus.style.backgroundColor = varEstadoNegocio;
-                    cbimg3.innerText  =  'ABIERTO';
-                } else {
-                    //imagenstatus.style.backgroundColor = varEstadoNegocio;
-                    //imagenstatus.style.backgroundColor = '#ffcccb';
-                    imagenstatus.style.backgroundColor = 'darkred';
-                    cbimg3.innerText  =  'CERRADO';
-                    
-                }            
-            }
-
-            function getCellStatus(day, time) {
-
-                // Get all the rows of the table body
-                const rows = document.querySelectorAll('#schedule_table tr');
-
-                // Loop through each row to find the right time
-                for (let row of rows) {
-                    const cell = row.cells[day+1]; // Get the cell for the specified day (column)
-                    const cellContent = cell.textContent;
-                    const isOpen = cell.classList.contains('open'); // Check if the cell has class 'open'
-					//console.log('isOpen:'+ isOpen)
-                    if (cellContent === time) {
-                        // Check if the cell has the 'open' class
-                        if (isOpen) {
-                            return 'open';  // Return 'open' if the class is present
-                        } else {
-                            return 'false';  // Return 'false' if the class is present
-						}
-						
-                    }
-                }
-				// If no matching time was found
-				return 'false';  // Return 'false' if the class is not present
-            }
-
-            function goToParentIndex() {
-            // Navegar un nivel hacia arriba y abrir index.html
-            window.location.href = "../index.html";
-            }
-
-            function scrollToTop() {
-                window.scrollTo({ top:0, behavior:'smooth' });
-                //scrollToSection('topo');
-            }
-
-            // Llama a la función cuando se carga la página
-            //window.onload = actualizarImagen();
-
-            document.addEventListener("DOMContentLoaded", function() {
-              actualizarImagen();
-            });
-
             // Listen for changes in localStorage and update the theme in all tabs
             window.addEventListener('storage', (event) => {
                 if (event.key === 'theme') {
-                    const savedThemeForTabs = localStorage.getItem('theme');
-                    setPAGE(savedThemeForTabs);
+                    //const savedThemeForTabs = localStorage.getItem('theme');
+                    //setPAGE(savedThemeForTabs);
+                    setPage();
                 }
             });
+        </script>
+        <script type="text/javascript">
+        var var_success = "100"
+        const v_promo_values = ["promos/promos01.html",];
+        const v_services_values = ["services/services01.html","services/services02.html","services/services03.html","services/services04.html",];
+        var_success = showData('../hdr/CONTACT.html','CONTACTHDR');
+        var_success = showData('../hdr/KNOWUS.html','KNOWUSHDR');
+        var_success = showData('../hdr/LOCATION.html','LOCATIONHDR');
+        var_success = showData('../hdr/OWNER.html','OWNERHDR');
+        var_success = showData('../hdr/PICS.html','PICSHDR');
+        var_success = showData('../hdr/PROMOS.html','PROMOSHDR');
+        var_success = showData('../hdr/SCHEDULE.html','SCHEDULEHDR');
+        var_success = showData('../hdr/SERVICES.html','SERVICESHDR');
+        var_success = showData('../hdr/SHARE.html','SHAREHDR');
+        var_success = showData('../secs/HEADER.html','HEADER');
+        var_success = showData('sec/TITLE.html','TITLE');
+        var_success = showData('sec/CATEGORY.html','CATEGORY');
+        var_success = showData('3BALLS.html','3BALLS');
+        var_success = showData('ICONS.html','ICONS');
+        var_success = showData('maps/LOCATION.html','LOCATION');
+        var_success = showData('share/share.html','SHARE');
+        var_success = showData('KNOWUS.html','KNOWUS');
+        var_success = showData('CONTACT.html','CONTACT');
         </script>
         </html>
         

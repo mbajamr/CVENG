@@ -1,40 +1,7 @@
 
-               
-    .knowus {
-        padding: 20px;
-    }
 
-    .info-container {
-        display: flex;
-        justify-content: space-around;
-        margin-bottom: 20px;
-    }
-
-    .info-card {
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        padding: 15px;
-        width: 30%;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .info-card2 {
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        padding: 15px;
-        width: 60%;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-    
-    /* Base styles */
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 20px;
-    }
-
-    .text-section {
-        font-size: 3em; /* Default large font size for desktop */
+    html, body {
+        line-height: 140%;
     }
 
     img {
@@ -42,17 +9,183 @@
         height: auto; /* Maintain aspect ratio */
     }
 
-    .browser-width {
-        margin-top: 20px; /* Add some space above the width display */
-        font-size: 1em; /* Font size for the width display */
+    .back-to-top {
+        margin-left: auto; /* Pushes back button to the right */
+        cursor: pointer; /* Changes cursor to pointer on hover */
     }
 
-    /* Custom container for the map */
-    .mapbody {
+    .back-to-top img {
+        width: 30px; /* Size of back icon */
+        height: auto;
+    }
+
+    /* General text styling */
+    .txt-uc {
+      text-transform: uppercase;
+    }
+
+    .txt-c {
+      text-transform: capitalize;
+    }
+
+    .txt-bld {
+      font-weight: bold;
+    }
+
+    .text-color {
+      color: #333;
+    }
+
+    /* Font size classes */
+    .txt-st {
+      font-size: 16px;
+    }
+
+    .txt-ss {
+      font-size: 18px;
+    }
+
+    .txt-sm {
+      font-size: 20px;
+    }
+
+    .txt-sl {
+      font-size: 22px;
+    }
+
+    .txt-sxl {
+      font-size: 24px;
+    }
+
+
+    /* General text style for normal content paragraphs */
+    .cntr-txt {
+      margin-bottom: 5px;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      text-align: center;
+      width: 100%;
+    }
+
+    .center-text {
+        /*text-align: right;*/
+        position: absolute;
+        left: 30%;
+        margin: 10px 0; /* Add margin to adjust spacing if needed */
+    }
+
+    /* Style for sections at the bottom */
+    .info-section4 {
+        display: flex; /* Flexbox layout for icons and text */
+        border: 1px solid #ccc; /* Border for sections */
+        border-radius: 10px; /* Rounded corners for sections */
+        justify-content: center; /* Center items horizontally */
+        align-items: center; /* Center items vertically */
+        padding: 10px; /* Optional padding */
+    }
+ 
+    .shr-cell {
+        width: 30%;   
+        height: 20%;
+        display: flex;
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+    }
+
+    .shr-mrg-btm {
+        margin-bottom: 1rem;
+    }
+
+    .shr-str {
+        justify-content: flex-start;
+    }
+
+    .shr-cntr {
+        justify-content: center;
+    }
+
+    .shr-end {
+        justify-content: flex-end;
+    }
+
+    /* Row styling using Flexbox */
+    .shr-line {
       display: flex;
+      flex-wrap: wrap; /* Ensures columns wrap to the next line if needed */
+      margin: -15px; /* Optional: negative margin to counteract padding of columns */
       justify-content: center;
-      align-items: center;
-      margin: 0; /* Remove default margin */
+    }
+
+  .button-like-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    user-select: none;
+    width: 200px; 
+    height: 30px;
+    border-radius: 50px;
+    font-size: 16px;
+    text-align: center;
+        background-color: #e0e0e0;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+                .share-button2 {
+                    width: 200px; 
+                    height: 30px;
+                    padding: 0px;
+                    border-radius: 50px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    text-align: center;
+                } 
+        
+  .button-like-label:hover {
+    background-color: black;
+  }
+
+  .button-like-label:active {
+    background-color: darkgrey;
+  }
+  
+    /* Grid container styles */
+    .share-grid-container {
+        display: grid;                          /* Use grid layout */
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));  /* Auto-fill columns with minimum width of 150px */
+        gap: 0.5rem;                             /* Space between grid items (buttons) */
+        width: 80%;                              /* Container width */
+        max-width: 1000px;                       /* Maximum width for the grid container */
+        padding: 1rem;                           /* Padding around the grid */
+    }
+
+    /* Styles for each button (cell) */
+    .share-grid-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem;
+        background-color: #e0e0e0;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .mybutton {
+        width: 100px;                           /* Set the width of the buttons */
+        padding: 0.5rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 4px;
+        background-color: #007BFF;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        display: block; 
+        margin: 0 auto;
     }
 
     /* Gradual styles for different screen sizes */
@@ -80,8 +213,7 @@
     }
     table {
         width: 100%; /* Ensure table uses full available width */
-        table-layout: fixed; /* Adjust table layout */
-    }
+            }
 
     td, th {
         font-size: 1em; /* Adjust font size inside table cells */
@@ -117,8 +249,7 @@
     }
     table {
         width: 100%; /* Ensure table uses full available width */
-        table-layout: fixed; /* Adjust table layout */
-    }
+            }
 
     td, th {
         font-size: .9em; /* Adjust font size inside table cells */
@@ -154,8 +285,7 @@
     }
     table {
         width: 100%; /* Ensure table uses full available width */
-        table-layout: fixed; /* Adjust table layout */
-    }
+            }
 
     td, th {
         font-size: .8em; /* Adjust font size inside table cells */
@@ -191,8 +321,7 @@
     }
     table {
         width: 100%; /* Ensure table uses full available width */
-        table-layout: fixed; /* Adjust table layout */
-    }
+            }
 
     td, th {
         font-size: .7em; /* Adjust font size inside table cells */
@@ -228,8 +357,7 @@
     }
     table {
         width: 100%; /* Ensure table uses full available width */
-        table-layout: fixed; /* Adjust table layout */
-    }
+            }
 
     td, th {
         font-size: .6em; /* Adjust font size inside table cells */
@@ -265,8 +393,7 @@
     }
     table {
         width: 100%; /* Ensure table uses full available width */
-        table-layout: fixed; /* Adjust table layout */
-    }
+            }
 
     td, th {
         font-size: .5em; /* Adjust font size inside table cells */
@@ -302,8 +429,7 @@
     }
     table {
         width: 100%; /* Ensure table uses full available width */
-        table-layout: fixed; /* Adjust table layout */
-    }
+            }
 
     td, th {
         font-size: .4em; /* Adjust font size inside table cells */
@@ -316,224 +442,7 @@
 
     }
 
-    /* Container for the grid */
-    .grid-container {
-        display: grid; /* Enables grid layout */
-        grid-template-columns: repeat(5, 1fr); /* Creates 5 equal columns */
-        gap: 10px; /* Space between grid items */
-        padding: 20px; /* Padding around the grid */
-    }
-
-    /* Style for each grid item */
-    .grid-item {
-        overflow: hidden; /* Hides overflow content */
-        border-radius: 10px; /* Rounded corners for items */
-        cursor: pointer; /* Changes cursor to pointer on hover */
-    }
-
-    .grid-container2 {
-        display: grid; /* Enables grid layout */
-        grid-template-columns: repeat(5, 1fr); /* Creates 5 equal columns */
-        gap: 10px; /* Space between grid items */
-        padding: 20px; /* Padding around the grid */
-    }
-
-    /* Style for each grid item */
-    .grid-item2 {
-        overflow: hidden; /* Hides overflow content */
-        border-radius: 10px; /* Rounded corners for items */
-        cursor: pointer; /* Changes cursor to pointer on hover */
-    }
-
-    .grid-containerX {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr); /* 5 columnas */
-        gap: 10px; /* Espacio entre las imágenes */
-    }
-
-    .grid-itemX {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .grid-item3 {
-        min-height: 200px; /* Sets a minimum height */
-        min-width: 200px;  /* Sets a minimum width */
-        overflow: hidden; /* Hides overflow content */
-        border-radius: 10px; /* Rounded corners for items */
-        cursor: none; /* Changes cursor to pointer on hover */
-        background-color: none; /* Optional: sets a background color to make the empty cell visible */
-        display: flex; /* Enables flexbox to center content */
-        align-items: center; /* Centers content vertically */
-        justify-content: center; /* Centers content horizontally */
-    }
-
-    /* Style for the images within the grid items */
-    .grid-item img {
-        width: 100%; /* Makes image responsive to container size */
-        height: auto; /* Maintains aspect ratio of images */
-        display: block; /* Removes bottom space/gap in images */
-        border-radius: 10px; /* Rounded corners for images */
-    }
-
-    .grid-item2 img {
-        width: 100%; /* Makes image responsive to container size */
-        height: auto; /* Maintains aspect ratio of images */
-        display: block; /* Removes bottom space/gap in images */
-        border-radius: 10px; /* Rounded corners for images */
-    }
-
-    /* Style for sections at the bottom */
-    .info-section4 {
-        display: flex; /* Flexbox layout for icons and text */
-        border: 1px solid #ccc; /* Border for sections */
-        border-radius: 10px; /* Rounded corners for sections */
-        justify-content: center; /* Center items horizontally */
-        align-items: center; /* Center items vertically */
-        padding: 10px; /* Optional padding */
-    }
-
-    .text-centered {
-        margin: 0; /* Remove default margins */
-        text-align: center; /* Center the text */
-    }
-
-    /* Style for sections at the bottom */
-    .info-section3 {
-        display: flex; /* Flexbox layout for icons and text */
-        border: 1px solid #ccc; /* Border for sections */
-        border-radius: 10px; /* Rounded corners for sections */
-    }
-    
-    /* Style for sections at the bottom */
-    .info-section {
-        display: flex; /* Flexbox layout for icons and text */
-        align-items: center; /* Centers items vertically */
-        margin: 20px 0; /* Margin around sections */
-        padding: 10px;
-        border: 1px solid #ccc; /* Border for sections */
-        border-radius: 10px; /* Rounded corners for sections */
-    }
-
-    .info-section2 {
-        text-align: center;
-        font-size: 24px;
-    }
-
-    .info-section img {
-        width: 100px; /* Size of the left icon */
-        height: auto;
-        margin-right: 20px; /* Space between icon and text */
-    }
-
-    .back-to-top {
-        margin-left: auto; /* Pushes back button to the right */
-        cursor: pointer; /* Changes cursor to pointer on hover */
-    }
-
-    .back-to-top img {
-        width: 30px; /* Size of back icon */
-        height: auto;
-    }
-
-    .center-container {
-        /*display: flex; */
-        /*justify-content: center; /* Centers items horizontally */
-        align-items: center; /* Centers items vertically */
-        /*flex-direction: column; /* Places items in a column (one below the other) */
-        text-align: center; /* Ensures any inline elements like text will also be centered */
-    }
-
-    .center-container2 {
-        display: flex; 
-        justify-content: center; /* Centers items horizontally */
-        align-items: center; /* Centers items vertically */
-        /*flex-direction: column; /* Places items in a column (one below the other) */
-        text-align: center; /* Ensures any inline elements like text will also be centered */
-    }
-
-    .center-text {
-        /*text-align: right;*/
-        position: absolute;
-        left: 30%;
-        font-size: 40px;
-        font-weight: bold;
-        margin: 10px 0; /* Add margin to adjust spacing if needed */
-    }
-
-    .center-text2 {
-        /*text-align: right;*/
-        position: absolute;
-        left: 30%;
-        font-weight: bold;
-        margin: 10px 0; /* Add margin to adjust spacing if needed */
-    }
-
-    /* Responsive adjustments for mobile screens */
-    @media (max-width: 500px) {
-        .grid-container {
-            grid-template-columns: repeat(3, 1fr); /* Adjusts to 3 columns on small screens */
-        }
-        .grid-item:nth-child(1),
-        .grid-item:nth-child(5),
-        .grid-item:nth-child(6),
-        .grid-item:nth-child(10),
-        .grid-item:nth-child(11),
-        .grid-item:nth-child(15),
-        .grid-item:nth-child(16),
-        .grid-item:nth-child(20),
-        .grid-item:nth-child(21),
-        .grid-item:nth-child(25) {
-            display: none; /* Hides specified cells on mobile */
-        }
-    }
-    @media (max-width: 500px) {
-        .grid-container2 {
-            grid-template-columns: repeat(3, 1fr); /* Adjusts to 3 columns on small screens */
-        }
-        .grid-item2:nth-child(1),
-        .grid-item2:nth-child(5) {
-            display: none; /* Hides specified cells on mobile */
-        }
-    }
-
-    :root {
-        --main-bg-color: #f4f4f4;
-        --primary-color: blue;
-        --secondary-color: #555;
-        --light-color: white;
-        --dark-color: #333;
-        --border-color: #ddd;
-        --background-color: #ddd;
-        --slide-background-color: #eee;
-        --control-background-color: #ffffff;
-        --active-color: #333;
-        --hover-bg-color: pink;
-        --hover-str-bg-color: grey;
-        --arrow-bg: rgba(0, 0, 0, 0.5);
-        --arrow-color: white;
-        --control-color: #000000;
-        --control-active-color: #333;
-        --font-family-heading: "Poppins", sans-serif;
-        --font-family-body: Arial, sans-serif;
-        --default-padding: 10px;
-        --border-radius: 10px;
-        --slide-height: 300px;
-    }
 
 
-    .title-style {
-        font-family: 'Playfair Display', serif; /* Elegant font for headings */
-        font-size: 3rem; /* Larger size */
-        font-weight: bold;
-        text-shadow: none; /* Remove text shadow */
-        border: none; /* Remove border */
-        padding: 10px 20px; /* Add spacing around the text */
-        display: flex; /* Use flexbox to align items */
-        align-items: center; /* Center items vertically */
-    }
 
-    .title-style img {
-        margin-right: 10px; /* Space between image and text */
-    }
+
