@@ -45,23 +45,7 @@
             <div style="padding: 10px;">
                 <!-- This div acts as a separator -->
             </div>
-            <div id="ICONS"></div><div id="KNOWUSHDR"></div>
-        <div id="KNOWUS"></div>
-         <div id="SERVICESHDR"></div>
-        <div id="carousel-container">
-            <table>
-            <td>
-            <button id="prev" onclick="changePage(-1,'carousel-content-services',v_services_values)">&#10094;</button>
-            </td>
-            <td>
-            <div id="carousel-content-services">Loading...</div>
-            </td>
-            <td>
-            <button id="next" onclick="changePage(1,'carousel-content-services',v_services_values)">&#10095;</button>
-            </td>
-            </table>
-        </div>
-         <div id="SCHEDULEHDR"></div>
+            <div id="ICONS"></div><div id="KNOWUSHDR"></div><div id="KNOWUS"></div><div id="SERVICESHDR"></div><div id="SERVICES"></div><div id="SCHEDULEHDR"></div>
         <table id="schedule_table" class="schedule">
             <tr>
                 <th class="schedule"></th>
@@ -71,56 +55,7 @@
     </html>
     <div id="CONTACTHDR"></div>
         <div id="CONTACT"></div>
-         <div id="PICSHDR"></div>
-                    <!-- Fotos -->
-                    <div class="d-flex justify-content-center">
-                    <div class="carousel" id="Fotos">
-                        
-                        <input type="radio" name="carouselpics" id="slidepics1" checked>
-                        <input type="radio" name="carouselpics" id="slidepics2" >
-                        <input type="radio" name="carouselpics" id="slidepics3" >
-
-                        <div class="slides">
-                            
-                                <div class="slide"
-                                id="s1b">
-                                    <img class="img-fluid custom-style" src="fotos/2009.jpg" alt="">
-                                </div>
-                                <div class="slide"
-                                id="s1b">
-                                    <img class="img-fluid custom-style" src="fotos/2022.jpg" alt="">
-                                </div>
-                                <div class="slide"
-                                id="s1b">
-                                    <img class="img-fluid custom-style" src="fotos/2023.jpg" alt="">
-                                </div>
-                        </div>
-                    <!-- Left and Right Arrows -->
-                    
-                    <label for="slidepics3" class="arrow left">&#10094;</label>
-                    <label for="slidepics2" class="arrow right">&#10095;</label>
-                    <label for="slidepics1" class="arrow left">&#10094;</label>
-                    <label for="slidepics3" class="arrow right">&#10095;</label>
-                    <label for="slidepics2" class="arrow left">&#10094;</label>
-                    <label for="slidepics1" class="arrow right">&#10095;</label>
-                    
-                    </div>
-                    </div>
-                    <div id="LOCATIONHDR"></div><div id="LOCATION"></div><div id="SHAREHDR"></div><div id="SHARE"></div><div id="PROMOSHDR"></div>
-        <div id="carousel-container">
-            <table>
-            <td>
-            <button id="prev" onclick="changePage(-1,'carousel-content-promos',v_promo_values)">&#10094;</button>
-            </td>
-            <td>
-            <div id="carousel-content-promos">Loading...</div>
-            </td>
-            <td>
-            <button id="next" onclick="changePage(1,'carousel-content-promos',v_promo_values)">&#10095;</button>
-            </td>
-            </table>
-        </div>
-         <div id="OWNERHDR"></div><div id="OWNER"></div>
+         <div id="PICSHDR"></div><div id="PICS"></div><div id="LOCATIONHDR"></div><div id="LOCATION"></div><div id="SHAREHDR"></div><div id="SHARE"></div><div id="PROMOSHDR"></div><div id="PROMOS"></div><div id="OWNERHDR"></div><div id="OWNER"></div>
         </div>
         
         </body>
@@ -131,8 +66,6 @@
             // Listen for changes in localStorage and update the theme in all tabs
             window.addEventListener('storage', (event) => {
                 if (event.key === 'theme') {
-                    //const savedThemeForTabs = localStorage.getItem('theme');
-                    //setPAGE(savedThemeForTabs);
                     setPage();
                 }
             });
@@ -159,6 +92,10 @@
         var_success = showData('sec/share.html','SHARE');
         var_success = showData('sec/KNOWUS.html','KNOWUS');
         var_success = showData('sec/CONTACT.html','CONTACT');
+        var_success = showData('../secs/OWNER.html','OWNER');
+        var_success = showData('../secs/PROMOS.html','PROMOS');
+        var_success = showData('../secs/SERVICES.html','SERVICES');
+        var_success = showData('code/css/PICS.html','PICS');
         </script>
         </html>
         
