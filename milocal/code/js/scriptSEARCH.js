@@ -56,5 +56,3 @@ function search() {
         alert("No se encontraron resultados");
     }
 }
-
-

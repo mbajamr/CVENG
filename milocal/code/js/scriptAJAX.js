@@ -32,7 +32,7 @@ xmlHttp[xmlHttpIndex].onreadystatechange=function(){
       xi[xmlHttpIndex] = 1;
 
     } else {
-      alert("Ha habido un problema con la URL.");
+      alert("Ha habido un problema con la URL:"+url);
     }
     xmlHttp[xmlHttpIndex] = null;
   }
