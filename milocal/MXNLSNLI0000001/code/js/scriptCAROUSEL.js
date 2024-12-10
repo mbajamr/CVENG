@@ -1,0 +1,1 @@
+const v_pics_values = ["fotos/2009.jpg","fotos/2022.jpg","fotos/2023.jpg",];const v_promo_values = ["promos/promos01.html",];const v_services_values = ["services/services01.html",];

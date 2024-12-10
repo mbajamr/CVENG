@@ -32,23 +32,31 @@
         </script>
         
         <body>
-        <div id="SEPARATOR"></div><div id="HEADER"></div><div id="SEPARATOR"></div><div id="TITLE"></div><div id="3BALLS"></div><div id="CATEGORY"></div><div id="SEPARATOR"></div><div id="ICONS"></div><div id="KNOWUSHDR"></div><div id="KNOWUS"></div><div id="SERVICESHDR"></div><div id="SERVICES"></div><div id="SCHEDULEHDR"></div>
-        <table id="schedule_table" class="schedule">
-            <tr>
-                <th class="schedule"></th>
-    <th>D</th><th>L</th><th>M</th><th>I</th><th>J</th><th>V</th><th>S</th></tr><tr><td>0900</td><td></td><td class="open">0900</td><td class="open">0900</td><td class="open">0900</td><td class="open">0900</td><td class="open">0900</td><td class="open">0900</td></tr><tr><td>1000</td><td></td><td class="open">1000</td><td class="open">1000</td><td class="open">1000</td><td class="open">1000</td><td class="open">1000</td><td class="open">1000</td></tr><tr><td>1100</td><td></td><td class="open">1100</td><td class="open">1100</td><td class="open">1100</td><td class="open">1100</td><td class="open">1100</td><td class="open">1100</td></tr><tr><td>1200</td><td></td><td class="open">1200</td><td class="open">1200</td><td class="open">1200</td><td class="open">1200</td><td class="open">1200</td><td class="open">1200</td></tr><tr><td>1300</td><td></td><td class="open">1300</td><td class="open">1300</td><td class="open">1300</td><td class="open">1300</td><td class="open">1300</td><td class="open">1300</td></tr><tr><td>1400</td><td></td><td class="open">1400</td><td class="open">1400</td><td class="open">1400</td><td class="open">1400</td><td class="open">1400</td><td class="open">1400</td></tr><tr><td>1500</td><td></td><td class="open">1500</td><td class="open">1500</td><td class="open">1500</td><td class="open">1500</td><td class="open">1500</td><td class="open">1500</td></tr><tr><td>1600</td><td></td><td class="open">1600</td><td class="open">1600</td><td class="open">1600</td><td class="open">1600</td><td class="open">1600</td><td class="open">1600</td></tr><tr><td>1700</td><td></td><td class="open">1700</td><td class="open">1700</td><td class="open">1700</td><td class="open">1700</td><td class="open">1700</td><td class="open">1700</td></tr>
-        </table>
-    </body>
-    </html>
-    <div id="CONTACTHDR"></div>
-        <div id="CONTACT"></div>
-         <div id="PICSHDR"></div><div id="PICS"></div><div id="LOCATIONHDR"></div><div id="LOCATION"></div><div id="SHAREHDR"></div><div id="SHARE"></div><div id="PROMOSHDR"></div><div id="PROMOS"></div><div id="OWNERHDR"></div><div id="OWNER"></div>
+        <div id="SEPARATOR"></div>
+        <div id="HEADER"></div>
+        <div id="SEPARATOR"></div>
+        <div id="TITLE"></div>
+        <div id="3BALLS"></div>
+        <div id="CATEGORY"></div>
+        <div id="SEPARATOR"></div>
+        <div id="ICONS"></div><div id="KNOWUSHDR"></div>
+        <div id="KNOWUS"></div><div id="SERVICESHDR"></div>
+        <div id="SERVICES"></div><div id="SCHEDULEHDR"></div>
+        <div id="SCHEDULE"></div><div id="CONTACTHDR"></div>
+        <div id="CONTACT"></div><div id="PICSHDR"></div>
+        <div id="PICS"></div><div id="LOCATIONHDR"></div>
+        <div id="LOCATION"></div><div id="SHAREHDR"></div>
+        <div id="SHARE"></div><div id="PROMOSHDR"></div>
+        <div id="PROMOS"></div><div id="OWNERHDR"></div>
+        <div id="OWNER"></div>
         </div>
         
         </body>
         <script src="../code/js/scriptCOMMON.js"></script>
         <script src="../code/js/scriptPAGES.js"></script>
         <script src="../code/js/scriptAJAX.js"></script>
+        <script src="code/js/scriptCAROUSEL.js"></script>
+
         <script>
             // Listen for changes in localStorage and update the theme in all tabs
             window.addEventListener('storage', (event) => {
@@ -59,31 +67,30 @@
         </script>
         <script type="text/javascript">
         var var_success = "100"
-        const v_promo_values = ["promos/promos01.html",];
-        const v_services_values = ["services/services01.html",];
-        var_success = showData('../hdr/CONTACT.html','CONTACTHDR');
-        var_success = showData('../hdr/KNOWUS.html','KNOWUSHDR');
-        var_success = showData('../hdr/LOCATION.html','LOCATIONHDR');
-        var_success = showData('../hdr/OWNER.html','OWNERHDR');
-        var_success = showData('../hdr/PICS.html','PICSHDR');
-        var_success = showData('../hdr/PROMOS.html','PROMOSHDR');
-        var_success = showData('../hdr/SCHEDULE.html','SCHEDULEHDR');
-        var_success = showData('../hdr/SERVICES.html','SERVICESHDR');
-        var_success = showData('../hdr/SHARE.html','SHAREHDR');
         var_success = showData('../secs/HEADER.html','HEADER');
         var_success = showData('sec/TITLE.html','TITLE');
         var_success = showData('sec/CATEGORY.html','CATEGORY');
         var_success = showData('sec/3BALLS.html','3BALLS');
         var_success = showData('sec/ICONS.html','ICONS');
+        var_success = showData('../secs/SEPARATOR.html','SEPARATOR');
+        var_success = showData('../hdr/KNOWUS.html','KNOWUSHDR');
+        var_success = showData('../hdr/SERVICES.html','SERVICESHDR');
+        var_success = showData('../hdr/SCHEDULE.html','SCHEDULEHDR');
+        var_success = showData('../hdr/CONTACT.html','CONTACTHDR');
+        var_success = showData('../hdr/PICS.html','PICSHDR');
+        var_success = showData('../hdr/LOCATION.html','LOCATIONHDR');
+        var_success = showData('../hdr/SHARE.html','SHAREHDR');
+        var_success = showData('../hdr/PROMOS.html','PROMOSHDR');
+        var_success = showData('../hdr/OWNER.html','OWNERHDR');
+        var_success = showData('sec/KNOWUS.html','KNOWUS');
+        var_success = showData('../secs/SERVICES.html','SERVICES');
+        var_success = showData('sec/CONTACT.html','CONTACT');
+        var_success = showData('sec/SCHEDULE.html','SCHEDULE');
+        var_success = showData('../secs/PICS.html','PICS');
         var_success = showData('maps/LOCATION.html','LOCATION');
         var_success = showData('sec/SHARE.html','SHARE');
-        var_success = showData('sec/KNOWUS.html','KNOWUS');
-        var_success = showData('sec/CONTACT.html','CONTACT');
-        var_success = showData('../secs/OWNER.html','OWNER');
         var_success = showData('../secs/PROMOS.html','PROMOS');
-        var_success = showData('../secs/SERVICES.html','SERVICES');
-        var_success = showData('code/css/PICS.html','PICS');
-        var_success = showData('../secs/SEPARATOR.html','SEPARATOR');
+        var_success = showData('../secs/OWNER.html','OWNER');
         </script>
         </html>
         

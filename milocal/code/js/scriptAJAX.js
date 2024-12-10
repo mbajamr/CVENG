@@ -107,7 +107,7 @@ return xmlHttp;
             }
 
             // Make an AJAX call to fetch the page (simulated here by loading HTML content)
-            loadPage(p_id,pValues[currentIndex]);
+            loadContent(p_id,pValues[currentIndex]);
         }
 
         // Function to load the HTML page via AJAX and update the content
@@ -125,3 +125,49 @@ return xmlHttp;
                     console.error("Error loading page:", error);
                 });
         }
+
+// Function to load content dynamically based on the file extension (HTML or Image)
+function loadContent(p_id, pagePath) {
+    const contentElement = document.getElementById(p_id);
+
+    // Check if the pagePath is an HTML file or an image file based on its extension
+    const fileExtension = pagePath.split('.').pop().toLowerCase();
+    
+    // Determine how to handle the content based on the file extension
+    if (fileExtension === 'html') {
+        // Load HTML content via fetch (your original method)
+        fetch(pagePath)
+            .then(response => response.text()) // Get the HTML content as text
+            .then(html => {
+                contentElement.innerHTML = html; // Insert the HTML content into the container
+            })
+            .catch(error => {
+                contentElement.innerHTML = "Failed to load page.";
+                console.error("Error loading page:", error);
+            });
+    } else if (['jpg', 'jpeg', 'png', 'gif', 'bmp', 'svg'].includes(fileExtension)) {
+        // Load image content dynamically
+        fetch(pagePath)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Image not found.");
+                }
+                return response.blob(); // Get the image content as a blob
+            })
+            .then(imageBlob => {
+                const imageURL = URL.createObjectURL(imageBlob); // Create a URL for the image blob
+                const imgElement = document.createElement("img"); // Create an <img> element
+                imgElement.src = imageURL; // Set the image source
+                contentElement.innerHTML = ""; // Clear previous content
+                contentElement.appendChild(imgElement); // Add the image to the container
+            })
+            .catch(error => {
+                contentElement.innerHTML = "Failed to load image.";
+                console.error("Error loading image:", error);
+            });
+    } else {
+        // Handle unsupported file types
+        contentElement.innerHTML = "Unsupported file type.";
+    }
+}
+

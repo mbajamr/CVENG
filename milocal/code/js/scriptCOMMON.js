@@ -116,4 +116,5 @@
                 setPage();
                 changePage(1,'carousel-content-services',v_services_values);
                 changePage(1,'carousel-content-promos',v_promo_values);
+                changePage(1,'carousel-content-pics',v_pics_values);
             }            

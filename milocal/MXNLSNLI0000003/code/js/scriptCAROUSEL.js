@@ -1,0 +1,1 @@
+const v_pics_values = ["fotos/Foto_1.jpg","fotos/Foto_2.jpg","fotos/Foto_3.jpg","fotos/Foto_4.jpg","fotos/Foto_5.jpg",];const v_promo_values = ["promos/promos01.html",];const v_services_values = ["services/services01.html",];
