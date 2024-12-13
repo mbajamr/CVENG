@@ -1,4 +1,7 @@
            
+            const htmlId = document.documentElement.id;  // `document.documentElement` refers to the <html> element
+            greyColor = 'grey';
+
             function setPage() {
                 vSavedTheme = getTheme();
                 //alert('setPge vSavedTheme: '+vSavedTheme);
@@ -29,13 +32,15 @@
             }
 
             function setTheme(pSavedTheme) {                
-                const htmlId = document.documentElement.id;  // `document.documentElement` refers to the <html> element
                 //alert('setTheme set page: '+pSavedTheme);
+                const body = document.body; 
                 if (pSavedTheme=='dark-mode') {
                     //localStorage.setItem('theme', 'dark-mode');
                     document.body.style.backgroundColor = "black";
                     document.body.style.color = "white";
+                    body.classList.toggle('dark-mode'); 
                     changeSVGs("white");
+                    changeLINKs("cyan","lavender");
                     //changeTBLs("white","white");
                     if (htmlId == "pages") {
                         changeBorderColor("white");
@@ -47,7 +52,9 @@
                     //localStorage.setItem('theme', 'light-mode');
                     document.body.style.backgroundColor = "white";
                     document.body.style.color = "black";
+                    body.classList.toggle('light-mode');
                     changeSVGs("black");
+                    changeLINKs("blue","purple");
                     //changeTBLs("black","black");
                     if (htmlId == "pages") {
                         changeBorderColor("black");
@@ -60,10 +67,12 @@
 
             function changeSVGs(pColor) {
                 //alert('change svg : '+pColor);
-                greyColor = 'grey';
+                
                 const svgs = document.querySelectorAll('svg');
 
                 svgs.forEach((svg, index) => {
+                    let svgId = svg.getAttribute('id');
+
                     // Get the current fill attribute
                     let currentFill = svg.getAttribute('fill');
 
@@ -73,6 +82,27 @@
                         svg.setAttribute('fill', pColor);
                     }
                 });
+            }
+
+            function changeLINKs(plinkNoVisited,plinkVisited,) {
+
+                var links = document.getElementsByTagName("a");
+                for(var i=0;i<links.length;i++)
+                {
+                    if(links[i].href)
+                    {
+                        links[i].style.color = plinkNoVisited;  
+                    }
+                }  
+               
+                var links = document.getElementsByTagName("a:visited");
+                for(var i=0;i<links.length;i++)
+                {
+                    if(links[i].href)
+                    {
+                        links[i].style.color = plinkVisited;  
+                    }
+                } 
             }
 
             function changeTBLs(pColorTD,pColorTH) {
@@ -109,12 +139,41 @@
             }
 
             // Onload
-            function otherFuncAfterAJAX() {
+            function otherFuncAfterAJAX(pcelda) {
                 //alert('other');
                 //cambiarEstilo();
-                actualizarImagen();
+                if (htmlId == "pages") {
+                    actualizarImagen();
+                    if (pcelda=='SERVICES') {
+                        changePage(1,'carousel-content-services',v_services_values);
+                    }
+                    if (pcelda=='PROMOS') {
+                        changePage(1,'carousel-content-promos',v_promo_values);
+                    }
+                    if (pcelda=='PICS') {
+                        changePage(1,'carousel-content-pics',v_pics_values);
+                    }
+                }
                 setPage();
-                changePage(1,'carousel-content-services',v_services_values);
-                changePage(1,'carousel-content-promos',v_promo_values);
-                changePage(1,'carousel-content-pics',v_pics_values);
             }            
+
+            // Function to check if the section exists and grey out the SVG icon
+            function checkSectionAndGreyOut(pcelda) {
+                pceldasec = pcelda + "SEC";
+                //alert("celda"+pceldasec);
+                var section = document.getElementById(pceldasec); // Check for the section
+                //var svgIcon = document.getElementById('knowus'); // SVG icon (button)
+                //alert("sec1 "+section);
+                //alert(svgIcon);
+
+                if (!section) {
+                    //alert("sec2 "+section);
+                    let pceldaL = pcelda.toLowerCase();
+                    const svgCelda = document.getElementById(pceldaL);
+                    //alert("svgCelda:  "+svgCelda);
+                    // Section not found, grey out the SVG icon
+                    svgCelda.style.fill = greyColor; // Change the fill color to grey
+                    //svgCelda.setAttribute('fill', 'grey';);
+                    //svgIcon.style.pointerEvents = 'none'; // Optionally disable clicks
+                }
+            }

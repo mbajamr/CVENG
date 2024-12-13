@@ -51,6 +51,7 @@ function search() {
     const searchResultsSection = document.getElementById('searchResults');
     if (found) {
         searchResultsSection.style.display = 'block';
+        setPage();
     } else {
         searchResultsSection.style.display = 'none'; // Hide if no results found
         alert("No se encontraron resultados");

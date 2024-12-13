@@ -2,11 +2,19 @@
             function changeBorderColor(pBorderColor) {
               //alert('change border : '+pBorderColor);
               const cbimg1 = document.getElementById('circleimg1');
-              cbimg1.style.border = "13px solid " + pBorderColor ;
+              if (cbimg1 != null) {
+                cbimg1.style.border = "13px solid " + pBorderColor ;
+              }
+
               const cbimg2 = document.getElementById('circleimg2');
-              cbimg2.style.border = "13px solid " + pBorderColor ;
+              if (cbimg2) {
+                cbimg2.style.border = "13px solid " + pBorderColor ;
+              }
+
               const cbimg3 = document.getElementById('circleimg3');
-              cbimg3.style.border = "13px solid " + pBorderColor ;
+              if (cbimg3 != null) {
+                cbimg3.style.border = "13px solid " + pBorderColor ;
+              }
             }
 
             // Open close based on table
@@ -21,8 +29,12 @@
                 } else {
                     //imagenstatus.style.backgroundColor = varEstadoNegocio;
                     //imagenstatus.style.backgroundColor = '#ffcccb';
-                    imagenstatus.style.backgroundColor = 'darkred';
-                    cbimg3.innerText  =  'CERRADO';
+                    if (imagenstatus != null) {
+                        imagenstatus.style.backgroundColor = 'darkred';
+                    }
+                    if (cbimg3 != null) {
+                        cbimg3.innerText  =  'CERRADO';
+                    }
                     
                 }            
             }

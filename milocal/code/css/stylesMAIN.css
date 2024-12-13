@@ -56,6 +56,14 @@
       font-size: 24px;
     }
 
+    /* Disable text selection */
+    .nosel {
+        user-select: none; /* Standard syntax */
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+    }
+
 
     /* General text style for normal content paragraphs */
     .cntr-txt {
@@ -117,11 +125,11 @@
       align-items: center;
     }
 
-.grid-container-balls {
-    display: grid; /* Defines the grid layout */
-    grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
-    gap: 10px; /* 10px space between items */
-}
+    .grid-container-balls {
+        display: grid; /* Defines the grid layout */
+        grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
+        gap: 10px; /* 10px space between items */
+    }
 
   .button-like-label {
     display: inline-block;
@@ -193,6 +201,42 @@
         display: block; 
         margin: 0 auto;
     }
+
+/* Default light mode styles for links */
+a:link {
+  color: blue; /* Unvisited links - Blue */
+  text-decoration: none;
+}
+
+a:visited {
+  color: purple; /* Visited links - Purple */
+}
+
+a:hover {
+  color: cyan; /* Hover state - Cyan */
+}
+
+a:active {
+  color: red; /* Active state (when clicked) - Red */
+}
+
+/* Dark mode styles */
+body.dark-theme a:link {
+  color: lightblue; /* Unvisited links - Light Blue */
+}
+
+body.dark-theme a:visited {
+  color: lightpurple; /* Visited links - Light Purple */
+}
+
+body.dark-theme a:hover {
+  color: lightcyan; /* Hover state - Light Cyan */
+}
+
+body.dark-theme a:active {
+  color: lightcoral; /* Active state - Light Coral */
+}
+
 
     /* Gradual styles for different screen sizes */
     @media (max-width: 1920px) {
@@ -447,8 +491,4 @@
     }
 
     }
-
-
-
-
 

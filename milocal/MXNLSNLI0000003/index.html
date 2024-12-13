@@ -16,6 +16,7 @@
             <link href="../code/css/stylesSERVICES.css" rel="stylesheet">
             <link href="../code/css/stylesSHARE.css" rel="stylesheet">
             <link href="../code/css/stylesSCHEDULE.css?v=1.0.1" rel="stylesheet">
+            <link href="../code/css/stylesDARKMODE.css?v=1.0.1" rel="stylesheet">
         
         </head>
         
@@ -37,17 +38,25 @@
         <div id="3BALLS"></div>
         <div id="CATEGORY"></div>
         <div id="SEPARATOR"></div>
-        <div id="ICONS"></div><div id="KNOWUSHDR"></div>
-        <div id="KNOWUS"></div><div id="SERVICESHDR"></div>
-        <div id="SERVICES"></div><div id="SCHEDULEHDR"></div>
-        <div id="SCHEDULE"></div><div id="CONTACTHDR"></div>
-        <div id="CONTACT"></div><div id="PICSHDR"></div>
-        <div id="PICS"></div><div id="LOCATIONHDR"></div>
-        <div id="LOCATION"></div><div id="SHAREHDR"></div>
-        <div id="SHARE"></div><div id="PROMOSHDR"></div>
-        <div id="PROMOS"></div><div id="OWNERHDR"></div>
+        <div id="ICONS"></div>
+        <div id="KNOWUSHDR"></div>
+        <div id="KNOWUS"></div>
+        <div id="SERVICESHDR"></div>
+        <div id="SERVICES"></div>
+        <div id="SCHEDULEHDR"></div>
+        <div id="SCHEDULE"></div>
+        <div id="CONTACTHDR"></div>
+        <div id="CONTACT"></div>
+        <div id="PICSHDR"></div>
+        <div id="PICS"></div>
+        <div id="LOCATIONHDR"></div>
+        <div id="LOCATION"></div>
+        <div id="SHAREHDR"></div>
+        <div id="SHARE"></div>
+        <div id="PROMOSHDR"></div>
+        <div id="PROMOS"></div>
+        <div id="OWNERHDR"></div>
         <div id="OWNER"></div>
-        </div>
         
         </body>
         <script src="../code/js/scriptCOMMON.js"></script>
@@ -64,31 +73,21 @@
             });
         </script>
         <script type="text/javascript">
-        var var_success = "100"
-        var_success = showData('../secs/HEADER.html','HEADER');
-        var_success = showData('sec/TITLE.html','TITLE');
-        var_success = showData('sec/CATEGORY.html','CATEGORY');
-        var_success = showData('sec/3BALLS.html','3BALLS');
-        var_success = showData('sec/ICONS.html','ICONS');
-        var_success = showData('../secs/SEPARATOR.html','SEPARATOR');
-        var_success = showData('../hdr/KNOWUS.html','KNOWUSHDR');
-        var_success = showData('../hdr/SERVICES.html','SERVICESHDR');
-        var_success = showData('../hdr/SCHEDULE.html','SCHEDULEHDR');
-        var_success = showData('../hdr/CONTACT.html','CONTACTHDR');
-        var_success = showData('../hdr/PICS.html','PICSHDR');
-        var_success = showData('../hdr/LOCATION.html','LOCATIONHDR');
-        var_success = showData('../hdr/SHARE.html','SHAREHDR');
-        var_success = showData('../hdr/PROMOS.html','PROMOSHDR');
-        var_success = showData('../hdr/OWNER.html','OWNERHDR');
-        var_success = showData('sec/KNOWUS.html','KNOWUS');
-        var_success = showData('../secs/SERVICES.html','SERVICES');
-        var_success = showData('sec/CONTACT.html','CONTACT');
-        var_success = showData('sec/SCHEDULE.html','SCHEDULE');
-        var_success = showData('../secs/PICS.html','PICS');
-        var_success = showData('maps/LOCATION.html','LOCATION');
-        var_success = showData('sec/SHARE.html','SHARE');
-        var_success = showData('../secs/PROMOS.html','PROMOS');
-        var_success = showData('../secs/OWNER.html','OWNER');
+        showData('../secs/HEADER.html','HEADER');
+        showData('sec/TITLE.html','TITLE');
+        showData('sec/CATEGORY.html','CATEGORY');
+        showData('../secs/3BALLS.html','3BALLS');
+        showData('sec/ICONS.html','ICONS');
+        showData('../secs/SEPARATOR.html','SEPARATOR');
+        show2Secs('sec/KNOWUS.html','KNOWUS','../hdr/KNOWUS.html','KNOWUSHDR');
+        show2Secs('../secs/SERVICES.html','SERVICES','../hdr/SERVICES.html','SERVICESHDR');
+        show2Secs('sec/CONTACT.html','CONTACT','../hdr/CONTACT.html','CONTACTHDR');
+        show2Secs('sec/SCHEDULE.html','SCHEDULE','../hdr/SCHEDULE.html','SCHEDULEHDR');
+        show2Secs('../secs/PICS.html','PICS','../hdr/PICS.html','PICSHDR');
+        show2Secs('maps/LOCATION.html','LOCATION','../hdr/LOCATION.html','LOCATIONHDR');
+        show2Secs('sec/SHARE.html','SHARE','../hdr/SHARE.html','SHAREHDR');
+        show2Secs('../secs/PROMOS.html','PROMOS','../hdr/PROMOS.html','PROMOSHDR');
+        show2Secs('../secs/OWNER.html','OWNER','../hdr/OWNER.html','OWNERHDR');
         </script>
         </html>
         

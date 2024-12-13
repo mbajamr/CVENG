@@ -3,7 +3,8 @@ var xmlHttp = new Array();
 var xi = new Array(0); // ARRAY OF XML-HTTP REQUEST INDEXES
 xi[0] = 1; // FIRST INDEX SET TO 1 MAKING IT AVAILABLE
 
-function showData(url,celda){ 
+function showData(url, celda){ 
+return new Promise(function(resolve, reject) {  // Returning a Promise
 var xmlHttpIndex = xi.length;
 var myClass;
 
@@ -28,11 +29,15 @@ xmlHttp[xmlHttpIndex].onreadystatechange=function(){
     if (xmlHttp[xmlHttpIndex].status == 200) {
       document.getElementById(celda).innerHTML=xmlHttp[xmlHttpIndex].responseText;
       document.getElementById(celda).className=myClass;
-      otherFuncAfterAJAX();
+      otherFuncAfterAJAX(celda);
       xi[xmlHttpIndex] = 1;
-
+      // Call the callback function with a success value
+      resolve("Request successful");
     } else {
-      alert("Ha habido un problema con la URL:"+url);
+      //alert("Ha habido un problema con la URL:"+url);
+      // Call the callback function with a failure value
+      reject("Request failed");
+      return;
     }
     xmlHttp[xmlHttpIndex] = null;
   }
@@ -41,7 +46,19 @@ xmlHttp[xmlHttpIndex].onreadystatechange=function(){
 xmlHttp[xmlHttpIndex].open("GET",url,true);
 
 xmlHttp[xmlHttpIndex].send(null);
+});
+}
 
+function show2Secs(url1,celda1,url2,celda2){ 
+    showData(url1,celda1)
+    .then(function(result) {
+        console.log(result); // "Request successful"
+        showData(url2,celda2);
+    })
+    .catch(function(error) {
+        console.log(error); // "Request failed" or "AJAX not supported"
+        checkSectionAndGreyOut(celda1);
+    });
 }
 
 function noTexto(thefield)
