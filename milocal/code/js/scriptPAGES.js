@@ -73,21 +73,9 @@
 				return 'false';  // Return 'false' if the class is not present
             }
 
-            function goToParentIndex() {
-            // Navegar un nivel hacia arriba y abrir index.html
-            window.location.href = "../index.html";
-            }
-
             function scrollToTop() {
                 window.scrollTo({ top:0, behavior:'smooth' });
                 //scrollToSection('topo');
             }
 
-  function handleClick(url) {
-    if (url.startsWith('mailto:') || url.startsWith('tel:') || url.startsWith('http') || url.startsWith('../')) {
-      //window.location.href = url;  // Open the URL, email client, or phone dialer
-      window.open(url, '_blank');
-    } else {
-      alert("Invalid URL"+url);
-    }
-  }
+

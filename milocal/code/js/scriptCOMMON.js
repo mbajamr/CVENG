@@ -41,7 +41,7 @@
                     body.classList.toggle('dark-mode'); 
                     changeSVGs("white");
                     changeLINKs("cyan","lavender");
-                    //changeTBLs("white","white");
+                    changeTBLs("white","white");
                     if (htmlId == "pages") {
                         changeBorderColor("white");
                     }
@@ -55,7 +55,7 @@
                     body.classList.toggle('light-mode');
                     changeSVGs("black");
                     changeLINKs("blue","purple");
-                    //changeTBLs("black","black");
+                    changeTBLs("black","black");
                     if (htmlId == "pages") {
                         changeBorderColor("black");
                     }
@@ -106,20 +106,35 @@
             }
 
             function changeTBLs(pColorTD,pColorTH) {
-                const tbls = document.getElementById('schedule_table');
-                const tbls2 = document.querySelectorAll('table');
+                //const tbls1 = document.getElementById('schedule_table');
+                //const tbls2 = document.querySelectorAll('table');
+                const tbls1 = document.getElementById('tabla');
+                //const tbls2 = document.getElementById('tabla2');
 
-                 //tbls.forEach(function(table) {
-                    tbls.style.border = "2px solid #007BFF";
-                    tbls.style.backgroundColor = "#f0f8ff";
-                    tbls.style.color = "#007BFF";
-                    tbls.querySelectorAll('th').forEach(th => {
-                      th.style.backgroundColor = "#007BFF";
-                      th.style.color = "white";
-                    });
-                    tbls.querySelectorAll('td').forEach(td => {
-                      td.style.backgroundColor = "#e7f3ff";
-                    });
+                if (pColorTH == "white") {
+                    vcolor1 = "white";
+                    vcolor2 = "black";
+                }
+                else
+                {
+                    vcolor1 = "black";
+                    vcolor2 = "white";
+                }
+
+                //tbls1.style.color = pColorTH;
+                 //tbls1.forEach(function(table) {
+                    //tbls1.style.border = "2px solid #007BFF";
+                    //tbls1.style.backgroundColor = "#f0f8ff";
+                    //tbls1.style.color = "#007BFF";
+                    //tbls1.querySelectorAll('td').forEach(td => {
+                      //tbls1.style.backgroundColor = vcolor2;
+                      //tbls1.style.border = "2px solid "+vcolor1;
+                      //th.style.color = "white";
+                      //tbls1.style.color = vcolor1;
+                    //});
+                    //tbls1.querySelectorAll('td').forEach(td => {
+                    //  td.style.backgroundColor = "#e7f3ff";
+                    //});
                 //});
             }
 

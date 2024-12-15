@@ -56,15 +56,6 @@
       font-size: 24px;
     }
 
-    /* Disable text selection */
-    .nosel {
-        user-select: none; /* Standard syntax */
-        -webkit-user-select: none; /* Safari */
-        -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-    }
-
-
     /* General text style for normal content paragraphs */
     .cntr-txt {
       margin-bottom: 5px;
@@ -130,42 +121,6 @@
         grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
         gap: 10px; /* 10px space between items */
     }
-
-  .button-like-label {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: black;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-    user-select: none;
-    width: 200px; 
-    height: 30px;
-    border-radius: 50px;
-    font-size: 16px;
-    text-align: center;
-        background-color: #e0e0e0;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-
-                .share-button2 {
-                    width: 200px; 
-                    height: 30px;
-                    padding: 0px;
-                    border-radius: 50px;
-                    font-size: 16px;
-                    cursor: pointer;
-                    text-align: center;
-                } 
-        
-  .button-like-label:hover {
-    background-color: black;
-  }
-
-  .button-like-label:active {
-    background-color: darkgrey;
-  }
   
     /* Grid container styles */
     .share-grid-container {
