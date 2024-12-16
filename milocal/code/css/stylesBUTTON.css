@@ -1,6 +1,6 @@
 
 
-  .button-like-label {
+  .btn-lbl {
     display: inline-block;
     padding: 10px 20px;
     background-color: black;
@@ -8,8 +8,6 @@
     cursor: pointer;
     border-radius: 5px;
     user-select: none;
-    width: 200px; 
-    height: 30px;
     border-radius: 50px;
     font-size: 16px;
     text-align: center;
@@ -18,20 +16,16 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 
-                .share-button2 {
-                    width: 200px; 
-                    height: 30px;
-                    padding: 0px;
-                    border-radius: 50px;
-                    font-size: 16px;
-                    cursor: pointer;
-                    text-align: center;
-                } 
-        
-  .button-like-label:hover {
+  .btn-wh {
+    width: 200px; 
+    height: 30px;
+  }
+
+
+  .btn-lbl:hover {
     background-color: black;
   }
 
-  .button-like-label:active {
+  .btn-lbl:active {
     background-color: dimgray;
   }

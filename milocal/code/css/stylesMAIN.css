@@ -1,7 +1,5 @@
 
-    html, body {
-        line-height: 140%;
-    }
+
 
     img {
         width: 100%; /* Images take full width of their container */
@@ -10,12 +8,7 @@
 
     .back-to-top {
         margin-left: auto; /* Pushes back button to the right */
-        cursor: pointer; /* Changes cursor to pointer on hover */
-    }
-
-    .back-to-top img {
-        width: 30px; /* Size of back icon */
-        height: auto;
+        cursor: pointer;
     }
 
     /* General text styling */
@@ -82,155 +75,61 @@
         align-items: center; /* Center items vertically */
         padding: 10px; /* Optional padding */
     }
- 
-    .shr-cell {
-        width: 30%;   
-        height: 20%;
-        display: flex;
-        padding-left: 0.25rem;
-        padding-right: 0.25rem;
-    }
 
-    .shr-mrg-btm {
-        margin-bottom: 1rem;
+    .txt-a {
+        text-align: center; 
     }
-
-    .shr-str {
-        justify-content: flex-start;
-    }
-
-    .shr-cntr {
-        justify-content: center;
-    }
-
-    .shr-end {
-        justify-content: flex-end;
-    }
-
-    /* Row styling using Flexbox */
-    .shr-line {
-      display: flex;
-      flex-wrap: wrap; /* Ensures columns wrap to the next line if needed */
-      margin: -15px; /* Optional: negative margin to counteract padding of columns */
-      justify-content: center;
-      align-items: center;
-    }
-
-    .grid-container-balls {
-        display: grid; /* Defines the grid layout */
-        grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
-        gap: 10px; /* 10px space between items */
-    }
-  
-    /* Grid container styles */
-    .share-grid-container {
-        display: grid;                          /* Use grid layout */
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));  /* Auto-fill columns with minimum width of 150px */
-        gap: 0.5rem;                             /* Space between grid items (buttons) */
-        width: 80%;                              /* Container width */
-        max-width: 1000px;                       /* Maximum width for the grid container */
-        padding: 1rem;                           /* Padding around the grid */
-    }
-
-    /* Styles for each button (cell) */
-    .share-grid-item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0.5rem;
-        background-color: #e0e0e0;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .mybutton {
-        width: 100px;                           /* Set the width of the buttons */
-        padding: 0.5rem;
-        font-size: 1rem;
+    .txt-b {
         border: none;
-        border-radius: 4px;
-        background-color: #007BFF;
-        color: white;
-        cursor: pointer;
-        transition: background-color 0.3s;
-        display: block; 
-        margin: 0 auto;
     }
-
-/* Default light mode styles for links */
-a:link {
-  color: blue; /* Unvisited links - Blue */
-  text-decoration: none;
-}
-
-a:visited {
-  color: purple; /* Visited links - Purple */
-}
-
-a:hover {
-  color: cyan; /* Hover state - Cyan */
-}
-
-a:active {
-  color: red; /* Active state (when clicked) - Red */
-}
-
-/* Dark mode styles */
-body.dark-theme a:link {
-  color: lightblue; /* Unvisited links - Light Blue */
-}
-
-body.dark-theme a:visited {
-  color: lightpurple; /* Visited links - Light Purple */
-}
-
-body.dark-theme a:hover {
-  color: lightcyan; /* Hover state - Light Cyan */
-}
-
-body.dark-theme a:active {
-  color: lightcoral; /* Active state - Light Coral */
-}
-
-
+    .txt-fw {
+        font-weight: bold; 
+    }
+    .txt-ws {
+        white-space: nowrap;
+    }
     /* Gradual styles for different screen sizes */
     @media (max-width: 1920px) {
+        html, body {
+            line-height: 100%;
+        }
         h1 {
-            font-size: 3em; /* Medium font size for large tablets */
+            font-size: 3em;
         }
         h2 {
-            font-size: 2em; /* Medium font size for large tablets */
+            font-size: 2em;
         }
         p {
-            font-size: 1em; /* Medium font size for large tablets */
+            font-size: 1em;
         }
         .text-section {
-            font-size: 2em; /* Slightly smaller paragraph font size */
+            font-size: 2em;
         }
-    #map {
-      height: 500px;
-      width: 500px;
-      border: 1px solid #ccc; /* Optional, to give the map a border */
-    }
-    svg {
-        width: 100%;   /* Reduce the size on smaller screens */
-        height: auto;
-    }
-    table {
-        width: 100%; /* Ensure table uses full available width */
-            }
+        .txt-fs {
+            font-size: 25px;
+        }
+        svg {
+            width: 100%;   /* Reduce the size on smaller screens */
+            height: auto;
+        }
+        table {
+            width: 100%; /* Ensure table uses full available width */
+                }
 
-    td, th {
-        font-size: 1em; /* Adjust font size inside table cells */
-        padding: 10px;   /* Adjust padding for readability */
-    }
+        td, th {
+            font-size: 1em; /* Adjust font size inside table cells */
+            padding: 10px;   /* Adjust padding for readability */
+        }
 
-    tr {
-        font-size: 1em; /* Ensure font size is consistent within rows */
-    }
+        tr {
+            font-size: 1em; /* Ensure font size is consistent within rows */
+        }
     }
 
     @media (max-width: 1680px) {
+        html, body {
+            line-height: 95%;
+        }
         h1 {
             font-size: 2.7em; /* Medium font size for large tablets */
         }
@@ -243,30 +142,27 @@ body.dark-theme a:active {
         .text-section {
            font-size: 1.8em; /* Slightly smaller paragraph font size */
         }
-    #map {
-      height: 480px;
-      width: 480px;
-      border: 1px solid #ccc; /* Optional, to give the map a border */
-    }
-    svg {
-        width: 95%;   /* Reduce the size on smaller screens */
-        height: auto;
-    }
-    table {
-        width: 100%; /* Ensure table uses full available width */
-            }
+        svg {
+            width: 95%;   /* Reduce the size on smaller screens */
+            height: auto;
+        }
+        table {
+            width: 100%; /* Ensure table uses full available width */
+                }
 
-    td, th {
-        font-size: .9em; /* Adjust font size inside table cells */
-        padding: 10px;   /* Adjust padding for readability */
-    }
+        td, th {
+            font-size: .9em; /* Adjust font size inside table cells */
+            padding: 10px;   /* Adjust padding for readability */
+        }
 
-    tr {
-        font-size: .9em; /* Ensure font size is consistent within rows */
+        tr {
+            font-size: .9em; /* Ensure font size is consistent within rows */
+        }
     }
-    }
-
     @media (max-width: 1200px) {
+        html, body {
+            line-height: 90%;
+        }
         h1 {
             font-size: 2.4em; /* Medium font size for large tablets */
         }
@@ -303,6 +199,9 @@ body.dark-theme a:active {
     }
 
     @media (max-width: 992px) {
+        html, body {
+            line-height: 85%;
+        }
         h1 {
             font-size: 2.1em; /* Smaller font size for medium tablets */
         }
@@ -315,11 +214,6 @@ body.dark-theme a:active {
         .text-section {
             font-size: 1.4em; /* Smaller paragraph font size */
         }
-    #map {
-      height: 440px;
-      width: 440px;
-      border: 1px solid #ccc; /* Optional, to give the map a border */
-    }
     svg {
         width: 85%;   /* Reduce the size on smaller screens */
         height: auto;
@@ -339,6 +233,9 @@ body.dark-theme a:active {
     }
 
     @media (max-width: 768px) {
+        html, body {
+            line-height: 80%;
+        }
         h1 {
             font-size: 1.8em; /* Smaller font size for small tablets */
         }
@@ -351,11 +248,7 @@ body.dark-theme a:active {
         .text-section {
             font-size: 1.2em; /* Smaller paragraph font size */
         }
-    #map {
-      height: 420px;
-      width: 420px;
-      border: 1px solid #ccc; /* Optional, to give the map a border */
-    }
+
     svg {
         width: 80%;   /* Reduce the size on smaller screens */
         height: auto;
@@ -375,6 +268,9 @@ body.dark-theme a:active {
     }
 
     @media (max-width: 600px) {
+        html, body {
+            line-height: 75%;
+        }
         h1 {
             font-size: 1.5em; /* Smaller font size for small tablets */
         }
@@ -387,11 +283,7 @@ body.dark-theme a:active {
         .text-section {
             font-size: 1em; /* Smaller paragraph font size */
         }
-    #map {
-      height: 400px;
-      width: 400px;
-      border: 1px solid #ccc; /* Optional, to give the map a border */
-    }
+
     svg {
         width: 75%;   /* Reduce the size on smaller screens */
         height: auto;
@@ -411,6 +303,9 @@ body.dark-theme a:active {
     }
 
     @media (max-width: 480px) {
+        html, body {
+            line-height: 70%;
+        }
         h1 {
             font-size: 1.2em; /* Even smaller font size for very small screens */
         }
@@ -423,11 +318,6 @@ body.dark-theme a:active {
         .text-section {
             font-size: 0.8em; /* Smaller paragraph font size */
         }
-    #map {
-      height: 380px;
-      width: 380px;
-      border: 1px solid #ccc; /* Optional, to give the map a border */
-    }
     svg {
         width: 70%;   /* Reduce the size on smaller screens */
         height: auto;

@@ -8,6 +8,7 @@
     <link href="../code/css/stylesPRICING.css" rel="stylesheet">
     <link href="../code/css/stylesHEADER.css" rel="stylesheet">
     <link href="../code/css/stylesBUTTON.css" rel="stylesheet">
+    <link href="../code/css/stylesMAIN.css" rel="stylesheet">
 
 </head>
 <script src="../code/js/scriptAJAX.js"></script>
@@ -25,16 +26,12 @@
     <!-- ************************************************************** -->
 
     <!-- MAIN TITLE -->
-    <table style="border-collapse: collapse; width: 50%; margin: auto;">
-        <tr>
-            <td class="text-balls">Precios y Servicios</td> 
-        </tr>
-    </table>
+    <h2 class="txt-a txt-b txt-fw txt-ws">Precios y Servicios</h2> 
 
 <!-- Pricing Table Section -->
 <div id="tabla" class="pricing-table-container">
     <!-- Radio buttons for selection -->
-    <div class="radio-buttons-container">
+    <div>
         <input type="radio" id="monthly" name="billing" value="monthly" checked onclick="updatePrices()"> 
         <label for="monthly">Mensual</label>
         <input type="radio" id="annual" name="billing" value="annual" onclick="updatePrices()"> 
@@ -65,10 +62,10 @@
     </table>
 
     <!-- Register buttons -->
-    <div class="register-button-container">
-		<label class="button-like-label" onclick="handleClick('https://www.google.com')">¡Registrate aquí!</label>
-		<label class="button-like-label" onclick="handleClick('https://www.google.com')">¡Registrate aquí!</label>
-		<label class="button-like-label" onclick="handleClick('https://www.google.com')">¡Registrate aquí!</label>
+    <div >
+		<label class="btn-lbl btn-wh" onclick="handleClick('https://www.google.com')">¡Registrate aquí!</label>
+		<label class="btn-lbl btn-wh" onclick="handleClick('https://www.google.com')">¡Registrate aquí!</label>
+		<label class="btn-lbl btn-wh" onclick="handleClick('https://www.google.com')">¡Registrate aquí!</label>
     </div>
 </div>
 

@@ -1,24 +1,37 @@
 
 
-#share-main-container {
-    position: relative;  /* Default value, ensures it grows with content */
-    overflow: visible;   /* Ensure no content is hidden */
-    padding: 10px;       /* Optional: space around the content */
-    width: 60%;
-    height: auto;        /* Let the height adjust with content */
-    max-width: 900px;
-    max-height: 900px;      /* Adjust this as needed */
-    margin: auto;
-      justify-content: center;
-      align-items: center;
-}
+    .cmain {
+        position: relative;  /* Default value, ensures it grows with content */
+        overflow: visible;   /* Ensure no content is hidden */
+        padding: 10px;       /* Optional: space around the content */
+        width: 60%;
+        height: auto;        /* Let the height adjust with content */
+        margin: auto;
+    }
 
-#share-container {
-    position: relative;
-    width: 60%;
-    max-width: 900px;
-    margin: auto;
-      justify-content: center;
-      align-items: center;
-}
+    .cmax {
+        max-width: 900px;
+        max-height: 900px;
+    }
+
+    .ccnt {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .shr-cell {
+        display: flex;
+        width: 250px;   
+        height: 50px;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    /* Row styling using Flexbox */
+    .shr-line {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
+    }
 
