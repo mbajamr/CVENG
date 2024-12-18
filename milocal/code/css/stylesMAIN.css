@@ -1,6 +1,5 @@
 
 
-
     img {
         width: 100%; /* Images take full width of their container */
         height: auto; /* Maintain aspect ratio */
@@ -9,61 +8,6 @@
     .back-to-top {
         margin-left: auto; /* Pushes back button to the right */
         cursor: pointer;
-    }
-
-    /* General text styling */
-    .txt-uc {
-      text-transform: uppercase;
-    }
-
-    .txt-c {
-      text-transform: capitalize;
-    }
-
-    .txt-bld {
-      font-weight: bold;
-    }
-
-    .text-color {
-      color: #333;
-    }
-
-    /* Font size classes */
-    .txt-st {
-      font-size: 16px;
-    }
-
-    .txt-ss {
-      font-size: 18px;
-    }
-
-    .txt-sm {
-      font-size: 20px;
-    }
-
-    .txt-sl {
-      font-size: 22px;
-    }
-
-    .txt-sxl {
-      font-size: 24px;
-    }
-
-    /* General text style for normal content paragraphs */
-    .cntr-txt {
-      margin-bottom: 5px;
-      font-style: normal;
-      font-weight: normal;
-      text-decoration: none;
-      text-align: center;
-      width: 100%;
-    }
-
-    .center-text {
-        /*text-align: right;*/
-        position: absolute;
-        left: 30%;
-        margin: 10px 0; /* Add margin to adjust spacing if needed */
     }
 
     /* Style for sections at the bottom */
@@ -76,18 +20,6 @@
         padding: 10px; /* Optional padding */
     }
 
-    .txt-a {
-        text-align: center; 
-    }
-    .txt-b {
-        border: none;
-    }
-    .txt-fw {
-        font-weight: bold; 
-    }
-    .txt-ws {
-        white-space: nowrap;
-    }
     /* Gradual styles for different screen sizes */
     @media (max-width: 1920px) {
         html, body {
@@ -142,6 +74,9 @@
         .text-section {
            font-size: 1.8em; /* Slightly smaller paragraph font size */
         }
+        .txt-fs {
+            font-size: 25px;
+        }
         svg {
             width: 95%;   /* Reduce the size on smaller screens */
             height: auto;
@@ -175,11 +110,9 @@
         .text-section {
             font-size: 1.6em; /* Slightly smaller paragraph font size */
         }
-    #map {
-      height: 460px;
-      width: 460px;
-      border: 1px solid #ccc; /* Optional, to give the map a border */
-    }
+        .txt-fs {
+            font-size: 25px;
+        }
     svg {
         width: 90%;   /* Reduce the size on smaller screens */
         height: auto;
@@ -213,6 +146,9 @@
         }
         .text-section {
             font-size: 1.4em; /* Smaller paragraph font size */
+        }
+        .txt-fs {
+            font-size: 25px;
         }
     svg {
         width: 85%;   /* Reduce the size on smaller screens */
@@ -248,7 +184,9 @@
         .text-section {
             font-size: 1.2em; /* Smaller paragraph font size */
         }
-
+        .txt-fs {
+            font-size: 25px;
+        }
     svg {
         width: 80%;   /* Reduce the size on smaller screens */
         height: auto;
@@ -283,7 +221,9 @@
         .text-section {
             font-size: 1em; /* Smaller paragraph font size */
         }
-
+        .txt-fs {
+            font-size: 25px;
+        }
     svg {
         width: 75%;   /* Reduce the size on smaller screens */
         height: auto;
@@ -317,6 +257,9 @@
         }
         .text-section {
             font-size: 0.8em; /* Smaller paragraph font size */
+        }
+        .txt-fs {
+            font-size: 25px;
         }
     svg {
         width: 70%;   /* Reduce the size on smaller screens */

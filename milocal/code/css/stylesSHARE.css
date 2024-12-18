@@ -1,23 +1,8 @@
 
 
-    .cmain {
-        position: relative;  /* Default value, ensures it grows with content */
-        overflow: visible;   /* Ensure no content is hidden */
-        padding: 10px;       /* Optional: space around the content */
-        width: 60%;
-        height: auto;        /* Let the height adjust with content */
-        margin: auto;
-    }
-
     .cmax {
         max-width: 900px;
         max-height: 900px;
-    }
-
-    .ccnt {
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     .shr-cell {
