@@ -11,7 +11,7 @@
     }
 
     /* Style for sections at the bottom */
-    .info-section4 {
+    .info-section {
         display: flex; /* Flexbox layout for icons and text */
         border: 1px solid #ccc; /* Border for sections */
         border-radius: 10px; /* Rounded corners for sections */
