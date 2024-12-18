@@ -21,27 +21,27 @@
     }
 
     /* Gradual styles for different screen sizes */
-    @media (max-width: 1920px) {
+    @media (min-width: 480px) {
         html, body {
-            line-height: 100%;
+            line-height: 70%;
         }
         h1 {
-            font-size: 3em;
+            font-size: 1.2em; /* Even smaller font size for very small screens */
         }
         h2 {
-            font-size: 2em;
+            font-size: 0.8em; /* Even smaller font size for very small screens */
         }
         p {
-            font-size: 1em;
+            font-size: .4em; /* Medium font size for large tablets */
         }
         .text-section {
-            font-size: 2em;
+            font-size: 0.8em; /* Smaller paragraph font size */
         }
         .txt-fs {
-            font-size: 25px;
+            font-size: 12px;
         }
         svg {
-            width: 100%;   /* Reduce the size on smaller screens */
+            width: 70%;   /* Reduce the size on smaller screens */
             height: auto;
         }
         table {
@@ -49,163 +49,16 @@
                 }
 
         td, th {
-            font-size: 1em; /* Adjust font size inside table cells */
+            font-size: .4em; /* Adjust font size inside table cells */
             padding: 10px;   /* Adjust padding for readability */
         }
 
         tr {
-            font-size: 1em; /* Ensure font size is consistent within rows */
+            font-size: .4em; /* Ensure font size is consistent within rows */
         }
     }
 
-    @media (max-width: 1680px) {
-        html, body {
-            line-height: 95%;
-        }
-        h1 {
-            font-size: 2.7em; /* Medium font size for large tablets */
-        }
-        h2 {
-            font-size: 1.8em; /* Medium font size for large tablets */
-        }
-        p {
-            font-size: 0.9em; /* Medium font size for large tablets */
-        }
-        .text-section {
-           font-size: 1.8em; /* Slightly smaller paragraph font size */
-        }
-        .txt-fs {
-            font-size: 25px;
-        }
-        svg {
-            width: 95%;   /* Reduce the size on smaller screens */
-            height: auto;
-        }
-        table {
-            width: 100%; /* Ensure table uses full available width */
-                }
-
-        td, th {
-            font-size: .9em; /* Adjust font size inside table cells */
-            padding: 10px;   /* Adjust padding for readability */
-        }
-
-        tr {
-            font-size: .9em; /* Ensure font size is consistent within rows */
-        }
-    }
-    @media (max-width: 1200px) {
-        html, body {
-            line-height: 90%;
-        }
-        h1 {
-            font-size: 2.4em; /* Medium font size for large tablets */
-        }
-        h2 {
-            font-size: 1.6em; /* Medium font size for large tablets */
-        }
-        p {
-            font-size: 0.8em; /* Medium font size for large tablets */
-        }
-        .text-section {
-            font-size: 1.6em; /* Slightly smaller paragraph font size */
-        }
-        .txt-fs {
-            font-size: 25px;
-        }
-    svg {
-        width: 90%;   /* Reduce the size on smaller screens */
-        height: auto;
-    }
-    table {
-        width: 100%; /* Ensure table uses full available width */
-            }
-
-    td, th {
-        font-size: .8em; /* Adjust font size inside table cells */
-        padding: 10px;   /* Adjust padding for readability */
-    }
-
-    tr {
-        font-size: .8em; /* Ensure font size is consistent within rows */
-    }
-    }
-
-    @media (max-width: 992px) {
-        html, body {
-            line-height: 85%;
-        }
-        h1 {
-            font-size: 2.1em; /* Smaller font size for medium tablets */
-        }
-        h2 {
-            font-size: 1.4em; /* Smaller font size for medium tablets */
-        }
-        p {
-            font-size: 0.7em; /* Medium font size for large tablets */
-        }
-        .text-section {
-            font-size: 1.4em; /* Smaller paragraph font size */
-        }
-        .txt-fs {
-            font-size: 25px;
-        }
-    svg {
-        width: 85%;   /* Reduce the size on smaller screens */
-        height: auto;
-    }
-    table {
-        width: 100%; /* Ensure table uses full available width */
-            }
-
-    td, th {
-        font-size: .7em; /* Adjust font size inside table cells */
-        padding: 10px;   /* Adjust padding for readability */
-    }
-
-    tr {
-        font-size: .7em; /* Ensure font size is consistent within rows */
-    }
-    }
-
-    @media (max-width: 768px) {
-        html, body {
-            line-height: 80%;
-        }
-        h1 {
-            font-size: 1.8em; /* Smaller font size for small tablets */
-        }
-        h2 {
-            font-size: 1.2em; /* Smaller font size for small tablets */
-        }
-        p {
-            font-size: 0.6em; /* Medium font size for large tablets */
-        }
-        .text-section {
-            font-size: 1.2em; /* Smaller paragraph font size */
-        }
-        .txt-fs {
-            font-size: 25px;
-        }
-    svg {
-        width: 80%;   /* Reduce the size on smaller screens */
-        height: auto;
-    }
-    table {
-        width: 100%; /* Ensure table uses full available width */
-            }
-
-    td, th {
-        font-size: .6em; /* Adjust font size inside table cells */
-        padding: 10px;   /* Adjust padding for readability */
-    }
-
-    tr {
-        font-size: .6em; /* Ensure font size is consistent within rows */
-    }
-    }
-
-    @media (max-width: 600px) {
+    @media (min-width: 600px) {
         html, body {
             line-height: 75%;
         }
@@ -222,7 +75,7 @@
             font-size: 1em; /* Smaller paragraph font size */
         }
         .txt-fs {
-            font-size: 25px;
+            font-size: 14px;
         }
     svg {
         width: 75%;   /* Reduce the size on smaller screens */
@@ -242,41 +95,187 @@
     }
     }
 
-    @media (max-width: 480px) {
+    @media (min-width: 768px) {
         html, body {
-            line-height: 70%;
+            line-height: 80%;
         }
         h1 {
-            font-size: 1.2em; /* Even smaller font size for very small screens */
+            font-size: 1.8em; /* Smaller font size for small tablets */
         }
         h2 {
-            font-size: 0.8em; /* Even smaller font size for very small screens */
+            font-size: 1.2em; /* Smaller font size for small tablets */
         }
         p {
-            font-size: .4em; /* Medium font size for large tablets */
+            font-size: 0.6em; /* Medium font size for large tablets */
         }
         .text-section {
-            font-size: 0.8em; /* Smaller paragraph font size */
+            font-size: 1.2em; /* Smaller paragraph font size */
         }
         .txt-fs {
-            font-size: 25px;
+            font-size: 16px;
         }
-    svg {
-        width: 70%;   /* Reduce the size on smaller screens */
-        height: auto;
-    }
-    table {
-        width: 100%; /* Ensure table uses full available width */
-            }
+        svg {
+            width: 80%;   /* Reduce the size on smaller screens */
+            height: auto;
+        }
+        table {
+            width: 100%; /* Ensure table uses full available width */
+                }
 
-    td, th {
-        font-size: .4em; /* Adjust font size inside table cells */
-        padding: 10px;   /* Adjust padding for readability */
+        td, th {
+            font-size: .6em; /* Adjust font size inside table cells */
+            padding: 10px;   /* Adjust padding for readability */
+        }
+
+        tr {
+            font-size: .6em; /* Ensure font size is consistent within rows */
+        }
     }
 
-    tr {
-        font-size: .4em; /* Ensure font size is consistent within rows */
+    @media (min-width: 992px) {
+        html, body {
+            line-height: 85%;
+        }
+        h1 {
+            font-size: 2.1em; /* Smaller font size for medium tablets */
+        }
+        h2 {
+            font-size: 1.4em; /* Smaller font size for medium tablets */
+        }
+        p {
+            font-size: 0.7em; /* Medium font size for large tablets */
+        }
+        .text-section {
+            font-size: 1.4em; /* Smaller paragraph font size */
+        }
+        .txt-fs {
+            font-size: 18px;
+        }
+        svg {
+            width: 85%;   /* Reduce the size on smaller screens */
+            height: auto;
+        }
+        table {
+            width: 100%; /* Ensure table uses full available width */
+                }
+
+        td, th {
+            font-size: .7em; /* Adjust font size inside table cells */
+            padding: 10px;   /* Adjust padding for readability */
+        }
+
+        tr {
+            font-size: .7em; /* Ensure font size is consistent within rows */
+        }
     }
 
+    @media (min-width: 1200px) {
+        html, body {
+            line-height: 90%;
+        }
+        h1 {
+            font-size: 2.4em; /* Medium font size for large tablets */
+        }
+        h2 {
+            font-size: 1.6em; /* Medium font size for large tablets */
+        }
+        p {
+            font-size: 0.8em; /* Medium font size for large tablets */
+        }
+        .text-section {
+            font-size: 1.6em; /* Slightly smaller paragraph font size */
+        }
+        .txt-fs {
+            font-size: 20px;
+        }
+        svg {
+            width: 90%;   /* Reduce the size on smaller screens */
+            height: auto;
+        }
+        table {
+            width: 100%; /* Ensure table uses full available width */
+                }
+
+        td, th {
+            font-size: .8em; /* Adjust font size inside table cells */
+            padding: 10px;   /* Adjust padding for readability */
+        }
+
+        tr {
+            font-size: .8em; /* Ensure font size is consistent within rows */
+        }
     }
 
+    @media (min-width: 1680px) {
+        html, body {
+            line-height: 95%;
+        }
+        h1 {
+            font-size: 2.7em; /* Medium font size for large tablets */
+        }
+        h2 {
+            font-size: 1.8em; /* Medium font size for large tablets */
+        }
+        p {
+            font-size: 0.9em; /* Medium font size for large tablets */
+        }
+        .text-section {
+           font-size: 1.8em; /* Slightly smaller paragraph font size */
+        }
+        .txt-fs {
+            font-size: 22px;
+        }
+        svg {
+            width: 95%;   /* Reduce the size on smaller screens */
+            height: auto;
+        }
+        table {
+            width: 100%; /* Ensure table uses full available width */
+                }
+
+        td, th {
+            font-size: .9em; /* Adjust font size inside table cells */
+            padding: 10px;   /* Adjust padding for readability */
+        }
+
+        tr {
+            font-size: .9em; /* Ensure font size is consistent within rows */
+        }
+    }
+
+    @media (min-width: 1920px) {
+        html, body {
+            line-height: 100%;
+        }
+        h1 {
+            font-size: 3em;
+        }
+        h2 {
+            font-size: 2em;
+        }
+        p {
+            font-size: 1em;
+        }
+        .text-section {
+            font-size: 2em;
+        }
+        .txt-fs {
+            font-size: 24px;
+        }
+        svg {
+            width: 100%;   /* Reduce the size on smaller screens */
+            height: auto;
+        }
+        table {
+            width: 100%; /* Ensure table uses full available width */
+                }
+
+        td, th {
+            font-size: 1em; /* Adjust font size inside table cells */
+            padding: 10px;   /* Adjust padding for readability */
+        }
+
+        tr {
+            font-size: 1em; /* Ensure font size is consistent within rows */
+        }
+    }
