@@ -1,4 +1,5 @@
 
+
     .cmain {
         position: relative;
         overflow: visible;
@@ -9,6 +10,10 @@
         display: flex;
         justify-content: space-around;
         margin-bottom: 20px;
+    }
+
+    .cnw {
+        flex-wrap: nowrap;
     }
 
     .ccard {
