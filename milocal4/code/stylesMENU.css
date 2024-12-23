@@ -1,0 +1,478 @@
+.share-button {
+    width: 200px; /* Ancho consistente */
+    height: 30px;
+    padding: 0px;
+    color: black;
+    border: black;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}        
+.carouselB {
+    position: relative;
+    width: auto;
+    max-width: 800px;
+    height: auto; /*600px*/
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    margin: 0 auto; /* Esto centrará el carrusel horizontalmente */
+    display: block;
+}     
+.carouselA {
+    position: relative;
+    width: auto;
+    max-width: 800px;
+    height: auto; /*600px*/
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    margin: 0 auto; /* Esto centrará el carrusel horizontalmente */
+    display: block;
+}   
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}  
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#slideB1:checked ~ .slides {
+transform: translateX(-0%);
+}
+
+#slideB2:checked ~ .slides {
+transform: translateX(-100%);
+}
+
+#slideB3:checked ~ .slides {
+transform: translateX(-200%);
+}
+
+#slideB4:checked ~ .slides {
+transform: translateX(-300%);
+}
+
+#slideB5:checked ~ .slides {
+transform: translateX(-400%);
+}
+
+#slideA1:checked ~ .slides {
+transform: translateX(-0%);
+}
+
+#slideA2:checked ~ .slides {
+transform: translateX(-100%);
+}
+
+#slideA3:checked ~ .slides {
+transform: translateX(-200%);
+}
+
+#slideA4:checked ~ .slides {
+transform: translateX(-300%);
+}
+
+#slideA5:checked ~ .slides {
+transform: translateX(-400%);
+}
+
+/* Arrows linked to radio button checks */
+#slideB1:checked ~ .arrow.left[for="slideB5"],
+#slideB1:checked ~ .arrow.right[for="slideB2"] {
+display: block;
+}
+#slideB2:checked ~ .arrow.left[for="slideB1"],
+#slideB2:checked ~ .arrow.right[for="slideB3"] {
+display: block;
+}
+#slideB3:checked ~ .arrow.left[for="slideB2"],
+#slideB3:checked ~ .arrow.right[for="slideB4"] {
+display: block;
+}
+#slideB4:checked ~ .arrow.left[for="slideB3"],
+#slideB4:checked ~ .arrow.right[for="slideB5"] {
+display: block;
+}
+#slideB5:checked ~ .arrow.left[for="slideB4"],
+#slideB5:checked ~ .arrow.right[for="slideB1"] {
+display: block;
+}       
+
+/* Arrows linked to radio button checks */
+#slideA1:checked ~ .arrow.left[for="slideA5"],
+#slideA1:checked ~ .arrow.right[for="slideA2"] {
+display: block;
+}
+#slideA2:checked ~ .arrow.left[for="slideA1"],
+#slideA2:checked ~ .arrow.right[for="slideA3"] {
+display: block;
+}
+#slideA3:checked ~ .arrow.left[for="slideA2"],
+#slideA3:checked ~ .arrow.right[for="slideA4"] {
+display: block;
+}
+#slideA4:checked ~ .arrow.left[for="slideA3"],
+#slideA4:checked ~ .arrow.right[for="slideA5"] {
+display: block;
+}
+#slideA5:checked ~ .arrow.left[for="slideA4"],
+#slideA5:checked ~ .arrow.right[for="slideA1"] {
+display: block;
+}  
+
+.arrow {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+background-color: rgba(0, 0, 0, 0.5);
+color: white;
+border: none;
+padding: 30px;
+cursor: pointer;
+font-size: 38px;
+border-radius: 30%;
+z-index: 10;
+}
+
+.left {
+left: 10px;
+}
+
+.right {
+right: 10px;
+}    
+.img-fluid {
+width: 100%;   /* This makes the image take the full width of the carousel */
+height: auto;  /* This forces the image to take the full height of the carousel */
+object-fit: cover; /* This preserves the aspect ratio while covering the entire area */
+display: block;  /*Removes bottom margin in some browsers */
+}     
+.controls {
+position: absolute;
+bottom: 10px;
+width: 100%;
+text-align: center;
+}
+
+.control {
+display: inline-block;
+width: 10px;
+height: 10px;
+margin: 0 5px;
+background: #000000;
+border-radius: 50%;
+cursor: pointer;
+}
+.arrow {
+    display: none;
+}
+
+table2 {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+/* Green background for open hours */
+.open {
+    background-color: green;
+    color: white;
+    border: 1px solid black;
+}
+/* Red background for closed hours */
+.closed {
+    background-color: #8B0000;
+    color: white;
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%; /* Set desired width */
+    margin: auto; /* Center the table */
+}
+td {
+    border: none; /* No border */
+    text-align: center; /* Center text */
+    font-size: 1em; /* Font size increased */
+    font-weight: bold; /* Make text bold */
+}
+/* Container for the grid */
+.grid-container {
+    display: grid; /* Enables grid layout */
+    grid-template-columns: repeat(5, 1fr); /* Creates 5 equal columns */
+    gap: 10px; /* Space between grid items */
+    padding: 20px; /* Padding around the grid */
+}
+
+/* Style for each grid item */
+.grid-item {
+    overflow: hidden; /* Hides overflow content */
+    border-radius: 10px; /* Rounded corners for items */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+.grid-container-header {
+    display: grid; /* Enables grid layout */
+    grid-template-columns: repeat(5, 1fr); /* Creates 5 equal columns */
+    gap: 10px; /* Space between grid items */
+    padding: 20px; /* Padding around the grid */
+}
+
+/* Style for each grid item */
+.grid-item-header {
+    overflow: hidden; /* Hides overflow content */
+    border-radius: 10px; /* Rounded corners for items */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+.grid-containerX {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+    gap: 10px; /* Espacio entre las imágenes */
+}
+
+.grid-itemX {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-imageX {
+    width: 150px; /* Ajusta el tamaño de la imagen */
+    height: 150px; /* Ajusta el tamaño de la imagen */
+    object-fit: cover; /* Asegura que la imagen se ajuste al círculo sin deformarse */
+    border-radius: 50%; /* Hace que el contenedor de la imagen sea un círculo */
+    border: 13px solid black; /* Añade un borde alrededor de la imagen */
+}
+
+
+.grid-item3 {
+    min-height: 200px; /* Sets a minimum height */
+    min-width: 200px;  /* Sets a minimum width */
+    overflow: hidden; /* Hides overflow content */
+    border-radius: 10px; /* Rounded corners for items */
+    cursor: none; /* Changes cursor to pointer on hover */
+    background-color: none; /* Optional: sets a background color to make the empty cell visible */
+    display: flex; /* Enables flexbox to center content */
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+}
+
+/* Style for the images within the grid items */
+.grid-item img {
+    width: 100%; /* Makes image responsive to container size */
+    height: auto; /* Maintains aspect ratio of images */
+    display: block; /* Removes bottom space/gap in images */
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+.grid-item-header img {
+    width: none; /* Makes image responsive to container size */
+    height: auto; /* Maintains aspect ratio of images */
+    display: block; /* Removes bottom space/gap in images */
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+/* Style for sections at the bottom */
+.info-section {
+    display: flex; /* Flexbox layout for icons and text */
+    align-items: center; /* Centers items vertically */
+    margin: 20px 0; /* Margin around sections */
+    padding: 10px;
+    border: 1px solid #ccc; /* Border for sections */
+    border-radius: 10px; /* Rounded corners for sections */
+}
+
+.info-section2 {
+    text-align: center;
+    font-size: 20px;
+
+}
+
+.info-section img {
+    width: 50px; /* Size of the left icon */
+    height: auto;
+    margin-right: 20px; /* Space between icon and text */
+}
+.back-to-top {
+    margin-left: auto; /* Pushes back button to the right */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+.back-to-top img {
+    width: 30px; /* Size of back icon */
+    height: auto;
+}
+
+.center-container-header {
+    /*display: flex; */
+    /*justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    /*flex-direction: column; /* Places items in a column (one below the other) */
+    text-align: center; /* Ensures any inline elements like text will also be centered */
+}
+.center-container-header img {
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    top: 15%;
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+    /*margin: 0;  Elimina el margin auto para evitar conflictos */
+}   
+.center-container2 {
+    display: flex; 
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    /*flex-direction: column; /* Places items in a column (one below the other) */
+    text-align: center; /* Ensures any inline elements like text will also be centered */
+}
+.center-text {
+    /*text-align: right;*/
+    position: absolute;
+    left: 42%;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0; /* Add margin to adjust spacing if needed */
+}
+@media (max-width: 600px) {
+    .center-text {
+        left: 24%;
+    }
+}              
+.center-container2 img {
+    max-width: 100%; /* La imagen no será más grande que su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Evita que la imagen sea tratada como un elemento inline */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+/* Responsive adjustments for mobile screens */
+@media (max-width: 600px) {
+    .grid-container-body {
+        grid-template-columns: repeat(3, 1fr); /* Adjusts to 3 columns on small screens */
+    }
+    .grid-item-body:nth-child(1),
+    .grid-item-body:nth-child(5),
+    .grid-item-body:nth-child(6),
+    .grid-item-body:nth-child(10),
+    .grid-item-body:nth-child(11),
+    .grid-item-body:nth-child(15),
+    .grid-item-body:nth-child(16),
+    .grid-item-body:nth-child(20),
+    .grid-item-body:nth-child(21),
+    .grid-item-body:nth-child(25) {
+        display: none; /* Hides specified cells on mobile */
+    }
+}
+@media (max-width: 600px) {
+    .grid-container-header {
+        grid-template-columns: repeat(3, 1fr); /* Adjusts to 3 columns on small screens */
+    }
+    .grid-item-header:nth-child(1),
+    .grid-item-header:nth-child(5) {
+        display: none; /* Hides specified cells on mobile */
+    }
+}
+.grid-container-header img {
+    max-width: 100%;  /*La imagen no será más grande que su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Evita que la imagen sea tratada como un elemento inline */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}        
+.grid-container-balls {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+    gap: 10px; /* Espacio entre las imágenes */
+}
+
+.grid-item-balls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-image-balls {
+    width: 100px; /* Ajusta el tamaño de la imagen */
+    height: 100px; /* Ajusta el tamaño de la imagen */
+    object-fit: cover; /* Asegura que la imagen se ajuste al círculo sin deformarse */
+    border-radius: 50%; /* Hace que el contenedor de la imagen sea un círculo */
+    border: 13px solid black; /* Añade un borde alrededor de la imagen */
+}    
+@media (max-width: 600px) {
+    .grid-container-balls {
+        grid-template-columns: repeat(3, 1fr); /* Adjusts to 3 columns on small screens */
+    }
+    .grid-item-balls:nth-child(1),
+    .grid-item-balls:nth-child(5) {
+        display: none; /* Hides specified cells on mobile */
+    }
+}            
+.text-balls {
+    border: none; text-align: center; font-size: 35px; font-weight: bold; white-space: nowrap;
+}
+@media (max-width: 600px) {
+        .text-balls {
+        border: none; text-align: center; font-size: 25px; font-weight: bold; white-space: nowrap;
+    }
+}
+@media (max-width: 600px) {
+    .grid-container-bd {
+        grid-template-columns: repeat(3, 1fr); /* Adjusts to 3 columns on small screens */
+    }
+    .grid-item-bd:nth-child(1),
+    .grid-item-bd:nth-child(5),
+    .grid-item-bd:nth-child(6),
+    .grid-item-bd:nth-child(10),
+    .grid-item-bd:nth-child(11),
+    .grid-item-bd:nth-child(15),
+    .grid-item-bd:nth-child(16),
+    .grid-item-bd:nth-child(20),
+    .grid-item-bd:nth-child(21),
+    .grid-item-bd:nth-child(25) {
+        display: none; /* Hides specified cells on mobile */
+    }
+}        
+.grid-container-bd {
+    display: grid; /* Enables grid layout */
+    grid-template-columns: repeat(5, 1fr); /* Creates 5 equal columns */
+    gap: 10px; /* Space between grid items */
+    padding: 20px; /* Padding around the grid */
+}
+.grid-item-bd {
+    overflow: hidden; /* Hides overflow content */
+    border-radius: 10px; /* Rounded corners for items */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}        
+.grid-item-bd img {
+    width: 100%; /* Makes image responsive to container size */
+    height: auto; /* Maintains aspect ratio of images */
+    display: block; /* Removes bottom space/gap in images */
+    border-radius: 10px; /* Rounded corners for images */
+}  
+.center-container-bd {
+    display: flex; 
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    /*flex-direction: column; /* Places items in a column (one below the other) */
+    text-align: center; /* Ensures any inline elements like text will also be centered */
+}
+.center-container-bd img {
+    max-width: 100%; /* La imagen no será más grande que su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Evita que la imagen sea tratada como un elemento inline */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}  

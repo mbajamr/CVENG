@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiLocal.com</title>
+    <link rel="stylesheet" href="../code/stylesSERV.css">
+</head>
+<body>
+
+    <!-- ************************************************************** -->
+    <!-- ************************************************************** -->
+    <!-- ************************************************************** -->
+    <div class="grid-container-header" id='top'> 
+        <div class="grid-item-header" onclick="scrollToSection('none')"><img src="../img/pixel_white.png" alt="Image 1"></div>
+        <!-- ************************************************************** -->
+        <!-- COMPANY LOGO -->
+        <div class="center-container-header" onclick="goToParentIndex()"><img id="imagenlogo" src="../img/MiLocal.png" alt="Image 2"></div>
+        <!-- ************************************************************** -->
+        <!-- SUN / MOON -->
+        <div class="center-container-header"> <img id="imagenx" src="../img/pixel_white.png" alt="Image 3"
+            onclick="cambiarEstilo()" class="grid-item" onclick="scrollToSection('none')">
+            <!-- Original SVG Icon -->
+            <svg id="sun" viewBox="0 0 552 552" width="40" height="40" xmlns="http://www.w3.org/2000/svg" onclick="cambiarEstilo()">
+                <path d="m256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7-100.5-33.5c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0s-49.9-131.1 0-181 131.1-49.9 181 0 49.9 131.1 0 181z" fill="black"/>
+                <!-- Vertical Line -->
+                <line x1="552" y1="0" x2="552" y2="552" stroke="black" stroke-width="40"/>
+            </svg>
+            <!-- New Moon SVG centered vertically with the sun and moved to the right -->
+            <svg id="moon" height="30" viewBox="0 0 8 8" width="30" xmlns="http://www.w3.org/2000/svg" onclick="cambiarEstilo()" style="vertical-align: middle; margin-left: 0px; position: relative; top: -17px;">
+                <path d="m2.72 0c-1.58.53-2.72 2.02-2.72 3.78 0 2.21 1.79 4 4 4 1.76 0 3.25-1.14 3.78-2.72-.4.13-.83.22-1.28.22-2.21 0-4-1.79-4-4 0-.45.08-.88.22-1.28z" fill="black"/>
+            </svg>
+        </div>
+        <!-- ************************************************************** -->
+        <!-- BACK MAIN -->
+        <div class="center-container-header" onclick="goToParentIndex()"><img src="../img/pixel_white.png" alt="Image 4">
+            <svg id="backmain" viewBox="0 0 24 24" height="40" width="40" xmlns="http://www.w3.org/2000/svg">
+                <path d="m0 0h24v24h-24z" fill="black" opacity="0"/>
+                <path d="m18 3h-12a3 3 0 0 0 -3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-12a3 3 0 0 0 -3-3zm-3 10h-2v2a1 1 0 0 1 -2 0v-2h-2a1 1 0 0 1 0-2h2v-2a1 1 0 0 1 2 0v2h2a1 1 0 0 1 0 2z" fill="black"/>
+            </svg>       
+        </div>
+        <div class="grid-item-header" onclick="scrollToSection('none')"><img src="../img/pixel_white.png" alt="Image 5"></div>
+    </div>
+
+    <!-- ************************************************************** -->
+    <!-- ************************************************************** -->
+    <!-- ************************************************************** -->    
+    <!-- ************************************************************** -->
+    <!-- MAIN TITLE -->
+    <table style="border-collapse: collapse; width: 50%; margin: auto;">
+        <tr>
+            <td class="text-balls">Morenita Mía</td> 
+    </table>
+    <!-- THREE BALLS -->
+    <div class="grid-container-balls">
+        <div class="grid-item-balls" onclick="scrollToSection('none')"></div>
+        <div class="grid-item-balls" onclick="scrollToSection('b1')"><img src="img/a1_logo.jpg" alt="Image 2" class="circle-image-balls"></div>
+        <div class="grid-item-balls" onclick="scrollToSection('b2')"><img src="img/a2_category.jpg" alt="Image 3" class="circle-image-balls"></div>
+        <div class="grid-item-balls" onclick="scrollToSection('b3')"><img id="imagenstatus" src="a3_status.png" alt="Image 4" class="circle-image-balls"></div>
+        <div class="grid-item-balls" onclick="scrollToSection('none')"></div>
+    </div>
+    <!-- CATEGORY -->
+    <table>
+        <tr>
+            <td class="text-balls">Parque</td> <!-- Centered text -->
+        </tr>
+    </table>
+    <!-- ICONS -->
+<div class="grid-container">
+    <!-- Each grid item contains an image center-container2-->
+    <div class="grid-item" onclick="scrollToSection('none')"></div>
+    <!-- ************************************************************** -->
+    <!-- B1 NEWS -->
+    <div class="grid-item-balls" onclick="scrollToSection('b1')"><img src="../img/pixel_white.png" alt="Image 7">
+        <svg id="b1_news" height="100" viewBox="0 0 48 48" width="100" xmlns="http://www.w3.org/2000/svg">
+            <path d="m0 0h48v48h-48z" fill="none"/>
+            <path d="m13.091 12c-5.021 0-9.091 4.477-9.091 10 0 4.701 2.952 8.633 6.926 9.703l3.074 12.297h12l-2.74-10.961 20.74 6.608v-35.647l-24 8zm4.032 28-2-8h3.754l2 8zm2.877-24v12h-6.909c-2.807 0-5.091-2.692-5.091-6s2.284-6 5.091-6zm20 18.174-16-5.098v-14.193l16-5.333z" fill="black"/>
+        </svg>
+    </div>
+    <!-- ************************************************************** -->
+    <!-- B2 MENU/SERVICES -->
+    <div class="grid-item-balls" onclick="scrollToSection('b2')"><img src="../img/pixel_white.png" alt="Image 8">
+        <svg id="b2_sp2" fill="none" height="130" viewBox="0 0 48 48" width="130" xmlns="http://www.w3.org/2000/svg">
+            <g fill="black">
+                <path clip-rule="evenodd" d="m36.826 13.643-2.326-7.53192-2.326 7.53192-4.4999 2.1428 4.5197 2.1523 2.3062 6.5891 2.3062-6.5891 4.5198-2.1523zm-3 1.4285.674-2.1824.674 2.1824 1.5001.7143-1.4803.7049-.6938 1.9823-.6938-1.9823-1.4802-.7049z" fill-rule="evenodd"/>
+                <path d="m19 16 1-4 1 4 3 1-3 1-1 4-1-4-3-1z"/>
+                <path clip-rule="evenodd" d="m13 39.7493v.2468c0 1.1045-.8954 2-2 2h-3c-1.10457 0-2-.8955-2-2v-10.9954c0-1.1045.89543-2 2-2h3c.946 0 1.7386.6568 1.9467 1.5393 1.3244-.4773 2.8713-1.0454 3.3446-1.2612.402-.1831.8662-.2453 1.2519-.2676.4056-.0234.8264-.0072 1.1946.0213.3714.0287.7085.0716.9519.107.1222.0178.2222.0339.2927.0457.0353.006.0633.0108.0831.0144l.0235.0042.0069.0013.0036.0006.0179.0034 6.6888 1.5005.0418.0134.0114.0035.0461.0141c.0421.0127.106.0314.1884.0542.1651.0458.4025.1075.6855.1692.5749.1254 1.2991.2425 1.9744.2425.6239 0 1.2693.2325 1.6143.8644.2963.5425.2273 1.1382.1164 1.5507-.1381.5134-.4241 1.0537-.7877 1.5127.4907-.1851 1.0271-.4043 1.6029-.6405l.1231-.0506c1.623-.666 3.5475-1.4558 5.245-1.7365 1.9397-.3209 3.3515.3832 3.9915 1.6324.5697 1.1119.4374 2.5713-.42 3.4506-.2152.2207-.5431.4522-.8724.6658-.3516.228-.7847.4857-1.2659.7586-.9638.5467-2.1569 1.1751-3.3548 1.7826-2.372 1.203-4.8584 2.3729-5.6485 2.6622-.9156.3354-1.8991.3671-2.8449.3184-.5152-.0265-1.1137-.086-1.7086-.1452-.4298-.0427-.8576-.0853-1.2507-.115-1.9278-.1461-3.4074-.6166-4.7703-1.05l-.1657-.0527c-1.4076-.4468-2.7171-.8431-4.4521-.913-.3967-.016-1.1888.0131-1.9054.0479zm4.1208-10.6506c.0641-.0292.2341-.0732.5377-.0908.2836-.0164.6072-.006.925.0186.3146.0244.6054.0612.8183.0921.1058.0154.1911.0292.2488.0389.0289.0049.0507.0087.0648.0112l.0022.0004 6.5675 1.4733.0451.0137c.0546.0164.1323.0391.2295.0661.1941.0538.468.1248.7934.1958.5852.1277 1.3692.2624 2.1684.2852-.057.1617-.1535.3526-.2843.5427-.1596.232-.3349.4114-.4788.5141-.4166.2976-.7528.4221-.9569.4751-.1033.0268-.176.0361-.2119.0393l-.0133.0011-.0078.0004-5.362-.0648-.1914 1.9837.1793-.9838-.1783.984.0532.0096.1525.0274c.132.0237.3221.0575.5558.0984.467.0818 1.1085.192 1.806.3056 1.3744.224 3.031.4722 3.9709.5289.6491.0392 1.4051-.16 2.1082-.3948.7337-.2449 1.5625-.584 2.396-.926 1.7173-.7044 3.4659-1.4212 4.9355-1.6642 1.2704-.2102 1.7226.2539 1.8851.5711.2328.4545.1062.9597-.0719 1.1424-.0437.0448-.2012.1716-.5288.3841-.3053.198-.7006.434-1.1643.697-.9261.5252-2.0888 1.138-3.2727 1.7385-2.3915 1.2129-4.772 2.3263-5.4317 2.5679-.5342.1957-1.1944.2433-2.0542.199-.5079-.0261-.9897-.0751-1.515-.1286-.4246-.0432-.8777-.0892-1.3961-.1285-1.6918-.1282-2.978-.5368-4.3563-.9747l-.1256-.0399c-1.4276-.4532-2.9552-.9238-4.9768-1.0052-.4551-.0183-1.2653.0098-1.9859.0439v-7.1009c1.4055-.503 3.4871-1.2584 4.1208-1.5473zm2.7954-.9099.1833-.9831c.0002.0001 0 0-.1833.9831zm-8.9162.8119h-3v10.9954h3z" fill-rule="evenodd"/>
+            </g>
+        </svg>  
+    </div>
+    <!-- ************************************************************** -->
+    <!-- B3 HORARIO -->
+    <div class="grid-item-balls" onclick="scrollToSection('b3')">
+        <svg id="b3_horario" viewBox="0 0 24 24" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+            <path d="m0 0h24v24h-24z" fill="black" opacity="0" transform="matrix(-1 0 0 -1 24 24)"/>
+            <g>
+                <path d="m12 2a10 10 0 1 0 10 10 10 10 0 0 0 -10-10zm0 18a8 8 0 1 1 8-8 8 8 0 0 1 -8 8z" fill="black"/>
+                <path d="m16 11h-3v-3a1 1 0 0 0 -2 0v4a1 1 0 0 0 1 1h4a1 1 0 0 0 0-2z" fill="black"/>
+            </g>
+        </svg>
+    </div>
+    <div class="grid-item" onclick="scrollToSection('none')"></div>
+    <div class="grid-item" onclick="scrollToSection('none')"></div>
+    <!-- ************************************************************** -->
+    <!-- C1 CONTACTO -->
+    <div class="grid-item-balls" onclick="scrollToSection('c1')">
+        <svg id="c1_contacto" height="100" viewBox="0 0 16 16" width="100" xmlns="http://www.w3.org/2000/svg"><g fill="black"><path d="m15.88 3.86-.61-1.31c-.155-.326-.443-.568-.792-.658-1.938-.528-4.161-.851-6.453-.891-2.342.041-4.565.363-6.687.934-.165.048-.453.29-.605.609l-.613 1.317c-.075.152-.119.331-.12.52v.87c-.001.012-.001.026-.001.041 0 .392.318.71.71.71.011 0 .022 0 .033-.001h2.518c.412-.01.742-.346.742-.76 0-.018-.001-.035-.002-.053v-.838c0-.004 0-.008 0-.012 0-.229.119-.43.298-.546.947-.508 2.069-.806 3.26-.806.156 0 .31.005.464.015.122-.011.288-.017.456-.017 1.178 0 2.287.291 3.261.805.143.099.262.3.262.529v.013.859c-.001.015-.002.033-.002.05 0 .413.33.75.741.76h2.521c.009 0 .02.001.031.001.392 0 .71-.318.71-.71 0-.014 0-.029-.001-.043v-.868c-.001-.189-.045-.368-.123-.527z"/><path d="m12 8.3c-.624-.797-1.001-1.815-1.001-2.92 0-.028 0-.056.001-.084v-.296h-1v1h-4v-1h-1v.33c0 .024.001.052.001.08 0 1.105-.377 2.122-1.009 2.93l-2.992 3.66v3h14v-3zm-4 4.7c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/><path d="m10 10c0 1.105-.895 2-2 2s-2-.895-2-2 .895-2 2-2 2 .895 2 2z"/></g></svg>
+    </div>
+    <!-- ************************************************************** -->
+    <!-- C2 FOTOS -->
+    <div class="grid-item-balls" onclick="scrollToSection('c2')">
+        <svg id="c2_fotos" height="110" viewBox="0 0 56 56" width="110" xmlns="http://www.w3.org/2000/svg">
+            <path d="m7.8086 50.3477h40.3828c4.8749 0 7.3594-2.4375 7.3594-7.2657v-24.539c0-4.8281-2.4845-7.2422-7.3594-7.2422h-5.4845c-1.828 0-2.3905-.375-3.4452-1.5469l-1.8984-2.1094c-1.1484-1.289-2.3437-1.9922-4.7813-1.9922h-9.3281c-2.4141 0-3.6094.7032-4.7812 1.9922l-1.8985 2.1094c-1.0312 1.1484-1.6171 1.5469-3.4453 1.5469h-5.3203c-4.875 0-7.3594 2.4141-7.3594 7.2422v24.539c0 4.8282 2.4844 7.2657 7.3594 7.2657zm20.1797-7.5c-7.0781 0-12.7734-5.6954-12.7734-12.8204s5.6953-12.8202 12.7734-12.8202c7.125 0 12.7969 5.6952 12.7969 12.8202s-5.6954 12.8204-12.7969 12.8204zm16.8517-18.5391c-1.594 0-2.9064-1.2891-2.9064-2.8828 0-1.6172 1.3124-2.9063 2.9064-2.9063 1.5936 0 2.906 1.2891 2.906 2.9063 0 1.5937-1.3124 2.8828-2.906 2.8828zm-16.8517 14.9766c5.1094 0 9.2578-4.125 9.2578-9.2579 0-5.1328-4.1484-9.2578-9.2578-9.2578s-9.2344 4.125-9.2344 9.2578c0 5.1329 4.1485 9.2579 9.2344 9.2579z"/>
+        </svg>
+    </div>
+    <!-- ************************************************************** -->
+    <!-- C3 UBICACION -->    
+    <div class="grid-item-balls" onclick="scrollToSection('c3')">
+        <svg id="c3_ubicacion" height="100" width="100" xmlns="http://www.w3.org/2000/svg">
+            <g fill="black">
+                <path d="m50.001303 0c-16.352602 0-29.751303 13.360422-29.751303 29.666303 0 6.317865 2.017532 12.188967 5.432936 17.016175l20.687753 35.762188c2.897215 3.784891 4.823674 3.06608 7.232659-.199393l22.817296-38.830854c.460965-.83384.822139-1.721773 1.137489-2.628431 1.408365-3.43986 2.191867-7.192337 2.191867-11.119685 0-16.305881-13.396104-29.666303-29.748697-29.666303zm0 13.900901c8.805396 0 15.80796 6.985154 15.80797 15.765402 0 8.780247-7.002574 15.762814-15.80797 15.762814-8.805405 0-15.810576-6.982567-15.810576-15.762814 0-8.780248 7.005171-15.765402 15.810576-15.765402z" stroke-width="3.62116"/>
+                <path d="m68.912802 48.907851-.04824.126174c.01569-.03832.02717-.07672.04267-.115041.0015-.0039.004-.0072.0056-.01113z"/>
+                <path d="m34.005859 69.056641c-14.125859 1.996545-24.005859 6.771562-24.005859 13.800781 0 9.46774 16.508399 17.142578 40 17.142578s40-7.674838 40-17.142578c0-7.028964-9.878869-11.804111-24.003906-13.800781-.651648 1.111256-1.305308 2.220821-1.957032 3.332031 10.64597 1.477058 17.960938 4.581453 17.960938 8.183594 0 5.04946-14.326887 9.142578-32 9.142578s-32-4.093118-32-9.142578c-.001289-3.589575 7.266228-6.691267 17.945312-8.173828-.645552-1.114537-1.294505-2.226873-1.939453-3.341797z"/>
+            </g>
+        </svg>
+    </div>
+    <div class="grid-item" onclick="scrollToSection('none')"></div>
+    <div class="grid-item" onclick="scrollToSection('none')"></div>
+    <!-- ************************************************************** -->
+    <!-- D1 SHARE -->     
+    <div class="grid-item-balls" onclick="scrollToSection('d1')">
+        <svg id="d1_share" height="90" width="90" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="m352 320c-22.608 0-43.387 7.819-59.79 20.895l-102.486-64.054a96.551 96.551 0 0 0 0-41.683l102.486-64.054c16.403 13.077 37.182 20.896 59.79 20.896 53.019 0 96-42.981 96-96s-42.981-96-96-96-96 42.981-96 96c0 7.158.79 14.13 2.276 20.841l-102.486 64.054c-16.403-13.076-37.182-20.895-59.79-20.895-53.019 0-96 42.981-96 96s42.981 96 96 96c22.608 0 43.387-7.819 59.79-20.895l102.486 64.054a96.301 96.301 0 0 0 -2.276 20.841c0 53.019 42.981 96 96 96s96-42.981 96-96-42.981-96-96-96z" filler="black"/></svg>
+    </div>
+    <!-- ************************************************************** -->
+    <!-- D2 PROMO -->     
+    <div class="center-container-bd" onclick="scrollToSection('d2')">
+        <svg id="d2_promo" viewBox="0 0 576 512" height="100" width="100" xmlns="http://www.w3.org/2000/svg">
+            <path d="m569.517 440.013c18.458 31.994-4.711 71.987-41.577 71.987h-479.886c-36.937 0-59.999-40.055-41.577-71.987l239.946-416.028c18.467-32.009 64.72-31.951 83.154 0zm-281.517-86.013c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346 7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/>
+        </svg> 
+    </div>
+    <!-- ************************************************************** -->
+    <!-- D3 ADMIN -->       
+    <div class="center-container-bd" onclick="scrollToSection('d3')">
+        <svg id="d3_admin" height="100" viewBox="0 0 48 48" width="100" xmlns="http://www.w3.org/2000/svg">
+            <path d="m0 0h48v48h-48z" fill="none"/>
+            <path d="m24 2a22 22 0 1 0 22 22 21.9 21.9 0 0 0 -22-22zm0 40a18 18 0 1 1 18-18 18.1 18.1 0 0 1 -18 18z"/>
+            <path d="m25.2 22.3a7.3 7.3 0 0 0 .8-3.3 7 7 0 1 0 -7 7 7.3 7.3 0 0 0 3.3-.8l2.9 2.8-2.6 2.6a1.9 1.9 0 0 0 0 2.8 1.9 1.9 0 0 0 2.8 0l2.6-2.6 1.2 1.2-2.6 2.6a1.9 1.9 0 0 0 0 2.8 1.9 1.9 0 0 0 2.8 0l4-4a1.9 1.9 0 0 0 0-2.8zm-9.2-3.3a3 3 0 1 1 3 3 2.9 2.9 0 0 1 -3-3z"/>
+        </svg>
+    </div>
+    <div class="grid-item" onclick="scrollToSection('none')"></div>
+    <div class="grid-item-bd" onclick="scrollToSection('none')"></div>
+    <div class="grid-item-bd" onclick="scrollToSection('none')"></div>
+    <div class="grid-item-bd" onclick="scrollToSection('none')"></div>
+    <div class="grid-item-bd" onclick="scrollToSection('none')"></div>
+    <div class="grid-item-bd" onclick="scrollToSection('none')"></div>
+</div>
+
+<!-- Sections at the bottom -->
+<div id='sections'>
+    <!-- Example section -->
+    <script type='text/javascript'>
+      function scrollToTop() {
+          window.scrollTo({ top:0, behavior:'smooth' });
+          //scrollToSection('topo');
+      }
+      function scrollToSection(sectionId) {
+          const section = document.getElementById(sectionId);
+          if (section) {
+              section.scrollIntoView({ behavior: 'smooth' });
+          }
+      }
+   </script>
+
+   <!-- ************************************************************** -->
+   <!-- B1 NEWS SECTION -->
+   <div id='b1' class='info-section'>
+       <svg id="b1_news2" height="30" viewBox="0 0 48 48" width="30" xmlns="http://www.w3.org/2000/svg">
+        <path d="m0 0h48v48h-48z" fill="none"/>
+        <path d="m13.091 12c-5.021 0-9.091 4.477-9.091 10 0 4.701 2.952 8.633 6.926 9.703l3.074 12.297h12l-2.74-10.961 20.74 6.608v-35.647l-24 8zm4.032 28-2-8h3.754l2 8zm2.877-24v12h-6.909c-2.807 0-5.091-2.692-5.091-6s2.284-6 5.091-6zm20 18.174-16-5.098v-14.193l16-5.333z" fill="black"/>
+       </svg>
+       <p class='center-text'>****** Conócenos. ******</p>
+       <span class='back-to-top' onclick='scrollToTop()'>
+           <svg id="z_backtop1" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
+            <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
+           </svg>
+       </span>
+   </div> 
+   <div id='b1_2' class='info-section2'>
+    <p>Parque público administrado por el gobierno de San Nicolás de los Garza.<br>
+        Área límpia y segura para su familia que incluye:<br> 
+        Juegos Infantiles<br>
+        Bancas<br>
+        Agua NO Potable<br>
+        Alumbrado<br>
+        Área Verde<br>
+    </p> 
+   </div> 
+   <!-- ************************************************************** -->
+   <!-- B2 MENU/SERVICIOS SECTION       -->
+   <div id='b2' class='info-section'>
+    <svg id="b2_sp" fill="none" height="40" viewBox="0 0 48 48" width="40" xmlns="http://www.w3.org/2000/svg">
+        <g fill="black">
+            <path clip-rule="evenodd" d="m36.826 13.643-2.326-7.53192-2.326 7.53192-4.4999 2.1428 4.5197 2.1523 2.3062 6.5891 2.3062-6.5891 4.5198-2.1523zm-3 1.4285.674-2.1824.674 2.1824 1.5001.7143-1.4803.7049-.6938 1.9823-.6938-1.9823-1.4802-.7049z" fill-rule="evenodd"/>
+            <path d="m19 16 1-4 1 4 3 1-3 1-1 4-1-4-3-1z"/>
+            <path clip-rule="evenodd" d="m13 39.7493v.2468c0 1.1045-.8954 2-2 2h-3c-1.10457 0-2-.8955-2-2v-10.9954c0-1.1045.89543-2 2-2h3c.946 0 1.7386.6568 1.9467 1.5393 1.3244-.4773 2.8713-1.0454 3.3446-1.2612.402-.1831.8662-.2453 1.2519-.2676.4056-.0234.8264-.0072 1.1946.0213.3714.0287.7085.0716.9519.107.1222.0178.2222.0339.2927.0457.0353.006.0633.0108.0831.0144l.0235.0042.0069.0013.0036.0006.0179.0034 6.6888 1.5005.0418.0134.0114.0035.0461.0141c.0421.0127.106.0314.1884.0542.1651.0458.4025.1075.6855.1692.5749.1254 1.2991.2425 1.9744.2425.6239 0 1.2693.2325 1.6143.8644.2963.5425.2273 1.1382.1164 1.5507-.1381.5134-.4241 1.0537-.7877 1.5127.4907-.1851 1.0271-.4043 1.6029-.6405l.1231-.0506c1.623-.666 3.5475-1.4558 5.245-1.7365 1.9397-.3209 3.3515.3832 3.9915 1.6324.5697 1.1119.4374 2.5713-.42 3.4506-.2152.2207-.5431.4522-.8724.6658-.3516.228-.7847.4857-1.2659.7586-.9638.5467-2.1569 1.1751-3.3548 1.7826-2.372 1.203-4.8584 2.3729-5.6485 2.6622-.9156.3354-1.8991.3671-2.8449.3184-.5152-.0265-1.1137-.086-1.7086-.1452-.4298-.0427-.8576-.0853-1.2507-.115-1.9278-.1461-3.4074-.6166-4.7703-1.05l-.1657-.0527c-1.4076-.4468-2.7171-.8431-4.4521-.913-.3967-.016-1.1888.0131-1.9054.0479zm4.1208-10.6506c.0641-.0292.2341-.0732.5377-.0908.2836-.0164.6072-.006.925.0186.3146.0244.6054.0612.8183.0921.1058.0154.1911.0292.2488.0389.0289.0049.0507.0087.0648.0112l.0022.0004 6.5675 1.4733.0451.0137c.0546.0164.1323.0391.2295.0661.1941.0538.468.1248.7934.1958.5852.1277 1.3692.2624 2.1684.2852-.057.1617-.1535.3526-.2843.5427-.1596.232-.3349.4114-.4788.5141-.4166.2976-.7528.4221-.9569.4751-.1033.0268-.176.0361-.2119.0393l-.0133.0011-.0078.0004-5.362-.0648-.1914 1.9837.1793-.9838-.1783.984.0532.0096.1525.0274c.132.0237.3221.0575.5558.0984.467.0818 1.1085.192 1.806.3056 1.3744.224 3.031.4722 3.9709.5289.6491.0392 1.4051-.16 2.1082-.3948.7337-.2449 1.5625-.584 2.396-.926 1.7173-.7044 3.4659-1.4212 4.9355-1.6642 1.2704-.2102 1.7226.2539 1.8851.5711.2328.4545.1062.9597-.0719 1.1424-.0437.0448-.2012.1716-.5288.3841-.3053.198-.7006.434-1.1643.697-.9261.5252-2.0888 1.138-3.2727 1.7385-2.3915 1.2129-4.772 2.3263-5.4317 2.5679-.5342.1957-1.1944.2433-2.0542.199-.5079-.0261-.9897-.0751-1.515-.1286-.4246-.0432-.8777-.0892-1.3961-.1285-1.6918-.1282-2.978-.5368-4.3563-.9747l-.1256-.0399c-1.4276-.4532-2.9552-.9238-4.9768-1.0052-.4551-.0183-1.2653.0098-1.9859.0439v-7.1009c1.4055-.503 3.4871-1.2584 4.1208-1.5473zm2.7954-.9099.1833-.9831c.0002.0001 0 0-.1833.9831zm-8.9162.8119h-3v10.9954h3z" fill-rule="evenodd"/>
+        </g>
+    </svg>  
+    <p class='center-text'>********* Servicios *********</p> 
+    <span class='back-to-top' onclick='scrollToTop()'>
+        <svg id="z_backtop2" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
+            <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
+        </svg>
+    </span> 
+    </div>
+    <div id='b2_2' class='info-section2'>
+        <div class="carouselB" id="Menu">
+            <input type="radio" name="carouselB" id="slideB1" checked>
+            <input type="radio" name="carouselB" id="slideB2">
+            <input type="radio" name="carouselB" id="slideB3">
+            <input type="radio" name="carouselB" id="slideB4">
+            <input type="radio" name="carouselB" id="slideB5">
+            
+            <div class="slides">
+                <div class="slide" id="s1b">
+                    <img class="img-fluid" src="img/SP_1.jpg" alt="">
+                </div>
+                <div class="slide" id="s2b">
+                    <img class="img-fluid" src="img/SP_2.jpg" alt="">
+                </div>
+                <div class="slide" id="s3b">
+                    <img class="img-fluid" src="img/SP_3.jpg" alt="">
+                </div>
+                <div class="slide" id="s4b">
+                    <img class="img-fluid" src="img/SP_4.jpg" alt="">
+                </div>
+                <div class="slide" id="s5b">
+                    <img class="img-fluid" src="img/SP_5.jpg" alt="">
+                </div>
+            </div>
+        <!-- Left and Right Arrows -->
+        <label for="slideB5" class="arrow left">&#10094;</label>
+        <label for="slideB2" class="arrow right" for="slide2">&#10095;</label>
+    
+        <label for="slideB1" class="arrow left">&#10094;</label>
+        <label for="slideB3" class="arrow right">&#10095;</label>
+    
+        <label for="slideB2" class="arrow left">&#10094;</label>
+        <label for="slideB4" class="arrow right">&#10095;</label>
+    
+        <label for="slideB3" class="arrow left">&#10094;</label>
+        <label for="slideB5" class="arrow right">&#10095;</label>
+    
+        <label for="slideB4" class="arrow left">&#10094;</label>
+        <label for="slideB1" class="arrow right">&#10095;</label>
+            <div class="controls">
+                <label for="slideB1" class="control"></label>
+                <label for="slideB2" class="control"></label>
+                <label for="slideB3" class="control"></label>
+                <label for="slideB4" class="control"></label>
+                <label for="slideB5" class="control"></label>
+            </div>
+        </div>
+            <hr class="w3-round" style="width:50px;border:5px solid red" ></hr>
+          </div>
+       </div>    
+    <!-- ************************************************************** -->
+   <!-- B3 HORARIO -->
+   <div id='b3' class='info-section'>
+    <svg id="b3_horario2" viewBox="0 0 24 24" width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+        <path d="m0 0h24v24h-24z" fill="black" opacity="0" transform="matrix(-1 0 0 -1 24 24)"/>
+        <g>
+            <path d="m12 2a10 10 0 1 0 10 10 10 10 0 0 0 -10-10zm0 18a8 8 0 1 1 8-8 8 8 0 0 1 -8 8z" fill="black"/>
+            <path d="m16 11h-3v-3a1 1 0 0 0 -2 0v4a1 1 0 0 0 1 1h4a1 1 0 0 0 0-2z" fill="black"/>
+        </g>
+    </svg>
+    <p class='center-text'>******* Horario. *******</p> 
+    <span class='back-to-top' onclick='scrollToTop()'>
+        <svg id="z_backtop3" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
+            <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
+        </svg>
+    </span> 
+    </div> 
+    <div id='b3_2' class='info-section2'>
+        <table class="table2 table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Hrs/Día</th>
+                    <th scope="col">D</th>
+                    <th scope="col">L</th>
+                    <th scope="col">M</th>
+                    <th scope="col">M</th>
+                    <th scope="col">J</th>
+                    <th scope="col">V</th>
+                    <th scope="col">S</th>
+                </tr>
+            </thead>
+            <tbody id="horarios-table-body">
+            </tbody>
+        </table>
+        <p><br></p>
+        <div id='b3_3' class='info-section2'>
+            <button id="toggleButton" class="share-button" style="width: 20%;" onclick="toggleRango()">¡24 horas!</button>
+            <p><br></p>
+        </div>
+          
+   <!-- ************************************************************** -->
+   <!-- C1 CONTACTO -->
+   <div id='c1' class='info-section'>
+    <svg id="c1_contacto2" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg"><g fill="black"><path d="m15.88 3.86-.61-1.31c-.155-.326-.443-.568-.792-.658-1.938-.528-4.161-.851-6.453-.891-2.342.041-4.565.363-6.687.934-.165.048-.453.29-.605.609l-.613 1.317c-.075.152-.119.331-.12.52v.87c-.001.012-.001.026-.001.041 0 .392.318.71.71.71.011 0 .022 0 .033-.001h2.518c.412-.01.742-.346.742-.76 0-.018-.001-.035-.002-.053v-.838c0-.004 0-.008 0-.012 0-.229.119-.43.298-.546.947-.508 2.069-.806 3.26-.806.156 0 .31.005.464.015.122-.011.288-.017.456-.017 1.178 0 2.287.291 3.261.805.143.099.262.3.262.529v.013.859c-.001.015-.002.033-.002.05 0 .413.33.75.741.76h2.521c.009 0 .02.001.031.001.392 0 .71-.318.71-.71 0-.014 0-.029-.001-.043v-.868c-.001-.189-.045-.368-.123-.527z"/><path d="m12 8.3c-.624-.797-1.001-1.815-1.001-2.92 0-.028 0-.056.001-.084v-.296h-1v1h-4v-1h-1v.33c0 .024.001.052.001.08 0 1.105-.377 2.122-1.009 2.93l-2.992 3.66v3h14v-3zm-4 4.7c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/><path d="m10 10c0 1.105-.895 2-2 2s-2-.895-2-2 .895-2 2-2 2 .895 2 2z"/></g></svg>
+    <p class='center-text'>****** Contáctanos ******</p> 
+    <span class='back-to-top' onclick='scrollToTop()'>
+        <svg id="z_backtop4" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
+            <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
+        </svg>
+    </span> 
+    </div>
+    <div id='c1_2' class='info-section2'>
+        <p>Reporta Incidentes al 81 999 9999<br><br>
+            O acude a las oficinas del gobierno municipal.<br><br>
+            <br><br>
+        </p> 
+       </div> 
+   <!-- ************************************************************** -->
+   <!-- C2 FOTOS -->
+   <div id='c2' class='info-section'>
+    <svg id="c2_fotos2" height="30" viewBox="0 0 56 56" width="30" xmlns="http://www.w3.org/2000/svg">
+        <path d="m7.8086 50.3477h40.3828c4.8749 0 7.3594-2.4375 7.3594-7.2657v-24.539c0-4.8281-2.4845-7.2422-7.3594-7.2422h-5.4845c-1.828 0-2.3905-.375-3.4452-1.5469l-1.8984-2.1094c-1.1484-1.289-2.3437-1.9922-4.7813-1.9922h-9.3281c-2.4141 0-3.6094.7032-4.7812 1.9922l-1.8985 2.1094c-1.0312 1.1484-1.6171 1.5469-3.4453 1.5469h-5.3203c-4.875 0-7.3594 2.4141-7.3594 7.2422v24.539c0 4.8282 2.4844 7.2657 7.3594 7.2657zm20.1797-7.5c-7.0781 0-12.7734-5.6954-12.7734-12.8204s5.6953-12.8202 12.7734-12.8202c7.125 0 12.7969 5.6952 12.7969 12.8202s-5.6954 12.8204-12.7969 12.8204zm16.8517-18.5391c-1.594 0-2.9064-1.2891-2.9064-2.8828 0-1.6172 1.3124-2.9063 2.9064-2.9063 1.5936 0 2.906 1.2891 2.906 2.9063 0 1.5937-1.3124 2.8828-2.906 2.8828zm-16.8517 14.9766c5.1094 0 9.2578-4.125 9.2578-9.2579 0-5.1328-4.1484-9.2578-9.2578-9.2578s-9.2344 4.125-9.2344 9.2578c0 5.1329 4.1485 9.2579 9.2344 9.2579z"/>
+    </svg>
+    <p class='center-text'>******** Fotos. ********</p> 
+    <span class='back-to-top' onclick='scrollToTop()'>
+        <svg id="z_backtop5" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
+            <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
+        </svg>
+    </span> 
+    </div>
+    <div id='c2_2' class='info-section2'>
+        <div class="carouselA" id="Menu">
+            <input type="radio" name="carouselA" id="slideA1" checked>
+            <input type="radio" name="carouselA" id="slideA2">
+            <input type="radio" name="carouselA" id="slideA3">
+            <input type="radio" name="carouselA" id="slideA4">
+            <input type="radio" name="carouselA" id="slideA5">
+            
+            <div class="slides">
+                <div class="slide" id="s1b">
+                    <img class="img-fluid" src="img/Foto_1.jpg" alt="">
+                </div>
+                <div class="slide" id="s2b">
+                    <img class="img-fluid" src="img/Foto_2.jpg" alt="">
+                </div>
+                <div class="slide" id="s3b">
+                    <img class="img-fluid" src="img/Foto_3.jpg" alt="">
+                </div>
+                <div class="slide" id="s4b">
+                    <img class="img-fluid" src="img/Foto_4.jpg" alt="">
+                </div>
+                <div class="slide" id="s5b">
+                    <img class="img-fluid" src="img/Foto_5.jpg" alt="">
+                </div>
+            </div>
+        <!-- Left and Right Arrows -->
+        <label for="slideA5" class="arrow left">&#10094;</label>
+        <label for="slideA2" class="arrow right" for="slide2">&#10095;</label>
+    
+        <label for="slideA1" class="arrow left">&#10094;</label>
+        <label for="slideA3" class="arrow right">&#10095;</label>
+    
+        <label for="slideA2" class="arrow left">&#10094;</label>
+        <label for="slideA4" class="arrow right">&#10095;</label>
+    
+        <label for="slideA3" class="arrow left">&#10094;</label>
+        <label for="slideA5" class="arrow right">&#10095;</label>
+    
+        <label for="slideA4" class="arrow left">&#10094;</label>
+        <label for="slideA1" class="arrow right">&#10095;</label>
+            <div class="controls">
+                <label for="slideA1" class="control"></label>
+                <label for="slideA2" class="control"></label>
+                <label for="slideA3" class="control"></label>
+                <label for="slideA4" class="control"></label>
+                <label for="slideA5" class="control"></label>
+            </div>
+        </div>
+            <hr class="w3-round" style="width:50px;border:5px solid red" ></hr>
+          </div>
+       </div>        
+   <!-- ************************************************************** -->
+   <!-- C3 UBICACION -->
+   <div id='c3' class='info-section'>
+    <svg id="c3_ubicacion2" height="30" width="30" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <g fill="black">
+            <path d="m50.001303 0c-16.352602 0-29.751303 13.360422-29.751303 29.666303 0 6.317865 2.017532 12.188967 5.432936 17.016175l20.687753 35.762188c2.897215 3.784891 4.823674 3.06608 7.232659-.199393l22.817296-38.830854c.460965-.83384.822139-1.721773 1.137489-2.628431 1.408365-3.43986 2.191867-7.192337 2.191867-11.119685 0-16.305881-13.396104-29.666303-29.748697-29.666303zm0 13.900901c8.805396 0 15.80796 6.985154 15.80797 15.765402 0 8.780247-7.002574 15.762814-15.80797 15.762814-8.805405 0-15.810576-6.982567-15.810576-15.762814 0-8.780248 7.005171-15.765402 15.810576-15.765402z" stroke-width="3.62116"/>
+            <path d="m68.912802 48.907851-.04824.126174c.01569-.03832.02717-.07672.04267-.115041.0015-.0039.004-.0072.0056-.01113z"/>
+            <path d="m34.005859 69.056641c-14.125859 1.996545-24.005859 6.771562-24.005859 13.800781 0 9.46774 16.508399 17.142578 40 17.142578s40-7.674838 40-17.142578c0-7.028964-9.878869-11.804111-24.003906-13.800781-.651648 1.111256-1.305308 2.220821-1.957032 3.332031 10.64597 1.477058 17.960938 4.581453 17.960938 8.183594 0 5.04946-14.326887 9.142578-32 9.142578s-32-4.093118-32-9.142578c-.001289-3.589575 7.266228-6.691267 17.945312-8.173828-.645552-1.114537-1.294505-2.226873-1.939453-3.341797z"/>
+        </g>
+    </svg>
+    <p class='center-text'>******* Ubicación ******</p> 
+    <span class='back-to-top' onclick='scrollToTop()'>
+        <svg id="z_backtop6" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
+            <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
+        </svg>
+    </span> 
+    </div>
+    <div id='c3_2' class='info-section2'>
+        <p>Morenita Mia #150<br></p> 
+        <a href="https://www.google.com/maps/place/Location_Lat_Lon" target="_blank">
+            <img src='../img/Location_Image.png' alt='Icon' style="border: 2px solid black;"/>
+        </a>
+    </div>
+   <!-- ************************************************************** -->
+   <!-- D1 SHARE -->
+   <div id='d1' class='info-section'>
+    <svg id="d1_share2" height="30" width="30" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="m352 320c-22.608 0-43.387 7.819-59.79 20.895l-102.486-64.054a96.551 96.551 0 0 0 0-41.683l102.486-64.054c16.403 13.077 37.182 20.896 59.79 20.896 53.019 0 96-42.981 96-96s-42.981-96-96-96-96 42.981-96 96c0 7.158.79 14.13 2.276 20.841l-102.486 64.054c-16.403-13.076-37.182-20.895-59.79-20.895-53.019 0-96 42.981-96 96s42.981 96 96 96c22.608 0 43.387-7.819 59.79-20.895l102.486 64.054a96.301 96.301 0 0 0 -2.276 20.841c0 53.019 42.981 96 96 96s96-42.981 96-96-42.981-96-96-96z" filler="black"/></svg>
+    <p class='center-text'>****** Compartir. ******</p> 
+    <span class='back-to-top' onclick='scrollToTop()'>
+        <svg id="z_backtop7" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
+            <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
+        </svg>
+    </span> 
+    </div>
+    <div id='c1_2' class='info-section2'>
+        <p>Comparte esta página en:</p>
+    
+        <a href="https://api.whatsapp.com/send?text=Visita%20esta%20página:%20https://tupaginaweb.com" 
+           target="_blank" style="text-decoration: none;">
+            <button class="share-button" style="width: 20%;">WhatsApp</button>
+        </a>
+        <br><br>
+    
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://tupaginaweb.com" 
+           target="_blank" style="text-decoration: none;">
+            <button class="share-button" style="width: 20%;">Facebook</button>
+        </a>
+        <br><br>
+    
+        <a href="https://signal.me/#p/+123456789" 
+        target="_blank" style="text-decoration: none;">
+         <button class="share-button" style="width: 20%;">Signal</button>
+        </a>
+        <br><br>
+
+        <a href="mailto:?subject=Echa%20un%20vistazo%20a%20esta%20página&body=Visita%20esta%20página:%20https://tupaginaweb.com" 
+           target="_blank" style="text-decoration: none;">
+            <button class="share-button" style="width: 20%;">Email</button>
+        </a>
+        <br><br>
+    
+        <a href="sms:?&body=Visita%20esta%20página:%20https://tupaginaweb.com" 
+           target="_blank" style="text-decoration: none;">
+            <button class="share-button" style="width: 20%;">SMS</button>
+        </a>
+        <br><br>
+    
+        <a href="https://twitter.com/intent/tweet?url=https://tupaginaweb.com&text=Echa%20un%20vistazo%20a%20esta%20página!" 
+           target="_blank" style="text-decoration: none;">
+            <button class="share-button" style="width: 20%;">X (Twitter)</button>
+        </a>
+        <br><br>
+    
+        <a href="https://www.tiktok.com/share?url=https://tupaginaweb.com" 
+           target="_blank" style="text-decoration: none;">
+            <button class="share-button" style="width: 20%;">TikTok</button>
+        </a>
+        <br><br>
+    
+        <a href="https://www.instagram.com" 
+           target="_blank" style="text-decoration: none;">
+            <button class="share-button" style="width: 20%;">Instagram</button>
+        </a>
+    </div>
+    
+   <!-- ************************************************************** -->
+   <!-- D2 PROMO -->
+   <div id='d2' class='info-section'>
+    <svg id="d2_promo2" viewBox="0 0 576 512" height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+        <path d="m569.517 440.013c18.458 31.994-4.711 71.987-41.577 71.987h-479.886c-36.937 0-59.999-40.055-41.577-71.987l239.946-416.028c18.467-32.009 64.72-31.951 83.154 0zm-281.517-86.013c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346 7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/>
+    </svg>  
+    <p class='center-text'>******** Avisos ********</p> 
+    <span class='back-to-top' onclick='scrollToTop()'>
+        <svg id="z_backtop8" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
+            <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
+        </svg>
+    </span> 
+    </div>
+    <div id='d2_2' class='info-section2'>
+        <p>Favor de NO tirar basura.<br><br>
+            Si acudes con tu mascota y se hace, tu no te hagas.<br><br>
+            El parque es tuyo, ¡cúidalo!<br><br><br><br><br><br></p> 
+    </div>
+   <!-- ************************************************************** -->
+   <!-- D3 ADMIN -->
+   <div id='d3' class='info-section'>
+    <svg id="d3_admin2" height="30" viewBox="0 0 48 48" width="30" xmlns="http://www.w3.org/2000/svg">
+        <path d="m0 0h48v48h-48z" fill="none"/>
+        <path d="m24 2a22 22 0 1 0 22 22 21.9 21.9 0 0 0 -22-22zm0 40a18 18 0 1 1 18-18 18.1 18.1 0 0 1 -18 18z"/>
+        <path d="m25.2 22.3a7.3 7.3 0 0 0 .8-3.3 7 7 0 1 0 -7 7 7.3 7.3 0 0 0 3.3-.8l2.9 2.8-2.6 2.6a1.9 1.9 0 0 0 0 2.8 1.9 1.9 0 0 0 2.8 0l2.6-2.6 1.2 1.2-2.6 2.6a1.9 1.9 0 0 0 0 2.8 1.9 1.9 0 0 0 2.8 0l4-4a1.9 1.9 0 0 0 0-2.8zm-9.2-3.3a3 3 0 1 1 3 3 2.9 2.9 0 0 1 -3-3z"/>
+    </svg>
+    <p class='center-text'>******** Admin. ********</p> 
+    <span class='back-to-top' onclick='scrollToTop()'>
+        <svg id="z_backtop9" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
+            <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
+        </svg>
+    </span> 
+    </div>
+    <div id='d3_2' class='info-section2'>
+        <p>¿Eres el responsable del local y quieres actualizar la información de este sitio web?<br>Conoce el detalle de todo lo que puedes configurar.<br>
+            No lo dudes, ¡es gratis!<br><br></p> 
+       </div> 
+       <div id='d3_3' class='info-section2'>
+        <a href="../PRICING/index.html" 
+        target="_blank" style="text-decoration: none;">
+         <button class="share-button" style="width: 20%;">¡Click aquí!</button>
+        </a>
+        <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+        <a href="../TERMS/index.html" 
+        target="_blank" style="text-decoration: none;">
+         <button class="share-button" style="width: 60%;">Términos y Condiciones</button>
+        </a>
+       </div> 
+</body>
+    <!-- Include JavaScript -->
+    <script>
+        // Objeto que representa los horarios, con horas de 0 a 23 (columna) y días de la semana como filas (números 0-6).
+        const horarios = {
+            0: [false, false, false, false, false, false, false], // 00:00 - 00:59
+            1: [false, false, false, false, false, false, false], // 01:00 - 01:59
+            2: [false, false, false, false, false, false, false], // 02:00 - 02:59
+            3: [false, false, false, false, false, false, false], // 03:00 - 03:59
+            4: [false, false, false, false, false, false, false], // 04:00 - 04:59
+            5: [false, false, false, false, false, false, false], // 05:00 - 05:59
+            6: [false, false, false, false, false, false, false], // 06:00 - 06:59
+            7: [false, false, false, false, false, false, false], // 07:00 - 07:59
+            8: [true, true, true, true, true, true, true], // 08:00 - 08:59
+            9: [true, true, true, true, true, true, true], // 09:00 - 09:59
+            10: [true, true, true, true, true, true, true], // 10:00 - 10:59
+            11: [true, true, true, true, true, true, true], // 11:00 - 11:59
+            12: [true, true, true, true, true, true, true], // 12:00 - 12:59
+            13: [true, true, true, true, true, true, true], // 13:00 - 13:59
+            14: [true, true, true, true, true, true, true], // 14:00 - 14:59
+            15: [true, true, true, true, true, true, true], // 15:00 - 15:59
+            16: [true, true, true, true, true, true, true], // 16:00 - 16:59
+            17: [true, true, true, true, true, true, true], // 17:00 - 17:59
+            18: [true, true, true, true, true, true, true], // 18:00 - 18:59
+            19: [true, true, true, true, true, true, true], // 19:00 - 19:59
+            20: [true, true, true, true, true, true, true], // 20:00 - 20:59
+            21: [false, false, false, false, false, false, false], // 21:00 - 21:59
+            22: [false, false, false, false, false, false, false], // 22:00 - 22:59
+            23: [false, false, false, false, false, false, false]  // 23:00 - 23:59
+        }
+    </script>
+    <script src="../code/scriptSERV.js"></script>
+</html>

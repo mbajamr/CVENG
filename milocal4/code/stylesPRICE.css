@@ -1,0 +1,162 @@
+        /* CSS to center the image */
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%; /* Adjust width as needed */
+        }
+        header {
+            background-color: white; /* Initial background color */
+            color: black; /* Initial text color */
+            padding: 20px; /* Add some padding */
+        }
+        .pricing-table-container {
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            text-align: center;
+        }
+        .pricing-table th, .pricing-table td {
+            padding: 5px;
+            border: 1px solid #ddd;
+        }
+        .pricing-table th {
+            background-color: #f4f4f4;
+            font-size: 16px;
+        }
+        .pricing-table td {
+            background-color: #fafafa;
+            font-size: 16px;
+        }
+        .pricing-table ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .radio-buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        /* Flexbox for the features */
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .features .column {
+            width: 80%;
+            text-align: left;
+        }
+        .features ul {
+            list-style: none;
+            padding: 0;
+        }
+        .features li {
+            margin: 5px 0;
+        }
+        /* Register button container */
+        .register-button-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .register-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .register-button:hover {
+            background-color: #45a049;
+        }
+        .register-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+        }
+        .radio-buttons-container {
+            display: flex;
+            justify-content: center; /* Centra horizontalmente el contenido */
+            gap: 10px; /* Espacio entre el radio button y la etiqueta */
+            margin: 20px 0; /* Márgenes opcionales para separación */
+        }
+        .grid-container-header {
+            display: grid; /* Enables grid layout */
+            grid-template-columns: repeat(5, 1fr); /* Creates 5 equal columns */
+            gap: 10px; /* Space between grid items */
+            padding: 20px; /* Padding around the grid */
+        }
+        
+        /* Style for each grid item */
+        .grid-item-header {
+            overflow: hidden; /* Hides overflow content */
+            border-radius: 10px; /* Rounded corners for items */
+            cursor: pointer; /* Changes cursor to pointer on hover */
+        }
+        .text-balls {
+            border: none; text-align: center; font-size: 35px; font-weight: bold; white-space: nowrap;
+        }
+        @media (max-width: 600px) {
+                .text-balls {
+                border: none; text-align: center; font-size: 25px; font-weight: bold; white-space: nowrap;
+            }
+        }
+        /* Style for each grid item */
+        .grid-item {
+            overflow: hidden; /* Hides overflow content */
+            border-radius: 10px; /* Rounded corners for items */
+            cursor: pointer; /* Changes cursor to pointer on hover */
+        }
+        @media (max-width: 600px) {
+            .grid-container-header {
+                grid-template-columns: repeat(3, 1fr); /* Adjusts to 3 columns on small screens */
+            }
+            .grid-item-header:nth-child(1),
+            .grid-item-header:nth-child(5) {
+                display: none; /* Hides specified cells on mobile */
+            }
+        }
+        .grid-container-header img {
+            max-width: 100%;  /*La imagen no será más grande que su contenedor */
+            height: auto; /* Mantiene la proporción de la imagen */
+            display: block; /* Evita que la imagen sea tratada como un elemento inline */
+            margin: 0 auto; /* Centra la imagen horizontalmente */
+        }     
+        /* Style for the images within the grid items */
+        .grid-item img {
+            width: 100%; /* Makes image responsive to container size */
+            height: auto; /* Maintains aspect ratio of images */
+            display: block; /* Removes bottom space/gap in images */
+            border-radius: 10px; /* Rounded corners for images */
+        }
+        .center-container-header {
+            /*display: flex; */
+            /*justify-content: center; /* Centers items horizontally */
+            align-items: center; /* Centers items vertically */
+            /*flex-direction: column; /* Places items in a column (one below the other) */
+            text-align: center; /* Ensures any inline elements like text will also be centered */
+        }
+        .center-container-header img {
+            max-width: 100%;
+            max-height: 100%;
+            position: relative;
+            top: 15%;
+            /*left: 50%;*/
+            /*transform: translate(-50%, -50%);*/
+            /*margin: 0;  Elimina el margin auto para evitar conflictos */
+        }   
