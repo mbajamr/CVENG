@@ -52,7 +52,7 @@ xmlHttp[xmlHttpIndex].send(null);
 function show2Secs(url1,celda1,url2,celda2){ 
     showData(url1,celda1)
     .then(function(result) {
-        console.log(result); // "Request successful"
+        //console.log(result); // "Request successful"
         showData(url2,celda2);
     })
     .catch(function(error) {

@@ -56,6 +56,11 @@
         tr {
             font-size: .4em; /* Ensure font size is consistent within rows */
         }
+
+  .btn-mwh {
+    width: 70%; 
+    height: 70%;
+  }
     }
 
     @media (min-width: 600px) {
@@ -93,8 +98,11 @@
     tr {
         font-size: .5em; /* Ensure font size is consistent within rows */
     }
+  .btn-mwh {
+    width: 70%; 
+    height: 70%;
+  }
     }
-
     @media (min-width: 768px) {
         html, body {
             line-height: 80%;
@@ -130,6 +138,10 @@
         tr {
             font-size: .6em; /* Ensure font size is consistent within rows */
         }
+  .btn-mwh {
+    width: 70%; 
+    height: 70%;
+  }
     }
 
     @media (min-width: 992px) {
@@ -245,7 +257,7 @@
 
     @media (min-width: 1920px) {
         html, body {
-            line-height: 100%;
+            line-height: 100%;f
         }
         h1 {
             font-size: 3em;
