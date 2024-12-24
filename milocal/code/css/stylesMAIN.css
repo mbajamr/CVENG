@@ -15,9 +15,8 @@
         display: flex; /* Flexbox layout for icons and text */
         border: 1px solid #ccc; /* Border for sections */
         border-radius: 10px; /* Rounded corners for sections */
-        justify-content: center; /* Center items horizontally */
         align-items: center; /* Center items vertically */
-        padding: 10px; /* Optional padding */
+        justify-content: space-between;
     }
 
     /* Gradual styles for different screen sizes */
@@ -34,7 +33,7 @@
         p {
             font-size: .4em; /* Medium font size for large tablets */
         }
-        .text-section {
+        .txt-sec {
             font-size: 0.8em; /* Smaller paragraph font size */
         }
         .txt-fs {
@@ -76,7 +75,7 @@
         p {
             font-size: 0.5em; /* Medium font size for large tablets */
         }
-        .text-section {
+        .txt-sec {
             font-size: 1em; /* Smaller paragraph font size */
         }
         .txt-fs {
@@ -116,7 +115,7 @@
         p {
             font-size: 0.6em; /* Medium font size for large tablets */
         }
-        .text-section {
+        .txt-sec {
             font-size: 1.2em; /* Smaller paragraph font size */
         }
         .txt-fs {
@@ -157,7 +156,7 @@
         p {
             font-size: 0.7em; /* Medium font size for large tablets */
         }
-        .text-section {
+        .txt-sec {
             font-size: 1.4em; /* Smaller paragraph font size */
         }
         .txt-fs {
@@ -194,7 +193,7 @@
         p {
             font-size: 0.8em; /* Medium font size for large tablets */
         }
-        .text-section {
+        .txt-sec {
             font-size: 1.6em; /* Slightly smaller paragraph font size */
         }
         .txt-fs {
@@ -231,7 +230,7 @@
         p {
             font-size: 0.9em; /* Medium font size for large tablets */
         }
-        .text-section {
+        .txt-sec {
            font-size: 1.8em; /* Slightly smaller paragraph font size */
         }
         .txt-fs {
@@ -268,7 +267,7 @@
         p {
             font-size: 1em;
         }
-        .text-section {
+        .txt-sec {
             font-size: 2em;
         }
         .txt-fs {
