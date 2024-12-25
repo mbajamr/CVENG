@@ -55,10 +55,9 @@
         tr {
             font-size: .4em; /* Ensure font size is consistent within rows */
         }
-
-        .btn-mwh {
-        width: 70%; 
-        height: 70%;
+        .btn-mw {
+            width: 20%;
+            height: auto;
         }
     }
 
@@ -97,10 +96,10 @@
         tr {
             font-size: .5em; /* Ensure font size is consistent within rows */
         }
-      .btn-mwh {
-        width: 60%; 
-        height: 70%;
-      }
+        .btn-mw {
+            width: 20%;
+            height: auto;
+        }
     }
     @media (min-width: 768px) {
         html, body {
@@ -137,10 +136,10 @@
         tr {
             font-size: .6em; /* Ensure font size is consistent within rows */
         }
-  .btn-mwh {
-    width: 70%; 
-    height: 70%;
-  }
+        .btn-mw {
+            width: 22%;
+            height: auto;
+        }
     }
 
     @media (min-width: 992px) {
@@ -177,6 +176,10 @@
 
         tr {
             font-size: .7em; /* Ensure font size is consistent within rows */
+        }
+        .btn-mw {
+            width: 24%;
+            height: auto;
         }
     }
 
@@ -215,6 +218,10 @@
         tr {
             font-size: .8em; /* Ensure font size is consistent within rows */
         }
+        .btn-mw {
+            width: 26%;
+            height: auto;
+        }
     }
 
     @media (min-width: 1680px) {
@@ -251,6 +258,10 @@
 
         tr {
             font-size: .9em; /* Ensure font size is consistent within rows */
+        }
+        .btn-mw {
+            width: 28%;
+            height: auto;
         }
     }
 
@@ -289,4 +300,9 @@
         tr {
             font-size: 1em; /* Ensure font size is consistent within rows */
         }
+        .btn-mw {
+            width: 30%;
+            height: auto;
+        }
+
     }

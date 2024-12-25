@@ -9,16 +9,22 @@
     border-radius: 5px;
     user-select: none;
     border-radius: 50px;
-    font-size: 16px;
     text-align: center;
-        background-color: DarkGray;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: DarkGray;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: auto; /* Ensure width can be adjusted */
+    height: auto; /* Ensure width can be adjusted */
   }
 
-  .btn-wh {
-    width: 200px; 
-    height: 30px;
+  .btn-whs {
+      width: 200px;
+      height: auto;
+  }
+        
+  .btn-whl {
+    width: 1000px; 
+    height: 20px;
   }
 
   .btn-lbl:hover {
