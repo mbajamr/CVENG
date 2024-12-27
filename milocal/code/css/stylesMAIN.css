@@ -20,7 +20,7 @@
     }
 
     /* Gradual styles for different screen sizes */
-    @media (min-width: 480px) {
+    @media (min-width: 80px) {
         html, body {
             line-height: 50%;
         }
