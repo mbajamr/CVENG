@@ -40,7 +40,7 @@
             font-size: 12px;
         }
         svg {
-            width: 40%;   /* Reduce the size on smaller screens */
+            width: 30%;   /* Reduce the size on smaller screens */
             height: auto;
         }
         table {
@@ -81,7 +81,7 @@
             font-size: 14px;
         }
         svg {
-            width: 50%;   /* Reduce the size on smaller screens */
+            width: 40%;   /* Reduce the size on smaller screens */
             height: auto;
         }
         table {
@@ -121,7 +121,7 @@
             font-size: 16px;
         }
         svg {
-            width: 60%;   /* Reduce the size on smaller screens */
+            width: 50%;   /* Reduce the size on smaller screens */
             height: auto;
         }
         table {
@@ -162,7 +162,7 @@
             font-size: 18px;
         }
         svg {
-            width: 70%;   /* Reduce the size on smaller screens */
+            width: 60%;   /* Reduce the size on smaller screens */
             height: auto;
         }
         table {
@@ -203,7 +203,7 @@
             font-size: 20px;
         }
         svg {
-            width: 80%;   /* Reduce the size on smaller screens */
+            width: 70%;   /* Reduce the size on smaller screens */
             height: auto;
         }
         table {
@@ -244,7 +244,7 @@
             font-size: 22px;
         }
         svg {
-            width: 90%;   /* Reduce the size on smaller screens */
+            width: 80%;   /* Reduce the size on smaller screens */
             height: auto;
         }
         table {
@@ -285,7 +285,7 @@
             font-size: 24px;
         }
         svg {
-            width: 100%;   /* Reduce the size on smaller screens */
+            width: 90%;   /* Reduce the size on smaller screens */
             height: auto;
         }
         table {
