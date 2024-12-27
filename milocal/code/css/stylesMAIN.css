@@ -38,10 +38,10 @@
             font-size: 0.8em; /* Smaller paragraph font size */
         }
         .txt-fs {
-            font-size: 12px;
+            font-size: 18px;
         }
         svg {
-            width: 70%;   /* Reduce the size on smaller screens */
+            width: 85%;   /* Reduce the size on smaller screens */
             height: auto;
         }
         table {
@@ -79,10 +79,10 @@
             font-size: 1em; /* Smaller paragraph font size */
         }
         .txt-fs {
-            font-size: 14px;
+            font-size: 19px;
         }
         svg {
-            width: 75%;   /* Reduce the size on smaller screens */
+            width: 90%;   /* Reduce the size on smaller screens */
             height: auto;
         }
         table {
@@ -119,10 +119,10 @@
             font-size: 1.2em; /* Smaller paragraph font size */
         }
         .txt-fs {
-            font-size: 16px;
+            font-size: 20px;
         }
         svg {
-            width: 80%;   /* Reduce the size on smaller screens */
+            width: 92%;   /* Reduce the size on smaller screens */
             height: auto;
         }
         table {
@@ -160,10 +160,10 @@
             font-size: 1.4em; /* Smaller paragraph font size */
         }
         .txt-fs {
-            font-size: 18px;
+            font-size: 21px;
         }
         svg {
-            width: 85%;   /* Reduce the size on smaller screens */
+            width: 94%;   /* Reduce the size on smaller screens */
             height: auto;
         }
         table {
@@ -201,10 +201,10 @@
             font-size: 1.6em; /* Slightly smaller paragraph font size */
         }
         .txt-fs {
-            font-size: 20px;
+            font-size: 22px;
         }
         svg {
-            width: 90%;   /* Reduce the size on smaller screens */
+            width: 96%;   /* Reduce the size on smaller screens */
             height: auto;
         }
         table {
@@ -242,10 +242,10 @@
            font-size: 1.8em; /* Slightly smaller paragraph font size */
         }
         .txt-fs {
-            font-size: 22px;
+            font-size: 23px;
         }
         svg {
-            width: 95%;   /* Reduce the size on smaller screens */
+            width: 98%;   /* Reduce the size on smaller screens */
             height: auto;
         }
         table {
