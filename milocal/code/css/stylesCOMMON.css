@@ -132,21 +132,21 @@
 
     /* Font size classes */
     .txt-st {
-      font-size: 16px;
-    }
-
-    .txt-ss {
       font-size: 18px;
     }
 
-    .txt-sm {
+    .txt-ss {
       font-size: 20px;
     }
 
-    .txt-sl {
+    .txt-sm {
       font-size: 22px;
     }
 
-    .txt-sxl {
+    .txt-sl {
       font-size: 24px;
+    }
+
+    .txt-sxl {
+      font-size: 28px;
     }
