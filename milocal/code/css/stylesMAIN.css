@@ -32,7 +32,7 @@
             font-size: 0.8em; /* Even smaller font size for very small screens */
         }
         p {
-            font-size: .4em; /* Medium font size for large tablets */
+            font-size: 1em; /* Medium font size for large tablets */
         }
         .txt-sec {
             font-size: 0.8em; /* Smaller paragraph font size */
@@ -73,7 +73,7 @@
             font-size: 1em; /* Smaller font size for small tablets */
         }
         p {
-            font-size: 0.5em; /* Medium font size for large tablets */
+            font-size: 1.1em; /* Medium font size for large tablets */
         }
         .txt-sec {
             font-size: 1em; /* Smaller paragraph font size */
@@ -113,7 +113,7 @@
             font-size: 1.2em; /* Smaller font size for small tablets */
         }
         p {
-            font-size: 0.6em; /* Medium font size for large tablets */
+            font-size: 1.2em; /* Medium font size for large tablets */
         }
         .txt-sec {
             font-size: 1.2em; /* Smaller paragraph font size */
@@ -154,7 +154,7 @@
             font-size: 1.4em; /* Smaller font size for medium tablets */
         }
         p {
-            font-size: 0.7em; /* Medium font size for large tablets */
+            font-size: 1.3em; /* Medium font size for large tablets */
         }
         .txt-sec {
             font-size: 1.4em; /* Smaller paragraph font size */
@@ -195,7 +195,7 @@
             font-size: 1.6em; /* Medium font size for large tablets */
         }
         p {
-            font-size: 0.8em; /* Medium font size for large tablets */
+            font-size: 1.4em; /* Medium font size for large tablets */
         }
         .txt-sec {
             font-size: 1.6em; /* Slightly smaller paragraph font size */
@@ -236,7 +236,7 @@
             font-size: 1.8em; /* Medium font size for large tablets */
         }
         p {
-            font-size: 0.9em; /* Medium font size for large tablets */
+            font-size: 1.5em; /* Medium font size for large tablets */
         }
         .txt-sec {
            font-size: 1.8em; /* Slightly smaller paragraph font size */
@@ -277,7 +277,7 @@
             font-size: 2em;
         }
         p {
-            font-size: 1em;
+            font-size: 1.6em;
         }
         .txt-sec {
             font-size: 2em;
