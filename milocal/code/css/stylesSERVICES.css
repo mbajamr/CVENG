@@ -1,7 +1,7 @@
 
 
 /* General styles for paragraphs with titles and subtitles */
-.services-title {
+.txt-mtl {
   border: 2px solid black;
   width: 500px;
   background-color: black;
@@ -14,7 +14,7 @@
 }
 
 /* General text style for normal content paragraphs */
-.services-centered-text {
+.txt-cntr {
   font-style: normal;
   font-weight: normal;
   text-decoration: none;
@@ -25,11 +25,11 @@
 }
 
 /* For subtitle and topic items (same styling) */
-.services-text-title {
+.txt-stl {
   font-size: 32px;
 }
 
 /* For subtitle and topic items (same styling) */
-.services-text-topic {
+.txt-sub {
   font-size: 26px;
 }
