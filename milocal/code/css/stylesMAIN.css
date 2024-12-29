@@ -82,7 +82,7 @@
             font-size: 19px;
         }
         svg {
-            width: 95%;   /* Reduce the size on smaller screens */
+            width: 120%;   /* Reduce the size on smaller screens */
             height: auto;
         }
         table {
