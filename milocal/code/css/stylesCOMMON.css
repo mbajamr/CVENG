@@ -82,7 +82,6 @@
 
     /* General text style for normal content paragraphs */
     .cntr-txt {
-      margin-bottom: 5px;
       font-style: normal;
       font-weight: normal;
       text-decoration: none;
@@ -116,6 +115,10 @@
 
     .txt-bld {
       font-weight: bold;
+    }
+
+    .clh {
+    line-height: 1;
     }
 
     .cmt {
