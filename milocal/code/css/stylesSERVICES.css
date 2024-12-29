@@ -1,9 +1,9 @@
 
 
 /* General styles for paragraphs with titles and subtitles */
-.txt-mtl {
+.smtl {
   border: 2px solid black;
-  width: 500px;
+  max-width: 500px;
   background-color: black;
   height: 50px;
   border-radius: 15px;
