@@ -49,12 +49,12 @@
                 }
 
         td, th {
-            font-size: .4em; /* Adjust font size inside table cells */
+            font-size: .7em; /* Adjust font size inside table cells */
             padding: 10px;   /* Adjust padding for readability */
         }
 
         tr {
-            font-size: .4em; /* Ensure font size is consistent within rows */
+            font-size: .7em; /* Ensure font size is consistent within rows */
         }
         .btn-mw {
             width: 20%;
@@ -90,12 +90,12 @@
                 }
 
         td, th {
-            font-size: .5em; /* Adjust font size inside table cells */
+            font-size: .8em; /* Adjust font size inside table cells */
             padding: 10px;   /* Adjust padding for readability */
         }
 
         tr {
-            font-size: .5em; /* Ensure font size is consistent within rows */
+            font-size: .8em; /* Ensure font size is consistent within rows */
         }
         .btn-mw {
             width: 20%;
@@ -130,12 +130,12 @@
                 }
 
         td, th {
-            font-size: .6em; /* Adjust font size inside table cells */
+            font-size: .9em; /* Adjust font size inside table cells */
             padding: 10px;   /* Adjust padding for readability */
         }
 
         tr {
-            font-size: .6em; /* Ensure font size is consistent within rows */
+            font-size: .9em; /* Ensure font size is consistent within rows */
         }
         .btn-mw {
             width: 22%;
@@ -171,12 +171,12 @@
                 }
 
         td, th {
-            font-size: .7em; /* Adjust font size inside table cells */
+            font-size: 1em; /* Adjust font size inside table cells */
             padding: 10px;   /* Adjust padding for readability */
         }
 
         tr {
-            font-size: .7em; /* Ensure font size is consistent within rows */
+            font-size: 1em; /* Ensure font size is consistent within rows */
         }
         .btn-mw {
             width: 24%;
@@ -212,12 +212,12 @@
                 }
 
         td, th {
-            font-size: .8em; /* Adjust font size inside table cells */
+            font-size: 1.1em; /* Adjust font size inside table cells */
             padding: 10px;   /* Adjust padding for readability */
         }
 
         tr {
-            font-size: .8em; /* Ensure font size is consistent within rows */
+            font-size: 1.1em; /* Ensure font size is consistent within rows */
         }
         .btn-mw {
             width: 26%;
@@ -253,12 +253,12 @@
                 }
 
         td, th {
-            font-size: .9em; /* Adjust font size inside table cells */
+            font-size: 1.2em; /* Adjust font size inside table cells */
             padding: 10px;   /* Adjust padding for readability */
         }
 
         tr {
-            font-size: .9em; /* Ensure font size is consistent within rows */
+            font-size: 1.2em; /* Ensure font size is consistent within rows */
         }
         .btn-mw {
             width: 28%;
@@ -294,12 +294,12 @@
                 }
 
         td, th {
-            font-size: 1em; /* Adjust font size inside table cells */
+            font-size: 1.4em; /* Adjust font size inside table cells */
             padding: 10px;   /* Adjust padding for readability */
         }
 
         tr {
-            font-size: 1em; /* Ensure font size is consistent within rows */
+            font-size: 1.4em; /* Ensure font size is consistent within rows */
         }
         .btn-mw {
             width: 30%;
