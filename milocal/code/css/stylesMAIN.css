@@ -45,7 +45,7 @@
             height: auto;
         }
         table {
-            width: 50%; /* Ensure table uses full available width */
+            width: 30%; /* Ensure table uses full available width */
                 }
 
         td, th {
