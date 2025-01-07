@@ -192,3 +192,46 @@
                     //svgIcon.style.pointerEvents = 'none'; // Optionally disable clicks
                 }
             }
+
+let showOnlyOpen = true;
+
+function toggleOpenCells() {
+  const toggleButton = document.getElementById('toggleButton');
+  //const records = document.querySelectorAll('#schedule_table');
+  //const table = document.querySelector('#schedule_table');
+  const table = document.querySelector('tbody');
+  const rows = table.querySelectorAll('tr');
+  const tdElements = table.querySelectorAll('td');
+  //alert('one');
+
+  rows.forEach(row => {
+    const cell = row.querySelector('td.open'); // Find the cell with the class "open"
+    //alert('two');
+    if (showOnlyOpen) {
+      // If showing only open rows, show all rows, and hide those without "open"
+      if (cell) {
+        row.style.display = 'table-row'; // Show the row if it contains an open cell
+        //alert('three');
+      } else {
+        row.style.display = 'none'; // Hide the row if it doesn't contain an open cell
+        //alert('four');
+      }
+    } else {
+      row.style.display = 'table-row'; // Show all rows if the toggle is off
+      //alert('five');
+    }
+  });
+  
+  // Toggle the state for the next click
+  //showOnlyOpen = !showOnlyOpen;
+  if (showOnlyOpen) {
+    showOnlyOpen = false;
+    toggleButton.textContent = "24 horas";
+  } else {
+    showOnlyOpen = true;
+    toggleButton.textContent = "Abierto";
+    
+  }
+}
+
+

@@ -2,13 +2,13 @@
 
             .open {
                 background-color: green;
-                color: white;
+                color: green;
                 border: 1px solid black;
             }
 
             .closed {
                 background-color: #8B0000;
-                color: white;
+                color: #8B0000;
                 border: 1px solid black;
             }
 
