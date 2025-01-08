@@ -41,11 +41,11 @@
             font-size: 18px;
         }
         svg {
-            width: 150%;   /* Reduce the size on smaller screens */
+            width: 140%;   /* Reduce the size on smaller screens */
             height: auto;
         }
         table {
-            width: 30%; /* Ensure table uses full available width */
+            width: 20%; /* Ensure table uses full available width */
                 }
 
         td, th {
@@ -85,7 +85,7 @@
             height: auto;
         }
         table {
-            width: 60%; /* Ensure table uses full available width */
+            width: 30%; /* Ensure table uses full available width */
                 }
 
         td, th {
@@ -124,7 +124,7 @@
             height: auto;
         }
         table {
-            width: 70%; /* Ensure table uses full available width */
+            width: 40%; /* Ensure table uses full available width */
                 }
 
         td, th {
@@ -164,7 +164,7 @@
             height: auto;
         }
         table {
-            width: 80%; /* Ensure table uses full available width */
+            width: 50%; /* Ensure table uses full available width */
                 }
 
         td, th {
@@ -204,7 +204,7 @@
             height: auto;
         }
         table {
-            width: 90%; /* Ensure table uses full available width */
+            width: 70%; /* Ensure table uses full available width */
                 }
 
         td, th {
@@ -244,7 +244,7 @@
             height: auto;
         }
         table {
-            width: 95%; /* Ensure table uses full available width */
+            width: 90%; /* Ensure table uses full available width */
                 }
 
         td, th {
